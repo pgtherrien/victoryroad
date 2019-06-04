@@ -3,7 +3,7 @@ const path = require("path");
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, "client/built")));
+app.use(express.static(path.join(__dirname, "victoryroad-ui")));
 
 app.get("/api/version", (req, res) => {
   var packageJSON = require("./package.json");
@@ -11,7 +11,7 @@ app.get("/api/version", (req, res) => {
 });
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname + "/client/build/index.js"));
+  res.sendFile(path.join(__dirname + "/victoryroad-ui/index.js"));
 });
 
 const port = process.env.PORT || 5000;
