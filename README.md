@@ -1,2 +1,2 @@
-# victory-road
+# VictoryRoad
 Victory Road
