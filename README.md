@@ -1,2 +1,0 @@
-# victoryroad
-Victory Road Description
