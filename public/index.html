@@ -22,7 +22,26 @@
     <title>React App</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBifastSp3WS-HAI08_sQ0U_gp_TEMGPxc",
+        authDomain: "victory-road-524d7.firebaseapp.com",
+        databaseURL: "https://victory-road-524d7.firebaseio.com",
+        projectId: "victory-road-524d7",
+        storageBucket: "victory-road-524d7.appspot.com",
+        messagingSenderId: "322547090268",
+        appId: "1:322547090268:web:adb16ea239653a65"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
     <div id="root"></div>
     <!--
       This HTML file is a template.
