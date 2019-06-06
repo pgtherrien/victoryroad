@@ -1,3 +1,3 @@
-import Checklist from "./Checklist";
+import Checklist from "./Checklist.jsx";
 
 export default Checklist;

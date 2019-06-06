@@ -1,8 +1,10 @@
 import React from "react";
 
+import styles from "./Home.module.css";
+
 class Home extends React.PureComponent {
   render() {
-    return <span>H O M E</span>;
+    return <div className={styles["home-container"]} />;
   }
 }
 

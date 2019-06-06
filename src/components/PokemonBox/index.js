@@ -1,3 +1,3 @@
-import PokemonBox from "./PokemonBox";
+import PokemonBox from "./PokemonBox.jsx";
 
 export default PokemonBox;
