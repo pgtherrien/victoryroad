@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Checklist from "../Checklist";
 import Header from "../Header";
-import Home from "../Home";
+import Timeline from "../Timeline";
 import PokemonBox from "../PokemonBox";
 
 class App extends React.PureComponent {
@@ -11,7 +11,7 @@ class App extends React.PureComponent {
     return (
       <Router>
         <Header />
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={Timeline} />
         <Route exact path="/checklist" component={Checklist} />
         <Route exact path="/pokemonbox" component={PokemonBox} />
       </Router>
