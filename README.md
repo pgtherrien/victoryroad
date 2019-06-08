@@ -19,7 +19,7 @@ Checklists Table
 Pokedex Table
 ````
 {
-	"133": {
+	"133_00": {
 		generation: 1,
 		name: "Eevee",
 		shiny: true,
