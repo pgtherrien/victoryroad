@@ -8,9 +8,10 @@ Checklists Table
 ````
 {
 	uuid: {
-		caught: ["001", "002", "003"],
+		lucky: ["001_00"],
+		shiny: ["001_00"],
 		tracking: [uuid, uuid, uuid],
-		type: "shiny",
+		unified: ["001_00"],		
 		user: token
 	}
 }
@@ -22,6 +23,7 @@ Pokedex Table
 		generation: 1,
 		name: "Eevee",
 		shiny: true,
+		tags: ["Mythic", "Legendary", "Regional"],
 		type: ["normal"]
 	}
 }
@@ -30,25 +32,17 @@ Pokemon Table
 ````
 {
 	uuid: {
-		meta: {
-			caught: true,
-			hatched: false,
-			lucky: false,
-			shiny: false,
-			traded: false
-		},
-		nickname: "Perfect * * *",
-		pokedex: "133",
-		stats: {
-			cp: 933,
-			hp: 118,
-			iv: {
-				attack: 15,
-				defense: 15,
-				hp: 15
-			},
-			level: 31,
-		}
+		caught: true,
+		cp: 933,
+		hatched: false,
+		hp: 118,
+		iv_attack: 15,
+		iv_defense: 15,
+		iv_hp: 15,
+		level: 31,
+		lucky: false,
+		shiny: false,
+		traded: false
 	}
 }
 ````
@@ -59,12 +53,10 @@ Tracking Table
 		caught: true,
 		dateStarted: timestamp,
 		dateCaught: timestamp,
-		encounters: {
-			initial: 10,
-			total: 77
-		},
+		initialEncounters: 10,
 		"pokedex": "001",
-		"pokemon": uuid
+		"pokemon": uuid,
+		totalEncounters: 77
 	}
 }
 ````
@@ -72,11 +64,9 @@ Types Table
 ````
 {
 	"dragon": {
-		effect: {
-			"0%": ["fairy"],
-			"50%": ["steel"],
-			"200%": ["dragon"]
-		}
+		"0%": ["fairy"],
+		"50%": ["steel"],
+		"200%": ["dragon"],
 		name: "Dragon",
 	}
 }
