@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "firebase": "^6.1.0",
+    "firestore-parser": "^0.8.8",
     "history": "^4.9.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
