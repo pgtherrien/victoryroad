@@ -1,6 +1,7 @@
 import React from "react";
-import "shards-ui/dist/css/shards.min.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "material-icons/iconfont/material-icons.css";
+import "shards-ui/dist/css/shards.min.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Checklist from "../Checklist";

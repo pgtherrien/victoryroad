@@ -25,7 +25,7 @@ class EventCard extends React.PureComponent {
 
     tags.forEach(function(tag) {
       badges.push(
-        <div className={styles["event-tag"]} key={i} pill>
+        <div className={styles["event-tag"]} key={i}>
           <b>{tag}</b>
         </div>
       );
@@ -40,12 +40,12 @@ class EventCard extends React.PureComponent {
     const { mouseInside } = this.state;
 
     return (
-      <li
-        onMouseEnter={() => this.setState({ mouseInside: true })}
-        onMouseLeave={() => this.setState({ mouseInside: false })}
-      >
+      <li>
         <time className={styles["event-time"]}>
-          <span>{startDate.toDateString()}</span>
+          <span>
+            {`${startDate.getUTCMonth() +
+              1}/${startDate.getUTCDate()}/${startDate.getUTCFullYear()}`}
+          </span>
           <span>
             {startDate.toLocaleString("en-US", {
               hour: "numeric",
@@ -56,7 +56,11 @@ class EventCard extends React.PureComponent {
         <div className={styles["event-icon"]}>
           <img src={"images/pokeball.png"} />
         </div>
-        <div className={styles["event-content"]}>
+        <div
+          className={styles["event-content"]}
+          onMouseEnter={() => this.setState({ mouseInside: true })}
+          onMouseLeave={() => this.setState({ mouseInside: false })}
+        >
           <img src={ICON_MAP[eventType]} />
           <h2>{title}</h2>
           {new Date() > startDate ? (
