@@ -62,9 +62,13 @@ function Header() {
             <NavItem
               className={styles["header-navitem"]}
               onClick={() => {
-                setProfileState({
-                  isOpen: !profileState.isOpen
-                });
+                if (user) {
+                  setProfileState({
+                    isOpen: !profileState.isOpen
+                  });
+                } else {
+                  actions.signIn();
+                }
               }}
             >
               {user ? (
@@ -74,12 +78,12 @@ function Header() {
                   src={user.photoURL}
                 />
               ) : (
-                <button onClick={actions.signIn}>Log In</button>
+                <span className={styles["header-navitem-text"]}>Sign In</span>
               )}
             </NavItem>
-            <Dropdown open={profileState.isOpen}>
+            <Dropdown open={profileState.isOpen && user}>
               <DropdownMenu right className={styles["header-profile-dropdown"]}>
-                <DropdownItem>Sign Out</DropdownItem>
+                <DropdownItem onClick={actions.signOut}>Sign Out</DropdownItem>
               </DropdownMenu>
             </Dropdown>
           </Col>
