@@ -1,10 +1,12 @@
 import React from "react";
+import "shards-ui/dist/css/shards.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Checklist from "../Checklist";
 import Header from "../Header";
-import Timeline from "../Timeline";
 import PokemonBox from "../PokemonBox";
+import Timeline from "../Timeline";
 
 class App extends React.PureComponent {
   render() {

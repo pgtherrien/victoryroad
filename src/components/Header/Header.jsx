@@ -1,12 +1,22 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import {
+  Col,
+  Container,
+  Dropdown,
+  DropdownItem,
+  DropdownMenu,
+  Nav,
+  NavItem,
+  NavLink,
+  Row
+} from "shards-react";
 
 import { useUserContext } from "../../contexts/user_context";
 import styles from "./Header.module.css";
 import { auth } from "../../firebase";
 
 function Header() {
-  const [profileMenuState, setProfileMenuState] = useState({
+  const [profileState, setProfileState] = useState({
     isOpen: false
   });
   const { actions, state } = useUserContext();
@@ -21,29 +31,61 @@ function Header() {
   }, [actions]);
 
   return (
-    <div className={styles["header-container"]}>
-      {user ? (
-        <div className={styles["header-profile"]}>
-          <img
-            alt="profile"
-            className={styles["header-profile-img"]}
-            onClick={() => {
-              setProfileMenuState({
-                isOpen: !profileMenuState.isOpen
-              });
-            }}
-            src={user.photoURL}
-          />
-          {profileMenuState.isOpen ? (
-            <div className={styles["header-profile-menu"]}>Menu is open</div>
-          ) : (
-            <div />
-          )}
-        </div>
-      ) : (
-        <button onClick={actions.signIn}>Log In</button>
-      )}
-    </div>
+    <Nav className={styles["header-nav"]}>
+      <Container className={styles["header-container"]}>
+        <Row className={styles["header-row"]}>
+          <Col>
+            <NavItem className={styles["header-navicon"]}>Icon</NavItem>
+          </Col>
+          <Col />
+          <Col />
+          <Col />
+          <Col>
+            <NavLink className={styles["header-navitem"]} href="/">
+              <span className={styles["header-navitem-text"]}>Events</span>
+            </NavLink>
+          </Col>
+          <Col>
+            <NavLink className={styles["header-navitem"]} href="/checklist">
+              <span className={styles["header-navitem-text"]}>Checklists</span>
+            </NavLink>
+          </Col>
+          <Col>
+            <NavLink className={styles["header-navitem"]} href="/pokebox">
+              <span className={styles["header-navitem-text"]}>Pokebox</span>
+            </NavLink>
+          </Col>
+          <Col />
+          <Col />
+          <Col />
+          <Col>
+            <NavItem
+              className={styles["header-navitem"]}
+              onClick={() => {
+                setProfileState({
+                  isOpen: !profileState.isOpen
+                });
+              }}
+            >
+              {user ? (
+                <img
+                  alt="profile"
+                  className={styles["header-profile-img"]}
+                  src={user.photoURL}
+                />
+              ) : (
+                <button onClick={actions.signIn}>Log In</button>
+              )}
+            </NavItem>
+            <Dropdown open={profileState.isOpen}>
+              <DropdownMenu right className={styles["header-profile-dropdown"]}>
+                <DropdownItem>Sign Out</DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
+          </Col>
+        </Row>
+      </Container>
+    </Nav>
   );
 }
 
