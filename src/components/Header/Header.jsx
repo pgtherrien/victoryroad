@@ -52,7 +52,7 @@ function Header() {
           </Col>
           <Col>
             <NavLink className={styles["header-navitem"]} href="/pokebox">
-              <span className={styles["header-navitem-text"]}>Pokebox</span>
+              <span className={styles["header-navitem-text"]}>Pokébox</span>
             </NavLink>
           </Col>
           <Col />

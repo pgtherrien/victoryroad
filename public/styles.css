@@ -1,0 +1,8 @@
+html,
+body,
+#root {
+  background-color: #9aa0a8;
+  font-family: "Karla", serif;
+  height: 100%;
+  width: 100%;
+}
