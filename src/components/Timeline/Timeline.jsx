@@ -3,19 +3,15 @@ import FireStoreParser from "firestore-parser";
 
 import { firestoreURL } from "../../constants/constants";
 import styles from "./Timeline.module.css";
-import { FilterButton } from "../Buttons";
+import { EventModal } from "../Modals";
 import EventCard from "./EventCard";
 
 class Timeline extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      isFilterOpen: false,
       events: [],
-      filters: {
-        pastEvents: false,
-        type: []
-      }
+      selectedEvent: null
     };
   }
 
@@ -43,26 +39,34 @@ class Timeline extends React.PureComponent {
   }
 
   renderEvents = () => {
+    let oThis = this;
     let events = [];
     let i = 0;
+
     this.state.events.forEach(function(event) {
-      events.push(<EventCard key={i} {...event} />);
+      events.push(
+        <EventCard key={i} event={event} onClick={oThis.toggleEvent} />
+      );
       i++;
     });
     return events;
   };
 
+  toggleEvent = event => {
+    this.setState({ selectedEvent: event });
+  };
+
   render() {
-    const { isFilterOpen } = this.state;
+    const { selectedEvent } = this.state;
 
     return (
       <div className={styles["timeline-container"]}>
         <ul className={styles["timeline"]}>{this.renderEvents()}</ul>
-        <FilterButton
-          isOpen={isFilterOpen}
-          text="Click to Open Filter Menu"
-          toggle={() => this.setState({ isFilterOpen: !isFilterOpen })}
-        />
+        {selectedEvent ? (
+          <EventModal event={selectedEvent} onClose={this.toggleEvent} />
+        ) : (
+          <div />
+        )}
       </div>
     );
   }

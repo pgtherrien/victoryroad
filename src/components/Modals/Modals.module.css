@@ -1,0 +1,64 @@
+.event-modal {
+  height: 100% !important;
+  margin: 0;
+  overflow-y: auto;
+  padding: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 60%;
+}
+
+.event-modal-backdrop {
+  filter: blur(20px);
+  opacity: 0.8 !important;
+}
+
+.event-modal-content {
+  background: #353535;
+  border-radius: 0px;
+  display: block;
+  height: 100% !important;
+  overflow-y: auto;
+}
+
+.event-modal-container {
+  overflow-y: auto;
+  position: relative;
+  width: 100%;
+}
+
+.event-modal-container img {
+  border-bottom: 4px solid #2de1c2;
+  cursor: pointer;
+  height: 200px;
+  object-fit: cover;
+  opacity: 0.2;
+  width: 100%;
+}
+
+#LinkIcon {
+  color: white;
+  position: absolute;
+  right: 2%;
+  text-align: center;
+  top: 2%;
+}
+
+.event-modal-title {
+  cursor: pointer;
+  color: white;
+  left: 5%;
+  position: absolute;
+  text-align: center;
+  top: 7%;
+}
+
+.event-modal-title h4 {
+  color: white;
+}
+
+.event-modal-container p {
+  color: white;
+  padding: 10px 0 0 20px;
+}

@@ -36,7 +36,7 @@ class EventCard extends React.PureComponent {
   };
 
   render() {
-    const { endDate, eventType, startDate, tags, title } = this.props;
+    const { endDate, eventType, startDate, tags, title } = this.props.event;
     const { mouseInside } = this.state;
 
     return (
@@ -54,15 +54,15 @@ class EventCard extends React.PureComponent {
           </span>
         </time>
         <div className={styles["event-icon"]}>
-          <img src={"images/pokeball.png"} />
+          <img alt={eventType} src={ICON_MAP[eventType]} />
         </div>
         <div
           className={styles["event-content"]}
           onMouseEnter={() => this.setState({ mouseInside: true })}
           onMouseLeave={() => this.setState({ mouseInside: false })}
+          onClick={() => this.props.onClick(this.props.event)}
         >
-          <img src={ICON_MAP[eventType]} />
-          <h2>{title}</h2>
+          <h4>{title}</h4>
           {new Date() > startDate ? (
             <span>
               Event Ends: <Countdown date={endDate} />
@@ -73,7 +73,9 @@ class EventCard extends React.PureComponent {
           <div className={styles["event-tags"]}>{this.renderTags(tags)}</div>
           {mouseInside ? (
             <div className={styles["event-link"]}>
-              <b className={styles["event-arrows"]}>>></b>
+              <span className="material-icons" id={styles["event-arrow"]}>
+                arrow_forward_ios
+              </span>
             </div>
           ) : (
             <div />
@@ -85,15 +87,8 @@ class EventCard extends React.PureComponent {
 }
 
 EventCard.propTypes = {
-  endDate: PropTypes.object.isRequired,
-  eventType: PropTypes.string.isRequired,
-  imageURL: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
-  metadata: PropTypes.object.isRequired,
-  startDate: PropTypes.object.isRequired,
-  summary: PropTypes.string.isRequired,
-  tags: PropTypes.array.isRequired,
-  title: PropTypes.string.isRequired
+  event: PropTypes.object.isRequired,
+  onClick: PropTypes.func.isRequired
 };
 
 export default EventCard;

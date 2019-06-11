@@ -1,10 +1,7 @@
 .header-nav {
-  background-color: #080705;
+  background: #353535;
   height: 60px;
-  position: fixed;
-  top: 0;
   width: 100%;
-  z-index: 1;
 }
 
 .header-container {
