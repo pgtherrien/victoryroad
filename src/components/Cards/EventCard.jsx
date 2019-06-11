@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import Countdown from "react-countdown-now";
 
-import styles from "./Timeline.module.css";
+import styles from "./Cards.module.css";
 
 const ICON_MAP = {
   communityDay: "images/communityDay.png",
@@ -19,40 +19,26 @@ class EventCard extends React.PureComponent {
     };
   }
 
-  renderTags = tags => {
-    let badges = [];
+  buildTags = tags => {
     let i = 0;
-
+    let renderedTags = [];
     tags.forEach(function(tag) {
-      badges.push(
+      renderedTags.push(
         <div className={styles["event-tag"]} key={i}>
-          <b>{tag}</b>
+          {tag}
         </div>
       );
       i++;
     });
-
-    return badges;
+    return renderedTags;
   };
 
   render() {
-    const { endDate, eventType, startDate, tags, title } = this.props.event;
+    const { endDate, eventType, startDate, tags, title } = this.props;
     const { mouseInside } = this.state;
 
     return (
-      <li>
-        <time className={styles["event-time"]}>
-          <span>
-            {`${startDate.getUTCMonth() +
-              1}/${startDate.getUTCDate()}/${startDate.getUTCFullYear()}`}
-          </span>
-          <span>
-            {startDate.toLocaleString("en-US", {
-              hour: "numeric",
-              hour12: true
-            })}
-          </span>
-        </time>
+      <li className={styles["event-card"]}>
         <div className={styles["event-icon"]}>
           <img alt={eventType} src={ICON_MAP[eventType]} />
         </div>
@@ -60,9 +46,8 @@ class EventCard extends React.PureComponent {
           className={styles["event-content"]}
           onMouseEnter={() => this.setState({ mouseInside: true })}
           onMouseLeave={() => this.setState({ mouseInside: false })}
-          onClick={() => this.props.onClick(this.props.event)}
         >
-          <h4>{title}</h4>
+          <h3>{title}</h3>
           {new Date() > startDate ? (
             <span>
               Event Ends: <Countdown date={endDate} />
@@ -70,16 +55,8 @@ class EventCard extends React.PureComponent {
           ) : (
             <span>Event Ends: {endDate.toDateStriong()}</span>
           )}
-          <div className={styles["event-tags"]}>{this.renderTags(tags)}</div>
-          {mouseInside ? (
-            <div className={styles["event-link"]}>
-              <span className="material-icons" id={styles["event-arrow"]}>
-                arrow_forward_ios
-              </span>
-            </div>
-          ) : (
-            <div />
-          )}
+          <div className={styles["event-tags"]}> {this.buildTags(tags)}</div>
+          {mouseInside ? <div className={styles["event-link"]} /> : <div />}
         </div>
       </li>
     );
@@ -87,8 +64,10 @@ class EventCard extends React.PureComponent {
 }
 
 EventCard.propTypes = {
-  event: PropTypes.object.isRequired,
-  onClick: PropTypes.func.isRequired
+  endDate: PropTypes.object.isRequired,
+  eventType: PropTypes.string.isRequired,
+  startDate: PropTypes.object.isRequired,
+  title: PropTypes.string.isRequired
 };
 
 export default EventCard;
