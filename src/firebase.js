@@ -1,4 +1,12 @@
 import firebase from "firebase";
+import {
+  MockAuthentication,
+  MockFirebase,
+  MockFirebaseSdk,
+  MockFirestore,
+  MockMessaging,
+  MockStorage,
+} from "firebase-mock";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,
@@ -10,8 +18,36 @@ const firebaseConfig = {
   appId: process.env.REACT_APP_APP_ID
 };
 
-firebase.initializeApp(firebaseConfig);
+const mockFirebase = new MockFirebaseSdk(
+  (path) => {
+    return path ? new MockFirebase().child(path) : new MockFirebase();
+  },
+  () => {
+    return new MockAuthentication();
+  },
+  () => {
+    return new MockFirestore();
+  },
+  () => {
+    return new MockStorage();
+  },
+  () => {
+    return new MockMessaging();
+  }
+);
 
-export const provider = new firebase.auth.GoogleAuthProvider();
-export const auth = firebase.auth();
-export default firebase;
+const production = process.env.NODE_ENV === "production";
+
+if (production) {
+  firebase.initializeApp(firebaseConfig);
+}
+
+export const provider = production
+  ? new firebase.auth.GoogleAuthProvider()
+  : new mockFirebase.auth.GoogleAuthProvider();
+export const auth = production
+  ? firebase.auth()
+  : mockFirebase.auth();
+export default production
+  ? firebase
+  : mockFirebase;
