@@ -5,7 +5,7 @@ import Countdown from "react-countdown-now";
 import styles from "./Cards.module.css";
 
 const ICON_MAP = {
-  communityDay: "images/communityDay.png",
+  shiny: "images/shiny.png",
   migrations: "images/migrations.png",
   raidBoss: "images/raidBoss.png",
   standard: "images/standard.png"
@@ -15,27 +15,43 @@ class EventCard extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
+      expanded: false,
       mouseInside: false
     };
   }
 
-  buildTags = tags => {
-    let i = 0;
-    let renderedTags = [];
-    tags.forEach(function(tag) {
-      renderedTags.push(
-        <div className={styles["event-tag"]} key={i}>
-          {tag}
-        </div>
-      );
-      i++;
+  buildContent = () => {
+    const { metadata } = this.props;
+    const oThis = this;
+    let content = [];
+    Object.keys(metadata).forEach(function(title) {
+      content.push(oThis.buildMetadata(title, metadata[title]));
     });
-    return renderedTags;
+    return content;
+  };
+
+  buildMetadata = (title, data) => {
+    let retval;
+
+    switch (title) {
+      case "New Shinies":
+        let shinies = [];
+        data.forEach(function(shiny) {
+          shinies.push(<li>{shiny}</li>);
+        });
+        retval = <ul>{shinies}</ul>;
+        break;
+      case "Bonuses":
+      case "Features":
+      default:
+        break;
+    }
+    return retval;
   };
 
   render() {
-    const { endDate, eventType, startDate, tags, title } = this.props;
-    const { mouseInside } = this.state;
+    const { endDate, eventType, startDate, title } = this.props;
+    const { expanded, mouseInside } = this.state;
 
     return (
       <li className={styles["event-card"]}>
@@ -44,19 +60,31 @@ class EventCard extends React.PureComponent {
         </div>
         <div
           className={styles["event-content"]}
+          onClick={() => {
+            if (!expanded) {
+              this.setState({ expanded: true });
+            }
+          }}
           onMouseEnter={() => this.setState({ mouseInside: true })}
           onMouseLeave={() => this.setState({ mouseInside: false })}
         >
-          <h3>{title}</h3>
-          {new Date() > startDate ? (
-            <span>
-              Event Ends: <Countdown date={endDate} />
-            </span>
+          <div className={styles["event-title-container"]}>
+            <h4 className={styles["event-title"]}>{title}</h4>
+            {new Date() > startDate ? (
+              <div className={styles["event-date"]}>
+                Event Ends <Countdown date={endDate} />
+              </div>
+            ) : (
+              <div className={styles["event-date"]}>
+                Event Starts <Countdown date={startDate} />
+              </div>
+            )}
+          </div>
+          {mouseInside ? (
+            <div className={styles["event-view"]}>View More</div>
           ) : (
-            <span>Event Ends: {endDate.toDateStriong()}</span>
+            <div />
           )}
-          <div className={styles["event-tags"]}> {this.buildTags(tags)}</div>
-          {mouseInside ? <div className={styles["event-link"]} /> : <div />}
         </div>
       </li>
     );

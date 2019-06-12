@@ -5,12 +5,12 @@
 }
 
 .timeline:before {
-  background: #2de1c2;
+  background: #1ed3b3;
   bottom: 0;
   content: "";
-  left: 18%;
+  left: 10%;
   margin-left: -10px;
   position: absolute;
-  top: 30%;
+  top: 0;
   width: 10px;
 }

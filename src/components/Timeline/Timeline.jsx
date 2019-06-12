@@ -9,13 +9,22 @@ class Timeline extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      events: []
+      events: {
+        current: [],
+        past: [],
+        upcoming: []
+      }
     };
   }
 
   // Gather the events, preformat the data, and sort by startDate
   componentWillMount() {
-    let events = [];
+    let events = {
+      current: [],
+      past: [],
+      upcoming: []
+    };
+
     fetch(`${firestoreURL}events`)
       .then(response => response.json())
       .then(json => FireStoreParser(json))
@@ -25,29 +34,37 @@ class Timeline extends React.PureComponent {
           event.metadata = JSON.parse(event.metadata);
           event.startDate = new Date(event.startDate);
           event.endDate = new Date(event.endDate);
-          events.push(event);
+          if (new Date() > event.endDate) {
+            events.past.push(event);
+          } else if (new Date() < event.startDate) {
+            events.upcoming.push(event);
+          } else {
+            events.current.push(event);
+          }
         });
-        events.sort(function compare(a, b) {
+        events.current.sort(function compare(a, b) {
+          return a.endDate - b.endDate;
+        });
+        events.upcoming.sort(function compaore(a, b) {
           return a.startDate - b.startDate;
         });
         this.setState({ events });
       });
   }
 
-  // renderEvents builds an EventCard for each event defined in the state
-  renderEvents = events => {
-    let i = 0;
+  render() {
+    const { current, upcoming } = this.state.events;
     let renderedEvents = [];
-    events.forEach(function(event) {
+    let i = 0;
+    current.forEach(function(event) {
       renderedEvents.push(<EventCard key={i} {...event} />);
       i++;
     });
-    return renderedEvents;
-  };
-
-  render() {
-    const { events } = this.state;
-    return <ul className={styles["timeline"]}>{this.renderEvents(events)}</ul>;
+    upcoming.forEach(function(event) {
+      renderedEvents.push(<EventCard key={i} {...event} />);
+      i++;
+    });
+    return <ul className={styles["timeline"]}>{renderedEvents}</ul>;
   }
 }
 
