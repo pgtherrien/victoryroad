@@ -15,6 +15,7 @@ class FilterButton extends React.PureComponent {
             filter_list
           </span>
         </div>
+        {/*
         <Tooltip
           open={isOpen}
           placement="left"
@@ -23,6 +24,7 @@ class FilterButton extends React.PureComponent {
         >
           {text}
         </Tooltip>
+        */}
       </div>
     );
   }
