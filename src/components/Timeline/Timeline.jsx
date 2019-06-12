@@ -1,26 +1,29 @@
 import React from "react";
 import FireStoreParser from "firestore-parser";
 
+import EventCard from "../Cards/EventCard";
 import { firestoreURL } from "../../constants/constants";
 import styles from "./Timeline.module.css";
-import { FilterButton } from "../Buttons";
-import EventCard from "./EventCard";
 
 class Timeline extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      isFilterOpen: false,
-      events: [],
-      filters: {
-        pastEvents: false,
-        type: []
+      events: {
+        current: [],
+        past: [],
+        upcoming: []
       }
     };
   }
 
+  // Gather the events, preformat the data, and sort by startDate
   componentWillMount() {
-    let events = [];
+    let events = {
+      current: [],
+      past: [],
+      upcoming: []
+    };
 
     fetch(`${firestoreURL}events`)
       .then(response => response.json())
@@ -31,40 +34,37 @@ class Timeline extends React.PureComponent {
           event.metadata = JSON.parse(event.metadata);
           event.startDate = new Date(event.startDate);
           event.endDate = new Date(event.endDate);
-          events.push(event);
+          if (new Date() > event.endDate) {
+            events.past.push(event);
+          } else if (new Date() < event.startDate) {
+            events.upcoming.push(event);
+          } else {
+            events.current.push(event);
+          }
         });
-
-        events.sort(function compare(a, b) {
+        events.current.sort(function compare(a, b) {
+          return a.endDate - b.endDate;
+        });
+        events.upcoming.sort(function compaore(a, b) {
           return a.startDate - b.startDate;
         });
-
         this.setState({ events });
       });
   }
 
-  renderEvents = () => {
-    let events = [];
+  render() {
+    const { current, upcoming } = this.state.events;
+    let renderedEvents = [];
     let i = 0;
-    this.state.events.forEach(function(event) {
-      events.push(<EventCard key={i} {...event} />);
+    current.forEach(function(event) {
+      renderedEvents.push(<EventCard key={i} {...event} />);
       i++;
     });
-    return events;
-  };
-
-  render() {
-    const { isFilterOpen } = this.state;
-
-    return (
-      <div className={styles["timeline-container"]}>
-        <ul className={styles["timeline"]}>{this.renderEvents()}</ul>
-        <FilterButton
-          isOpen={isFilterOpen}
-          text="Click to Open Filter Menu"
-          toggle={() => this.setState({ isFilterOpen: !isFilterOpen })}
-        />
-      </div>
-    );
+    upcoming.forEach(function(event) {
+      renderedEvents.push(<EventCard key={i} {...event} />);
+      i++;
+    });
+    return <ul className={styles["timeline"]}>{renderedEvents}</ul>;
   }
 }
 
