@@ -1,16 +1,9 @@
-.timeline {
-  list-style: none;
-  padding: 50px 0 0 0;
-  position: relative;
+.timeline-container {
+  background: #121212;
+  height: 100%;
+  width: 100%;
 }
 
-.timeline:before {
-  background: #1ed3b3;
-  bottom: 0;
-  content: "";
-  left: 10%;
-  margin-left: -10px;
-  position: absolute;
-  top: 5%;
-  width: 10px;
+.timeline-grid {
+  padding: 0 8% 2% 8%;
 }

@@ -1,67 +1,43 @@
-.event-card {
-  position: relative;
+.event-card-event-image {
+  margin: 0 auto;
+  max-height: 140px;
+  max-width: 140px;
 }
 
-.event-content {
-  background: #2d2d2d;
-  border-radius: 15px;
-  color: white;
+.event-card-label {
+  z-index: 1;
+}
+
+.event-card-range {
+  color: white !important;
+}
+
+.event-card-row {
+  background: #282b33;
   cursor: pointer;
-  display: inline-block;
-  font-size: 1.2em;
-  font-weight: 300;
-  line-height: 1.4;
-  margin: 0 0 35px 15%;
-  padding: 2%;
-  position: relative;
-  width: 75%;
+  margin-top: 30px !important;
 }
 
-.event-date {
-  font-family: Helvetica-Light;
-  font-size: 0.9em;
-  margin: 0 0 0 auto;
+.event-card-timer {
+  opacity: 0.5;
 }
 
-.event-icon {
-  background: #1ed3b3;
-  border-radius: 50%;
-  color: #fff;
-  height: 80px;
-  left: 10%;
-  line-height: 80px;
-  margin: 0 0 -3px -45px;
-  position: absolute;
-  text-align: center;
-  top: 15%;
-  width: 80px;
+.event-card-timer-mobile {
+  color: white !important;
+  margin-top: 10px !important;
 }
 
-.event-icon img {
-  height: 55px;
-  width: 55px;
+.event-card-title {
+  background: #282b33 !important;
 }
 
-.event-title {
-  color: white;
-  margin: 0;
-  max-width: 70%;
-}
-
-.event-title-container {
-  align-items: center;
-  display: flex;
-  min-height: 60px;
-}
-
-.event-view {
+.event-card-view {
   bottom: 0;
-  color: white;
-  font-family: Helvetica-Light;
-  font-size: 0.8em;
-  margin-bottom: 5px;
+  color: white !important;
+  margin-bottom: 10px;
+  padding: 0 40% 0 40%;
   position: absolute;
-  text-align: center;
+  text-align: center !important;
   text-decoration: underline;
-  width: 93%;
+  width: 100% !important;
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import FireStoreParser from "firestore-parser";
+import { Dimmer, Grid, Loader, Segment } from "semantic-ui-react";
 
 import EventCard from "../Cards/EventCard";
 import { firestoreURL } from "../../constants/constants";
@@ -56,15 +57,35 @@ class Timeline extends React.PureComponent {
     const { current, upcoming } = this.state.events;
     let renderedEvents = [];
     let i = 0;
-    current.forEach(function(event) {
-      renderedEvents.push(<EventCard key={i} {...event} />);
-      i++;
-    });
-    upcoming.forEach(function(event) {
-      renderedEvents.push(<EventCard key={i} {...event} />);
-      i++;
-    });
-    return <ul className={styles["timeline"]}>{renderedEvents}</ul>;
+
+    if (current.length > 0 || upcoming.length > 0) {
+      current.forEach(function(event) {
+        renderedEvents.push(<EventCard key={i} {...event} />);
+        i++;
+      });
+      upcoming.forEach(function(event) {
+        renderedEvents.push(<EventCard key={i} {...event} />);
+        i++;
+      });
+
+      return (
+        <div className={styles["timeline-container"]}>
+          <div className={styles["timeline-grid"]}>
+            <Grid columns={4} padded stackable verticalAlign="middle">
+              {renderedEvents}
+            </Grid>
+          </div>
+        </div>
+      );
+    } else {
+      return (
+        <div className={styles["timeline-container"]}>
+          <Dimmer active>
+            <Loader>Loading Events</Loader>
+          </Dimmer>
+        </div>
+      );
+    }
   }
 }
 
