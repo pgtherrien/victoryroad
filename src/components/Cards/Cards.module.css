@@ -1,3 +1,10 @@
+.event-card-content {
+  background: #282b33 !important;
+  margin-bottom: 40px !important;
+  padding: 0 20% 0 20% !important;
+  width: 100% !important;
+}
+
 .event-card-event-image {
   margin: 0 auto;
   max-height: 140px;
@@ -8,8 +15,14 @@
   z-index: 1;
 }
 
+.event-card-link {
+  text-align: center;
+  width: 100%;
+}
+
 .event-card-range {
   color: white !important;
+  margin-top: 10px !important;
 }
 
 .event-card-row {
@@ -25,13 +38,14 @@
 .event-card-timer-mobile {
   color: white !important;
   margin-top: 10px !important;
+  opacity: 0.5;
 }
 
 .event-card-title {
   background: #282b33 !important;
 }
 
-.event-card-view {
+.event-card-view-more {
   bottom: 0;
   color: white !important;
   margin-bottom: 10px;

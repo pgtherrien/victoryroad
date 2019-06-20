@@ -32,7 +32,7 @@ class Timeline extends React.PureComponent {
       .then(json => {
         Object.keys(json.documents).forEach(function(index) {
           let event = json.documents[index].fields;
-          event.metadata = JSON.parse(event.metadata);
+          event.bonuses = JSON.parse(event.bonuses);
           event.startDate = new Date(event.startDate);
           event.endDate = new Date(event.endDate);
           if (new Date() > event.endDate) {

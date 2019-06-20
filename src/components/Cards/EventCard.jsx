@@ -5,6 +5,7 @@ import {
   Divider,
   Grid,
   Header,
+  Icon,
   Image,
   Label,
   Responsive,
@@ -51,19 +52,39 @@ class EventCard extends React.PureComponent {
     );
   };
 
+  renderContents = () => {
+    const { link, summary } = this.props;
+
+    return (
+      <Segment className={styles["event-card-content"]} inverted>
+        <div className={styles["event-card-link"]}>
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            Pokémon Go Live Article
+            <Icon name="external alternate" />
+          </a>
+        </div>
+        {summary ? (
+          <React.Fragment>
+            <Divider horizontal inverted>
+              Summary
+            </Divider>
+            {summary}
+          </React.Fragment>
+        ) : (
+          <React.Fragment />
+        )}
+      </Segment>
+    );
+  };
+
   render() {
-    const {
-      backgroundImage,
-      endDate,
-      eventImage,
-      startDate,
-      title
-    } = this.props;
+    const { endDate, eventImage, startDate, title } = this.props;
     const { expanded, mouseInside } = this.state;
 
     return (
       <Grid.Row
         className={styles["event-card-row"]}
+        onClick={() => this.setState({ expanded: !expanded })}
         onMouseEnter={() => this.setState({ mouseInside: true })}
         onMouseLeave={() => this.setState({ mouseInside: false })}
       >
@@ -81,28 +102,26 @@ class EventCard extends React.PureComponent {
             <Header as="h1" textAlign="center">
               <Header.Content>
                 {title}
-                <Header.Subheader className={styles["event-card-timer-mobile"]}>
+                <Responsive
+                  as={Header.Subheader}
+                  className={styles["event-card-range"]}
+                  minWidth={768}
+                >
                   {startDate.toDateString()} - {endDate.toDateString()}
-                </Header.Subheader>
+                </Responsive>
                 {new Date() > startDate ? (
                   <Responsive
                     as={Header.Subheader}
-                    className={styles["event-card-timer-mobile"]}
-                    inverted
+                    className={styles["event-card-range"]}
                     maxWidth={768}
-                    size="huge"
-                    textAlign="center"
                   >
                     Event Ends <Countdown date={endDate} />
                   </Responsive>
                 ) : (
                   <Responsive
                     as={Header.Subheader}
-                    className={styles["event-card-timer-mobile"]}
-                    inverted
+                    className={styles["event-card-range"]}
                     maxWidth={768}
-                    size="huge"
-                    textAlign="center"
                   >
                     Event Starts <Countdown date={startDate} />
                   </Responsive>
@@ -111,41 +130,45 @@ class EventCard extends React.PureComponent {
             </Header>
           </Segment>
         </Grid.Column>
-        <Grid.Column width={4}>
+        <Responsive as={Grid.Column} width={3} minWidth={768}>
           {new Date() > startDate ? (
-            <Responsive
-              as={Header}
+            <Header
               className={styles["event-card-timer"]}
               inverted
-              minWidth={768}
               size="huge"
               textAlign="center"
             >
               Event Ends <Countdown date={endDate} />
-            </Responsive>
+            </Header>
           ) : (
-            <Responsive
-              as={Header}
+            <Header
               className={styles["event-card-timer"]}
               inverted
-              minWidth={768}
               size="huge"
               textAlign="center"
             >
               Event Starts <Countdown date={startDate} />
-            </Responsive>
+            </Header>
           )}
-        </Grid.Column>
-        {mouseInside ? (
-          <Responsive
-            as={Divider}
-            className={styles["event-card-view"]}
-            horizontal
-            inverted
-            minWidth={768}
-          >
-            View More
-          </Responsive>
+        </Responsive>{" "}
+        <Grid.Column width={1} />
+        {mouseInside && !expanded ? (
+          <React.Fragment>
+            <Responsive
+              as={Divider}
+              className={styles["event-card-view-more"]}
+              horizontal
+              inverted
+              minWidth={768}
+            >
+              View More
+            </Responsive>
+          </React.Fragment>
+        ) : (
+          <React.Fragment />
+        )}
+        {expanded ? (
+          <React.Fragment>{this.renderContents()}</React.Fragment>
         ) : (
           <React.Fragment />
         )}
@@ -156,6 +179,7 @@ class EventCard extends React.PureComponent {
 
 EventCard.propTypes = {
   backgroundImage: PropTypes.string,
+  bonuses: PropTypes.object,
   endDate: PropTypes.object.isRequired,
   eventImage: PropTypes.string.isRequired,
   link: PropTypes.string,
