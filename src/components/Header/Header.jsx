@@ -1,5 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { Dropdown, Icon, Image, Menu } from "semantic-ui-react";
+import {
+  Container,
+  Dropdown,
+  Icon,
+  Image,
+  Menu,
+  Responsive
+} from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 import { useUserContext } from "../../contexts/user_context";
@@ -30,7 +37,11 @@ function Header() {
           src="/images/misc/pokeball.png"
         />
       </Menu.Item>
-      <div className={styles["header-items-wrapper"]}>
+      <Responsive
+        as={Container}
+        className={styles["header-items-wrapper"]}
+        minWidth={768}
+      >
         <Menu.Item
           active={tabState.pathname === "/"}
           as={Link}
@@ -61,7 +72,43 @@ function Header() {
         >
           <span className={styles["header-center"]}>Pokébox</span>
         </Menu.Item>
-      </div>
+      </Responsive>
+      <Responsive
+        as={Container}
+        className={styles["header-items-wrapper-mobile"]}
+        maxWidth={768}
+      >
+        <Menu.Item
+          active={tabState.pathname === "/"}
+          as={Link}
+          className={styles["header-item"]}
+          name="events"
+          onClick={() => setTabState({ pathname: "/" })}
+          to=""
+        >
+          <span className={styles["header-center"]}>Events</span>
+        </Menu.Item>
+        <Menu.Item
+          active={tabState.pathname.includes("checklist")}
+          as={Link}
+          className={styles["header-item"]}
+          name="checklists"
+          onClick={() => setTabState({ pathname: "/checklist" })}
+          to="checklist"
+        >
+          <span className={styles["header-center"]}>Checklists</span>
+        </Menu.Item>
+        <Menu.Item
+          active={tabState.pathname.includes("pokebox")}
+          as={Link}
+          className={styles["header-item"]}
+          name="pokebox"
+          onClick={() => setTabState({ pathname: "/pokebox" })}
+          to="pokebox"
+        >
+          <span className={styles["header-center"]}>Pokébox</span>
+        </Menu.Item>
+      </Responsive>
       {user ? (
         <Dropdown
           direction="left"

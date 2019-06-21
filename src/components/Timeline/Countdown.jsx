@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 
 class Countdown extends Component {
   constructor(props) {
@@ -103,10 +102,6 @@ class Countdown extends Component {
     );
   }
 }
-
-Countdown.propTypes = {
-  date: PropTypes.string.isRequired
-};
 
 Countdown.defaultProps = {
   date: new Date()

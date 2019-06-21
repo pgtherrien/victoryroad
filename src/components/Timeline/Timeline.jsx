@@ -71,21 +71,17 @@ class Timeline extends React.PureComponent {
       });
 
       return (
-        <div className={styles["timeline-container"]}>
-          <div className={styles["timeline-grid"]}>
-            <Grid columns={4} padded stackable verticalAlign="middle">
-              {renderedEvents}
-            </Grid>
-          </div>
+        <div className={styles["timeline-grid"]}>
+          <Grid columns={4} padded stackable verticalAlign="middle">
+            {renderedEvents}
+          </Grid>
         </div>
       );
     } else {
       return (
-        <div className={styles["timeline-container"]}>
-          <Dimmer active>
-            <Loader>Loading Events</Loader>
-          </Dimmer>
-        </div>
+        <Dimmer active>
+          <Loader>Loading Events</Loader>
+        </Dimmer>
       );
     }
   }
