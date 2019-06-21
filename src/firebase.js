@@ -5,7 +5,7 @@ import {
   MockFirebaseSdk,
   MockFirestore,
   MockMessaging,
-  MockStorage,
+  MockStorage
 } from "firebase-mock";
 
 const firebaseConfig = {
@@ -19,7 +19,7 @@ const firebaseConfig = {
 };
 
 const mockFirebase = new MockFirebaseSdk(
-  (path) => {
+  path => {
     return path ? new MockFirebase().child(path) : new MockFirebase();
   },
   () => {
@@ -36,7 +36,7 @@ const mockFirebase = new MockFirebaseSdk(
   }
 );
 
-const production = process.env.NODE_ENV === "production";
+const production = true;
 
 if (production) {
   firebase.initializeApp(firebaseConfig);
@@ -45,9 +45,5 @@ if (production) {
 export const provider = production
   ? new firebase.auth.GoogleAuthProvider()
   : new mockFirebase.auth.GoogleAuthProvider();
-export const auth = production
-  ? firebase.auth()
-  : mockFirebase.auth();
-export default production
-  ? firebase
-  : mockFirebase;
+export const auth = production ? firebase.auth() : mockFirebase.auth();
+export default (production ? firebase : mockFirebase);

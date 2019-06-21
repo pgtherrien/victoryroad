@@ -1,23 +1,21 @@
 import React, { useEffect, useState } from "react";
 import {
-  Col,
   Container,
   Dropdown,
-  DropdownItem,
-  DropdownMenu,
-  Nav,
-  NavItem,
-  NavLink,
-  Row
-} from "shards-react";
+  Icon,
+  Image,
+  Menu,
+  Responsive
+} from "semantic-ui-react";
+import { Link } from "react-router-dom";
 
 import { useUserContext } from "../../contexts/user_context";
 import styles from "./Header.module.css";
 import { auth } from "../../firebase";
 
 function Header() {
-  const [profileState, setProfileState] = useState({
-    isOpen: false
+  const [tabState, setTabState] = useState({
+    pathname: window.location.pathname
   });
   const { actions, state } = useUserContext();
   const { user } = state;
@@ -31,65 +29,113 @@ function Header() {
   }, [actions]);
 
   return (
-    <Nav className={styles["header-nav"]}>
-      <Container className={styles["header-container"]}>
-        <Row className={styles["header-row"]}>
-          <Col>
-            <NavItem className={styles["header-navicon"]}>Icon</NavItem>
-          </Col>
-          <Col />
-          <Col />
-          <Col />
-          <Col>
-            <NavLink className={styles["header-navitem"]} href="/">
-              <span className={styles["header-navitem-text"]}>Events</span>
-            </NavLink>
-          </Col>
-          <Col>
-            <NavLink className={styles["header-navitem"]} href="/checklist">
-              <span className={styles["header-navitem-text"]}>Checklists</span>
-            </NavLink>
-          </Col>
-          <Col>
-            <NavLink className={styles["header-navitem"]} href="/pokebox">
-              <span className={styles["header-navitem-text"]}>Pokébox</span>
-            </NavLink>
-          </Col>
-          <Col />
-          <Col />
-          <Col />
-          <Col>
-            <NavItem
-              className={styles["header-navitem"]}
-              onClick={() => {
-                if (user) {
-                  setProfileState({
-                    isOpen: !profileState.isOpen
-                  });
-                } else {
-                  actions.signIn();
-                }
-              }}
-            >
-              {user ? (
-                <img
-                  alt="profile"
-                  className={styles["header-profile-img"]}
-                  src={user.photoURL}
-                />
-              ) : (
-                <span className={styles["header-navitem-text"]}>Sign In</span>
-              )}
-            </NavItem>
-            <Dropdown open={profileState.isOpen && user}>
-              <DropdownMenu right className={styles["header-profile-dropdown"]}>
-                <DropdownItem onClick={actions.signOut}>Sign Out</DropdownItem>
-              </DropdownMenu>
-            </Dropdown>
-          </Col>
-        </Row>
-      </Container>
-    </Nav>
+    <Menu className={styles["header-wrapper"]} inverted size="huge" stackable>
+      <Menu.Item>
+        <img
+          alt="app"
+          className={styles["header-center"]}
+          src="/images/misc/pokeball.png"
+        />
+      </Menu.Item>
+      <Responsive
+        as={Container}
+        className={styles["header-items-wrapper"]}
+        minWidth={768}
+      >
+        <Menu.Item
+          active={tabState.pathname === "/"}
+          as={Link}
+          className={styles["header-item"]}
+          name="events"
+          onClick={() => setTabState({ pathname: "/" })}
+          to=""
+        >
+          <span className={styles["header-center"]}>Events</span>
+        </Menu.Item>
+        <Menu.Item
+          active={tabState.pathname.includes("checklist")}
+          as={Link}
+          className={styles["header-item"]}
+          name="checklists"
+          onClick={() => setTabState({ pathname: "/checklist" })}
+          to="checklist"
+        >
+          <span className={styles["header-center"]}>Checklists</span>
+        </Menu.Item>
+        <Menu.Item
+          active={tabState.pathname.includes("pokebox")}
+          as={Link}
+          className={styles["header-item"]}
+          name="pokebox"
+          onClick={() => setTabState({ pathname: "/pokebox" })}
+          to="pokebox"
+        >
+          <span className={styles["header-center"]}>Pokébox</span>
+        </Menu.Item>
+      </Responsive>
+      <Responsive
+        as={Container}
+        className={styles["header-items-wrapper-mobile"]}
+        maxWidth={768}
+      >
+        <Menu.Item
+          active={tabState.pathname === "/"}
+          as={Link}
+          className={styles["header-item"]}
+          name="events"
+          onClick={() => setTabState({ pathname: "/" })}
+          to=""
+        >
+          <span className={styles["header-center"]}>Events</span>
+        </Menu.Item>
+        <Menu.Item
+          active={tabState.pathname.includes("checklist")}
+          as={Link}
+          className={styles["header-item"]}
+          name="checklists"
+          onClick={() => setTabState({ pathname: "/checklist" })}
+          to="checklist"
+        >
+          <span className={styles["header-center"]}>Checklists</span>
+        </Menu.Item>
+        <Menu.Item
+          active={tabState.pathname.includes("pokebox")}
+          as={Link}
+          className={styles["header-item"]}
+          name="pokebox"
+          onClick={() => setTabState({ pathname: "/pokebox" })}
+          to="pokebox"
+        >
+          <span className={styles["header-center"]}>Pokébox</span>
+        </Menu.Item>
+      </Responsive>
+      {user ? (
+        <Dropdown
+          direction="left"
+          icon={null}
+          item
+          simple
+          trigger={
+            <Image
+              avatar
+              className={styles["header-center"]}
+              src={user.photoURL}
+            />
+          }
+        >
+          <Dropdown.Menu>
+            <Dropdown.Item onClick={actions.signOut}>
+              <Icon name="sign out" />
+              <span className="text">Sign Out</span>
+            </Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+      ) : (
+        <Menu.Item onClick={actions.signIn}>
+          <span className={styles["header-center"]}>Sign In</span>
+        </Menu.Item>
+      )}
+    </Menu>
   );
 }
 

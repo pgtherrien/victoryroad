@@ -1,9 +1,10 @@
 import React from "react";
 import FireStoreParser from "firestore-parser";
+import { Dimmer, Grid, Loader } from "semantic-ui-react";
 
-import EventCard from "../Cards/EventCard";
 import { firestoreURL } from "../../constants/constants";
 import styles from "./Timeline.module.css";
+import Row from "./Row";
 
 class Timeline extends React.PureComponent {
   constructor(props) {
@@ -31,7 +32,9 @@ class Timeline extends React.PureComponent {
       .then(json => {
         Object.keys(json.documents).forEach(function(index) {
           let event = json.documents[index].fields;
-          event.metadata = JSON.parse(event.metadata);
+          if (event.bonuses) {
+            event.bonuses = JSON.parse(event.bonuses);
+          }
           event.startDate = new Date(event.startDate);
           event.endDate = new Date(event.endDate);
           if (new Date() > event.endDate) {
@@ -56,15 +59,31 @@ class Timeline extends React.PureComponent {
     const { current, upcoming } = this.state.events;
     let renderedEvents = [];
     let i = 0;
-    current.forEach(function(event) {
-      renderedEvents.push(<EventCard key={i} {...event} />);
-      i++;
-    });
-    upcoming.forEach(function(event) {
-      renderedEvents.push(<EventCard key={i} {...event} />);
-      i++;
-    });
-    return <ul className={styles["timeline"]}>{renderedEvents}</ul>;
+
+    if (current.length > 0 || upcoming.length > 0) {
+      current.forEach(function(event) {
+        renderedEvents.push(<Row key={i} {...event} />);
+        i++;
+      });
+      upcoming.forEach(function(event) {
+        renderedEvents.push(<Row key={i} {...event} />);
+        i++;
+      });
+
+      return (
+        <div className={styles["timeline-grid"]}>
+          <Grid columns={4} padded stackable verticalAlign="middle">
+            {renderedEvents}
+          </Grid>
+        </div>
+      );
+    } else {
+      return (
+        <Dimmer active>
+          <Loader>Loading Events</Loader>
+        </Dimmer>
+      );
+    }
   }
 }
 

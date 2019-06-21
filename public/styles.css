@@ -1,8 +1,14 @@
 html,
 body,
 #root {
-  background-color: #50545a;
+  background: #121212 !important;
   font-family: "Karla", serif;
   height: 100%;
+  overflow: scroll;
   width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
 }
