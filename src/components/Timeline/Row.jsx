@@ -52,7 +52,22 @@ class Row extends React.PureComponent {
     );
   };
 
-  renderContents = () => {};
+  renderRange = (startDate, endDate) => {
+    if (
+      startDate.getMonth() === endDate.getMonth() &&
+      startDate.getDate() === endDate.getDate()
+    ) {
+      return (
+        startDate.toDateString() +
+        " from " +
+        startDate.toLocaleString("en-US", { hour: "numeric", hour12: true }) +
+        " - " +
+        endDate.toLocaleString("en-US", { hour: "numeric", hour12: true })
+      );
+    } else {
+      return startDate.toDateString() + " - " + endDate.toDateString();
+    }
+  };
 
   render() {
     const { endDate, eventImage, eventType, startDate, title } = this.props;
@@ -105,7 +120,7 @@ class Row extends React.PureComponent {
                 <Header as="h1">
                   {title}
                   <Header.Subheader className={styles["timeline-row-range"]}>
-                    {startDate.toDateString()} - {endDate.toDateString()}
+                    {this.renderRange(startDate, endDate)}
                   </Header.Subheader>
                 </Header>
               </Segment>
@@ -115,7 +130,7 @@ class Row extends React.PureComponent {
                 <Responsive
                   as={Grid.Column}
                   className={styles["timeline-row-countdown"]}
-                  minWidth={768}
+                  minWidth={Responsive.onlyTablet.minWidth}
                   width={4}
                 >
                   <Header inverted>
@@ -125,7 +140,7 @@ class Row extends React.PureComponent {
                 <Responsive
                   as={Grid.Column}
                   className={styles["timeline-row-countdown-mobile"]}
-                  maxWidth={768}
+                  {...Responsive.onlyMobile}
                   width={4}
                 >
                   <Header inverted>
@@ -138,7 +153,7 @@ class Row extends React.PureComponent {
                 <Responsive
                   as={Grid.Column}
                   className={styles["timeline-row-countdown"]}
-                  minWidth={768}
+                  minWidth={Responsive.onlyTablet.minWidth}
                   width={4}
                 >
                   <Header inverted>
@@ -148,7 +163,7 @@ class Row extends React.PureComponent {
                 <Responsive
                   as={Grid.Column}
                   className={styles["timeline-row-countdown-mobile"]}
-                  maxWidth={768}
+                  {...Responsive.onlyMobile}
                   width={4}
                 >
                   <Header inverted>
@@ -164,7 +179,7 @@ class Row extends React.PureComponent {
                   className={styles["timeline-row-view"]}
                   horizontal
                   inverted
-                  minWidth={768}
+                  minWidth={Responsive.onlyTablet.minWidth}
                 >
                   View More
                 </Responsive>

@@ -40,7 +40,7 @@ function Header() {
       <Responsive
         as={Container}
         className={styles["header-items-wrapper"]}
-        minWidth={768}
+        minWidth={Responsive.onlyTablet.minWidth}
       >
         <Menu.Item
           active={tabState.pathname === "/"}
@@ -76,7 +76,7 @@ function Header() {
       <Responsive
         as={Container}
         className={styles["header-items-wrapper-mobile"]}
-        maxWidth={768}
+        {...Responsive.onlyMobile}
       >
         <Menu.Item
           active={tabState.pathname === "/"}
