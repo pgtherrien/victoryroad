@@ -36,12 +36,15 @@ const mockFirebase = new MockFirebaseSdk(
   }
 );
 
-const production = true;
+const production = process.env.NODE_ENV === "production";
 
 if (production) {
   firebase.initializeApp(firebaseConfig);
 }
 
+export const db = production
+  ? new firebase.firestore()
+  : new mockFirebase.firestore();
 export const provider = production
   ? new firebase.auth.GoogleAuthProvider()
   : new mockFirebase.auth.GoogleAuthProvider();

@@ -1,0 +1,31 @@
+.modal-background {
+  color: white !important;
+}
+
+.modal-container {
+  position: unset !important;
+}
+
+.modal-datepicker {
+  margin-top: 4px !important;
+}
+
+.modal-divider {
+  margin: 0 !important;
+}
+
+.modal-header {
+  text-align: center !important;
+}
+
+.modal-label {
+  font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+}

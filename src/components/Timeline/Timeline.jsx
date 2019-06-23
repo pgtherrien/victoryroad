@@ -1,14 +1,15 @@
 import React from "react";
-import FireStoreParser from "firestore-parser";
+import PropTypes from "prop-types";
 import { Dimmer, Grid, Loader } from "semantic-ui-react";
 
-import { firestoreURL } from "../../constants/constants";
 import styles from "./Timeline.module.css";
+import { db } from "../../firebase";
 import Row from "./Row";
 
 class Timeline extends React.PureComponent {
   constructor(props) {
     super(props);
+
     this.state = {
       events: {
         current: [],
@@ -18,7 +19,7 @@ class Timeline extends React.PureComponent {
     };
   }
 
-  // Gather the events, preformat the data, and sort by startDate
+  // Gather the events and format the data
   componentWillMount() {
     let events = {
       current: [],
@@ -26,22 +27,22 @@ class Timeline extends React.PureComponent {
       upcoming: []
     };
 
-    fetch(`${firestoreURL}events`)
-      .then(response => response.json())
-      .then(json => FireStoreParser(json))
-      .then(json => {
-        Object.keys(json.documents).forEach(function(index) {
-          let event = json.documents[index].fields;
-          if (event.bonuses) {
-            event.bonuses = JSON.parse(event.bonuses);
-          }
-          event.startDate = new Date(event.startDate);
-          event.endDate = new Date(event.endDate);
+    db.collection("events")
+      .get()
+      .then(querySnapshot => {
+        querySnapshot.forEach(doc => {
+          let event = doc.data();
+          event.id = doc.id;
+          event.startDate = new Date(event.startDate.toDate());
+          event.endDate = new Date(event.endDate.toDate());
           if (new Date() > event.endDate) {
+            // If this event has already ended
             events.past.push(event);
           } else if (new Date() < event.startDate) {
+            // If the event has not occured yet
             events.upcoming.push(event);
           } else {
+            // Otherwise, the event is active
             events.current.push(event);
           }
         });
@@ -57,16 +58,33 @@ class Timeline extends React.PureComponent {
 
   render() {
     const { current, upcoming } = this.state.events;
+    const { admins, insertEvent, user } = this.props;
     let renderedEvents = [];
     let i = 0;
 
     if (current.length > 0 || upcoming.length > 0) {
       current.forEach(function(event) {
-        renderedEvents.push(<Row key={i} {...event} />);
+        renderedEvents.push(
+          <Row
+            admins={admins}
+            key={i}
+            event={{ ...event }}
+            insertEvent={insertEvent}
+            user={user}
+          />
+        );
         i++;
       });
       upcoming.forEach(function(event) {
-        renderedEvents.push(<Row key={i} {...event} />);
+        renderedEvents.push(
+          <Row
+            admins={admins}
+            key={i}
+            event={{ ...event }}
+            insertEvent={insertEvent}
+            user={user}
+          />
+        );
         i++;
       });
 
@@ -86,5 +104,11 @@ class Timeline extends React.PureComponent {
     }
   }
 }
+
+Timeline.propTypes = {
+  admins: PropTypes.array.isRequired,
+  insertEvent: PropTypes.func.isRequired,
+  user: PropTypes.object.isRequired
+};
 
 export default Timeline;
