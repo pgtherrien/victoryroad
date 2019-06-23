@@ -118,7 +118,10 @@ class Header extends React.PureComponent {
                 </Dropdown.Menu>
               </Dropdown>
             ) : (
-              <Menu.Item onClick={actions.signIn}>
+              <Menu.Item
+                className={styles["header-profile"]}
+                onClick={actions.signIn}
+              >
                 <span className={styles["header-center"]}>Sign In</span>
               </Menu.Item>
             )}

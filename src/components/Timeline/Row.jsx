@@ -88,9 +88,10 @@ class Row extends React.PureComponent {
     const { expanded } = this.state;
 
     if (
-      !expanded ||
-      window.innerWidth < Responsive.onlyComputer.minWidth ||
-      e.target.id === "close_row"
+      !expanded &&
+      e.target.id !== "add_event_to_calendar" &&
+      (window.innerWidth < Responsive.onlyComputer.minWidth ||
+        e.target.id === "close_row")
     ) {
       this.setState({ expanded: !expanded });
     }

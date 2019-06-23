@@ -123,7 +123,7 @@ class App extends React.PureComponent {
       return;
     }
 
-    auth2.signIn().catch(error => {
+    auth2.signIn({ prompt: "select_account" }).catch(error => {
       alert(`Sign in error: ${error}`);
     });
   };
