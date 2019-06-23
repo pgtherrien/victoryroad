@@ -5,16 +5,14 @@
   "dependencies": {
     "firebase": "^6.1.0",
     "firebase-mock": "^2.2.10",
-    "firestore-parser": "^0.8.8",
     "history": "^4.9.0",
-    "material-icons": "^0.3.1",
+    "pokemon-font": "^1.8.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
-    "react-countdown-now": "^2.1.0",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
-    "save": "^2.4.0",
+    "semantic-ui-calendar-react": "^0.15.0",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.87.2"
   },

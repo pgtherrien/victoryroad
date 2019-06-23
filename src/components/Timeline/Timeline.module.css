@@ -1,17 +1,4 @@
-.timeline-row-countdown {
-  font-size: 1.5em;
-  opacity: 0.5;
-  text-align: right !important;
-}
-
-.timeline-row-countdown-mobile {
-  font-size: 1em;
-  opacity: 0.5;
-  position: absolute !important;
-  text-align: right !important;
-  top: 0 !important;
-}
-
+/* Timeline CSS */
 .timeline-grid {
   padding: 0 8% 2% 8%;
 }
@@ -36,43 +23,69 @@
   width: 100% !important;
 }
 
-.timeline-row {
-  background: #282b33;
-  cursor: pointer;
-  margin-top: 30px !important;
-}
-
-.timeline-row-image {
-  margin: 0 auto;
-  max-height: 140px;
-  max-width: 140px;
-}
-
-.timeline-row-label {
-  z-index: 1;
-}
-
-.timeline-row-link {
-  text-align: center;
-  width: 100%;
-}
-
-.timeline-row-content {
+/* Content CSS */
+.content {
   background: #282b33 !important;
   margin-bottom: 40px !important;
   padding: 0 20% 0 20% !important;
   width: 100% !important;
 }
 
-.timeline-row-range {
+.content-link {
+  text-align: center;
+  width: 100%;
+}
+
+/* Row CSS */
+.row {
+  background: #282b33;
+  cursor: pointer;
+  margin-top: 30px !important;
+}
+
+.row-countdown {
+  font-size: 1.5em;
+  opacity: 0.5;
+  text-align: right !important;
+}
+
+.row-countdown-mobile {
+  font-size: 1em;
+  opacity: 0.5;
+  position: absolute !important;
+  text-align: right !important;
+  top: 0 !important;
+}
+
+.row-edit {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+.row-edit i {
+  margin-right: 0 !important;
+}
+
+.row-image {
+  margin: 0 auto;
+  max-height: 140px;
+  max-width: 140px;
+}
+
+.row-label {
+  z-index: 1;
+}
+
+.row-range {
   color: white !important;
 }
 
-.timeline-row-title {
+.row-title {
   background: #282b33 !important;
 }
 
-.timeline-row-view {
+.row-view {
   bottom: 0;
   color: white !important;
   padding: 0 40% 0 40%;

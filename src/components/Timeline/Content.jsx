@@ -9,8 +9,8 @@ class Content extends React.PureComponent {
     const { link, summary } = this.props;
 
     return (
-      <Segment className={styles["timeline-row-content"]} inverted>
-        <div className={styles["timeline-row-link"]}>
+      <Segment className={styles["content"]} inverted>
+        <div className={styles["content-link"]}>
           <a href={link} target="_blank" rel="noopener noreferrer">
             Pokémon Go Live Article <Icon name="external alternate" />
           </a>
