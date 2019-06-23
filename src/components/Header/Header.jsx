@@ -83,45 +83,46 @@ class Header extends React.PureComponent {
             >
               <span>Pokébox</span>
             </Menu.Item>
-          </Responsive>
-          {user ? (
-            <Dropdown
-              direction="left"
-              icon={null}
-              item
-              simple
-              trigger={
-                <Responsive
-                  as={Image}
-                  avatar
-                  className={styles["header-center"]}
-                  minWidth={Responsive.onlyTablet.minWidth}
-                  src={user.photoURL}
-                />
-              }
-            >
-              <Dropdown.Menu className={styles["header-dropdown"]}>
-                {admins.includes(user.uid) ? (
-                  <Dropdown.Item
-                    onClick={() => this.setState({ showEventModal: true })}
-                  >
-                    <Icon name="calendar plus" />
-                    <span className="text">Create Event</span>
+            {user ? (
+              <Dropdown
+                className={styles["header-profile"]}
+                direction="left"
+                icon={null}
+                item
+                simple
+                trigger={
+                  <Responsive
+                    as={Image}
+                    avatar
+                    className={styles["header-center"]}
+                    minWidth={Responsive.onlyTablet.minWidth}
+                    src={user.photoURL}
+                  />
+                }
+              >
+                <Dropdown.Menu className={styles["header-dropdown"]}>
+                  {admins.includes(user.uid) ? (
+                    <Dropdown.Item
+                      onClick={() => this.setState({ showEventModal: true })}
+                    >
+                      <Icon name="calendar plus" />
+                      <span className="text">Create Event</span>
+                    </Dropdown.Item>
+                  ) : (
+                    <React.Fragment />
+                  )}
+                  <Dropdown.Item onClick={actions.signOut}>
+                    <Icon name="sign out" />
+                    <span className="text">Sign Out</span>
                   </Dropdown.Item>
-                ) : (
-                  <React.Fragment />
-                )}
-                <Dropdown.Item onClick={actions.signOut}>
-                  <Icon name="sign out" />
-                  <span className="text">Sign Out</span>
-                </Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-          ) : (
-            <Menu.Item onClick={actions.signIn}>
-              <span className={styles["header-center"]}>Sign In</span>
-            </Menu.Item>
-          )}
+                </Dropdown.Menu>
+              </Dropdown>
+            ) : (
+              <Menu.Item onClick={actions.signIn}>
+                <span className={styles["header-center"]}>Sign In</span>
+              </Menu.Item>
+            )}
+          </Responsive>
         </Menu>
         <Responsive
           actions={actions}

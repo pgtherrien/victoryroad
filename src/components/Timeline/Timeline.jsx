@@ -58,20 +58,32 @@ class Timeline extends React.PureComponent {
 
   render() {
     const { current, upcoming } = this.state.events;
-    const { admins, user } = this.props;
+    const { admins, insertEvent, user } = this.props;
     let renderedEvents = [];
     let i = 0;
 
     if (current.length > 0 || upcoming.length > 0) {
       current.forEach(function(event) {
         renderedEvents.push(
-          <Row admins={admins} key={i} event={{ ...event }} user={user} />
+          <Row
+            admins={admins}
+            key={i}
+            event={{ ...event }}
+            insertEvent={insertEvent}
+            user={user}
+          />
         );
         i++;
       });
       upcoming.forEach(function(event) {
         renderedEvents.push(
-          <Row admins={admins} key={i} event={{ ...event }} user={user} />
+          <Row
+            admins={admins}
+            key={i}
+            event={{ ...event }}
+            insertEvent={insertEvent}
+            user={user}
+          />
         );
         i++;
       });
@@ -95,6 +107,7 @@ class Timeline extends React.PureComponent {
 
 Timeline.propTypes = {
   admins: PropTypes.array.isRequired,
+  insertEvent: PropTypes.func.isRequired,
   user: PropTypes.object.isRequired
 };
 

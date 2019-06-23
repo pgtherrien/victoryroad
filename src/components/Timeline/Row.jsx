@@ -84,6 +84,18 @@ class Row extends React.PureComponent {
     }
   };
 
+  toggleShowRow = e => {
+    const { expanded } = this.state;
+
+    if (
+      !expanded ||
+      window.innerWidth < Responsive.onlyComputer.minWidth ||
+      e.target.id === "close_row"
+    ) {
+      this.setState({ expanded: !expanded });
+    }
+  };
+
   render() {
     const {
       endDate,
@@ -119,8 +131,14 @@ class Row extends React.PureComponent {
       default:
         retval = (
           <Grid.Row
-            className={styles["row"]}
-            onClick={() => this.setState({ expanded: !expanded })}
+            className={
+              window.innerWidth > Responsive.onlyComputer.minWidth
+                ? expanded
+                  ? styles["row-expanded"]
+                  : styles["row"]
+                : styles["row-mobile"]
+            }
+            onClick={this.toggleShowRow}
             onMouseEnter={() => this.setState({ mouseInside: true })}
             onMouseLeave={() => this.setState({ mouseInside: false })}
           >
@@ -133,16 +151,45 @@ class Row extends React.PureComponent {
             <Grid.Column width={8}>
               <Segment
                 textAlign="center"
-                className={styles["row-title"]}
+                className={
+                  window.innerWidth > Responsive.onlyComputer.minWidth
+                    ? styles["row-title"]
+                    : styles["row-title-mobile"]
+                }
                 inverted
               >
                 <Header as="h1">
                   {title}
-                  <Header.Subheader className={styles["row-range"]}>
+                  <Header.Subheader
+                    className={
+                      window.innerWidth > Responsive.onlyComputer.minWidth
+                        ? styles["row-range"]
+                        : styles["row-range-mobile"]
+                    }
+                  >
                     {this.renderRange(startDate, endDate)}
                   </Header.Subheader>
                 </Header>
               </Segment>
+              <Responsive
+                as={Segment}
+                className={styles["row-view-segment"]}
+                inverted
+                minWidth={Responsive.onlyTablet.minWidth}
+                textAlign="center"
+              >
+                {mouseInside && !expanded ? (
+                  <Divider
+                    className={styles["row-view-divider"]}
+                    horizontal
+                    inverted
+                  >
+                    View More
+                  </Divider>
+                ) : (
+                  <React.Fragment />
+                )}
+              </Responsive>
             </Grid.Column>
             {new Date() > startDate ? (
               <React.Fragment>
@@ -191,29 +238,33 @@ class Row extends React.PureComponent {
                 </Responsive>
               </React.Fragment>
             )}
-            {mouseInside && !expanded ? (
-              <Responsive
-                as={Divider}
-                className={styles["row-view"]}
-                horizontal
-                inverted
-                minWidth={Responsive.onlyTablet.minWidth}
-              >
-                View More
-              </Responsive>
-            ) : (
-              <React.Fragment />
-            )}
-            {mouseInside && admins.includes(user.uid) ? (
-              <Responsive
-                as={Icon}
-                className={styles["row-edit"]}
-                inverted
-                minWidth={Responsive.onlyTablet.minWidth}
-                name="cogs"
-                onClick={() => this.setState({ showEventModal: true })}
-                title={"Click to edit " + title}
-              />
+            {mouseInside ? (
+              <div className={styles["row-actions"]}>
+                {expanded ? (
+                  <Responsive
+                    as={Icon}
+                    className={styles["row-close"]}
+                    id="close_row"
+                    inverted
+                    minWidth={Responsive.onlyTablet.minWidth}
+                    name="close"
+                    onClick={this.toggleShowRow}
+                    title={`Close ${title}`}
+                  />
+                ) : admins.includes(user.uid) ? (
+                  <Responsive
+                    as={Icon}
+                    className={styles["row-edit"]}
+                    inverted
+                    minWidth={Responsive.onlyTablet.minWidth}
+                    name="cogs"
+                    onClick={() => this.setState({ showEventModal: true })}
+                    title={`Edit ${title}`}
+                  />
+                ) : (
+                  <React.Fragment />
+                )}
+              </div>
             ) : (
               <React.Fragment />
             )}
@@ -228,7 +279,7 @@ class Row extends React.PureComponent {
           <CreateEvent
             event={{ ...this.props.event }}
             onClose={() => {
-              this.setState({ showEventModal: false });
+              this.setState({ expanded: false, showEventModal: false });
             }}
             user={user}
           />
@@ -244,6 +295,7 @@ class Row extends React.PureComponent {
 Row.propTypes = {
   admins: PropTypes.array.isRequired,
   event: PropTypes.object.isRequired,
+  insertEvent: PropTypes.func.isRequired,
   user: PropTypes.object
 };
 

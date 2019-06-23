@@ -2,7 +2,7 @@ html,
 body,
 #root {
   background: #121212 !important;
-  font-family: "Karla", serif;
+  font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif !important;
   height: 100%;
   overflow: scroll;
   width: 100%;
