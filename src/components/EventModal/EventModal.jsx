@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 import { Divider, Form, Modal } from "semantic-ui-react";
 import { DateTimeInput } from "semantic-ui-calendar-react";
 
-import styles from "./Modals.module.css";
+import styles from "./EventModal.module.css";
 import { db } from "../../firebase";
 
-class CreateEvent extends React.PureComponent {
+class EventModal extends React.PureComponent {
   constructor(props) {
     super(props);
 
@@ -97,6 +97,7 @@ class CreateEvent extends React.PureComponent {
   render() {
     const {
       bonuses,
+      challenges,
       endDate,
       eventImage,
       eventType,
@@ -190,6 +191,12 @@ class CreateEvent extends React.PureComponent {
               "Features...",
               features || ""
             )}
+            {this.renderTextArea(
+              "Challenges",
+              "challenges",
+              "Challenges...",
+              challenges || ""
+            )}
             <Form.Button
               className={styles["modal-actions"]}
               color="green"
@@ -203,11 +210,11 @@ class CreateEvent extends React.PureComponent {
   }
 }
 
-CreateEvent.propTypes = {
+EventModal.propTypes = {
   eventID: PropTypes.string,
   event: PropTypes.object,
   onClose: PropTypes.func.isRequired,
   user: PropTypes.object.isRequired
 };
 
-export default CreateEvent;
+export default EventModal;
