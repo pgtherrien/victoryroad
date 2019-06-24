@@ -10,12 +10,19 @@
 }
 
 .header-dropdown {
+  background: #121212 !important;
   border-radius: 0% !important;
+  color: white !important;
 }
 
 .header-profile {
-  position: absolute !important;
-  right: 0;
+  margin-left: auto !important;
+  min-height: 66px !important;
+  min-width: 88px !important;
+}
+
+.header-profile:hover {
+  border-bottom: #2de1c2 solid 3px !important;
 }
 
 .header-tab {
@@ -29,12 +36,21 @@
   margin: 0 auto !important;
 }
 
+.header-tab:hover {
+  border-bottom: #2de1c2 solid 3px !important;
+}
+
 .header-tab-active {
   border-bottom: #2de1c2 solid 3px !important;
+}
+
+.header-tab-event {
+  margin-left: auto !important;
 }
 
 .header-tabs-wrapper {
   display: flex;
   justify-content: center;
-  width: 100%;
+  padding-left: 88px !important;
+  width: 100% !important;
 }

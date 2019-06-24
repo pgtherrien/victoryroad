@@ -48,10 +48,6 @@ class App extends React.PureComponent {
   // Initialize the GAPI client
   initClient = () => {
     gapi.load("client:auth2", () => {
-      if (process.env.NODE_ENV !== "production") {
-        console.log("Initializing GAPI Client");
-      }
-
       gapi.client.init({
         apiKey: process.env.REACT_APP_API_KEY,
         clientId: process.env.REACT_APP_OATH_CLIENT_ID,
@@ -78,16 +74,6 @@ class App extends React.PureComponent {
     if (isSignedIn) {
       const auth2 = gapi.auth2.getAuthInstance();
       const currentUser = auth2.currentUser.get();
-      const profile = currentUser.getBasicProfile();
-
-      if (process.env.NODE_ENV !== "production") {
-        console.log("GAPI: User signed in", {
-          name: profile.getName(),
-          imageURL: profile.getImageUrl(),
-          email: profile.getEmail()
-        });
-      }
-
       const authResponse = currentUser.getAuthResponse(true);
       const credential = firebase.auth.GoogleAuthProvider.credential(
         authResponse.id_token,
@@ -95,18 +81,9 @@ class App extends React.PureComponent {
       );
 
       auth.signInAndRetrieveDataWithCredential(credential).then(({ user }) => {
-        if (process.env.NODE_ENV !== "production") {
-          console.log("Firebase: User signed in", {
-            displayName: user.displayName,
-            email: user.email,
-            photoURL: user.photoURL
-          });
-        }
         localStorage.setItem("user", JSON.stringify(user));
         this.setState({ user: user });
       });
-
-      // Try to get calendar events here?
     } else {
       if (process.env.NODE_ENV !== "production") {
         console.log("GAPI: User is not signed in");

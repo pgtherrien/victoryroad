@@ -11,12 +11,12 @@ import {
   Segment
 } from "semantic-ui-react";
 
-import styles from "./Timeline.module.css";
+import styles from "./TimelineRow.module.css";
 import Countdown from "./Countdown";
 import Content from "./Content";
-import { CreateEvent } from "../Modals";
+import { EventModal } from "../EventModal";
 
-class Row extends React.PureComponent {
+class TimelineRow extends React.PureComponent {
   constructor(props) {
     super(props);
 
@@ -88,10 +88,9 @@ class Row extends React.PureComponent {
     const { expanded } = this.state;
 
     if (
-      !expanded &&
-      e.target.id !== "add_event_to_calendar" &&
-      (window.innerWidth < Responsive.onlyComputer.minWidth ||
-        e.target.id === "close_row")
+      !expanded ||
+      (e.target.id !== "content-action-button" &&
+        e.target.id !== "content-sprite")
     ) {
       this.setState({ expanded: !expanded });
     }
@@ -113,18 +112,14 @@ class Row extends React.PureComponent {
       case "recurring":
         retval = (
           <React.Fragment>
-            <Divider
-              className={styles["timeline-recurring-row"]}
-              horizontal
-              inverted
-            >
+            <Divider className={styles["row-recurring"]} horizontal inverted>
               {title} - {startDate.toDateString()}{" "}
               {startDate.toLocaleString("en-US", {
                 hour: "numeric",
                 hour12: true
               })}
             </Divider>
-            <div className={styles["timeline-recurring-splitter"]} />
+            <div className={styles["row-recurring-splitter"]} />
           </React.Fragment>
         );
         break;
@@ -241,18 +236,7 @@ class Row extends React.PureComponent {
             )}
             {mouseInside ? (
               <div className={styles["row-actions"]}>
-                {expanded ? (
-                  <Responsive
-                    as={Icon}
-                    className={styles["row-close"]}
-                    id="close_row"
-                    inverted
-                    minWidth={Responsive.onlyTablet.minWidth}
-                    name="close"
-                    onClick={this.toggleShowRow}
-                    title={`Close ${title}`}
-                  />
-                ) : admins.includes(user.uid) ? (
+                {admins.includes(user.uid) ? (
                   <Responsive
                     as={Icon}
                     className={styles["row-edit"]}
@@ -277,7 +261,7 @@ class Row extends React.PureComponent {
     return (
       <React.Fragment>
         {showEventModal ? (
-          <CreateEvent
+          <EventModal
             event={{ ...this.props.event }}
             onClose={() => {
               this.setState({ expanded: false, showEventModal: false });
@@ -293,11 +277,11 @@ class Row extends React.PureComponent {
   }
 }
 
-Row.propTypes = {
+TimelineRow.propTypes = {
   admins: PropTypes.array.isRequired,
   event: PropTypes.object.isRequired,
   insertEvent: PropTypes.func.isRequired,
   user: PropTypes.object
 };
 
-export default Row;
+export default TimelineRow;

@@ -11,7 +11,7 @@ import {
 import { Link } from "react-router-dom";
 
 import styles from "./Header.module.css";
-import { CreateEvent } from "../Modals";
+import { EventModal } from "../EventModal";
 import MobileSidebar from "../MobileSidebar";
 
 class Header extends React.PureComponent {
@@ -48,8 +48,10 @@ class Header extends React.PureComponent {
               as={Link}
               className={
                 tab === "/"
-                  ? `${styles["header-tab"]} ${styles["header-tab-active"]}`
-                  : styles["header-tab"]
+                  ? `${styles["header-tab"]} ${styles["header-tab-event"]} ${
+                      styles["header-tab-active"]
+                    }`
+                  : `${styles["header-tab"]} ${styles["header-tab-event"]}`
               }
               name="events"
               onClick={() => this.setState({ tab: "/" })}
@@ -141,7 +143,7 @@ class Header extends React.PureComponent {
           visible={showSidebar}
         />
         {showEventModal ? (
-          <CreateEvent
+          <EventModal
             onClose={() => {
               this.setState({ showEventModal: false });
             }}

@@ -17,9 +17,8 @@
 }
 
 .mobile-sidebar-app span {
-  font-size: 24px !important;
-  -webkit-font-smoothing: none !important;
-  font-family: "pokemon-font", monospace !important;
+  font-size: 1.3em !important;
+  font-family: "Press Start 2P", cursive;
   left: 0 !important;
   position: absolute !important;
   top: 50% !important;

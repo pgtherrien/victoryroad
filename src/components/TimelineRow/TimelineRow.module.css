@@ -1,0 +1,170 @@
+/* Content CSS */
+.content {
+  background: #282b33 !important;
+  margin: 0 0 40px 0 !important;
+  padding: 0 20% 0 20% !important;
+  width: 100% !important;
+}
+
+.content-actions-wrapper {
+  display: flex;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+.content-divider {
+  margin-top: 40px !important;
+}
+
+.content-link {
+  margin-left: 20px !important;
+}
+
+.content-sprite:hover {
+  display: block !important;
+  cursor: pointer !important;
+}
+
+.content-sprite-single img {
+  margin: 0 auto !important;
+}
+
+.content-summary {
+  display: block !important;
+  text-align: center !important;
+}
+
+.content-table-text {
+  text-align: left !important;
+}
+
+.content-table-text-reward {
+  font-style: italic !important;
+  text-align: left !important;
+}
+
+/* Row CSS */
+.row {
+  background: #282b33;
+  cursor: pointer;
+  margin-top: 30px !important;
+}
+
+.row-actions {
+  left: 20px;
+  position: absolute;
+  top: 20px;
+}
+
+.row-close {
+  height: 20px !important;
+  margin-right: 10px !important;
+}
+
+.row-close:hover {
+  border-bottom: #2de1c2 solid 3px !important;
+  cursor: pointer;
+}
+
+.row-countdown {
+  font-size: 1.5em;
+  opacity: 0.5;
+  text-align: right !important;
+}
+
+.row-countdown-mobile {
+  font-size: 1em;
+  opacity: 0.5;
+  position: absolute !important;
+  text-align: right !important;
+  top: 0 !important;
+}
+
+.row-edit:hover {
+  border-bottom: #2de1c2 solid 3px !important;
+  cursor: pointer;
+  height: 20px !important;
+}
+
+.row-edit i {
+  margin-right: 0 !important;
+}
+
+.row-expanded {
+  background: #282b33;
+  margin-top: 30px !important;
+}
+
+.row-image {
+  margin: 0 auto;
+  max-height: 140px;
+  max-width: 140px;
+}
+
+.row-label {
+  z-index: 1;
+}
+
+.row-mobile {
+  background: #282b33;
+  cursor: pointer;
+  margin-top: 30px !important;
+  padding-bottom: 20px !important;
+}
+
+.row-range {
+  color: white !important;
+}
+
+.row-range-mobile {
+  color: white !important;
+  margin-top: 15px !important;
+}
+
+.row-title {
+  background: #282b33 !important;
+  margin-top: 60px !important;
+  padding: 0 0 0 0 !important;
+}
+
+.row-title-mobile {
+  background: #282b33 !important;
+  padding: 0 0 0 0 !important;
+}
+
+.row-view-segment {
+  background: #282b33 !important;
+  height: 40px !important;
+  padding: 0 0 0 0 !important;
+}
+
+.row-view-divider {
+  bottom: 0;
+  color: white !important;
+  font-size: 0.8em !important;
+  padding: 0 30% 0 30% !important;
+  position: absolute;
+  text-align: center !important;
+  text-decoration: underline;
+  width: 100% !important;
+}
+
+.row-recurring {
+  margin: 30px 0 0 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+
+.row-recurring:before {
+  position: static !important;
+  top: auto !important;
+}
+
+.row-recurring:after {
+  position: static !important;
+  top: auto !important;
+}
+
+.row-recurring-splitter {
+  width: 100% !important;
+}
