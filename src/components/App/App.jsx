@@ -1,7 +1,7 @@
 import React from "react";
-import "semantic-ui-css/semantic.min.css";
-import { BrowserRouter as Router, Route } from "react-router-dom";
 import firebase from "firebase";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import "semantic-ui-css/semantic.min.css";
 
 import { auth, db } from "../../firebase";
 import Checklist from "../Checklist";
@@ -108,6 +108,8 @@ class App extends React.PureComponent {
   // Sign the user out of the GAPI client and Firebase
   authSignOut = () => {
     const auth2 = gapi.auth2.getAuthInstance();
+    localStorage.removeItem("user");
+
     if (!auth2.isSignedIn.get()) {
       alert("User is not signed in!");
       return;

@@ -4,7 +4,7 @@ import { Dimmer, Grid, Loader } from "semantic-ui-react";
 
 import { db } from "../../firebase";
 import styles from "./Timeline.module.css";
-import TimelineRow from "../TimelineRow";
+import Row from "../Row";
 
 class Timeline extends React.PureComponent {
   constructor(props) {
@@ -65,7 +65,7 @@ class Timeline extends React.PureComponent {
     if (current.length > 0 || upcoming.length > 0) {
       current.forEach(function(event) {
         renderedEvents.push(
-          <TimelineRow
+          <Row
             admins={admins}
             key={i}
             event={{ ...event }}
@@ -77,7 +77,7 @@ class Timeline extends React.PureComponent {
       });
       upcoming.forEach(function(event) {
         renderedEvents.push(
-          <TimelineRow
+          <Row
             admins={admins}
             key={i}
             event={{ ...event }}

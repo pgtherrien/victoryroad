@@ -1,3 +1,3 @@
 import EventModal from "./EventModal.jsx";
 
-export { EventModal };
+export default EventModal;

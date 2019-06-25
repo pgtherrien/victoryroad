@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import {
   Container,
   Dropdown,
@@ -8,10 +9,9 @@ import {
   Menu,
   Responsive
 } from "semantic-ui-react";
-import { Link } from "react-router-dom";
 
 import styles from "./Header.module.css";
-import { EventModal } from "../EventModal";
+import EventModal from "../EventModal";
 import MobileSidebar from "../MobileSidebar";
 
 class Header extends React.PureComponent {
@@ -19,14 +19,14 @@ class Header extends React.PureComponent {
     super(props);
     this.state = {
       showEventModal: false,
-      showSidebar: false,
+      showMobileSidebar: false,
       tab: window.location.pathname
     };
   }
 
   render() {
     const { actions, admins, user } = this.props;
-    const { showEventModal, showSidebar, tab } = this.state;
+    const { showEventModal, showMobileSidebar, tab } = this.state;
 
     return (
       <React.Fragment>
@@ -35,13 +35,13 @@ class Header extends React.PureComponent {
             as={Menu.Item}
             className={styles["header-tab"]}
             maxWidth={Responsive.onlyMobile.maxWidth}
-            onClick={() => this.setState({ showSidebar: true })}
+            onClick={() => this.setState({ showMobileSidebar: true })}
           >
             <Icon inverted name="bars" />
           </Responsive>
           <Responsive
             as={Container}
-            className={styles["header-tabs-wrapper"]}
+            className={styles["header-tabs"]}
             minWidth={Responsive.onlyTablet.minWidth}
           >
             <Menu.Item
@@ -57,7 +57,7 @@ class Header extends React.PureComponent {
               onClick={() => this.setState({ tab: "/" })}
               to=""
             >
-              <span>Events</span>
+              <span className={styles["header-font"]}>Events</span>
             </Menu.Item>
             <Menu.Item
               as={Link}
@@ -70,7 +70,7 @@ class Header extends React.PureComponent {
               onClick={() => this.setState({ tab: "/checklist" })}
               to="checklist"
             >
-              <span>Checklists</span>
+              <span className={styles["header-font"]}>Checklists</span>
             </Menu.Item>
             <Menu.Item
               as={Link}
@@ -83,11 +83,11 @@ class Header extends React.PureComponent {
               onClick={() => this.setState({ tab: "/pokebox" })}
               to="pokebox"
             >
-              <span>Pokébox</span>
+              <span className={styles["header-font"]}>Pokébox</span>
             </Menu.Item>
             {user ? (
               <Dropdown
-                className={styles["header-profile"]}
+                className={styles["header-tab-profile"]}
                 direction="left"
                 icon={null}
                 item
@@ -102,7 +102,9 @@ class Header extends React.PureComponent {
                   />
                 }
               >
-                <Dropdown.Menu className={styles["header-dropdown"]}>
+                <Dropdown.Menu
+                  className={styles["header-tab-profile-dropdown"]}
+                >
                   {admins.includes(user.uid) ? (
                     <Dropdown.Item
                       onClick={() => this.setState({ showEventModal: true })}
@@ -121,10 +123,12 @@ class Header extends React.PureComponent {
               </Dropdown>
             ) : (
               <Menu.Item
-                className={styles["header-profile"]}
+                className={`${styles["header-tab-profile"]} ${
+                  styles["header-tab-sign-in"]
+                }`}
                 onClick={actions.signIn}
               >
-                <span className={styles["header-center"]}>Sign In</span>
+                <span className={styles["header-font"]}>Sign In</span>
               </Menu.Item>
             )}
           </Responsive>
@@ -134,13 +138,13 @@ class Header extends React.PureComponent {
           as={MobileSidebar}
           admins={admins}
           maxWidth={Responsive.onlyMobile.maxWidth}
-          onHide={() => this.setState({ showSidebar: false })}
+          onHide={() => this.setState({ showMobileSidebar: false })}
           tab={window.location.pathname}
           toggleEventModal={() =>
             this.setState({ showEventModal: !showEventModal })
           }
           user={user}
-          visible={showSidebar}
+          visible={showMobileSidebar}
         />
         {showEventModal ? (
           <EventModal

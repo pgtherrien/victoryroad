@@ -11,12 +11,12 @@ import {
   Segment
 } from "semantic-ui-react";
 
-import styles from "./TimelineRow.module.css";
+import styles from "./Row.module.css";
 import Countdown from "./Countdown";
-import Content from "./Content";
-import { EventModal } from "../EventModal";
+import Event from "../Event";
+import EventModal from "../EventModal";
 
-class TimelineRow extends React.PureComponent {
+class Row extends React.PureComponent {
   constructor(props) {
     super(props);
 
@@ -84,13 +84,14 @@ class TimelineRow extends React.PureComponent {
     }
   };
 
-  toggleShowRow = e => {
+  toggleExpand = e => {
     const { expanded } = this.state;
 
     if (
       !expanded ||
       (e.target.id !== "content-action-button" &&
-        e.target.id !== "content-sprite")
+        e.target.id !== "content-sprite" &&
+        e.target.id !== "event-action-button")
     ) {
       this.setState({ expanded: !expanded });
     }
@@ -134,14 +135,12 @@ class TimelineRow extends React.PureComponent {
                   : styles["row"]
                 : styles["row-mobile"]
             }
-            onClick={this.toggleShowRow}
+            onClick={this.toggleExpand}
             onMouseEnter={() => this.setState({ mouseInside: true })}
             onMouseLeave={() => this.setState({ mouseInside: false })}
           >
-            <Grid.Column width={2}>
+            <Grid.Column width={4}>
               {this.buildLabel(startDate, endDate)}
-            </Grid.Column>
-            <Grid.Column width={2}>
               <Image className={styles["row-image"]} src={eventImage} />
             </Grid.Column>
             <Grid.Column width={8}>
@@ -173,19 +172,7 @@ class TimelineRow extends React.PureComponent {
                 inverted
                 minWidth={Responsive.onlyTablet.minWidth}
                 textAlign="center"
-              >
-                {mouseInside && !expanded ? (
-                  <Divider
-                    className={styles["row-view-divider"]}
-                    horizontal
-                    inverted
-                  >
-                    View More
-                  </Divider>
-                ) : (
-                  <React.Fragment />
-                )}
-              </Responsive>
+              />
             </Grid.Column>
             {new Date() > startDate ? (
               <React.Fragment>
@@ -234,26 +221,20 @@ class TimelineRow extends React.PureComponent {
                 </Responsive>
               </React.Fragment>
             )}
-            {mouseInside ? (
-              <div className={styles["row-actions"]}>
-                {admins.includes(user.uid) ? (
-                  <Responsive
-                    as={Icon}
-                    className={styles["row-edit"]}
-                    inverted
-                    minWidth={Responsive.onlyTablet.minWidth}
-                    name="cogs"
-                    onClick={() => this.setState({ showEventModal: true })}
-                    title={`Edit ${title}`}
-                  />
-                ) : (
-                  <React.Fragment />
-                )}
-              </div>
+            {mouseInside && admins.includes(user.uid) ? (
+              <Responsive
+                as={Icon}
+                className={styles["row-edit"]}
+                inverted
+                minWidth={Responsive.onlyTablet.minWidth}
+                name="cogs"
+                onClick={() => this.setState({ showEventModal: true })}
+                title={`Edit ${title}`}
+              />
             ) : (
               <React.Fragment />
             )}
-            {expanded ? <Content {...this.props} /> : <React.Fragment />}
+            {expanded ? <Event {...this.props} /> : <React.Fragment />}
           </Grid.Row>
         );
         break;
@@ -277,11 +258,11 @@ class TimelineRow extends React.PureComponent {
   }
 }
 
-TimelineRow.propTypes = {
+Row.propTypes = {
   admins: PropTypes.array.isRequired,
   event: PropTypes.object.isRequired,
   insertEvent: PropTypes.func.isRequired,
   user: PropTypes.object
 };
 
-export default TimelineRow;
+export default Row;

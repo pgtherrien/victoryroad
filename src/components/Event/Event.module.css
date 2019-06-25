@@ -1,0 +1,54 @@
+.event {
+  background: #282b33 !important;
+  margin: 0 0 40px 0 !important;
+  padding: 0 20% 0 20% !important;
+  width: 100% !important;
+}
+
+.event-actions-wrapper {
+  display: flex;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+#event-action-button {
+  min-width: 73px !important;
+}
+
+.event-action-button-poke {
+  height: 16px !important;
+  margin: 0 10px 3px 0 !important;
+  width: 16px !important;
+}
+
+.event-divider {
+  margin-top: 40px !important;
+}
+
+.event-link {
+  margin-left: 20px !important;
+}
+
+.event-summary {
+  display: block !important;
+  text-align: center !important;
+}
+
+.event-table-text {
+  text-align: left !important;
+}
+
+.event-table-text-reward {
+  font-style: italic !important;
+  text-align: left !important;
+}
+
+/* MetaShinies CSS */
+.meta-shinies-sprite:hover {
+  display: block !important;
+  cursor: pointer !important;
+}
+
+.meta-shinies-sprite-single img {
+  margin: 0 auto !important;
+}
