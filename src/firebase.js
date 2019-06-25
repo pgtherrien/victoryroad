@@ -36,8 +36,7 @@ const mockFirebase = new MockFirebaseSdk(
   }
 );
 
-// const production = process.env.NODE_ENV === "production";
-const production = true;
+const production = process.env.NODE_ENV === "production";
 
 if (production) {
   firebase.initializeApp(firebaseConfig);
