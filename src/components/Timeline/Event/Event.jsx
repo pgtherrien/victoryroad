@@ -1,6 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Button, Divider, Icon, Image, Segment } from "semantic-ui-react";
+import {
+  Button,
+  Divider,
+  Icon,
+  Image,
+  Responsive,
+  Segment
+} from "semantic-ui-react";
 
 import styles from "./Event.module.css";
 import MetaBonuses from "./MetaBonuses";
@@ -44,57 +51,55 @@ class Event extends React.PureComponent {
 
     return (
       <Segment className={styles["event"]} inverted>
-        {summary ? (
+        {summary && (
           <React.Fragment>
             <Divider className={styles["event-divider"]} horizontal inverted>
               Summary
             </Divider>
             <span className={styles["event-summary"]}>{summary}</span>
           </React.Fragment>
-        ) : (
-          <React.Fragment />
         )}
-        {newShinies ? (
-          <MetaShiny newShinies={newShinies} />
-        ) : (
-          <React.Fragment />
-        )}
-        {bonuses ? (
-          <MetaBonuses bonuses={JSON.parse(bonuses)} />
-        ) : (
-          <React.Fragment />
-        )}
-        {features ? (
-          <MetaFeatures features={JSON.parse(features)} />
-        ) : (
-          <React.Fragment />
-        )}
-        {challenges ? (
-          <MetaChallenges challenges={JSON.parse(challenges)} />
-        ) : (
-          <React.Fragment />
-        )}
+        {newShinies && <MetaShiny newShinies={newShinies} />}
+        {bonuses && <MetaBonuses bonuses={JSON.parse(bonuses)} />}
+        {features && <MetaFeatures features={JSON.parse(features)} />}
+        {challenges && <MetaChallenges challenges={JSON.parse(challenges)} />}
         <div className={styles["event-actions-wrapper"]}>
-          {new Date() < startDate && user.uid ? (
-            submitted === "success" ? (
-              <Button color="green" icon id="event-action-button" inverted>
+          {new Date() < startDate &&
+            user.uid &&
+            (submitted === "success" ? (
+              <Button
+                className={styles["event-action-button"]}
+                color="green"
+                icon
+                id="event-action-button"
+                inverted
+              >
                 <Icon name="calendar check outline" /> Added the Event!
               </Button>
             ) : (
               <Button
+                className={styles["event-action-button"]}
                 color="teal"
                 icon
                 id="event-action-button"
                 onClick={this.addToCalendar}
               >
-                <Icon name="calendar plus" /> Add to Google Calendar
+                <Icon name="calendar plus" title="Add to Google Calendar" />
+                <span
+                  className={
+                    window.innerWidth < Responsive.onlyComputer.minWidth &&
+                    styles["event-hide"]
+                  }
+                >
+                  {" "}
+                  Add to Google Calendar
+                </span>
               </Button>
-            )
-          ) : (
-            <React.Fragment />
-          )}
+            ))}
           <Button
-            className={styles["event-link"]}
+            className={`${styles["event-link"]} ${
+              styles["event-action-button"]
+            }`}
             color="blue"
             id="event-action-button"
             onClick={() => window.open(link)}
@@ -103,8 +108,17 @@ class Event extends React.PureComponent {
               avatar
               className={styles["event-action-button-poke"]}
               src="images/misc/pokeball_white.png"
+              title="Pokémon Go Live Post"
             />
-            Pokémon Go Live Post
+            <span
+              className={
+                window.innerWidth < Responsive.onlyComputer.minWidth &&
+                styles["event-hide"]
+              }
+            >
+              {" "}
+              Pokémon Go Live Post
+            </span>
           </Button>
         </div>
       </Segment>

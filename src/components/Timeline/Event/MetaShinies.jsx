@@ -63,6 +63,7 @@ class MetaShiny extends React.PureComponent {
         src = shiny.split("_shiny")[0];
         src += ".png";
       }
+
       columns.push(
         <Grid.Column
           className={

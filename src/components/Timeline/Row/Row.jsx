@@ -12,9 +12,9 @@ import {
 } from "semantic-ui-react";
 
 import styles from "./Row.module.css";
-import Countdown from "./Countdown";
+import Countdown from "../Countdown";
 import Event from "../Event";
-import EventModal from "../EventModal";
+import EventModal from "../../EventModal";
 
 class Row extends React.PureComponent {
   constructor(props) {
@@ -221,7 +221,7 @@ class Row extends React.PureComponent {
                 </Responsive>
               </React.Fragment>
             )}
-            {mouseInside && admins.includes(user.uid) ? (
+            {mouseInside && admins.includes(user.uid) && (
               <Responsive
                 as={Icon}
                 className={styles["row-edit"]}
@@ -231,17 +231,15 @@ class Row extends React.PureComponent {
                 onClick={() => this.setState({ showEventModal: true })}
                 title={`Edit ${title}`}
               />
-            ) : (
-              <React.Fragment />
             )}
-            {expanded ? <Event {...this.props} /> : <React.Fragment />}
+            {expanded && <Event {...this.props} />}
           </Grid.Row>
         );
         break;
     }
     return (
       <React.Fragment>
-        {showEventModal ? (
+        {showEventModal && (
           <EventModal
             event={{ ...this.props.event }}
             onClose={() => {
@@ -249,8 +247,6 @@ class Row extends React.PureComponent {
             }}
             user={user}
           />
-        ) : (
-          <React.Fragment />
         )}
         {retval}
       </React.Fragment>

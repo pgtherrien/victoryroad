@@ -12,7 +12,7 @@ import {
 
 import styles from "./Header.module.css";
 import EventModal from "../EventModal";
-import MobileSidebar from "../MobileSidebar";
+import MobileSidebar from "./MobileSidebar";
 
 class Header extends React.PureComponent {
   constructor(props) {
@@ -105,15 +105,13 @@ class Header extends React.PureComponent {
                 <Dropdown.Menu
                   className={styles["header-tab-profile-dropdown"]}
                 >
-                  {admins.includes(user.uid) ? (
+                  {admins.includes(user.uid) && (
                     <Dropdown.Item
                       onClick={() => this.setState({ showEventModal: true })}
                     >
                       <Icon name="calendar plus" />
                       <span className="text">Create Event</span>
                     </Dropdown.Item>
-                  ) : (
-                    <React.Fragment />
                   )}
                   <Dropdown.Item onClick={actions.signOut}>
                     <Icon name="sign out" />
@@ -146,15 +144,13 @@ class Header extends React.PureComponent {
           user={user}
           visible={showMobileSidebar}
         />
-        {showEventModal ? (
+        {showEventModal && (
           <EventModal
             onClose={() => {
               this.setState({ showEventModal: false });
             }}
             user={user}
           />
-        ) : (
-          <React.Fragment />
         )}
       </React.Fragment>
     );

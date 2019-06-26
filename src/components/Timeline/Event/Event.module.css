@@ -11,18 +11,23 @@
   justify-content: center;
 }
 
-#event-action-button {
-  min-width: 73px !important;
+.event-action-button {
+  padding: 11px !important;
 }
 
 .event-action-button-poke {
   height: 16px !important;
-  margin: 0 10px 3px 0 !important;
+  margin-bottom: 3px !important;
+  margin-right: 0px !important;
   width: 16px !important;
 }
 
 .event-divider {
   margin-top: 40px !important;
+}
+
+.event-hide {
+  display: none !important;
 }
 
 .event-link {
@@ -44,6 +49,10 @@
 }
 
 /* MetaShinies CSS */
+.meta-shinies-shiny {
+  position: absolute !important;
+}
+
 .meta-shinies-sprite:hover {
   display: block !important;
   cursor: pointer !important;

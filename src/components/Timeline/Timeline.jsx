@@ -4,7 +4,7 @@ import { Dimmer, Grid, Loader } from "semantic-ui-react";
 
 import { db } from "../../firebase";
 import styles from "./Timeline.module.css";
-import Row from "../Row";
+import Row from "./Row";
 
 class Timeline extends React.PureComponent {
   constructor(props) {
