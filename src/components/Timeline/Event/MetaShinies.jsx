@@ -45,7 +45,7 @@ class MetaShiny extends React.PureComponent {
 
   render() {
     const { toggled } = this.state;
-    let newShinies = JSON.parse(this.props.newShinies);
+    let newShinies = this.props.newShinies;
     let columnCount = this.getColumnCount(newShinies.length);
     let columns = [];
     let label = "New Shinies Released";

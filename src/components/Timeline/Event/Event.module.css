@@ -48,6 +48,24 @@
   text-align: left !important;
 }
 
+/* FieldResearch CSS */
+.field-image {
+  height: 100px !important;
+  margin-right: 0px !important;
+  width: 100px !important;
+}
+
+.field-image-shiny {
+  height: 20px !important;
+  position: absolute !important;
+  width: 20px !important;
+}
+
+.field-reward {
+  display: inline-block !important;
+  margin: 0 auto !important;
+}
+
 /* MetaShinies CSS */
 .meta-shinies-shiny {
   position: absolute !important;

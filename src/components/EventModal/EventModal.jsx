@@ -40,6 +40,8 @@ class EventModal extends React.PureComponent {
     const { id } = form;
     delete form.id;
 
+    form.fieldResearch = JSON.parse(form.fieldResearch);
+
     db.collection("events")
       .doc(id || form.title)
       .set({
@@ -83,6 +85,10 @@ class EventModal extends React.PureComponent {
   };
 
   renderTextArea = (label, name, placeholder, value) => {
+    if (typeof value === "object") {
+      value = JSON.stringify(value);
+    }
+
     return (
       <Form.TextArea
         label={label}
@@ -102,6 +108,7 @@ class EventModal extends React.PureComponent {
       eventImage,
       eventType,
       features,
+      fieldResearch,
       link,
       newShinies,
       startDate,
@@ -176,8 +183,8 @@ class EventModal extends React.PureComponent {
             {this.renderInput(
               "New Shinies",
               "newShinies",
-              "[001, 002, 003]",
-              newShinies || ""
+              "New Shinies...",
+              newShinies || "[]"
             )}
             {this.renderTextArea(
               "Bonuses",
@@ -190,6 +197,12 @@ class EventModal extends React.PureComponent {
               "features",
               "Features...",
               features || ""
+            )}
+            {this.renderTextArea(
+              "Field Research",
+              "fieldResearch",
+              "Field Research...",
+              fieldResearch || ""
             )}
             {this.renderTextArea(
               "Challenges",

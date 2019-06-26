@@ -13,6 +13,7 @@ import styles from "./Event.module.css";
 import MetaBonuses from "./MetaBonuses";
 import MetaChallenges from "./MetaChallenges";
 import MetaFeatures from "./MetaFeatures";
+import MetaFieldResearch from "./MetaFieldResearch";
 import MetaShiny from "./MetaShinies";
 
 class Event extends React.PureComponent {
@@ -41,6 +42,7 @@ class Event extends React.PureComponent {
       bonuses,
       challenges,
       features,
+      fieldResearch,
       link,
       newShinies,
       startDate,
@@ -59,9 +61,14 @@ class Event extends React.PureComponent {
             <span className={styles["event-summary"]}>{summary}</span>
           </React.Fragment>
         )}
-        {newShinies && <MetaShiny newShinies={newShinies} />}
+        {newShinies && newShinies.length > 0 && (
+          <MetaShiny newShinies={newShinies} />
+        )}
         {bonuses && <MetaBonuses bonuses={JSON.parse(bonuses)} />}
         {features && <MetaFeatures features={JSON.parse(features)} />}
+        {fieldResearch && fieldResearch.length > 0 && (
+          <MetaFieldResearch fieldResearch={fieldResearch} />
+        )}
         {challenges && <MetaChallenges challenges={JSON.parse(challenges)} />}
         <div className={styles["event-actions-wrapper"]}>
           {new Date() < startDate &&
@@ -87,8 +94,9 @@ class Event extends React.PureComponent {
                 <Icon name="calendar plus" title="Add to Google Calendar" />
                 <span
                   className={
-                    window.innerWidth < Responsive.onlyComputer.minWidth &&
-                    styles["event-hide"]
+                    window.innerWidth < Responsive.onlyComputer.minWidth
+                      ? styles["event-hide"]
+                      : ""
                   }
                 >
                   {" "}
@@ -112,11 +120,11 @@ class Event extends React.PureComponent {
             />
             <span
               className={
-                window.innerWidth < Responsive.onlyComputer.minWidth &&
-                styles["event-hide"]
+                window.innerWidth < Responsive.onlyComputer.minWidth
+                  ? styles["event-hide"]
+                  : ""
               }
             >
-              {" "}
               Pokémon Go Live Post
             </span>
           </Button>
