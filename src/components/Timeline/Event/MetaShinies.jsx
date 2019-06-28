@@ -58,9 +58,9 @@ class MetaShiny extends React.PureComponent {
     }
 
     newShinies.forEach(function(shiny) {
-      src = shiny;
-      if (toggled.includes(shiny)) {
-        src = shiny.split("_shiny")[0];
+      src = shiny.image;
+      if (toggled.includes(src)) {
+        src = src.split("_shiny")[0];
         src += ".png";
       }
 
@@ -74,7 +74,7 @@ class MetaShiny extends React.PureComponent {
           <Image
             className={styles["meta-shinies-sprite"]}
             id="content-sprite"
-            onClick={() => oThis.toggleSprite(shiny)}
+            onClick={() => oThis.toggleSprite(shiny.image)}
             src={src}
             title="Click to toggle shiny & normal forms"
           />

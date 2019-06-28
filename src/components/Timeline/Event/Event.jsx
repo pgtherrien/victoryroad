@@ -64,12 +64,12 @@ class Event extends React.PureComponent {
         {newShinies && newShinies.length > 0 && (
           <MetaShiny newShinies={newShinies} />
         )}
-        {bonuses && <MetaBonuses bonuses={JSON.parse(bonuses)} />}
-        {features && <MetaFeatures features={JSON.parse(features)} />}
+        {bonuses && <MetaBonuses bonuses={bonuses} />}
+        {features && <MetaFeatures features={features} />}
         {fieldResearch && fieldResearch.length > 0 && (
           <MetaFieldResearch fieldResearch={fieldResearch} />
         )}
-        {challenges && <MetaChallenges challenges={JSON.parse(challenges)} />}
+        {challenges && <MetaChallenges challenges={challenges} />}
         <div className={styles["event-actions-wrapper"]}>
           {new Date() < startDate &&
             user.uid &&

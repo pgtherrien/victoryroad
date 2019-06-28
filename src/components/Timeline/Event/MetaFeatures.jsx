@@ -13,9 +13,6 @@ class MetaFeatures extends React.PureComponent {
     Object.keys(features).forEach(function(index) {
       rows.push(
         <Table.Row key={i}>
-          <Table.Cell textAlign="center">
-            <Image avatar src={index} />
-          </Table.Cell>
           <Table.Cell
             className={
               window.innerWidth > Responsive.onlyTablet.minWidth
@@ -24,7 +21,7 @@ class MetaFeatures extends React.PureComponent {
             }
             textAlign="center"
           >
-            {features[index]}
+            {features[index].feature}
           </Table.Cell>
         </Table.Row>
       );

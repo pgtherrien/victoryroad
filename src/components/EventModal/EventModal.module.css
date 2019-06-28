@@ -1,3 +1,19 @@
+/* MetaBlock CSS */
+.meta-block {
+  padding: 40px 40px 0 40px;
+}
+
+.meta-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 30px 0;
+}
+
+.meta-buttons-add {
+  margin-right: 20px !important;
+}
+
+/* EventModal CSS */
 .modal-actions {
   display: flex;
   justify-content: center;
