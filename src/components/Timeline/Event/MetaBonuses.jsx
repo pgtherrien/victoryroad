@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Divider, Image, Responsive, Table } from "semantic-ui-react";
+import { Divider, Image, Table } from "semantic-ui-react";
 
 import styles from "./Event.module.css";
 
@@ -15,15 +15,6 @@ class MetaBonuses extends React.PureComponent {
         <Table.Row key={i}>
           <Table.Cell textAlign="center">
             <Image avatar src={bonus.image} />
-          </Table.Cell>
-          <Table.Cell
-            className={
-              window.innerWidth > Responsive.onlyTablet.minWidth
-                ? styles["event-table-text"]
-                : ""
-            }
-            textAlign="center"
-          >
             {bonus.text}
           </Table.Cell>
         </Table.Row>
@@ -33,10 +24,23 @@ class MetaBonuses extends React.PureComponent {
 
     return (
       <React.Fragment>
-        <Divider className={styles["event-divider"]} horizontal inverted>
+        <Divider
+          className={`${styles["event-center"]}
+          ${styles["meta-bonuses-divider"]}`}
+          horizontal
+          inverted
+        >
           Bonuses
         </Divider>
-        <Table basic="very" celled inverted size="large" stackable>
+        <Table
+          basic="very"
+          celled
+          className={styles["event-center"]}
+          collapsing
+          inverted
+          size="large"
+          stackable
+        >
           <Table.Body>{rows}</Table.Body>
         </Table>
       </React.Fragment>

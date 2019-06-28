@@ -1,0 +1,112 @@
+.event {
+  background: #282b33 !important;
+  margin: 0 0 40px 0 !important;
+  padding: 0 30% 0 30% !important;
+  width: 100% !important;
+}
+
+.event-mobile {
+  background: #282b33 !important;
+  margin: 0 0 40px 0 !important;
+  padding: 0 10% 0 10% !important;
+  width: 100% !important;
+}
+
+.event-action-button {
+  padding: 11px !important;
+}
+
+.event-action-button-calendar {
+  margin-right: 20px !important;
+}
+
+.event-action-button-poke {
+  height: 16px !important;
+  margin: 0 0 3px 0 !important;
+  width: 16px !important;
+}
+
+.event-action-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.event-center {
+  margin: 0 auto !important;
+}
+
+.event-font {
+  font-size: 1.2em !important;
+}
+
+.event-hide {
+  display: none !important;
+}
+
+.event-margin-top {
+  margin: 40px 0 20px 0 !important;
+}
+
+.event-summary {
+  display: block !important;
+  font-size: 1.2em !important;
+  text-align: center !important;
+}
+
+.event-table-text {
+  text-align: left !important;
+}
+
+.event-table-text-reward {
+  font-style: italic !important;
+  text-align: left !important;
+}
+
+/* MetaBonuses CSS */
+.meta-bonuses-divider {
+  margin: 40px 20% 20px 20% !important;
+}
+
+/* MetaCounters CSS */
+.meta-counters-poke-moves {
+  text-align: center !important;
+}
+
+.meta-counters-title {
+  margin-top: 30px !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+.meta-counters-type {
+  font-size: 1.2em !important;
+  margin: 0 15px 0 15px !important;
+}
+
+/* MetaFieldResearch CSS */
+.meta-field-image {
+  height: 100px !important;
+  margin-right: 0px !important;
+  width: 100px !important;
+}
+
+.meta-field-image-shiny {
+  height: 20px !important;
+  position: absolute !important;
+  width: 20px !important;
+}
+
+.meta-field-reward {
+  display: inline-block !important;
+  margin: 0 auto !important;
+}
+
+/* MetaShinies CSS */
+.meta-shinies-shiny {
+  position: absolute !important;
+}
+
+.meta-shinies-sprite:hover {
+  display: block !important;
+  cursor: pointer !important;
+}

@@ -64,12 +64,12 @@ class MobileSidebar extends React.PureComponent {
             <Icon name="computer" /> Pokébox
           </SemanticHeader>
         </Menu.Item>
-        {user && admins.includes(user.uid) ? (
+        {user && admins.includes(user.uid) && (
           <React.Fragment>
             <Divider horizontal inverted>
               Admin Controls
             </Divider>
-            {tab === "/" ? (
+            {tab === "/" && (
               <Menu.Item
                 onClick={() => {
                   toggleEventModal();
@@ -79,12 +79,8 @@ class MobileSidebar extends React.PureComponent {
                   <Icon name="calendar plus" /> Create Event
                 </SemanticHeader>
               </Menu.Item>
-            ) : (
-              <React.Fragment />
             )}
           </React.Fragment>
-        ) : (
-          <React.Fragment />
         )}
         {user ? (
           showSignout ? (

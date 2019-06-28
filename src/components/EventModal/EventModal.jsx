@@ -3,8 +3,9 @@ import PropTypes from "prop-types";
 import { Divider, Form, Modal } from "semantic-ui-react";
 import { DateTimeInput } from "semantic-ui-calendar-react";
 
-import styles from "./EventModal.module.css";
 import { db } from "../../firebase";
+import InputBlock from "./InputBlock";
+import styles from "./EventModal.module.css";
 
 class EventModal extends React.PureComponent {
   constructor(props) {
@@ -70,32 +71,8 @@ class EventModal extends React.PureComponent {
     );
   };
 
-  renderInput = (label, name, placeholder, value) => {
-    return (
-      <Form.Input
-        label={label}
-        name={name}
-        onChange={this.handleChange}
-        placeholder={placeholder}
-        value={value}
-      />
-    );
-  };
-
-  renderTextArea = (label, name, placeholder, value) => {
-    return (
-      <Form.TextArea
-        label={label}
-        name={name}
-        onChange={this.handleChange}
-        placeholder={placeholder}
-        value={value}
-      />
-    );
-  };
-
   render() {
-    const {
+    let {
       bonuses,
       challenges,
       endDate,
@@ -125,20 +102,35 @@ class EventModal extends React.PureComponent {
         </Modal.Header>
         <Divider className={styles["modal-divider"]} />
         <Modal.Content className={styles["modal-background"]}>
-          <Form inverted onSubmit={this.handleSubmit}>
-            {this.renderInput("Title", "title", "Title...", title || "")}
-            {this.renderTextArea(
-              "Summary",
-              "summary",
-              "Summary...",
-              summary || ""
-            )}
-            {this.renderInput(
-              "Link",
-              "link",
-              "https://pokemongolive.com/en/",
-              link || ""
-            )}
+          <Form inverted>
+            <Form.Input
+              label="Title"
+              name="title"
+              onChange={this.handleChange}
+              placeholder="Title..."
+              value={title || ""}
+            />
+            <Form.TextArea
+              label="Summary"
+              name="summary"
+              onChange={this.handleChange}
+              placeholder="Summary..."
+              value={summary}
+            />
+            <Form.Input
+              label="Link"
+              name="link"
+              onChange={this.handleChange}
+              placeholder="https://pokemongolive.com/en/"
+              value={link || ""}
+            />
+            <Form.Input
+              label="Event Image"
+              name="eventImage"
+              onChange={this.handleChange}
+              placeholder="images/pokemon_icons/pokemon_icon_001_00.png"
+              value={eventImage || ""}
+            />
             <Form.Select
               label="Event Type"
               name="eventType"
@@ -149,12 +141,6 @@ class EventModal extends React.PureComponent {
               ]}
               value={eventType}
             />
-            {this.renderInput(
-              "Event Image",
-              "eventImage",
-              "images/pokemon_icons/pokemon_icon_001_00.png",
-              eventImage || ""
-            )}
             <Divider className={styles["modal-divider"]} horizontal inverted>
               Date Range
             </Divider>
@@ -170,38 +156,80 @@ class EventModal extends React.PureComponent {
               "End Date...",
               endDate ? endDate.toString() : ""
             )}
-            <Divider className={styles["modal-divider"]} horizontal inverted>
-              Metadata
-            </Divider>
-            {this.renderInput(
-              "New Shinies",
-              "newShinies",
-              "[001, 002, 003]",
-              newShinies || ""
-            )}
-            {this.renderTextArea(
-              "Bonuses",
-              "bonuses",
-              "Bonuses...",
-              bonuses || ""
-            )}
-            {this.renderTextArea(
-              "Features",
-              "features",
-              "Features...",
-              features || ""
-            )}
-            {this.renderTextArea(
-              "Challenges",
-              "challenges",
-              "Challenges...",
-              challenges || ""
-            )}
+            <InputBlock
+              data={bonuses || []}
+              handleChange={this.handleChange}
+              fieldLabel="Bonuses"
+              fieldName="bonuses"
+              fields={[
+                {
+                  label: "Bonus",
+                  name: "text",
+                  placeholder: "Bonus earned..."
+                },
+                {
+                  label: "Image",
+                  name: "image",
+                  placeholder: "images/items/lucky_egg.png"
+                }
+              ]}
+            />
+            <InputBlock
+              data={challenges || []}
+              handleChange={this.handleChange}
+              fieldLabel="Challenges"
+              fieldName="challenges"
+              fields={[
+                {
+                  label: "Challenge",
+                  name: "challenge",
+                  placeholder: "Challenge to complete..."
+                },
+                {
+                  label: "Reward",
+                  name: "reward",
+                  placeholder: "Reward earned..."
+                },
+                {
+                  label: "Image",
+                  name: "image",
+                  placeholder: "images/items/lucky_egg.png"
+                }
+              ]}
+            />
+            <InputBlock
+              data={features || []}
+              handleChange={this.handleChange}
+              fieldLabel="Features"
+              fieldName="features"
+              fields={[
+                {
+                  label: "Feature",
+                  name: "feature",
+                  placeholder: "Feature that will be active..."
+                }
+              ]}
+            />
+            <InputBlock
+              data={newShinies || []}
+              handleChange={this.handleChange}
+              fieldLabel="New Shinies"
+              fieldName="newShinies"
+              fields={[
+                {
+                  label: "Image",
+                  name: "image",
+                  placeholder:
+                    "images/pokemon_icons/pokemon_icon_001_00_shiny.png"
+                }
+              ]}
+            />
             <Form.Button
               className={styles["modal-actions"]}
               color="green"
               content="Submit"
               inverted
+              onClick={this.handleSubmit}
             />
           </Form>
         </Modal.Content>
