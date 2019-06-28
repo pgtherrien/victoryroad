@@ -12,6 +12,7 @@ import {
 import styles from "./Event.module.css";
 import MetaBonuses from "./MetaBonuses";
 import MetaChallenges from "./MetaChallenges";
+import MetaCounters from "./MetaCounters";
 import MetaFeatures from "./MetaFeatures";
 import MetaFieldResearch from "./MetaFieldResearch";
 import MetaShiny from "./MetaShinies";
@@ -41,6 +42,7 @@ class Event extends React.PureComponent {
     const {
       bonuses,
       challenges,
+      counters,
       features,
       fieldResearch,
       link,
@@ -52,30 +54,52 @@ class Event extends React.PureComponent {
     const { user } = this.props;
 
     return (
-      <Segment className={styles["event"]} inverted>
+      <Segment
+        className={
+          window.innerWidth > Responsive.onlyComputer.minWidth
+            ? styles["event"]
+            : styles["event-mobile"]
+        }
+        inverted
+      >
         {summary && (
           <React.Fragment>
-            <Divider className={styles["event-divider"]} horizontal inverted>
+            <Divider
+              className={`${styles["event-center"]} ${
+                styles["event-margin-top"]
+              }`}
+              horizontal
+              inverted
+            >
               Summary
-            </Divider>
-            <span className={styles["event-summary"]}>{summary}</span>
+            </Divider>{" "}
+            <div className={styles["event-center"]}>
+              <span className={styles["event-summary"]}>{summary}</span>
+            </div>
           </React.Fragment>
         )}
+        {features && <MetaFeatures features={features} />}
         {newShinies && newShinies.length > 0 && (
           <MetaShiny newShinies={newShinies} />
         )}
         {bonuses && <MetaBonuses bonuses={bonuses} />}
-        {features && <MetaFeatures features={features} />}
         {fieldResearch && fieldResearch.length > 0 && (
           <MetaFieldResearch fieldResearch={fieldResearch} />
         )}
+        {counters && <MetaCounters counters={counters} />}
         {challenges && <MetaChallenges challenges={challenges} />}
-        <div className={styles["event-actions-wrapper"]}>
+        <div
+          className={`${styles["event-action-wrapper"]} ${
+            styles["event-margin-top"]
+          }`}
+        >
           {new Date() < startDate &&
             user.uid &&
             (submitted === "success" ? (
               <Button
-                className={styles["event-action-button"]}
+                className={`${styles["event-action-button-calendar"]} ${
+                  styles["event-action-button"]
+                }`}
                 color="green"
                 icon
                 id="event-action-button"
@@ -85,7 +109,9 @@ class Event extends React.PureComponent {
               </Button>
             ) : (
               <Button
-                className={styles["event-action-button"]}
+                className={`${styles["event-action-button-calendar"]} ${
+                  styles["event-action-button"]
+                }`}
                 color="teal"
                 icon
                 id="event-action-button"
@@ -105,9 +131,7 @@ class Event extends React.PureComponent {
               </Button>
             ))}
           <Button
-            className={`${styles["event-link"]} ${
-              styles["event-action-button"]
-            }`}
+            className={styles["event-action-button"]}
             color="blue"
             id="event-action-button"
             onClick={() => window.open(link)}

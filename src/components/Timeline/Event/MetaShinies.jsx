@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Divider, Grid, Image } from "semantic-ui-react";
+import { Divider, Grid, Image, Responsive } from "semantic-ui-react";
 
 import styles from "./Event.module.css";
 
-class MetaShiny extends React.PureComponent {
+export default class MetaShiny extends React.PureComponent {
   constructor(props) {
     super(props);
 
@@ -30,7 +30,7 @@ class MetaShiny extends React.PureComponent {
   getColumnCount = arrayLength => {
     let columnCount = 1;
 
-    if (arrayLength % 2 === 0) {
+    if (arrayLength === 2) {
       columnCount = 2;
     } else if (arrayLength % 3 === 0) {
       columnCount = 3;
@@ -65,14 +65,13 @@ class MetaShiny extends React.PureComponent {
       }
 
       columns.push(
-        <Grid.Column
-          className={
-            columnCount === 1 ? styles["meta-shinies-sprite-single"] : ""
-          }
-          key={i}
-        >
+        <Grid.Column key={i}>
           <Image
-            className={styles["meta-shinies-sprite"]}
+            className={
+              window.innerWidth > Responsive.onlyComputer.minWidth
+                ? `${styles["event-center"]} ${styles["meta-shinies-sprite"]}`
+                : styles["event-center"]
+            }
             id="content-sprite"
             onClick={() => oThis.toggleSprite(shiny.image)}
             src={src}
@@ -85,7 +84,11 @@ class MetaShiny extends React.PureComponent {
 
     return (
       <React.Fragment>
-        <Divider className={styles["event-divider"]} horizontal inverted>
+        <Divider
+          className={`${styles["event-center"]} ${styles["event-margin-top"]}`}
+          horizontal
+          inverted
+        >
           {label}
         </Divider>
         <Grid stackable columns={columnCount}>
@@ -99,5 +102,3 @@ class MetaShiny extends React.PureComponent {
 MetaShiny.propTypes = {
   newShinies: PropTypes.array.isRequired
 };
-
-export default MetaShiny;

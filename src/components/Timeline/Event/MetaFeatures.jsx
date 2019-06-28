@@ -1,41 +1,32 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Divider, Image, Responsive, Table } from "semantic-ui-react";
+import { Divider, List } from "semantic-ui-react";
 
 import styles from "./Event.module.css";
 
 class MetaFeatures extends React.PureComponent {
   render() {
     const { features } = this.props;
-    let rows = [];
+    let items = [];
     let i = 0;
 
     Object.keys(features).forEach(function(index) {
-      rows.push(
-        <Table.Row key={i}>
-          <Table.Cell
-            className={
-              window.innerWidth > Responsive.onlyTablet.minWidth
-                ? styles["event-table-text"]
-                : ""
-            }
-            textAlign="center"
-          >
-            {features[index].feature}
-          </Table.Cell>
-        </Table.Row>
-      );
+      items.push(<List.Item key={i}>{features[index].feature}</List.Item>);
       i++;
     });
 
     return (
       <React.Fragment>
-        <Divider className={styles["event-divider"]} horizontal inverted>
+        <Divider
+          className={`${styles["event-center"]} ${styles["event-margin-top"]}`}
+          horizontal
+          inverted
+        >
           Features
         </Divider>
-        <Table basic="very" celled inverted size="large" stackable>
-          <Table.Body>{rows}</Table.Body>
-        </Table>
+        <List bulleted inverted size="large">
+          {items}
+        </List>
       </React.Fragment>
     );
   }

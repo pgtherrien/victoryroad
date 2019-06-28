@@ -20,11 +20,11 @@ class MetaChallenges extends React.PureComponent {
                 : ""
             }
           >
-            {challenge.challenge}
+            <span className={styles["event-font"]}>{challenge.challenge}</span>
           </Table.Cell>
           <Table.Cell className={styles["event-table-text-reward"]}>
             <Image avatar src={challenge.image} />
-            {challenge.reward}
+            <span className={styles["event-font"]}>{challenge.reward}</span>
           </Table.Cell>
         </Table.Row>
       );
@@ -33,7 +33,11 @@ class MetaChallenges extends React.PureComponent {
 
     return (
       <React.Fragment>
-        <Divider className={styles["event-divider"]} horizontal inverted>
+        <Divider
+          className={`${styles["event-center"]} ${styles["event-margin-top"]}`}
+          horizontal
+          inverted
+        >
           Challenges
         </Divider>
         <Table basic="very" celled inverted>

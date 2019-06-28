@@ -49,15 +49,15 @@ class MetaFieldResearch extends React.PureComponent {
         }
 
         rewards.push(
-          <div className={styles["field-reward"]} key={i}>
+          <div className={styles["meta-field-reward"]} key={i}>
             {reward.shiny && (
               <Image
-                className={styles["field-image-shiny"]}
+                className={styles["meta-field-image-shiny"]}
                 src="images/misc/shiny_white.png"
               />
             )}
             <Image
-              className={styles["field-image"]}
+              className={styles["meta-field-image"]}
               id="content-sprite"
               onClick={() => oThis.toggleSprite(reward)}
               src={src}
@@ -69,8 +69,12 @@ class MetaFieldResearch extends React.PureComponent {
 
       rows.push(
         <Table.Row key={i}>
-          <Table.Cell textAlign="center">{obj.task}</Table.Cell>
-          <Table.Cell textAlign="center">{rewards}</Table.Cell>
+          <Table.Cell textAlign="center" width="12">
+            <span className={styles["event-font"]}>{obj.task}</span>
+          </Table.Cell>
+          <Table.Cell textAlign="center" width="4">
+            {rewards}
+          </Table.Cell>
         </Table.Row>
       );
       i++;
@@ -78,18 +82,14 @@ class MetaFieldResearch extends React.PureComponent {
 
     return (
       <React.Fragment>
-        <Divider className={styles["event-divider"]} horizontal inverted>
+        <Divider
+          className={`${styles["event-center"]} ${styles["event-margin-top"]}`}
+          horizontal
+          inverted
+        >
           Field Research
         </Divider>
         <Table basic="very" celled inverted>
-          <Table.Header>
-            <Table.Row>
-              <Table.HeaderCell textAlign="center">
-                Research Task
-              </Table.HeaderCell>
-              <Table.HeaderCell textAlign="center">Reward</Table.HeaderCell>
-            </Table.Row>
-          </Table.Header>
           <Table.Body>{rows}</Table.Body>
         </Table>
       </React.Fragment>
