@@ -207,6 +207,11 @@ class EventModal extends React.PureComponent {
                   label: "Feature",
                   name: "feature",
                   placeholder: "Feature that will be active..."
+                },
+                {
+                  label: "Image",
+                  name: "image",
+                  placeholder: "images/misc/stardust.png"
                 }
               ]}
             />

@@ -1,0 +1,73 @@
+.header-sidebar {
+  background: #282b33 !important;
+  position: fixed !important;
+}
+
+.header-sidebar-image {
+  height: 20% !important;
+  padding: 0 !important;
+  position: relative !important;
+  width: 100% !important;
+}
+
+.header-sidebar-image img {
+  height: 100% !important;
+  opacity: 0.5 !important;
+  width: 100% !important;
+}
+
+.header-sidebar-image span {
+  font-family: "Press Start 2P", cursive !important;
+  font-size: 1.3em !important;
+  left: 0 !important;
+  position: absolute !important;
+  text-align: center !important;
+  top: 50% !important;
+  width: 100% !important;
+}
+
+.header-sidebar-profile {
+  bottom: 0;
+  position: absolute !important;
+}
+
+.header-sidebar-profile-pic img {
+  border-radius: 50% !important;
+  margin: 50px auto 30px auto !important;
+  width: 50% !important;
+}
+
+.header-sidebar-tab-active {
+  border-left: #2de1c2 solid 3px !important;
+}
+
+.header-sidebar-tab:hover {
+  border-left: #2de1c2 solid 3px !important;
+}
+
+.header-sidebar-tab span {
+  font-size: 1.5em !important;
+}
+
+.header-sidebar-tab-profile:before {
+  height: 0px !important;
+}
+
+.header-sidebar-tab-profile span {
+  font-size: 1.5em !important;
+}
+
+.header-top {
+  background: #282b33 !important;
+  border-radius: 0;
+}
+
+.header-top i:hover {
+  cursor: pointer;
+}
+
+.header-top-title {
+  font-size: 1.5em !important;
+  margin: 0 0 0 20px !important;
+  vertical-align: middle;
+}

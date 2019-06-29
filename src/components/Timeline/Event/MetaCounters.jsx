@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Divider, Grid, Image, Table } from "semantic-ui-react";
 
 import styles from "./Event.module.css";
+import Sprite from "../../Sprite";
 
 export default class MetaCounters extends React.PureComponent {
   buildCounter = (counter, i) => {
@@ -29,7 +30,7 @@ export default class MetaCounters extends React.PureComponent {
     pokemon.forEach(function(poke) {
       renderedPokes.push(
         <Grid.Column key={i}>
-          <Image src={poke.image} />
+          <Sprite showShiny={true} src={poke.image} />
           <div className={styles["meta-counters-poke-moves"]}>
             <Table basic="very" celled inverted>
               <Table.Body>
