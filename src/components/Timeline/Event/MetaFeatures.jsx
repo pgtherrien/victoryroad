@@ -1,17 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Divider, List } from "semantic-ui-react";
+import { Divider, Image, Table } from "semantic-ui-react";
 
 import styles from "./Event.module.css";
 
 class MetaFeatures extends React.PureComponent {
   render() {
     const { features } = this.props;
-    let items = [];
+    let rows = [];
     let i = 0;
 
     Object.keys(features).forEach(function(index) {
-      items.push(<List.Item key={i}>{features[index].feature}</List.Item>);
+      rows.push(
+        <Table.Row key={i}>
+          <Table.Cell textAlign="center">
+            <Image avatar src={features[index].image} />
+          </Table.Cell>
+          <Table.Cell textAlign="left">{features[index].feature}</Table.Cell>
+        </Table.Row>
+      );
       i++;
     });
 
@@ -24,9 +31,9 @@ class MetaFeatures extends React.PureComponent {
         >
           Features
         </Divider>
-        <List bulleted inverted size="large">
-          {items}
-        </List>
+        <Table basic="very" celled inverted size="large" stackable>
+          <Table.Body>{rows}</Table.Body>
+        </Table>
       </React.Fragment>
     );
   }

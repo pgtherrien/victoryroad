@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import {
   Button,
   Divider,
+  Header,
   Icon,
   Image,
   Responsive,
@@ -47,6 +48,7 @@ class Event extends React.PureComponent {
       fieldResearch,
       link,
       newShinies,
+      perfectIV,
       startDate,
       summary
     } = this.props.event;
@@ -85,6 +87,18 @@ class Event extends React.PureComponent {
         {bonuses && <MetaBonuses bonuses={bonuses} />}
         {fieldResearch && fieldResearch.length > 0 && (
           <MetaFieldResearch fieldResearch={fieldResearch} />
+        )}
+        {perfectIV && (
+          <Header
+            as="h4"
+            className={`${styles["event-center"]} ${
+              styles["event-margin-top"]
+            }`}
+            inverted
+            textAlign="center"
+          >
+            Perfect IV's: {perfectIV[0]} & {perfectIV[1]}
+          </Header>
         )}
         {counters && <MetaCounters counters={counters} />}
         {challenges && <MetaChallenges challenges={challenges} />}
@@ -125,8 +139,9 @@ class Event extends React.PureComponent {
                       : ""
                   }
                 >
-                  {" "}
-                  Add to Google Calendar
+                  <span className={styles["event-action-text"]}>
+                    Add to Google Calendar
+                  </span>
                 </span>
               </Button>
             ))}
@@ -149,7 +164,9 @@ class Event extends React.PureComponent {
                   : ""
               }
             >
-              Pokémon Go Live Post
+              <span className={styles["event-action-text"]}>
+                Pokémon Go Live Post
+              </span>
             </span>
           </Button>
         </div>

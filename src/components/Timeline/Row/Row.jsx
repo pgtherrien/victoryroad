@@ -90,7 +90,7 @@ class Row extends React.PureComponent {
     if (
       !expanded ||
       (e.target.id !== "content-action-button" &&
-        e.target.id !== "content-sprite" &&
+        e.target.id !== "sprite-image" &&
         e.target.id !== "event-action-button")
     ) {
       this.setState({ expanded: !expanded });

@@ -1,0 +1,9 @@
+.sprite {
+  margin: 0 auto !important;
+}
+
+.sprite-shiny {
+  height: 20px !important;
+  position: absolute !important;
+  width: 20px !important;
+}
