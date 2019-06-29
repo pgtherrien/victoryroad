@@ -1,6 +1,7 @@
 .header-sidebar {
   background: #282b33 !important;
-  position: fixed !important;
+  position: absolute !important;
+  margin-top: -18% !important;
 }
 
 .header-sidebar-image {

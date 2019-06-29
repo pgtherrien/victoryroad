@@ -6,7 +6,21 @@ import styles from "./Event.module.css";
 import Sprite from "../../Sprite";
 
 export default class MetaCounters extends React.PureComponent {
+  getColumnCount = arrayLength => {
+    let columnCount = 1;
+
+    if (arrayLength === 2) {
+      columnCount = 2;
+    } else {
+      columnCount = 3;
+    }
+
+    return columnCount;
+  };
+
   buildCounter = (counter, i) => {
+    let columnCount = this.getColumnCount(counter.pokemon.length);
+
     return (
       <React.Fragment key={i}>
         <div className={styles["meta-counters-title"]}>
@@ -16,7 +30,7 @@ export default class MetaCounters extends React.PureComponent {
           </span>
           <Image avatar src={counter.condition.image} />
         </div>
-        <Grid stackable columns={counter.pokemon.length}>
+        <Grid stackable columns={columnCount}>
           {this.buildPokemon(counter.pokemon)}
         </Grid>
       </React.Fragment>
@@ -35,14 +49,12 @@ export default class MetaCounters extends React.PureComponent {
             <Table basic="very" celled inverted>
               <Table.Body>
                 <Table.Row textAlign="center">
-                  <Table.Cell>Fast Attack:</Table.Cell>
                   <Table.Cell>
                     <Image avatar src={poke.fastAttack.image} />{" "}
                     {poke.fastAttack.name}
                   </Table.Cell>
                 </Table.Row>
                 <Table.Row textAlign="center">
-                  <Table.Cell>Charged Attack</Table.Cell>
                   <Table.Cell>
                     <Image avatar src={poke.chargedAttack.image} />
                     {poke.chargedAttack.name}

@@ -284,7 +284,7 @@ class App extends React.PureComponent {
                 )}
               </div>
             ) : (
-              <React.Fragment>
+              <div className={styles["header-sidebar-profile"]}>
                 <Divider horizontal inverted>
                   Authentication
                 </Divider>
@@ -294,7 +294,7 @@ class App extends React.PureComponent {
                 >
                   <Icon name="sign in" /> <span>Sign In</span>
                 </Menu.Item>
-              </React.Fragment>
+              </div>
             )}
           </Sidebar>
           <Sidebar.Pusher>

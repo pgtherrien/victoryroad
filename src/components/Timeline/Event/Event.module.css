@@ -1,7 +1,7 @@
 .event {
   background: #282b33 !important;
   margin: 0 0 40px 0 !important;
-  padding: 0 30% 0 30% !important;
+  padding: 0 20% 0 20% !important;
   width: 100% !important;
 }
 
@@ -24,6 +24,10 @@
   height: 16px !important;
   margin: 0 0 3px 0 !important;
   width: 16px !important;
+}
+
+.event-action-text {
+  margin-left: 15px !important;
 }
 
 .event-action-wrapper {

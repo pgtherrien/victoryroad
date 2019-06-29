@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Image } from "semantic-ui-react";
+import { Image, Responsive } from "semantic-ui-react";
 
 import styles from "./Sprite.module.css";
 
@@ -42,8 +42,14 @@ export default class Sprite extends React.PureComponent {
         <Image
           id="sprite-image"
           className={styles["sprite"]}
-          onMouseEnter={this.toggleSprite}
-          onMouseLeave={this.toggleSprite}
+          onMouseEnter={
+            window.innerWidth > Responsive.onlyComputer.minWidth &&
+            this.toggleSprite
+          }
+          onMouseLeave={
+            window.innerWidth > Responsive.onlyComputer.minWidth &&
+            this.toggleSprite
+          }
           onClick={this.toggleSprite}
           src={src}
         />
