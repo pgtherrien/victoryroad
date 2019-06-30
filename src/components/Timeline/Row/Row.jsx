@@ -127,101 +127,109 @@ class Row extends React.PureComponent {
       case "unique":
       default:
         retval = (
-          <Grid.Row
-            className={
-              window.innerWidth > Responsive.onlyComputer.minWidth
-                ? expanded
-                  ? styles["row-expanded"]
-                  : styles["row"]
-                : styles["row-mobile"]
-            }
-            onClick={this.toggleExpand}
-            onMouseEnter={() => this.setState({ mouseInside: true })}
-            onMouseLeave={() => this.setState({ mouseInside: false })}
-          >
-            <Grid.Column width={4}>
-              {this.buildLabel(startDate, endDate)}
-              <Image className={styles["row-image"]} src={eventImage} />
-            </Grid.Column>
-            <Grid.Column width={8}>
-              <Segment
-                textAlign="center"
-                className={
-                  window.innerWidth > Responsive.onlyComputer.minWidth
-                    ? styles["row-title"]
-                    : styles["row-title-mobile"]
-                }
-                inverted
-              >
-                <Header as="h1">
-                  {title}
-                  <Header.Subheader
-                    className={
-                      window.innerWidth > Responsive.onlyComputer.minWidth
-                        ? styles["row-range"]
-                        : styles["row-range-mobile"]
-                    }
+          <React.Fragment>
+            <Grid.Row
+              className={
+                window.innerWidth > Responsive.onlyComputer.minWidth
+                  ? expanded
+                    ? styles["row-expanded"]
+                    : styles["row"]
+                  : styles["row-mobile"]
+              }
+              onClick={this.toggleExpand}
+              onMouseEnter={() => this.setState({ mouseInside: true })}
+              onMouseLeave={() => this.setState({ mouseInside: false })}
+            >
+              <Grid.Column width={4}>
+                {this.buildLabel(startDate, endDate)}
+                <Image className={styles["row-image"]} src={eventImage} />
+              </Grid.Column>
+              
+              <Grid.Column width={8}>
+                <Segment
+                  textAlign="center"
+                  className={
+                    window.innerWidth > Responsive.onlyComputer.minWidth
+                      ? styles["row-title"]
+                      : styles["row-title-mobile"]
+                  }
+                  inverted
+                >
+                  <Header as="h1">
+                    {title}
+                    <Header.Subheader
+                      className={
+                        window.innerWidth > Responsive.onlyComputer.minWidth
+                          ? styles["row-range"]
+                          : styles["row-range-mobile"]
+                      }
+                    >
+                      {this.renderRange(startDate, endDate)}
+                    </Header.Subheader>
+                  </Header>
+                </Segment>
+                <Responsive
+                  as={Segment}
+                  className={styles["row-view-segment"]}
+                  inverted
+                  minWidth={Responsive.onlyTablet.minWidth}
+                  textAlign="center"
+                />
+              </Grid.Column>
+              
+              {new Date() > startDate ? (
+                // Countdown if event has already begun
+                <React.Fragment>
+                  <Responsive
+                    as={Grid.Column}
+                    className={styles["row-countdown"]}
+                    minWidth={Responsive.onlyTablet.minWidth}
+                    width={4}
                   >
-                    {this.renderRange(startDate, endDate)}
-                  </Header.Subheader>
-                </Header>
-              </Segment>
-              <Responsive
-                as={Segment}
-                className={styles["row-view-segment"]}
-                inverted
-                minWidth={Responsive.onlyTablet.minWidth}
-                textAlign="center"
-              />
-            </Grid.Column>
-            {new Date() > startDate ? (
-              <React.Fragment>
-                <Responsive
-                  as={Grid.Column}
-                  className={styles["row-countdown"]}
-                  minWidth={Responsive.onlyTablet.minWidth}
-                  width={4}
-                >
-                  <Header inverted>
-                    Ends <Countdown date={endDate} />
-                  </Header>
-                </Responsive>
-                <Responsive
-                  as={Grid.Column}
-                  className={styles["row-countdown-mobile"]}
-                  {...Responsive.onlyMobile}
-                  width={4}
-                >
-                  <Header inverted>
-                    Ends <Countdown date={endDate} />
-                  </Header>
-                </Responsive>
-              </React.Fragment>
-            ) : (
-              <React.Fragment>
-                <Responsive
-                  as={Grid.Column}
-                  className={styles["row-countdown"]}
-                  minWidth={Responsive.onlyTablet.minWidth}
-                  width={4}
-                >
-                  <Header inverted>
-                    Starts <Countdown date={startDate} />
-                  </Header>
-                </Responsive>
-                <Responsive
-                  as={Grid.Column}
-                  className={styles["row-countdown-mobile"]}
-                  {...Responsive.onlyMobile}
-                  width={4}
-                >
-                  <Header inverted>
-                    Starts <Countdown date={startDate} />
-                  </Header>
-                </Responsive>
-              </React.Fragment>
-            )}
+                    <Header inverted>
+                      Ends <Countdown date={endDate} />
+                    </Header>
+                  </Responsive>
+                  <Responsive
+                    as={Grid.Column}
+                    className={styles["row-countdown-mobile"]}
+                    {...Responsive.onlyMobile}
+                    width={4}
+                  >
+                    <Header inverted>
+                      Ends <Countdown date={endDate} />
+                    </Header>
+                  </Responsive>
+                </React.Fragment>
+              ) : (
+                // Countdown if event is in the future
+                <React.Fragment>
+                  <Responsive
+                    as={Grid.Column}
+                    className={styles["row-countdown"]}
+                    minWidth={Responsive.onlyTablet.minWidth}
+                    width={4}
+                  >
+                    <Header inverted>
+                      Starts <Countdown date={startDate} />
+                    </Header>
+                  </Responsive>
+                  <Responsive
+                    as={Grid.Column}
+                    className={styles["row-countdown-mobile"]}
+                    {...Responsive.onlyMobile}
+                    width={4}
+                  >
+                    <Header inverted>
+                      Starts <Countdown date={startDate} />
+                    </Header>
+                  </Responsive>
+                </React.Fragment>
+              )}
+            </Grid.Row>
+
             {mouseInside && admins.includes(user.uid) && (
+              // displays the edit event modal
               <Responsive
                 as={Icon}
                 className={styles["row-edit"]}
@@ -233,7 +241,7 @@ class Row extends React.PureComponent {
               />
             )}
             {expanded && <Event {...this.props} />}
-          </Grid.Row>
+          </React.Fragment>
         );
         break;
     }
