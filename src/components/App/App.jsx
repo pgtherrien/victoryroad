@@ -2,6 +2,8 @@ import React from "react";
 import firebase from "firebase";
 import {
   Divider,
+  Grid,
+  Header,
   Icon,
   Image,
   Menu,
@@ -15,7 +17,7 @@ import "semantic-ui-css/semantic.min.css";
 import { auth, db } from "../../firebase";
 import styles from "./App.module.css";
 import Checklist from "../Checklist";
-import EventModal from "../EventModal";
+import { EventModal } from "../Modals";
 import PokemonBox from "../PokemonBox";
 import Timeline from "../Timeline";
 
@@ -322,6 +324,27 @@ class App extends React.PureComponent {
             />
             <Route exact path="/checklist" component={Checklist} />
             <Route exact path="/pokemonbox" component={PokemonBox} />
+            <Grid className={styles["footer"]}>
+              <Grid.Column width="6" />
+              <Grid.Column width="4">
+                <Header
+                  as="h4"
+                  className={styles["footer-title"]}
+                  inverted
+                  onClick={() =>
+                    window.open(
+                      "https://github.com/pgtherrien/victoryroad/issues/new",
+                      "_blank"
+                    )
+                  }
+                  title="Submit an issue on Github"
+                >
+                  <Icon inverted name="github" size="large" />
+                  Victory Road
+                </Header>
+              </Grid.Column>
+              <Grid.Column width="6" />
+            </Grid>
           </Sidebar.Pusher>
         </Sidebar.Pushable>
         {showEventModal && (

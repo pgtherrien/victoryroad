@@ -5,7 +5,7 @@ import { DateTimeInput } from "semantic-ui-calendar-react";
 
 import { db } from "../../firebase";
 import InputBlock from "./InputBlock";
-import styles from "./EventModal.module.css";
+import styles from "./Modals.module.css";
 
 class EventModal extends React.PureComponent {
   constructor(props) {
@@ -21,10 +21,24 @@ class EventModal extends React.PureComponent {
     let form = Object.assign({}, this.state.form);
 
     switch (name) {
-      case "startDate":
       case "endDate":
+      case "startDate":
         let date = new Date(value.substr(0, value.indexOf(" ")));
         form[name] = date;
+        break;
+      case "perfectIV20":
+        if (form.perfectIV) {
+          form.perfectIV[0] = value;
+        } else {
+          form.perfectIV = [value];
+        }
+        break;
+      case "perfectIV25":
+        if (form.perfectIV) {
+          form.perfectIV[1] = value;
+        } else {
+          form.perfectIV = ["", value];
+        }
         break;
       default:
         form[name] = value;
@@ -58,7 +72,7 @@ class EventModal extends React.PureComponent {
     return (
       <DateTimeInput
         animation=""
-        className={styles["modal-datepicker"]}
+        className={styles["event-modal-datepicker"]}
         closable={true}
         dateFormat="YYYY-MM-DDTHH:mm:ss"
         iconPosition="left"
@@ -79,8 +93,10 @@ class EventModal extends React.PureComponent {
       eventImage,
       eventType,
       features,
+      ivSearchStrings,
       link,
       newShinies,
+      perfectIV,
       startDate,
       summary,
       title
@@ -90,7 +106,7 @@ class EventModal extends React.PureComponent {
     return (
       <Modal
         basic
-        className={styles["modal-container"]}
+        className={styles["event-modal-container"]}
         onClose={onClose}
         open={true}
         size="small"
@@ -144,18 +160,32 @@ class EventModal extends React.PureComponent {
             <Divider className={styles["modal-divider"]} horizontal inverted>
               Date Range
             </Divider>
-            <label className={styles["modal-label"]}>Start Date</label>
+            <label className={styles["event-modal-label"]}>Start Date</label>
             {this.renderDatePicker(
               "startDate",
               "Start Date...",
               startDate ? startDate.toString() : ""
             )}
-            <label className={styles["modal-label"]}>End Date</label>
+            <label className={styles["event-modal-label"]}>End Date</label>
             {this.renderDatePicker(
               "endDate",
               "End Date...",
               endDate ? endDate.toString() : ""
             )}
+            <Form.Input
+              label="Level 20 Perfect CP"
+              name="perfectIV20"
+              onChange={this.handleChange}
+              placeholder="2328"
+              value={perfectIV ? perfectIV[0] : ""}
+            />
+            <Form.Input
+              label="Level 25 Perfect CP"
+              name="perfectIV25"
+              onChange={this.handleChange}
+              placeholder="2910"
+              value={perfectIV ? perfectIV[1] : ""}
+            />
             <InputBlock
               data={bonuses || []}
               handleChange={this.handleChange}
@@ -229,8 +259,26 @@ class EventModal extends React.PureComponent {
                 }
               ]}
             />
+            <InputBlock
+              data={ivSearchStrings || []}
+              handleChange={this.handleChange}
+              fieldLabel="IV Search Strings"
+              fieldName="ivSearchStrings"
+              fields={[
+                {
+                  label: "IV",
+                  name: "iv",
+                  placeholder: "IV parameter goes here..."
+                },
+                {
+                  label: "Search String",
+                  name: "searchString",
+                  placeholder: "Search string goes here..."
+                }
+              ]}
+            />
             <Form.Button
-              className={styles["modal-actions"]}
+              className={styles["event-modal-actions"]}
               color="green"
               content="Submit"
               inverted
