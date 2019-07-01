@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Dimmer, Grid, Loader } from "semantic-ui-react";
+import { Button, Dimmer, Grid, Icon, Loader } from "semantic-ui-react";
 
 import { db } from "../../firebase";
 import styles from "./Timeline.module.css";
@@ -15,7 +15,8 @@ class Timeline extends React.PureComponent {
         current: [],
         past: [],
         upcoming: []
-      }
+      },
+      key: 0
     };
   }
 
@@ -59,6 +60,7 @@ class Timeline extends React.PureComponent {
   render() {
     const { current, upcoming } = this.state.events;
     const { admins, insertEvent, user } = this.props;
+    const { key } = this.state;
     let renderedEvents = [];
     let i = 0;
 
@@ -69,6 +71,7 @@ class Timeline extends React.PureComponent {
             admins={admins}
             key={i}
             event={{ ...event }}
+            expansionKey={key}
             insertEvent={insertEvent}
             user={user}
           />
@@ -81,6 +84,7 @@ class Timeline extends React.PureComponent {
             admins={admins}
             key={i}
             event={{ ...event }}
+            expansionKey={key}
             insertEvent={insertEvent}
             user={user}
           />
@@ -93,6 +97,15 @@ class Timeline extends React.PureComponent {
           <Grid columns={4} padded stackable verticalAlign="middle">
             {renderedEvents}
           </Grid>
+          <Button
+            className={styles["timeline-close-all"]}
+            color="teal"
+            icon
+            onClick={() => this.setState({ key: key + 1 })}
+            title="Collapse all open events"
+          >
+            <Icon name="compress" size="large" />
+          </Button>
         </div>
       );
     } else {

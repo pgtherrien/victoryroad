@@ -3,3 +3,12 @@
   margin-bottom: 40px !important;
   padding: 0 8% 2% 8%;
 }
+
+.timeline-close-all {
+  border-radius: 50% !important;
+  bottom: 20px !important;
+  height: 60px !important;
+  position: fixed !important;
+  right: 15px !important;
+  width: 60px !important;
+}

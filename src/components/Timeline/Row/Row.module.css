@@ -10,7 +10,7 @@
 }
 
 .row-close:hover {
-  border-bottom: #2de1c2 solid 3px !important;
+  border-bottom: #008080 solid 3px !important;
   cursor: pointer;
 }
 
@@ -36,8 +36,8 @@
 
 .row-expanded {
   background: #282b33;
-  margin-top: 30px !important;
   cursor: pointer;
+  margin-top: 30px !important;
 }
 
 .row-image {
@@ -59,6 +59,16 @@
 
 .row-mobile:focus {
   outline: none !important;
+}
+
+.row-open {
+  left: 43% !important;
+  text-align: center !important;
+  width: 14% !important;
+}
+
+.row-open-icon {
+  margin: 0 0.75em 0 0.74em !important;
 }
 
 .row-range {

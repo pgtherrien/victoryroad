@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import CopyToClipboard from "react-copy-to-clipboard";
-import { Button, Divider, Icon, Modal, Table } from "semantic-ui-react";
+import { Button, Divider, Grid, Icon, Modal } from "semantic-ui-react";
 
 import styles from "./Modals.module.css";
 
@@ -23,29 +23,28 @@ export default class SearchStringModal extends React.PureComponent {
     ivSearchStrings.forEach(function(config) {
       if (selectedIV === config.iv) {
         rows.push(
-          <Table.Row key={i} textAlign="center">
-            <Table.Cell>
-              <Button className={styles["search-button"]} color="green">
+          <Grid.Row key={i} textAlign="center">
+            <Grid.Column>
+              <Button color="green">
                 <Icon inverted name="check" /> Copied to Clipboard!
               </Button>
-            </Table.Cell>
-          </Table.Row>
+            </Grid.Column>
+          </Grid.Row>
         );
       } else {
         rows.push(
-          <Table.Row key={i} textAlign="center">
-            <Table.Cell>
+          <Grid.Row key={i} textAlign="center">
+            <Grid.Column>
               <CopyToClipboard text={config.searchString}>
                 <Button
-                  className={styles["search-button"]}
                   color="purple"
                   onClick={() => oThis.setState({ selectedIV: config.iv })}
                 >
                   <Icon inverted name="copy" /> {config.iv}
                 </Button>
               </CopyToClipboard>
-            </Table.Cell>
-          </Table.Row>
+            </Grid.Column>
+          </Grid.Row>
         );
       }
 
@@ -67,16 +66,9 @@ export default class SearchStringModal extends React.PureComponent {
         </Modal.Header>
         <Divider className={styles["modal-divider"]} />
         <Modal.Content className={styles["modal-background"]}>
-          <Table
-            basic="very"
-            celled
-            className={styles["search-center"]}
-            inverted
-            size="large"
-            stackable
-          >
-            <Table.Body>{this.renderSearchStrings()}</Table.Body>
-          </Table>
+          <Grid className={styles["search-center"]} inverted stackable>
+            {this.renderSearchStrings()}
+          </Grid>
         </Modal.Content>
       </Modal>
     );

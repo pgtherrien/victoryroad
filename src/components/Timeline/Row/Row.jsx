@@ -27,6 +27,15 @@ class Row extends React.PureComponent {
     };
   }
 
+  componentDidUpdate(prevProps) {
+    if (
+      prevProps.expansionKey !== this.props.expansionKey &&
+      this.state.expanded
+    ) {
+      this.setState({ expanded: false });
+    }
+  }
+
   // Determine whether to render a label, and what configuration to pass it
   buildLabel = (startDate, endDate) => {
     if (
@@ -34,7 +43,7 @@ class Row extends React.PureComponent {
       new Date(new Date().getTime() + 60 * 60 * 24 * 1000) > startDate
     ) {
       // If the startDate has not passed, but is within 24 hours
-      return this.renderLabel("teal", "Starting Soon");
+      return this.renderLabel("blue", "Starting Soon");
     } else if (
       new Date() < endDate &&
       new Date(new Date().getTime() + 60 * 60 * 24 * 1000) > endDate
@@ -43,7 +52,7 @@ class Row extends React.PureComponent {
       return this.renderLabel("orange", "Ending Soon");
     } else if (new Date() > startDate) {
       // Otherwise, if the startDate has passed the event is active
-      return this.renderLabel("blue", "Active");
+      return this.renderLabel("teal", "Active");
     }
   };
 
@@ -205,7 +214,7 @@ class Row extends React.PureComponent {
                   </Responsive>
                 </React.Fragment>
               )}
-              {mouseInside && admins.includes(user.uid) && (
+              {!expanded && mouseInside && admins.includes(user.uid) && (
                 // displays the edit event modal
                 <Responsive
                   as={Icon}
@@ -217,6 +226,27 @@ class Row extends React.PureComponent {
                   title={`Edit ${title}`}
                 />
               )}
+              {mouseInside &&
+                !expanded &&
+                window.innerWidth > Responsive.onlyComputer.minWidth && (
+                  <Label
+                    attached="bottom"
+                    className={styles["row-open"]}
+                    color="teal"
+                  >
+                    <Icon
+                      className={styles["row-open-icon"]}
+                      inverted
+                      name="angle down"
+                    />
+                    Show More
+                    <Icon
+                      className={styles["row-open-icon"]}
+                      inverted
+                      name="angle down"
+                    />
+                  </Label>
+                )}
             </Grid.Row>
             {expanded && <Event {...this.props} />}
           </React.Fragment>
@@ -243,6 +273,7 @@ class Row extends React.PureComponent {
 Row.propTypes = {
   admins: PropTypes.array.isRequired,
   event: PropTypes.object.isRequired,
+  expansionKey: PropTypes.number.isRequired,
   insertEvent: PropTypes.func.isRequired,
   user: PropTypes.object
 };
