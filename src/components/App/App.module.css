@@ -1,3 +1,19 @@
+/* Footer CSS */
+.footer {
+  background: #282b33 !important;
+  bottom: 0;
+  height: 75px !important;
+  padding: 10px !important;
+  position: absolute !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+.footer-title {
+  cursor: pointer;
+}
+
+/* Header CSS */
 .header-sidebar {
   background: #282b33 !important;
   position: absolute !important;
@@ -29,17 +45,22 @@
 
 .header-sidebar-profile {
   bottom: 0;
+  margin-bottom: 15px !important;
   position: absolute !important;
 }
 
 .header-sidebar-profile-pic img {
   border-radius: 50% !important;
   margin: 50px auto 30px auto !important;
-  width: 50% !important;
+  width: 30% !important;
 }
 
 .header-sidebar-tab-active {
   border-left: #2de1c2 solid 3px !important;
+}
+
+.header-sidebar-tab {
+  padding-top: 15px !important;
 }
 
 .header-sidebar-tab:hover {

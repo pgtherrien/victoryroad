@@ -14,7 +14,7 @@ import {
 import styles from "./Row.module.css";
 import Countdown from "../Countdown";
 import Event from "../Event";
-import EventModal from "../../EventModal";
+import { EventModal } from "../../Modals";
 
 class Row extends React.PureComponent {
   constructor(props) {
@@ -84,19 +84,6 @@ class Row extends React.PureComponent {
     }
   };
 
-  toggleExpand = e => {
-    const { expanded } = this.state;
-
-    if (
-      !expanded ||
-      (e.target.id !== "content-action-button" &&
-        e.target.id !== "sprite-image" &&
-        e.target.id !== "event-action-button")
-    ) {
-      this.setState({ expanded: !expanded });
-    }
-  };
-
   render() {
     const {
       endDate,
@@ -136,7 +123,7 @@ class Row extends React.PureComponent {
                     : styles["row"]
                   : styles["row-mobile"]
               }
-              onClick={this.toggleExpand}
+              onClick={() => this.setState({ expanded: !expanded })}
               onMouseEnter={() => this.setState({ mouseInside: true })}
               onMouseLeave={() => this.setState({ mouseInside: false })}
             >
@@ -144,7 +131,7 @@ class Row extends React.PureComponent {
                 {this.buildLabel(startDate, endDate)}
                 <Image className={styles["row-image"]} src={eventImage} />
               </Grid.Column>
-              
+
               <Grid.Column width={8}>
                 <Segment
                   textAlign="center"
@@ -168,15 +155,7 @@ class Row extends React.PureComponent {
                     </Header.Subheader>
                   </Header>
                 </Segment>
-                <Responsive
-                  as={Segment}
-                  className={styles["row-view-segment"]}
-                  inverted
-                  minWidth={Responsive.onlyTablet.minWidth}
-                  textAlign="center"
-                />
               </Grid.Column>
-              
               {new Date() > startDate ? (
                 // Countdown if event has already begun
                 <React.Fragment>
@@ -226,20 +205,19 @@ class Row extends React.PureComponent {
                   </Responsive>
                 </React.Fragment>
               )}
+              {mouseInside && admins.includes(user.uid) && (
+                // displays the edit event modal
+                <Responsive
+                  as={Icon}
+                  className={styles["row-edit"]}
+                  inverted
+                  minWidth={Responsive.onlyTablet.minWidth}
+                  name="cogs"
+                  onClick={() => this.setState({ showEventModal: true })}
+                  title={`Edit ${title}`}
+                />
+              )}
             </Grid.Row>
-
-            {mouseInside && admins.includes(user.uid) && (
-              // displays the edit event modal
-              <Responsive
-                as={Icon}
-                className={styles["row-edit"]}
-                inverted
-                minWidth={Responsive.onlyTablet.minWidth}
-                name="cogs"
-                onClick={() => this.setState({ showEventModal: true })}
-                title={`Edit ${title}`}
-              />
-            )}
             {expanded && <Event {...this.props} />}
           </React.Fragment>
         );

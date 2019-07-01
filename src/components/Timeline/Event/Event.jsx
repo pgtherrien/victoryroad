@@ -3,11 +3,12 @@ import PropTypes from "prop-types";
 import {
   Button,
   Divider,
-  Header,
+  Grid,
   Icon,
   Image,
   Responsive,
-  Segment
+  Segment,
+  Statistic
 } from "semantic-ui-react";
 
 import styles from "./Event.module.css";
@@ -17,12 +18,14 @@ import MetaCounters from "./MetaCounters";
 import MetaFeatures from "./MetaFeatures";
 import MetaFieldResearch from "./MetaFieldResearch";
 import MetaShiny from "./MetaShinies";
+import { SearchStringModal } from "../../Modals";
 
 class Event extends React.PureComponent {
   constructor(props) {
     super(props);
 
     this.state = {
+      showSearchStringModal: false,
       submitted: ""
     };
   }
@@ -46,13 +49,14 @@ class Event extends React.PureComponent {
       counters,
       features,
       fieldResearch,
+      ivSearchStrings,
       link,
       newShinies,
       perfectIV,
       startDate,
       summary
     } = this.props.event;
-    const { submitted } = this.state;
+    const { showSearchStringModal, submitted } = this.state;
     const { user } = this.props;
 
     return (
@@ -74,10 +78,37 @@ class Event extends React.PureComponent {
               inverted
             >
               Summary
-            </Divider>{" "}
+            </Divider>
             <div className={styles["event-center"]}>
               <span className={styles["event-summary"]}>{summary}</span>
             </div>
+          </React.Fragment>
+        )}
+        {perfectIV && (
+          <React.Fragment>
+            <Divider
+              className={`${styles["event-center"]} ${
+                styles["event-margin-top"]
+              }`}
+              horizontal
+              inverted
+            >
+              Perfect CP's
+            </Divider>
+            <Grid>
+              <Grid.Column textAlign="center" width="8">
+                <Statistic inverted>
+                  <Statistic.Label>Level 20</Statistic.Label>
+                  <Statistic.Value>{perfectIV[0]}</Statistic.Value>
+                </Statistic>
+              </Grid.Column>
+              <Grid.Column textAlign="center" width="8">
+                <Statistic inverted>
+                  <Statistic.Label>Level 25</Statistic.Label>
+                  <Statistic.Value>{perfectIV[1]}</Statistic.Value>
+                </Statistic>
+              </Grid.Column>
+            </Grid>
           </React.Fragment>
         )}
         {features && <MetaFeatures features={features} />}
@@ -88,67 +119,61 @@ class Event extends React.PureComponent {
         {fieldResearch && fieldResearch.length > 0 && (
           <MetaFieldResearch fieldResearch={fieldResearch} />
         )}
-        {perfectIV && (
-          <Header
-            as="h4"
-            className={`${styles["event-center"]} ${
-              styles["event-margin-top"]
-            }`}
-            inverted
-            textAlign="center"
-          >
-            Perfect IV's: {perfectIV[0]} & {perfectIV[1]}
-          </Header>
-        )}
         {counters && <MetaCounters counters={counters} />}
         {challenges && <MetaChallenges challenges={challenges} />}
-        <div
-          className={`${styles["event-action-wrapper"]} ${
-            styles["event-margin-top"]
-          }`}
-        >
+        <div className={styles["event-action-wrapper"]}>
           {new Date() < startDate &&
             user.uid &&
             (submitted === "success" ? (
               <Button
-                className={`${styles["event-action-button-calendar"]} ${
-                  styles["event-action-button"]
-                }`}
-                color="green"
-                icon
-                id="event-action-button"
-                inverted
-              >
-                <Icon name="calendar check outline" /> Added the Event!
-              </Button>
-            ) : (
-              <Button
-                className={`${styles["event-action-button-calendar"]} ${
+                className={`${styles["event-action-button-right"]} ${
                   styles["event-action-button"]
                 }`}
                 color="teal"
                 icon
-                id="event-action-button"
+                inverted
+              >
+                <Icon name="calendar check outline" />{" "}
+                <span
+                  className={
+                    window.innerWidth < Responsive.onlyComputer.minWidth
+                      ? `${styles["event-hide"]}  ${
+                          styles["event-action-text"]
+                        }`
+                      : styles["event-action-text"]
+                  }
+                >
+                  Added the Event!
+                </span>
+              </Button>
+            ) : (
+              <Button
+                className={`${styles["event-action-button-right"]} ${
+                  styles["event-action-button"]
+                }`}
+                color="teal"
+                icon
                 onClick={this.addToCalendar}
               >
                 <Icon name="calendar plus" title="Add to Google Calendar" />
                 <span
                   className={
                     window.innerWidth < Responsive.onlyComputer.minWidth
-                      ? styles["event-hide"]
-                      : ""
+                      ? `${styles["event-hide"]}  ${
+                          styles["event-action-text"]
+                        }`
+                      : styles["event-action-text"]
                   }
                 >
-                  <span className={styles["event-action-text"]}>
-                    Add to Google Calendar
-                  </span>
+                  Add to Google Calendar
                 </span>
               </Button>
             ))}
           <Button
-            className={styles["event-action-button"]}
+            className={`${styles["event-action-button-right"]} ${
+              styles["event-action-button"]
+            }`}
             color="blue"
-            id="event-action-button"
             onClick={() => window.open(link)}
           >
             <Image
@@ -160,16 +185,39 @@ class Event extends React.PureComponent {
             <span
               className={
                 window.innerWidth < Responsive.onlyComputer.minWidth
-                  ? styles["event-hide"]
-                  : ""
+                  ? `${styles["event-hide"]}  ${styles["event-action-text"]}`
+                  : styles["event-action-text"]
               }
             >
-              <span className={styles["event-action-text"]}>
-                Pokémon Go Live Post
-              </span>
+              Pokémon Go Live Post
             </span>
           </Button>
+          {ivSearchStrings && (
+            <Button
+              className={styles["event-action-button"]}
+              color="purple"
+              icon
+              onClick={() => this.setState({ showSearchStringModal: true })}
+            >
+              <Icon name="copy" inverted />
+              <span
+                className={
+                  window.innerWidth < Responsive.onlyComputer.minWidth
+                    ? `${styles["event-hide"]}  ${styles["event-action-text"]}`
+                    : styles["event-action-text"]
+                }
+              >
+                IV Search Strings
+              </span>
+            </Button>
+          )}
         </div>
+        {showSearchStringModal && (
+          <SearchStringModal
+            ivSearchStrings={ivSearchStrings}
+            onClose={() => this.setState({ showSearchStringModal: false })}
+          />
+        )}
       </Segment>
     );
   }

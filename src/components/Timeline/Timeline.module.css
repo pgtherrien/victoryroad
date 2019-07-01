@@ -1,4 +1,5 @@
 /* Timeline CSS */
 .timeline-grid {
+  margin-bottom: 40px !important;
   padding: 0 8% 2% 8%;
 }

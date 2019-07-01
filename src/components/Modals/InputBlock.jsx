@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Button, Divider, Form, Icon } from "semantic-ui-react";
 
-import styles from "./EventModal.module.css";
+import styles from "./Modals.module.css";
 
 export default class InputBlock extends React.Component {
   constructor(props) {
@@ -68,7 +68,7 @@ export default class InputBlock extends React.Component {
 
     for (i = 0; i <= count - 1; i++) {
       metaBlock = (
-        <div className={styles["meta-block"]} key={i}>
+        <div className={styles["input-block"]} key={i}>
           <Divider className={styles["modal-divider"]} horizontal inverted>
             {i}
           </Divider>
@@ -84,9 +84,9 @@ export default class InputBlock extends React.Component {
           {fieldLabel}
         </Divider>
         {metaCollection}
-        <div className={styles["meta-buttons"]}>
+        <div className={styles["input-buttons"]}>
           <Button
-            className={styles["meta-buttons-add"]}
+            className={styles["input-buttons-add"]}
             color="blue"
             icon
             inverted

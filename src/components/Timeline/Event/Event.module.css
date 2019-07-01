@@ -16,23 +16,26 @@
   padding: 11px !important;
 }
 
-.event-action-button-calendar {
+.event-action-button-right {
   margin-right: 20px !important;
 }
 
 .event-action-button-poke {
   height: 16px !important;
   margin: 0 0 3px 0 !important;
+  opacity: 0.8;
   width: 16px !important;
 }
 
 .event-action-text {
-  margin-left: 15px !important;
+  margin: 10px 10px 0 10px !important;
+  opacity: 0.9;
 }
 
 .event-action-wrapper {
   display: flex;
   justify-content: center;
+  margin: 40px 0 40px 0 !important;
 }
 
 .event-center {

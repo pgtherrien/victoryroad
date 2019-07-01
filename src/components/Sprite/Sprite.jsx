@@ -40,15 +40,16 @@ export default class Sprite extends React.PureComponent {
           />
         )}
         <Image
-          id="sprite-image"
           className={styles["sprite"]}
           onMouseEnter={
-            window.innerWidth > Responsive.onlyComputer.minWidth &&
-            this.toggleSprite
+            window.innerWidth > Responsive.onlyComputer.minWidth
+              ? this.toggleSprite
+              : () => null
           }
           onMouseLeave={
-            window.innerWidth > Responsive.onlyComputer.minWidth &&
-            this.toggleSprite
+            window.innerWidth > Responsive.onlyComputer.minWidth
+              ? this.toggleSprite
+              : () => null
           }
           onClick={this.toggleSprite}
           src={src}
