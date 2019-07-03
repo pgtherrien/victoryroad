@@ -111,7 +111,7 @@ class Timeline extends React.PureComponent {
     } else {
       return (
         <Dimmer active>
-          <Loader>Loading Events</Loader>
+          <Loader>Loading Events...</Loader>
         </Dimmer>
       );
     }

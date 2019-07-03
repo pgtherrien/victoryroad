@@ -25,7 +25,7 @@ class MetaFieldResearch extends React.PureComponent {
                 src="images/misc/shiny_white.png"
               />
             )}
-            <Sprite src={src} />
+            <Sprite showShiny={reward.shiny} src={src} />
           </div>
         );
         i++;

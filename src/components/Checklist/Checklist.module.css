@@ -1,0 +1,18 @@
+.card {
+  background: #121212 !important;
+  box-shadow: none !important;
+  min-width: 250px !important;
+}
+
+.card-content {
+  background: #282b33 !important;
+}
+
+.card-font {
+  color: white !important;
+}
+
+.checklist-container {
+  min-height: 100% !important;
+  padding: 2% !important;
+}
