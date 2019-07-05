@@ -19,15 +19,28 @@ import Checklist from "../Checklist";
 import { EventModal } from "../Modals";
 import PokemonBox from "../PokemonBox";
 import Timeline from "../Timeline";
+import GoogleService from "../../services/google";
 
 const gapi = window.gapi;
 
 class App extends React.PureComponent {
+  fireBase = {
+    auth,
+    db,
+  };
+
+  googleService = new GoogleService({
+    firebase,
+    setUser: user => {
+      this.setState({ user });
+    },
+  });
+
   constructor(props) {
     super(props);
 
-    // Initialize the GAPI client for use with authorization
-    this.initClient();
+    // initialize the Google service
+    this.googleService.initialize();
 
     // Capture the user from the localStorage / set the user in localStorage
     auth.onAuthStateChanged(function(user) {
@@ -58,95 +71,6 @@ class App extends React.PureComponent {
         this.setState({ admins: admins });
       });
   }
-
-  // Initialize the GAPI client
-  initClient = () => {
-    gapi.load("client:auth2", () => {
-      gapi.client.init({
-        apiKey: process.env.REACT_APP_API_KEY,
-        clientId: process.env.REACT_APP_OATH_CLIENT_ID,
-        discoveryDocs: [
-          "https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"
-        ],
-        scope: "https://www.googleapis.com/auth/calendar"
-      });
-
-      gapi.client.load("calendar", "v3", () => {
-        if (process.env.NODE_ENV !== "production") {
-          console.log("Loaded GAPI Calendar Client");
-        }
-      });
-
-      const auth2 = gapi.auth2.getAuthInstance();
-      auth2.isSignedIn.listen(this.handleIsSignedIn);
-      this.handleIsSignedIn(auth2.isSignedIn.get());
-    });
-  };
-
-  // Check if the user is signed into the GAPI client and Firebase
-  handleIsSignedIn = isSignedIn => {
-    if (isSignedIn) {
-      const auth2 = gapi.auth2.getAuthInstance();
-      const currentUser = auth2.currentUser.get();
-      const authResponse = currentUser.getAuthResponse(true);
-      const credential = firebase.auth.GoogleAuthProvider.credential(
-        authResponse.id_token,
-        authResponse.access_token
-      );
-
-      auth.signInAndRetrieveDataWithCredential(credential).then(({ user }) => {
-        localStorage.setItem("user", JSON.stringify(user));
-        this.setState({ user: user });
-      });
-    } else {
-      if (process.env.NODE_ENV !== "production") {
-        console.log("GAPI: User is not signed in");
-      }
-    }
-  };
-
-  // Sign the user into the GAPI client and Firebase
-  authSignIn = () => {
-    const auth2 = gapi.auth2.getAuthInstance();
-
-    if (auth2.isSignedIn.get()) {
-      alert("User is already signed in!");
-      return;
-    }
-
-    auth2.signIn({ prompt: "select_account" }).catch(error => {
-      alert(`Sign in error: ${error}`);
-    });
-  };
-
-  // Sign the user out of the GAPI client and Firebase
-  authSignOut = () => {
-    const auth2 = gapi.auth2.getAuthInstance();
-    localStorage.removeItem("user");
-
-    if (!auth2.isSignedIn.get()) {
-      alert("User is not signed in!");
-      return;
-    }
-
-    auth2
-      .signOut()
-      .then(() => {
-        if (process.env.NODE_ENV !== "production") {
-          console.log("GAPI: Sign out complete");
-        }
-      })
-      .then(() => {
-        return auth.signOut();
-      })
-      .then(() => {
-        localStorage.removeItem("user");
-        if (process.env.NODE_ENV !== "production") {
-          console.log("Firebase: Sign out complete");
-        }
-        this.setState({ user: undefined });
-      });
-  };
 
   // Creates an event in the user's Google Calendar
   async insertEvent(title, summary, startDate, endDate) {
@@ -257,7 +181,7 @@ class App extends React.PureComponent {
               </Divider>
               <Menu.Item
                 className={styles["header-sidebar-tab-profile"]}
-                onClick={this.authSignOut}
+                onClick={this.googleService.signOutUser}
               >
                 <Icon name="sign out" /> <span>Sign Out</span>
               </Menu.Item>
@@ -287,7 +211,7 @@ class App extends React.PureComponent {
               </Divider>
               <Menu.Item
                 className={styles["header-sidebar-tab-profile"]}
-                onClick={this.authSignIn}
+                onClick={this.googleService.signInUser}
               >
                 <Icon name="sign in" /> <span>Sign In</span>
               </Menu.Item>
