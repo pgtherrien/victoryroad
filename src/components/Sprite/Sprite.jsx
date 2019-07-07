@@ -29,6 +29,7 @@ export default class Sprite extends React.PureComponent {
   };
 
   render() {
+    const { showShiny } = this.props;
     const { src } = this.state;
 
     return (
@@ -42,16 +43,16 @@ export default class Sprite extends React.PureComponent {
         <Image
           className={styles["sprite"]}
           onMouseEnter={
-            window.innerWidth > Responsive.onlyComputer.minWidth
+            window.innerWidth > Responsive.onlyComputer.minWidth && showShiny
               ? this.toggleSprite
               : () => null
           }
           onMouseLeave={
-            window.innerWidth > Responsive.onlyComputer.minWidth
+            window.innerWidth > Responsive.onlyComputer.minWidth && showShiny
               ? this.toggleSprite
               : () => null
           }
-          onClick={this.toggleSprite}
+          onClick={showShiny ? this.toggleSprite : () => null}
           src={src}
         />
       </React.Fragment>

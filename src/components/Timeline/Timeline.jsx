@@ -1,6 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Button, Dimmer, Grid, Icon, Loader } from "semantic-ui-react";
+import {
+  Button,
+  Dimmer,
+  Grid,
+  Icon,
+  Loader,
+  Menu,
+  Popup,
+  Responsive
+} from "semantic-ui-react";
 
 import { db } from "../../firebase";
 import styles from "./Timeline.module.css";
@@ -9,7 +18,6 @@ import Row from "./Row";
 class Timeline extends React.PureComponent {
   constructor(props) {
     super(props);
-
     this.state = {
       events: {
         current: [],
@@ -57,61 +65,111 @@ class Timeline extends React.PureComponent {
       });
   }
 
-  render() {
-    const { current, upcoming } = this.state.events;
+  buildRows = () => {
     const { admins, insertEvent, user } = this.props;
+    const { current, upcoming } = this.state.events;
     const { key } = this.state;
-    let renderedEvents = [];
+    let rows = [];
     let i = 0;
 
+    current.forEach(function(event) {
+      rows.push(
+        <Row
+          admins={admins}
+          key={i}
+          event={{ ...event }}
+          expansionKey={key}
+          insertEvent={insertEvent}
+          user={user}
+        />
+      );
+      i++;
+    });
+    upcoming.forEach(function(event) {
+      rows.push(
+        <Row
+          admins={admins}
+          key={i}
+          event={{ ...event }}
+          expansionKey={key}
+          insertEvent={insertEvent}
+          user={user}
+        />
+      );
+      i++;
+    });
+
+    return rows;
+  };
+
+  render() {
+    const { admins, handleSubmitEvent, user } = this.props;
+    const { current, upcoming } = this.state.events;
+    const { key } = this.state;
+
     if (current.length > 0 || upcoming.length > 0) {
-      current.forEach(function(event) {
-        renderedEvents.push(
-          <Row
-            admins={admins}
-            key={i}
-            event={{ ...event }}
-            expansionKey={key}
-            insertEvent={insertEvent}
-            user={user}
-          />
-        );
-        i++;
-      });
-      upcoming.forEach(function(event) {
-        renderedEvents.push(
-          <Row
-            admins={admins}
-            key={i}
-            event={{ ...event }}
-            expansionKey={key}
-            insertEvent={insertEvent}
-            user={user}
-          />
-        );
-        i++;
-      });
+      let rows = this.buildRows();
 
       return (
-        <div className={styles["timeline-grid"]}>
-          <Grid columns={4} padded stackable verticalAlign="middle">
-            {renderedEvents}
-          </Grid>
-          <Button
-            className={styles["timeline-close-all"]}
-            color="teal"
-            icon
-            onClick={() => this.setState({ key: key + 1 })}
-            title="Collapse all open events"
+        <React.Fragment>
+          <div className={styles["timeline-grid"]}>
+            <Grid columns={4} padded stackable verticalAlign="middle">
+              {rows}
+            </Grid>
+            <Responsive
+              as={Button}
+              className={styles["timeline-close-all"]}
+              color="teal"
+              icon
+              maxWidth={Responsive.onlyMobile.maxWidth}
+              onClick={() => this.setState({ key: key + 1 })}
+              title="Collapse all open events"
+            >
+              <Icon name="compress" size="large" />
+            </Responsive>
+          </div>
+          <Responsive
+            as={Menu}
+            className={styles["timeline-sidebar"]}
+            inverted
+            minWidth={Responsive.onlyComputer.minWidth}
+            vertical
           >
-            <Icon name="compress" size="large" />
-          </Button>
-        </div>
+            <Popup
+              content="Collapse all open events"
+              inverted
+              position="left center"
+              trigger={
+                <Menu.Item
+                  className={styles["timeline-sidebar-item"]}
+                  onClick={() => this.setState({ key: key + 1 })}
+                >
+                  <Icon inverted name="compress" size="big" />
+                </Menu.Item>
+              }
+            />
+            {admins.includes(user.uid) && (
+              <Popup
+                content="Create a new event"
+                inverted
+                position="left center"
+                trigger={
+                  <Menu.Item
+                    className={styles["timeline-sidebar-item"]}
+                    onClick={handleSubmitEvent}
+                  >
+                    <Icon inverted name="plus" size="big" />
+                  </Menu.Item>
+                }
+              />
+            )}
+          </Responsive>
+        </React.Fragment>
       );
     } else {
       return (
         <Dimmer active>
-          <Loader>Loading Events</Loader>
+          <Loader>Loading Events...</Loader>
         </Dimmer>
       );
     }
@@ -120,6 +178,7 @@ class Timeline extends React.PureComponent {
 
 Timeline.propTypes = {
   admins: PropTypes.array.isRequired,
+  handleSubmitEvent: PropTypes.func.isRequired,
   insertEvent: PropTypes.func.isRequired,
   user: PropTypes.object.isRequired
 };

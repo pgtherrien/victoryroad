@@ -1,99 +1,80 @@
 /* Footer CSS */
 .footer {
-  background: #282b33 !important;
   height: 75px !important;
-  margin: 0 !important;
+  margin: 0 auto !important;
   padding: 10px !important;
   text-align: center !important;
-  width: 100% !important;
+  width: 90% !important;
 }
 
 .footer-title {
   cursor: pointer;
 }
 
-/* Header CSS */
-.header-sidebar {
+/* Menu CSS */
+.menu-close {
+  left: 10px;
+  margin-left: 0 !important;
+  position: fixed;
+  top: 10px;
+}
+
+.menu-collapsed {
+  background: #121212 !important;
+  height: 100%;
+  margin: 0 !important;
+  position: fixed;
+  width: 60px !important;
+}
+
+.menu-collapsed-mobile {
+  background: #121212 !important;
+  height: 100%;
+  left: 0;
+  margin: 0 !important;
+  position: absolute;
+  top: 0;
+  width: 60px !important;
+}
+
+.menu-item {
+  height: 50px !important;
+}
+
+.menu-item span {
+  font-size: 1.4em !important;
+}
+
+.menu-item-auth {
+  bottom: 0;
+  position: absolute !important;
+  width: 60px;
+}
+
+.menu-item-title {
+  text-align: center;
+}
+
+.menu-open {
   background: #121212 !important;
   left: 0;
   position: fixed !important;
   margin-top: -18% !important;
 }
 
-.header-sidebar-image {
-  height: 20% !important;
-  padding: 0 !important;
-  position: relative !important;
-  width: 100% !important;
-}
-
-.header-sidebar-image img {
-  height: 100% !important;
-  opacity: 0.5 !important;
-  width: 100% !important;
-}
-
-.header-sidebar-image span {
-  font-family: "Press Start 2P", cursive !important;
-  font-size: 1.3em !important;
-  left: 0 !important;
-  position: absolute !important;
-  text-align: center !important;
-  top: 50% !important;
-  width: 100% !important;
-}
-
-.header-sidebar-profile {
+.menu-open-auth {
   bottom: 0;
   position: absolute !important;
+  width: 100%;
 }
 
-.header-sidebar-profile-pic img {
+.menu-open-auth-pic img {
   border-radius: 50% !important;
   margin: 50px auto 30px auto !important;
   width: 30% !important;
 }
 
-.header-sidebar-tab-active {
-  border-left: #008080 solid 5px !important;
-}
-
-.header-sidebar-tab {
-  padding-top: 15px !important;
-}
-
-.header-sidebar-tab:hover {
-  border-left: #008080 solid 5px !important;
-}
-
-.header-sidebar-tab span {
-  font-size: 1.5em !important;
-}
-
-.header-sidebar-tab-profile:before {
-  height: 0px !important;
-}
-
-.header-sidebar-tab-profile span {
-  font-size: 1.5em !important;
-}
-
-.header-sidebar-tab-profile:hover {
-  border-left: #008080 solid 5px !important;
-}
-
-.header-top {
-  background: #282b33 !important;
-  border-radius: 0;
-  margin-top: 0 !important;
-}
-
-.header-top i:hover {
-  cursor: pointer;
-}
-
-.header-top-title {
-  font-size: 1.5em !important;
-  margin: 0 0 0 20px !important;
-  vertical-align: middle;
+.menu-title {
+  font-family: "Press Start 2P", cursive !important;
+  font-size: 1.3em !important;
 }

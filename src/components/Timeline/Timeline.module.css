@@ -1,9 +1,4 @@
 /* Timeline CSS */
-.timeline-grid {
-  margin-bottom: 40px !important;
-  padding: 0 8% 2% 8%;
-}
-
 .timeline-close-all {
   border-radius: 50% !important;
   bottom: 20px !important;
@@ -11,4 +6,23 @@
   position: fixed !important;
   right: 15px !important;
   width: 60px !important;
+}
+
+.timeline-grid {
+  padding: 0 8% 2% 8%;
+}
+
+.timeline-sidebar {
+  background: #121212 !important;
+  cursor: pointer;
+  height: 100%;
+  margin: 0 !important;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 60px !important;
+}
+
+.timeline-sidebar-item {
+  height: 50px !important;
 }

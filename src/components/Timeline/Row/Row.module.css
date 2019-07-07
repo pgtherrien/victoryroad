@@ -4,16 +4,6 @@
   margin-top: 30px !important;
 }
 
-.row-close {
-  height: 20px !important;
-  margin-right: 10px !important;
-}
-
-.row-close:hover {
-  border-bottom: #008080 solid 3px !important;
-  cursor: pointer;
-}
-
 .row-countdown {
   font-size: 1.5em;
   opacity: 0.5;
@@ -53,7 +43,7 @@
 .row-mobile {
   background: #282b33;
   cursor: default !important;
-  margin-top: 30px !important;
+  margin-top: 40px !important;
   padding-bottom: 20px !important;
 }
 
@@ -62,13 +52,15 @@
 }
 
 .row-open {
+  background: #282b33 !important;
+  color: white !important;
   left: 43% !important;
   text-align: center !important;
   width: 14% !important;
 }
 
 .row-open-icon {
-  margin: 0 0.75em 0 0.74em !important;
+  margin: 0 0.75em 0 0.75em !important;
 }
 
 .row-range {

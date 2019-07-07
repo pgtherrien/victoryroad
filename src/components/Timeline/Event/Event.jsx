@@ -180,7 +180,6 @@ class Event extends React.PureComponent {
               avatar
               className={styles["event-action-button-poke"]}
               src="images/misc/pokeball_white.png"
-              title="Pokémon Go Live Post"
             />
             <span
               className={

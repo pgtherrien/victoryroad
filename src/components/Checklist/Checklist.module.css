@@ -1,0 +1,121 @@
+/* Checklist CSS */
+.checklist-container {
+  margin-bottom: 20px !important;
+  min-height: 100% !important;
+  padding: 3% 10% 2% 10%;
+}
+
+.checklist-button-icon {
+  height: 20px !important;
+  margin-right: 15px !important;
+  opacity: 1 !important;
+  width: 20px !important;
+}
+
+.checklist-button-wrapper {
+  display: flex !important;
+  justify-content: center;
+  margin: 10px 0 40px 0 !important;
+  width: 100% !important;
+}
+
+/* Entry CSS */
+.entry {
+  background: #121212 !important;
+  box-shadow: none !important;
+}
+
+.entry-checked {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.entry-checked-image {
+  background-color: #121212 !important;
+  background-repeat: repeat-y !important;
+  background-size: 100% 88px !important;
+  background-position: 0% 0% !important;
+  background-image: repeating-linear-gradient(
+    -25deg,
+    #121212,
+    #121212 20px,
+    #282b33 20px,
+    #282b33 40px,
+    #121212 40px,
+    #121212 60px,
+    #282b33 60px,
+    #282b33 80px
+  ) !important;
+}
+
+.entry-content {
+  background: #282b33 !important;
+}
+
+.entry-font {
+  color: white !important;
+}
+
+.entry-hover {
+  cursor: pointer;
+}
+
+/* FilterSidebar CSS */
+.filter-sidebar {
+  background: #121212 !important;
+  margin-top: -18% !important;
+  position: fixed !important;
+  right: 0;
+}
+
+.filter-sidebar-close {
+  position: fixed !important;
+  top: 10px;
+  right: 10px;
+}
+
+.filter-sidebar-collapsed {
+  background: #121212 !important;
+  cursor: pointer;
+  height: 100%;
+  margin: 0 !important;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 60px !important;
+}
+
+.filter-sidebar-generation {
+  cursor: pointer;
+}
+
+.filter-sidebar-item {
+  height: 50px !important;
+}
+
+.filter-sidebar-radio {
+  float: right;
+}
+
+.filter-sidebar-radio label:before {
+  background: gray !important;
+}
+
+.filter-sidebar-search {
+  height: 65px !important;
+}
+
+.filter-sidebar-title {
+  font-family: "Press Start 2P", cursive !important;
+  font-size: 1.3em !important;
+  text-align: center;
+}
+
+.filter-sidebar-title span {
+  font-size: 1.5em;
+}
+
+/* Progress CSS */
+.progress {
+}
