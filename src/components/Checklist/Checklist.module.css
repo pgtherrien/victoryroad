@@ -1,8 +1,7 @@
 /* Checklist CSS */
 .checklist-container {
-  margin-bottom: 20px !important;
   min-height: 100% !important;
-  padding: 3% 10% 2% 10%;
+  padding: 3% 10% 0 10%;
 }
 
 .checklist-button-icon {
@@ -15,7 +14,7 @@
 .checklist-button-wrapper {
   display: flex !important;
   justify-content: center;
-  margin: 10px 0 40px 0 !important;
+  margin-bottom: 10px !important;
   width: 100% !important;
 }
 

@@ -39,8 +39,6 @@ export default class Entry extends React.PureComponent {
         break;
     }
 
-    // src = "images/pokemon_icons/pokemon_icon_000.png";
-
     return src;
   };
 
@@ -75,14 +73,12 @@ export default class Entry extends React.PureComponent {
             <Responsive
               as={Card.Header}
               className={styles["entry-font"]}
-              minWidth={Responsive.onlyTablet.minWidth}
+              minWidth={1400}
             >
               {entry.name}
             </Responsive>
             <Card.Meta className={styles["entry-font"]}>
-              {window.innerWidth > Responsive.onlyTablet.minWidth
-                ? `#${entry.number}`
-                : `${entry.name}`}
+              {window.innerWidth > 1400 ? `#${entry.number}` : `${entry.name}`}
             </Card.Meta>
           </Card.Content>
         </Card>

@@ -102,7 +102,12 @@ export default class ChecklistSidebar extends React.PureComponent {
                     className={styles["filter-sidebar-item"]}
                     onClick={handleSave}
                   >
-                    <Icon inverted name={saveState.name} size="large" />
+                    <Icon
+                      inverted
+                      color={saveState.color}
+                      name={saveState.name}
+                      size="large"
+                    />
                   </Menu.Item>
                 }
               />

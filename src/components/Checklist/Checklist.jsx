@@ -1,7 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { db } from "../../firebase";
-import { Dimmer, Grid, Loader, Menu } from "semantic-ui-react";
+import { List } from "react-virtualized";
+import { Dimmer, Grid, Loader, Menu, Responsive } from "semantic-ui-react";
 
 import pokedex from "../../data/pokedex";
 import styles from "./Checklist.module.css";
@@ -18,26 +19,43 @@ const DEFAULT_FILTERS = {
   type: "normal"
 };
 
+const DEFAULT_SAVE_STATE = {
+  color: "grey",
+  label: "Click to save changes",
+  name: "save"
+};
+
+const ENTRIES_PER_ROW =
+  window.innerWidth < Responsive.onlyMobile.maxWidth
+    ? 3
+    : window.innerWidth > Responsive.onlyComputer.minWidth
+    ? 8
+    : 5;
+
+const ROW_HEIGHT =
+  window.innerWidth < Responsive.onlyMobile.maxWidth ? 150 : 200;
+
 export default class Checklist extends React.PureComponent {
   constructor(props) {
     super(props);
 
     let localFilters = localStorage.getItem("victory_road_checklist_filters");
+    let rowCount = Math.ceil(Object.keys(pokedex).length / ENTRIES_PER_ROW);
 
     this.state = {
+      filteredPokedex: pokedex,
       filters:
         localFilters === null ? DEFAULT_FILTERS : JSON.parse(localFilters),
       lists: {},
-      saveState: {
-        color: "grey",
-        label: "Click to save changes",
-        name: "save"
-      }
+      rowCount: rowCount,
+      rowData: this.buildRowData(pokedex, rowCount),
+      saveState: DEFAULT_SAVE_STATE
     };
   }
 
   // If the user is logged in, get their Checklist object
   componentWillMount() {
+    const { filters } = this.state;
     const { user } = this.props;
     let oThis = this;
     if (user.uid) {
@@ -45,43 +63,91 @@ export default class Checklist extends React.PureComponent {
       docRef.get().then(function(doc) {
         if (doc.exists) {
           let data = doc.data();
+          let lists = {
+            lucky: JSON.parse(data.lucky),
+            normal: JSON.parse(data.normal),
+            shiny: JSON.parse(data.shiny)
+          };
+          let filteredDex = oThis.getFilteredDex(filters, lists);
+          let rowCount = Math.ceil(
+            Object.keys(filteredDex).length / ENTRIES_PER_ROW
+          );
+
           oThis.setState({
-            lists: {
-              lucky: JSON.parse(data.lucky),
-              normal: JSON.parse(data.normal),
-              shiny: JSON.parse(data.shiny)
-            }
+            filteredDex: filteredDex,
+            lists: lists,
+            rowCount: rowCount,
+            rowData: oThis.buildRowData(filteredDex, rowCount)
           });
 
           return;
         }
       });
     }
-
+    let lists = {
+      lucky: [],
+      normal: [],
+      shiny: []
+    };
+    let filteredDex = oThis.getFilteredDex(filters, lists);
+    let rowCount = Math.ceil(Object.keys(filteredDex).length / ENTRIES_PER_ROW);
     this.setState({
-      lists: {
-        lucky: [],
-        normal: [],
-        shiny: []
-      }
+      filteredDex: filteredDex,
+      lists: lists,
+      rowCount: rowCount,
+      rowData: this.buildRowData(filteredDex, rowCount)
     });
   }
+
+  // Group the pokedex entries into rows
+  buildRowData = (filteredDex, rowCount) => {
+    let rows = [];
+    let row;
+    let rowIndex = 0;
+    let index = 0;
+
+    if (filteredDex) {
+      while (rowIndex < rowCount) {
+        row = {};
+        if (Object.keys(filteredDex).length <= ENTRIES_PER_ROW) {
+          Object.keys(filteredDex).forEach(function(number) {
+            row[number] = filteredDex[number];
+          });
+        } else {
+          while (
+            filteredDex[Object.keys(filteredDex)[index]] &&
+            Object.keys(row).length < ENTRIES_PER_ROW
+          ) {
+            row[Object.keys(filteredDex)[index]] =
+              filteredDex[Object.keys(filteredDex)[index]];
+            index++;
+          }
+        }
+        rows.push(row);
+        rowIndex++;
+      }
+    }
+    return rows;
+  };
 
   // Get the count of checked entries in the current filtered Pokedex
   getCheckedCount = filteredDex => {
     const { filters, lists } = this.state;
     let count = 0;
-    Object.keys(filteredDex).forEach(function(number) {
-      if (lists[filters.type].indexOf(number) > -1) {
-        count++;
-      }
-    });
+
+    if (filteredDex) {
+      Object.keys(filteredDex).forEach(function(number) {
+        if (lists[filters.type].indexOf(number) > -1) {
+          count++;
+        }
+      });
+    }
+
     return count;
   };
 
   // Get the visible entries from the Pokedex based upon the acitve filters
-  getFilteredDex = () => {
-    const { filters, lists } = this.state;
+  getFilteredDex = (filters, lists) => {
     const {
       generations,
       onlyChecked,
@@ -109,7 +175,8 @@ export default class Checklist extends React.PureComponent {
         default:
           break;
       }
-      if (search.length > 0) {
+
+      if (add && search.length > 0) {
         if (
           !pokedex[number].name.toLowerCase().includes(search.toLowerCase()) &&
           !pokedex[number].number.toLowerCase().includes(search.toLowerCase())
@@ -117,16 +184,17 @@ export default class Checklist extends React.PureComponent {
           add = false;
         }
       }
-      if (onlyChecked && lists[type].indexOf(number) === -1) {
+      if (add && onlyChecked && lists[type].indexOf(number) === -1) {
         add = false;
       }
-      if (onlyUnchecked && lists[type].indexOf(number) > -1) {
+      if (add && onlyUnchecked && lists[type].indexOf(number) > -1) {
         add = false;
       }
-      if (!showEventForms && number.length > 6) {
+      if (add && !showEventForms && number.length > 6) {
         add = false;
       }
       if (
+        add &&
         generations.length > 0 &&
         generations.indexOf(pokedex[number].generation) === -1
       ) {
@@ -143,7 +211,7 @@ export default class Checklist extends React.PureComponent {
 
   // Update the current checklist, and update the progress bar with the count
   handleCheck = number => {
-    const { lists, filters } = this.state;
+    const { filters, lists } = this.state;
     const { type } = filters;
 
     if (lists[type].indexOf(number) > -1) {
@@ -151,7 +219,8 @@ export default class Checklist extends React.PureComponent {
     } else {
       lists[type].push(number);
     }
-    let filteredDex = this.getFilteredDex();
+
+    let filteredDex = this.getFilteredDex(filters, lists);
     let count = this.getCheckedCount(filteredDex);
 
     this.child.setCounts({
@@ -164,6 +233,7 @@ export default class Checklist extends React.PureComponent {
   handleSave = () => {
     const { uid } = this.props.user;
     const { lists } = this.state;
+    let oThis = this;
 
     db.collection("checklists")
       .doc(uid)
@@ -183,7 +253,7 @@ export default class Checklist extends React.PureComponent {
       )
       .catch(function(error) {
         console.error("Error updating the checklists: ", error);
-        this.setState({
+        oThis.setState({
           saveState: {
             color: "red",
             label: "Error saving your changes...",
@@ -195,11 +265,25 @@ export default class Checklist extends React.PureComponent {
 
   // Update the local storage and then the state with the filters
   handleSetFilters = filters => {
+    const { lists } = this.state;
+    let filteredDex = this.getFilteredDex(filters, lists);
+    let rowCount = Math.ceil(Object.keys(filteredDex).length / ENTRIES_PER_ROW);
+
     localStorage.setItem(
       "victory_road_checklist_filters",
       JSON.stringify(filters)
     );
-    this.setState({ filters: filters });
+
+    if (this.list) {
+      this.list.forceUpdateGrid();
+    }
+
+    this.setState({
+      filters: filters,
+      filteredDex: filteredDex,
+      rowCount: rowCount,
+      rowData: this.buildRowData(filteredDex, rowCount)
+    });
   };
 
   // Determine the current type, and update the filters
@@ -210,54 +294,67 @@ export default class Checklist extends React.PureComponent {
     this.handleSetFilters(newFilters);
   };
 
-  // Render all the pokedex entries for the current checklist type
-  renderEntries = filteredDex => {
-    const { filters, lists } = this.state;
-    const { type } = filters;
+  renderRow = ({
+    key, // Unique key within array of rows
+    index, // Index of row within collection
+    isScrolling, // The List is currently being scrolled
+    isVisible, // This row is visible within the List (eg it is not an overscanned row)
+    style // Style object to be applied to row (to position it)
+  }) => {
+    const { lists, filters, rowData } = this.state;
     let entries = [];
     let oThis = this;
     let i = 0;
 
-    Object.keys(filteredDex).forEach(function(number) {
+    Object.keys(rowData[index]).forEach(function(number) {
       entries.push(
         <Entry
-          checked={lists[type] && lists[type].indexOf(number) > -1}
+          checked={
+            lists[filters.type] && lists[filters.type].indexOf(number) > -1
+          }
           entry={pokedex[number]}
           handleCheck={() => oThis.handleCheck(number)}
           key={i}
-          listType={type}
+          listType={filters.type}
           number={number}
         />
       );
       i++;
     });
 
-    return entries;
+    return (
+      <div key={key} style={style}>
+        <Grid textAlign="center">{entries}</Grid>
+      </div>
+    );
   };
 
   render() {
-    const { filters, lists, saveState } = this.state;
+    const { filteredDex, filters, lists, rowCount, saveState } = this.state;
+    let totalCount = filteredDex ? Object.keys(filteredDex).length : 0;
     const { user } = this.props;
     const { type } = filters;
 
     if (lists[type]) {
-      let filteredDex = this.getFilteredDex();
       if (this.child) {
         let count = this.getCheckedCount(filteredDex);
         this.child.setCounts({
           checked: count,
-          total: Object.keys(filteredDex).length
+          total: totalCount
         });
       }
 
       return (
-        <div className={styles["checklist-container"]}>
+        <div
+          className={styles["checklist-container"]}
+          onScroll={this.handleScroll}
+        >
           <Progress
             checkedCount={this.getCheckedCount(filteredDex)}
             handleSave={this.handleSave}
             listType={type}
             onRef={ref => (this.child = ref)}
-            totalCount={Object.keys(filteredDex).length}
+            totalCount={totalCount}
             user={user}
           />
           <div className={styles["checklist-button-wrapper"]}>
@@ -279,7 +376,16 @@ export default class Checklist extends React.PureComponent {
               />
             </Menu>
           </div>
-          <Grid>{this.renderEntries(filteredDex)}</Grid>
+          <List
+            height={window.innerHeight}
+            overscanRowCount={2}
+            ref={c => (this.list = c)}
+            rowCount={rowCount}
+            rowHeight={ROW_HEIGHT}
+            rowRenderer={this.renderRow}
+            style={{ outline: "none" }}
+            width={window.innerWidth * 0.8}
+          />
           <ChecklistSidebar
             filters={filters}
             handleSave={this.handleSave}
