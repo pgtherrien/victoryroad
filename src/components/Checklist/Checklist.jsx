@@ -52,17 +52,19 @@ export default class Checklist extends React.PureComponent {
               shiny: JSON.parse(data.shiny)
             }
           });
-        }
-      });
-    } else {
-      this.setState({
-        lists: {
-          lucky: [],
-          normal: [],
-          shiny: []
+
+          return;
         }
       });
     }
+
+    this.setState({
+      lists: {
+        lucky: [],
+        normal: [],
+        shiny: []
+      }
+    });
   }
 
   // Get the count of checked entries in the current filtered Pokedex
