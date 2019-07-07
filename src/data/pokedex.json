@@ -6,7 +6,7 @@
     "number": "001",
     "shiny": true,
     "tags": [],
-    "type": ["poison", "grass"]
+    "types": ["poison", "grass"]
   },
   "002_00": {
     "genders": ["female", "male"],
@@ -15,7 +15,7 @@
     "number": "002",
     "shiny": true,
     "tags": [],
-    "type": ["poison", "grass"]
+    "types": ["poison", "grass"]
   },
   "003_00": {
     "genders": ["female", "male"],
@@ -24,7 +24,7 @@
     "number": "003",
     "shiny": true,
     "tags": [],
-    "type": ["poison", "grass"]
+    "types": ["poison", "grass"]
   },
   "004_00": {
     "genders": ["female", "male"],
@@ -33,7 +33,7 @@
     "number": "004",
     "shiny": true,
     "tags": [],
-    "type": ["fire"]
+    "types": ["fire"]
   },
   "005_00": {
     "genders": ["female", "male"],
@@ -42,7 +42,7 @@
     "number": "005",
     "shiny": true,
     "tags": [],
-    "type": ["fire"]
+    "types": ["fire"]
   },
   "006_00": {
     "genders": ["female", "male"],
@@ -51,7 +51,7 @@
     "number": "006",
     "shiny": true,
     "tags": [],
-    "type": ["flying", "fire"]
+    "types": ["flying", "fire"]
   },
   "007_00": {
     "genders": ["female", "male"],
@@ -60,7 +60,7 @@
     "number": "007",
     "shiny": true,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "007_00_05": {
     "genders": ["female", "male"],
@@ -69,7 +69,7 @@
     "number": "007",
     "shiny": true,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "008_00": {
     "genders": ["female", "male"],
@@ -78,7 +78,7 @@
     "number": "008",
     "shiny": true,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "008_00_05": {
     "genders": ["female", "male"],
@@ -87,7 +87,7 @@
     "number": "008",
     "shiny": true,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "009_00": {
     "genders": ["female", "male"],
@@ -96,7 +96,7 @@
     "number": "009",
     "shiny": true,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "009_00_05": {
     "genders": ["female", "male"],
@@ -105,7 +105,7 @@
     "number": "009",
     "shiny": true,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "010_00": {
     "genders": ["female", "male"],
@@ -114,7 +114,7 @@
     "number": "010",
     "shiny": true,
     "tags": [],
-    "type": ["bug"]
+    "types": ["bug"]
   },
   "011_00": {
     "genders": ["female", "male"],
@@ -123,7 +123,7 @@
     "number": "011",
     "shiny": true,
     "tags": [],
-    "type": ["bug"]
+    "types": ["bug"]
   },
   "012_00": {
     "genders": ["female", "male"],
@@ -132,7 +132,7 @@
     "number": "012",
     "shiny": true,
     "tags": [],
-    "type": ["flying", "bug"]
+    "types": ["flying", "bug"]
   },
   "013_00": {
     "genders": ["female", "male"],
@@ -141,7 +141,7 @@
     "number": "013",
     "shiny": false,
     "tags": [],
-    "type": ["poison", "bug"]
+    "types": ["poison", "bug"]
   },
   "014_00": {
     "genders": ["female", "male"],
@@ -150,7 +150,7 @@
     "number": "014",
     "shiny": false,
     "tags": [],
-    "type": ["poison", "bug"]
+    "types": ["poison", "bug"]
   },
   "015_00": {
     "genders": ["female", "male"],
@@ -159,7 +159,7 @@
     "number": "015",
     "shiny": false,
     "tags": [],
-    "type": ["poison", "bug"]
+    "types": ["poison", "bug"]
   },
   "016_00": {
     "genders": ["female", "male"],
@@ -168,7 +168,7 @@
     "number": "016",
     "shiny": true,
     "tags": [],
-    "type": ["flying", "normal"]
+    "types": ["flying", "normal"]
   },
   "017_00": {
     "genders": ["female", "male"],
@@ -177,7 +177,7 @@
     "number": "017",
     "shiny": true,
     "tags": [],
-    "type": ["flying", "normal"]
+    "types": ["flying", "normal"]
   },
   "018_00": {
     "genders": ["female", "male"],
@@ -186,7 +186,7 @@
     "number": "018",
     "shiny": true,
     "tags": [],
-    "type": ["flying", "normal"]
+    "types": ["flying", "normal"]
   },
   "019_00": {
     "genders": ["female", "male"],
@@ -195,7 +195,7 @@
     "number": "019",
     "shiny": true,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "019_61": {
     "genders": ["female", "male"],
@@ -204,7 +204,7 @@
     "number": "019",
     "shiny": true,
     "tags": ["alolan"],
-    "type": ["dark", "normal"]
+    "types": ["dark", "normal"]
   },
   "020_00": {
     "genders": ["female", "male"],
@@ -213,7 +213,7 @@
     "number": "020",
     "shiny": true,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "020_61": {
     "genders": ["female", "male"],
@@ -222,7 +222,7 @@
     "number": "020",
     "shiny": true,
     "tags": ["alolan"],
-    "type": ["dark", "normal"]
+    "types": ["dark", "normal"]
   },
   "021_00": {
     "genders": ["female", "male"],
@@ -231,7 +231,7 @@
     "number": "021",
     "shiny": false,
     "tags": [],
-    "type": ["flying", "normal"]
+    "types": ["flying", "normal"]
   },
   "022_00": {
     "genders": ["female", "male"],
@@ -240,7 +240,7 @@
     "number": "022",
     "shiny": false,
     "tags": [],
-    "type": ["flying", "normal"]
+    "types": ["flying", "normal"]
   },
   "023_00": {
     "genders": ["female", "male"],
@@ -249,7 +249,7 @@
     "number": "023",
     "shiny": false,
     "tags": [],
-    "type": ["poison"]
+    "types": ["poison"]
   },
   "024_00": {
     "genders": ["female", "male"],
@@ -258,7 +258,7 @@
     "number": "024",
     "shiny": false,
     "tags": [],
-    "type": ["poison"]
+    "types": ["poison"]
   },
   "025_00": {
     "genders": ["female", "male"],
@@ -267,7 +267,7 @@
     "number": "025",
     "shiny": true,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "025_00_01": {
     "genders": ["female", "male"],
@@ -276,7 +276,7 @@
     "number": "025",
     "shiny": true,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "025_00_02": {
     "genders": ["female", "male"],
@@ -285,7 +285,7 @@
     "number": "025",
     "shiny": true,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "025_00_03": {
     "genders": ["female", "male"],
@@ -294,7 +294,7 @@
     "number": "025",
     "shiny": true,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "025_00_04": {
     "genders": ["female", "male"],
@@ -303,7 +303,7 @@
     "number": "025",
     "shiny": true,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "025_00_05": {
     "genders": ["female", "male"],
@@ -312,7 +312,7 @@
     "number": "025",
     "shiny": false,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "025_00_06": {
     "genders": ["female", "male"],
@@ -321,7 +321,7 @@
     "number": "025",
     "shiny": true,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "025_00_07": {
     "genders": ["female", "male"],
@@ -330,7 +330,7 @@
     "number": "025",
     "shiny": true,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "025_00_09": {
     "genders": ["female", "male"],
@@ -339,7 +339,7 @@
     "number": "025",
     "shiny": false,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "026_00": {
     "genders": ["female", "male"],
@@ -348,7 +348,7 @@
     "number": "026",
     "shiny": true,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "026_00_01": {
     "genders": ["female", "male"],
@@ -357,7 +357,7 @@
     "number": "026",
     "shiny": true,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "026_00_02": {
     "genders": ["female", "male"],
@@ -366,7 +366,7 @@
     "number": "026",
     "shiny": true,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "026_00_03": {
     "genders": ["female", "male"],
@@ -375,7 +375,7 @@
     "number": "026",
     "shiny": true,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "026_00_04": {
     "genders": ["female", "male"],
@@ -384,7 +384,7 @@
     "number": "026",
     "shiny": true,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "026_00_05": {
     "genders": ["female", "male"],
@@ -393,7 +393,7 @@
     "number": "026",
     "shiny": false,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "026_00_06": {
     "genders": ["female", "male"],
@@ -402,7 +402,7 @@
     "number": "026",
     "shiny": true,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "026_00_07": {
     "genders": ["female", "male"],
@@ -411,7 +411,7 @@
     "number": "026",
     "shiny": true,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "026_00_09": {
     "genders": ["female", "male"],
@@ -420,7 +420,7 @@
     "number": "026",
     "shiny": false,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "026_61": {
     "genders": ["female", "male"],
@@ -429,7 +429,7 @@
     "number": "026",
     "shiny": true,
     "tags": ["alolan"],
-    "type": ["electric", "psychic"]
+    "types": ["electric", "psychic"]
   },
   "027_00": {
     "genders": ["female", "male"],
@@ -438,7 +438,7 @@
     "number": "027",
     "shiny": true,
     "tags": [],
-    "type": ["ground"]
+    "types": ["ground"]
   },
   "027_61": {
     "genders": ["female", "male"],
@@ -447,7 +447,7 @@
     "number": "027",
     "shiny": true,
     "tags": ["alolan"],
-    "type": ["ice", "steel"]
+    "types": ["ice", "steel"]
   },
   "028_00": {
     "genders": ["female", "male"],
@@ -456,7 +456,7 @@
     "number": "028",
     "shiny": true,
     "tags": [],
-    "type": ["ground"]
+    "types": ["ground"]
   },
   "028_61": {
     "genders": ["female", "male"],
@@ -465,7 +465,7 @@
     "number": "028",
     "shiny": true,
     "tags": ["alolan"],
-    "type": ["ice", "steel"]
+    "types": ["ice", "steel"]
   },
   "029_01": {
     "genders": ["female"],
@@ -474,7 +474,7 @@
     "number": "029",
     "shiny": true,
     "tags": [],
-    "type": ["poison"]
+    "types": ["poison"]
   },
   "030_01": {
     "genders": ["female"],
@@ -483,7 +483,7 @@
     "number": "030",
     "shiny": true,
     "tags": [],
-    "type": ["poison"]
+    "types": ["poison"]
   },
   "031_01": {
     "genders": ["female"],
@@ -492,7 +492,7 @@
     "number": "031",
     "shiny": true,
     "tags": [],
-    "type": ["poison", "ground"]
+    "types": ["poison", "ground"]
   },
   "032_00": {
     "genders": ["male"],
@@ -501,7 +501,7 @@
     "number": "032",
     "shiny": false,
     "tags": [],
-    "type": ["poison"]
+    "types": ["poison"]
   },
   "033_00": {
     "genders": ["male"],
@@ -510,7 +510,7 @@
     "number": "033",
     "shiny": false,
     "tags": [],
-    "type": ["poison"]
+    "types": ["poison"]
   },
   "034_00": {
     "genders": ["male"],
@@ -519,7 +519,7 @@
     "number": "034",
     "shiny": false,
     "tags": [],
-    "type": ["ground", "poison"]
+    "types": ["ground", "poison"]
   },
   "035_00": {
     "genders": ["female", "male"],
@@ -528,7 +528,7 @@
     "number": "035",
     "shiny": true,
     "tags": [],
-    "type": ["fairy"]
+    "types": ["fairy"]
   },
   "036_00": {
     "genders": ["female", "male"],
@@ -537,7 +537,7 @@
     "number": "036",
     "shiny": true,
     "tags": [],
-    "type": ["fairy"]
+    "types": ["fairy"]
   },
   "037_00": {
     "genders": ["female", "male"],
@@ -546,7 +546,7 @@
     "number": "037",
     "shiny": false,
     "tags": [],
-    "type": ["fire"]
+    "types": ["fire"]
   },
   "037_61": {
     "genders": ["female", "male"],
@@ -555,7 +555,7 @@
     "number": "037",
     "shiny": true,
     "tags": ["alolan"],
-    "type": ["ice"]
+    "types": ["ice"]
   },
   "038_00": {
     "genders": ["female", "male"],
@@ -564,7 +564,7 @@
     "number": "038",
     "shiny": false,
     "tags": [],
-    "type": ["fire"]
+    "types": ["fire"]
   },
   "038_61": {
     "genders": ["female", "male"],
@@ -573,7 +573,7 @@
     "number": "038",
     "shiny": true,
     "tags": ["alolan"],
-    "type": ["ice", "fairy"]
+    "types": ["ice", "fairy"]
   },
   "039_00": {
     "genders": ["female", "male"],
@@ -582,7 +582,7 @@
     "number": "039",
     "shiny": true,
     "tags": [],
-    "type": ["fairy", "normal"]
+    "types": ["fairy", "normal"]
   },
   "040_00": {
     "genders": ["female", "male"],
@@ -591,7 +591,7 @@
     "number": "040",
     "shiny": true,
     "tags": [],
-    "type": ["fairy", "normal"]
+    "types": ["fairy", "normal"]
   },
   "041_00": {
     "genders": ["female", "male"],
@@ -600,7 +600,7 @@
     "number": "041",
     "shiny": false,
     "tags": [],
-    "type": ["flying", "poison"]
+    "types": ["flying", "poison"]
   },
   "042_00": {
     "genders": ["female", "male"],
@@ -609,7 +609,7 @@
     "number": "042",
     "shiny": false,
     "tags": [],
-    "type": ["flying", "poison"]
+    "types": ["flying", "poison"]
   },
   "043_00": {
     "genders": ["female", "male"],
@@ -618,7 +618,7 @@
     "number": "043",
     "shiny": false,
     "tags": [],
-    "type": ["poison", "grass"]
+    "types": ["poison", "grass"]
   },
   "044_00": {
     "genders": ["female", "male"],
@@ -627,7 +627,7 @@
     "number": "044",
     "shiny": false,
     "tags": [],
-    "type": ["poison", "grass"]
+    "types": ["poison", "grass"]
   },
   "045_00": {
     "genders": ["female", "male"],
@@ -636,7 +636,7 @@
     "number": "045",
     "shiny": false,
     "tags": [],
-    "type": ["poison", "grass"]
+    "types": ["poison", "grass"]
   },
   "046_00": {
     "genders": ["female", "male"],
@@ -645,7 +645,7 @@
     "number": "046",
     "shiny": false,
     "tags": [],
-    "type": ["grass", "bug"]
+    "types": ["grass", "bug"]
   },
   "047_00": {
     "genders": ["female", "male"],
@@ -654,7 +654,7 @@
     "number": "047",
     "shiny": false,
     "tags": [],
-    "type": ["grass", "bug"]
+    "types": ["grass", "bug"]
   },
   "048_00": {
     "genders": ["female", "male"],
@@ -663,7 +663,7 @@
     "number": "048",
     "shiny": false,
     "tags": [],
-    "type": ["poison", "bug"]
+    "types": ["poison", "bug"]
   },
   "049_00": {
     "genders": ["female", "male"],
@@ -672,7 +672,7 @@
     "number": "049",
     "shiny": false,
     "tags": [],
-    "type": ["poison", "bug"]
+    "types": ["poison", "bug"]
   },
   "050_00": {
     "genders": ["female", "male"],
@@ -681,7 +681,7 @@
     "number": "050",
     "shiny": true,
     "tags": [],
-    "type": ["ground"]
+    "types": ["ground"]
   },
   "050_61": {
     "genders": ["female", "male"],
@@ -690,7 +690,7 @@
     "number": "050",
     "shiny": true,
     "tags": ["alolan"],
-    "type": ["ground", "steel"]
+    "types": ["ground", "steel"]
   },
   "051_00": {
     "genders": ["female", "male"],
@@ -699,7 +699,7 @@
     "number": "051",
     "shiny": true,
     "tags": [],
-    "type": ["ground"]
+    "types": ["ground"]
   },
   "051_61": {
     "genders": ["female", "male"],
@@ -708,7 +708,7 @@
     "number": "051",
     "shiny": true,
     "tags": ["alolan"],
-    "type": ["ground", "steel"]
+    "types": ["ground", "steel"]
   },
   "052_00": {
     "genders": ["female", "male"],
@@ -717,7 +717,7 @@
     "number": "052",
     "shiny": false,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "052_61": {
     "genders": ["female", "male"],
@@ -726,7 +726,7 @@
     "number": "052",
     "shiny": true,
     "tags": ["alolan"],
-    "type": ["dark"]
+    "types": ["dark"]
   },
   "053_00": {
     "genders": ["female", "male"],
@@ -735,7 +735,7 @@
     "number": "053",
     "shiny": false,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "053_61": {
     "genders": ["female", "male"],
@@ -744,7 +744,7 @@
     "number": "053",
     "shiny": true,
     "tags": ["alolan"],
-    "type": ["dark"]
+    "types": ["dark"]
   },
   "054_00": {
     "genders": ["female", "male"],
@@ -753,7 +753,7 @@
     "number": "054",
     "shiny": true,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "055_00": {
     "genders": ["female", "male"],
@@ -762,7 +762,7 @@
     "number": "055",
     "shiny": true,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "056_00": {
     "genders": ["female", "male"],
@@ -771,7 +771,7 @@
     "number": "056",
     "shiny": true,
     "tags": [],
-    "type": ["fighting"]
+    "types": ["fighting"]
   },
   "057_00": {
     "genders": ["female", "male"],
@@ -780,7 +780,7 @@
     "number": "057",
     "shiny": true,
     "tags": [],
-    "type": ["fighting"]
+    "types": ["fighting"]
   },
   "058_00": {
     "genders": ["female", "male"],
@@ -789,7 +789,7 @@
     "number": "058",
     "shiny": true,
     "tags": [],
-    "type": ["fire"]
+    "types": ["fire"]
   },
   "059_00": {
     "genders": ["female", "male"],
@@ -798,7 +798,7 @@
     "number": "059",
     "shiny": true,
     "tags": [],
-    "type": ["fire"]
+    "types": ["fire"]
   },
   "060_00": {
     "genders": ["female", "male"],
@@ -807,7 +807,7 @@
     "number": "060",
     "shiny": false,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "061_00": {
     "genders": ["female", "male"],
@@ -816,7 +816,7 @@
     "number": "061",
     "shiny": false,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "062_00": {
     "genders": ["female", "male"],
@@ -825,7 +825,7 @@
     "number": "062",
     "shiny": false,
     "tags": [],
-    "type": ["fighting", "water"]
+    "types": ["fighting", "water"]
   },
   "063_00": {
     "genders": ["female", "male"],
@@ -834,7 +834,7 @@
     "number": "063",
     "shiny": false,
     "tags": [],
-    "type": ["psychic"]
+    "types": ["psychic"]
   },
   "064_00": {
     "genders": ["female", "male"],
@@ -843,7 +843,7 @@
     "number": "064",
     "shiny": false,
     "tags": [],
-    "type": ["psychic"]
+    "types": ["psychic"]
   },
   "065_00": {
     "genders": ["female", "male"],
@@ -852,7 +852,7 @@
     "number": "065",
     "shiny": false,
     "tags": [],
-    "type": ["psychic"]
+    "types": ["psychic"]
   },
   "066_00": {
     "genders": ["female", "male"],
@@ -861,7 +861,7 @@
     "number": "066",
     "shiny": true,
     "tags": [],
-    "type": ["fighting"]
+    "types": ["fighting"]
   },
   "067_00": {
     "genders": ["female", "male"],
@@ -870,7 +870,7 @@
     "number": "067",
     "shiny": true,
     "tags": [],
-    "type": ["fighting"]
+    "types": ["fighting"]
   },
   "068_00": {
     "genders": ["female", "male"],
@@ -879,7 +879,7 @@
     "number": "068",
     "shiny": true,
     "tags": [],
-    "type": ["fighting"]
+    "types": ["fighting"]
   },
   "069_00": {
     "genders": ["female", "male"],
@@ -888,7 +888,7 @@
     "number": "069",
     "shiny": false,
     "tags": [],
-    "type": ["poison", "grass"]
+    "types": ["poison", "grass"]
   },
   "070_00": {
     "genders": ["female", "male"],
@@ -897,7 +897,7 @@
     "number": "070",
     "shiny": false,
     "tags": [],
-    "type": ["poison", "grass"]
+    "types": ["poison", "grass"]
   },
   "071_00": {
     "genders": ["female", "male"],
@@ -906,7 +906,7 @@
     "number": "071",
     "shiny": false,
     "tags": [],
-    "type": ["poison", "grass"]
+    "types": ["poison", "grass"]
   },
   "072_00": {
     "genders": ["female", "male"],
@@ -915,7 +915,7 @@
     "number": "072",
     "shiny": false,
     "tags": [],
-    "type": ["poison", "water"]
+    "types": ["poison", "water"]
   },
   "073_00": {
     "genders": ["female", "male"],
@@ -924,7 +924,7 @@
     "number": "073",
     "shiny": false,
     "tags": [],
-    "type": ["poison", "water"]
+    "types": ["poison", "water"]
   },
   "074_00": {
     "genders": ["female", "male"],
@@ -933,7 +933,7 @@
     "number": "074",
     "shiny": true,
     "tags": [],
-    "type": ["ground", "rock"]
+    "types": ["ground", "rock"]
   },
   "074_61": {
     "genders": ["female", "male"],
@@ -942,7 +942,7 @@
     "number": "074",
     "shiny": true,
     "tags": ["alolan"],
-    "type": ["rock", "electric"]
+    "types": ["rock", "electric"]
   },
   "075_00": {
     "genders": ["female", "male"],
@@ -951,7 +951,7 @@
     "number": "075",
     "shiny": true,
     "tags": [],
-    "type": ["ground", "rock"]
+    "types": ["ground", "rock"]
   },
   "075_61": {
     "genders": ["female", "male"],
@@ -960,7 +960,7 @@
     "number": "075",
     "shiny": true,
     "tags": ["alolan"],
-    "type": ["rock", "electric"]
+    "types": ["rock", "electric"]
   },
   "076_00": {
     "genders": ["female", "male"],
@@ -969,7 +969,7 @@
     "number": "076",
     "shiny": true,
     "tags": [],
-    "type": ["ground", "rock"]
+    "types": ["ground", "rock"]
   },
   "076_61": {
     "genders": ["female", "male"],
@@ -978,7 +978,7 @@
     "number": "076",
     "shiny": true,
     "tags": ["alolan"],
-    "type": ["rock", "electric"]
+    "types": ["rock", "electric"]
   },
   "077_00": {
     "genders": ["female", "male"],
@@ -987,7 +987,7 @@
     "number": "077",
     "shiny": true,
     "tags": [],
-    "type": ["fire"]
+    "types": ["fire"]
   },
   "078_00": {
     "genders": ["female", "male"],
@@ -996,7 +996,7 @@
     "number": "078",
     "shiny": true,
     "tags": [],
-    "type": ["fire"]
+    "types": ["fire"]
   },
   "079_00": {
     "genders": ["female", "male"],
@@ -1005,7 +1005,7 @@
     "number": "079",
     "shiny": false,
     "tags": [],
-    "type": ["psychic", "water"]
+    "types": ["psychic", "water"]
   },
   "080_00": {
     "genders": ["female", "male"],
@@ -1014,7 +1014,7 @@
     "number": "080",
     "shiny": false,
     "tags": [],
-    "type": ["psychic", "water"]
+    "types": ["psychic", "water"]
   },
   "081_00": {
     "genders": ["female", "male"],
@@ -1023,7 +1023,7 @@
     "number": "081",
     "shiny": true,
     "tags": [],
-    "type": ["steel", "electric"]
+    "types": ["steel", "electric"]
   },
   "082_00": {
     "genders": ["female", "male"],
@@ -1032,7 +1032,7 @@
     "number": "082",
     "shiny": true,
     "tags": [],
-    "type": ["steel", "electric"]
+    "types": ["steel", "electric"]
   },
   "083_00": {
     "genders": ["female", "male"],
@@ -1041,7 +1041,7 @@
     "number": "083",
     "shiny": false,
     "tags": ["regional"],
-    "type": ["flying", "normal"]
+    "types": ["flying", "normal"]
   },
   "084_00": {
     "genders": ["female", "male"],
@@ -1050,7 +1050,7 @@
     "number": "084",
     "shiny": false,
     "tags": [],
-    "type": ["flying", "normal"]
+    "types": ["flying", "normal"]
   },
   "085_00": {
     "genders": ["female", "male"],
@@ -1059,7 +1059,7 @@
     "number": "085",
     "shiny": false,
     "tags": [],
-    "type": ["flying", "normal"]
+    "types": ["flying", "normal"]
   },
   "086_00": {
     "genders": ["female", "male"],
@@ -1068,7 +1068,7 @@
     "number": "086",
     "shiny": true,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "087_00": {
     "genders": ["female", "male"],
@@ -1077,7 +1077,7 @@
     "number": "087",
     "shiny": true,
     "tags": [],
-    "type": ["ice", "water"]
+    "types": ["ice", "water"]
   },
   "088_00": {
     "genders": ["female", "male"],
@@ -1086,7 +1086,7 @@
     "number": "088",
     "shiny": true,
     "tags": [],
-    "type": ["poison"]
+    "types": ["poison"]
   },
   "088_61": {
     "genders": ["female", "male"],
@@ -1095,7 +1095,7 @@
     "number": "088",
     "shiny": true,
     "tags": ["alolan"],
-    "type": ["poison", "dark"]
+    "types": ["poison", "dark"]
   },
   "089_00": {
     "genders": ["female", "male"],
@@ -1104,7 +1104,7 @@
     "number": "089",
     "shiny": true,
     "tags": [],
-    "type": ["poison"]
+    "types": ["poison"]
   },
   "089_61": {
     "genders": ["female", "male"],
@@ -1113,7 +1113,7 @@
     "number": "089",
     "shiny": true,
     "tags": ["alolan"],
-    "type": ["poison", "dark"]
+    "types": ["poison", "dark"]
   },
   "090_00": {
     "genders": ["female", "male"],
@@ -1122,7 +1122,7 @@
     "number": "090",
     "shiny": true,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "091_00": {
     "genders": ["female", "male"],
@@ -1131,7 +1131,7 @@
     "number": "091",
     "shiny": true,
     "tags": [],
-    "type": ["ice", "water"]
+    "types": ["ice", "water"]
   },
   "092_00": {
     "genders": ["female", "male"],
@@ -1140,7 +1140,7 @@
     "number": "092",
     "shiny": true,
     "tags": [],
-    "type": ["poison", "ghost"]
+    "types": ["poison", "ghost"]
   },
   "093_00": {
     "genders": ["female", "male"],
@@ -1149,7 +1149,7 @@
     "number": "093",
     "shiny": true,
     "tags": [],
-    "type": ["poison", "ghost"]
+    "types": ["poison", "ghost"]
   },
   "094_00": {
     "genders": ["female", "male"],
@@ -1158,7 +1158,7 @@
     "number": "094",
     "shiny": true,
     "tags": [],
-    "type": ["poison", "ghost"]
+    "types": ["poison", "ghost"]
   },
   "095_00": {
     "genders": ["female", "male"],
@@ -1167,7 +1167,7 @@
     "number": "095",
     "shiny": true,
     "tags": [],
-    "type": ["ground", "rock"]
+    "types": ["ground", "rock"]
   },
   "096_00": {
     "genders": ["female", "male"],
@@ -1176,7 +1176,7 @@
     "number": "096",
     "shiny": true,
     "tags": [],
-    "type": ["psychic"]
+    "types": ["psychic"]
   },
   "097_00": {
     "genders": ["female", "male"],
@@ -1185,7 +1185,7 @@
     "number": "097",
     "shiny": true,
     "tags": [],
-    "type": ["psychic"]
+    "types": ["psychic"]
   },
   "098_00": {
     "genders": ["female", "male"],
@@ -1194,7 +1194,7 @@
     "number": "098",
     "shiny": true,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "099_00": {
     "genders": ["female", "male"],
@@ -1203,7 +1203,7 @@
     "number": "099",
     "shiny": true,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "100_00": {
     "genders": ["female", "male"],
@@ -1212,7 +1212,7 @@
     "number": "100",
     "shiny": false,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "101_00": {
     "genders": ["female", "male"],
@@ -1221,7 +1221,7 @@
     "number": "101",
     "shiny": false,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "102_00": {
     "genders": ["female", "male"],
@@ -1230,7 +1230,7 @@
     "number": "102",
     "shiny": false,
     "tags": [],
-    "type": ["psychic", "grass"]
+    "types": ["psychic", "grass"]
   },
   "103_00": {
     "genders": ["female", "male"],
@@ -1239,7 +1239,7 @@
     "number": "103",
     "shiny": false,
     "tags": [],
-    "type": ["psychic", "grass"]
+    "types": ["psychic", "grass"]
   },
   "103_61": {
     "genders": ["female", "male"],
@@ -1248,7 +1248,7 @@
     "number": "103",
     "shiny": true,
     "tags": ["alolan"],
-    "type": ["grass", "dragon"]
+    "types": ["grass", "dragon"]
   },
   "104_00": {
     "genders": ["female", "male"],
@@ -1257,7 +1257,7 @@
     "number": "104",
     "shiny": true,
     "tags": [],
-    "type": ["ground"]
+    "types": ["ground"]
   },
   "105_00": {
     "genders": ["female", "male"],
@@ -1266,7 +1266,7 @@
     "number": "105",
     "shiny": true,
     "tags": [],
-    "type": ["ground"]
+    "types": ["ground"]
   },
   "105_61": {
     "genders": ["female", "male"],
@@ -1275,7 +1275,7 @@
     "number": "105",
     "shiny": true,
     "tags": ["alolan"],
-    "type": ["fire", "ghost"]
+    "types": ["fire", "ghost"]
   },
   "106_00": {
     "genders": ["male"],
@@ -1284,7 +1284,7 @@
     "number": "106",
     "shiny": false,
     "tags": [],
-    "type": ["fighting"]
+    "types": ["fighting"]
   },
   "107_00": {
     "genders": ["male"],
@@ -1293,7 +1293,7 @@
     "number": "107",
     "shiny": false,
     "tags": [],
-    "type": ["fighting"]
+    "types": ["fighting"]
   },
   "108_00": {
     "genders": ["female", "male"],
@@ -1302,7 +1302,7 @@
     "number": "108",
     "shiny": false,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "109_00": {
     "genders": ["female", "male"],
@@ -1311,7 +1311,7 @@
     "number": "109",
     "shiny": false,
     "tags": [],
-    "type": ["poison"]
+    "types": ["poison"]
   },
   "110_00": {
     "genders": ["female", "male"],
@@ -1320,7 +1320,7 @@
     "number": "110",
     "shiny": false,
     "tags": [],
-    "type": ["poison"]
+    "types": ["poison"]
   },
   "111_00": {
     "genders": ["female", "male"],
@@ -1329,7 +1329,7 @@
     "number": "111",
     "shiny": false,
     "tags": [],
-    "type": ["rock", "ground"]
+    "types": ["rock", "ground"]
   },
   "112_00": {
     "genders": ["female", "male"],
@@ -1338,7 +1338,7 @@
     "number": "112",
     "shiny": false,
     "tags": [],
-    "type": ["rock", "ground"]
+    "types": ["rock", "ground"]
   },
   "113_01": {
     "genders": ["female"],
@@ -1347,7 +1347,7 @@
     "number": "113",
     "shiny": false,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "114_00": {
     "genders": ["female", "male"],
@@ -1356,7 +1356,7 @@
     "number": "114",
     "shiny": false,
     "tags": [],
-    "type": ["grass"]
+    "types": ["grass"]
   },
   "115_01": {
     "genders": ["female"],
@@ -1365,7 +1365,7 @@
     "number": "115",
     "shiny": false,
     "tags": ["regional"],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "116_00": {
     "genders": ["female", "male"],
@@ -1374,7 +1374,7 @@
     "number": "116",
     "shiny": false,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "117_00": {
     "genders": ["female", "male"],
@@ -1383,7 +1383,7 @@
     "number": "117",
     "shiny": false,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "118_00": {
     "genders": ["female", "male"],
@@ -1392,7 +1392,7 @@
     "number": "118",
     "shiny": false,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "119_00": {
     "genders": ["female", "male"],
@@ -1401,7 +1401,7 @@
     "number": "119",
     "shiny": false,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "120_00": {
     "genders": ["female", "male"],
@@ -1410,7 +1410,7 @@
     "number": "120",
     "shiny": false,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "121_00": {
     "genders": ["female", "male"],
@@ -1419,7 +1419,7 @@
     "number": "121",
     "shiny": false,
     "tags": [],
-    "type": ["psychic", "water"]
+    "types": ["psychic", "water"]
   },
   "122_00": {
     "genders": ["female", "male"],
@@ -1428,7 +1428,7 @@
     "number": "122",
     "shiny": false,
     "tags": ["regional"],
-    "type": ["fairy", "psychic"]
+    "types": ["fairy", "psychic"]
   },
   "123_00": {
     "genders": ["female", "male"],
@@ -1437,7 +1437,7 @@
     "number": "123",
     "shiny": true,
     "tags": [],
-    "type": ["flying", "bug"]
+    "types": ["flying", "bug"]
   },
   "124_01": {
     "genders": ["female"],
@@ -1446,7 +1446,7 @@
     "number": "124",
     "shiny": false,
     "tags": [],
-    "type": ["ice", "psychic"]
+    "types": ["ice", "psychic"]
   },
   "125_00": {
     "genders": ["female", "male"],
@@ -1455,7 +1455,7 @@
     "number": "125",
     "shiny": true,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "126_00": {
     "genders": ["female", "male"],
@@ -1464,7 +1464,7 @@
     "number": "126",
     "shiny": true,
     "tags": [],
-    "type": ["fire"]
+    "types": ["fire"]
   },
   "127_00": {
     "genders": ["female", "male"],
@@ -1473,7 +1473,7 @@
     "number": "127",
     "shiny": true,
     "tags": [],
-    "type": ["bug"]
+    "types": ["bug"]
   },
   "128_00": {
     "genders": ["male"],
@@ -1482,7 +1482,7 @@
     "number": "128",
     "shiny": false,
     "tags": ["regional"],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "129_00": {
     "genders": ["female", "male"],
@@ -1491,7 +1491,7 @@
     "number": "129",
     "shiny": true,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "130_00": {
     "genders": ["female", "male"],
@@ -1500,7 +1500,7 @@
     "number": "130",
     "shiny": true,
     "tags": [],
-    "type": ["flying", "water"]
+    "types": ["flying", "water"]
   },
   "131_00": {
     "genders": ["female", "male"],
@@ -1509,7 +1509,7 @@
     "number": "131",
     "shiny": true,
     "tags": [],
-    "type": ["ice", "water"]
+    "types": ["ice", "water"]
   },
   "132_00": {
     "genders": ["female", "male"],
@@ -1518,7 +1518,7 @@
     "number": "132",
     "shiny": false,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "133_00": {
     "genders": ["female", "male"],
@@ -1527,7 +1527,7 @@
     "number": "133",
     "shiny": true,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "133_00_07": {
     "genders": ["female", "male"],
@@ -1536,7 +1536,7 @@
     "number": "133",
     "shiny": true,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "134_00": {
     "genders": ["female", "male"],
@@ -1545,7 +1545,7 @@
     "number": "134",
     "shiny": true,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "134_00_07": {
     "genders": ["female", "male"],
@@ -1554,7 +1554,7 @@
     "number": "134",
     "shiny": true,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "135_00": {
     "genders": ["female", "male"],
@@ -1563,7 +1563,7 @@
     "number": "135",
     "shiny": true,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "135_00_07": {
     "genders": ["female", "male"],
@@ -1572,7 +1572,7 @@
     "number": "135",
     "shiny": true,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "136_00": {
     "genders": ["female", "male"],
@@ -1581,7 +1581,7 @@
     "number": "136",
     "shiny": true,
     "tags": [],
-    "type": ["fire"]
+    "types": ["fire"]
   },
   "136_00_07": {
     "genders": ["female", "male"],
@@ -1590,7 +1590,7 @@
     "number": "136",
     "shiny": true,
     "tags": [],
-    "type": ["fire"]
+    "types": ["fire"]
   },
   "137_00": {
     "genders": ["female", "male"],
@@ -1599,7 +1599,7 @@
     "number": "137",
     "shiny": false,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "138_00": {
     "genders": ["female", "male"],
@@ -1608,7 +1608,7 @@
     "number": "138",
     "shiny": true,
     "tags": [],
-    "type": ["water", "rock"]
+    "types": ["water", "rock"]
   },
   "139_00": {
     "genders": ["female", "male"],
@@ -1617,7 +1617,7 @@
     "number": "139",
     "shiny": true,
     "tags": [],
-    "type": ["water", "rock"]
+    "types": ["water", "rock"]
   },
   "140_00": {
     "genders": ["female", "male"],
@@ -1626,7 +1626,7 @@
     "number": "140",
     "shiny": true,
     "tags": [],
-    "type": ["water", "rock"]
+    "types": ["water", "rock"]
   },
   "141_00": {
     "genders": ["female", "male"],
@@ -1635,7 +1635,7 @@
     "number": "141",
     "shiny": true,
     "tags": [],
-    "type": ["water", "rock"]
+    "types": ["water", "rock"]
   },
   "142_00": {
     "genders": ["female", "male"],
@@ -1644,7 +1644,7 @@
     "number": "142",
     "shiny": true,
     "tags": [],
-    "type": ["flying", "rock"]
+    "types": ["flying", "rock"]
   },
   "143_00": {
     "genders": ["female", "male"],
@@ -1653,7 +1653,7 @@
     "number": "143",
     "shiny": false,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "144_00": {
     "genders": ["female", "male"],
@@ -1662,7 +1662,7 @@
     "number": "144",
     "shiny": true,
     "tags": ["legendary"],
-    "type": ["flying", "ice"]
+    "types": ["flying", "ice"]
   },
   "145_00": {
     "genders": ["female", "male"],
@@ -1671,7 +1671,7 @@
     "number": "145",
     "shiny": true,
     "tags": ["legendary"],
-    "type": ["flying", "electric"]
+    "types": ["flying", "electric"]
   },
   "146_00": {
     "genders": ["female", "male"],
@@ -1680,7 +1680,7 @@
     "number": "146",
     "shiny": true,
     "tags": ["legendary"],
-    "type": ["flying", "fire"]
+    "types": ["flying", "fire"]
   },
   "147_00": {
     "genders": ["female", "male"],
@@ -1689,7 +1689,7 @@
     "number": "147",
     "shiny": true,
     "tags": [],
-    "type": ["dragon"]
+    "types": ["dragon"]
   },
   "148_00": {
     "genders": ["female", "male"],
@@ -1698,7 +1698,7 @@
     "number": "148",
     "shiny": true,
     "tags": [],
-    "type": ["dragon"]
+    "types": ["dragon"]
   },
   "149_00": {
     "genders": ["female", "male"],
@@ -1707,7 +1707,7 @@
     "number": "149",
     "shiny": true,
     "tags": [],
-    "type": ["flying", "dragon"]
+    "types": ["flying", "dragon"]
   },
   "150_00": {
     "genders": ["female", "male"],
@@ -1716,7 +1716,7 @@
     "number": "150",
     "shiny": false,
     "tags": ["legendary"],
-    "type": ["psychic"]
+    "types": ["psychic"]
   },
   "151_00": {
     "genders": ["female", "male"],
@@ -1724,8 +1724,8 @@
     "name": "Mew",
     "number": "151",
     "shiny": false,
-    "tags": ["mythical"],
-    "type": ["psychic"]
+    "tags": ["mythical", "not_tradable"],
+    "types": ["psychic"]
   },
   "152_00": {
     "genders": ["female", "male"],
@@ -1734,7 +1734,7 @@
     "number": "152",
     "shiny": true,
     "tags": [],
-    "type": ["grass"]
+    "types": ["grass"]
   },
   "153_00": {
     "genders": ["female", "male"],
@@ -1743,7 +1743,7 @@
     "number": "153",
     "shiny": true,
     "tags": [],
-    "type": ["grass"]
+    "types": ["grass"]
   },
   "154_00": {
     "genders": ["female", "male"],
@@ -1752,7 +1752,7 @@
     "number": "154",
     "shiny": true,
     "tags": [],
-    "type": ["grass"]
+    "types": ["grass"]
   },
   "155_00": {
     "genders": ["female", "male"],
@@ -1761,7 +1761,7 @@
     "number": "155",
     "shiny": true,
     "tags": [],
-    "type": ["fire"]
+    "types": ["fire"]
   },
   "156_00": {
     "genders": ["female", "male"],
@@ -1770,7 +1770,7 @@
     "number": "156",
     "shiny": true,
     "tags": [],
-    "type": ["fire"]
+    "types": ["fire"]
   },
   "157_00": {
     "genders": ["female", "male"],
@@ -1779,7 +1779,7 @@
     "number": "157",
     "shiny": true,
     "tags": [],
-    "type": ["fire"]
+    "types": ["fire"]
   },
   "158_00": {
     "genders": ["female", "male"],
@@ -1788,7 +1788,7 @@
     "number": "158",
     "shiny": true,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "159_00": {
     "genders": ["female", "male"],
@@ -1797,7 +1797,7 @@
     "number": "159",
     "shiny": true,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "160_00": {
     "genders": ["female", "male"],
@@ -1806,7 +1806,7 @@
     "number": "160",
     "shiny": true,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "161_00": {
     "genders": ["female", "male"],
@@ -1815,7 +1815,7 @@
     "number": "161",
     "shiny": false,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "162_00": {
     "genders": ["female", "male"],
@@ -1824,7 +1824,7 @@
     "number": "162",
     "shiny": false,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "163_00": {
     "genders": ["female", "male"],
@@ -1833,7 +1833,7 @@
     "number": "163",
     "shiny": false,
     "tags": [],
-    "type": ["flying", "normal"]
+    "types": ["flying", "normal"]
   },
   "164_00": {
     "genders": ["female", "male"],
@@ -1842,7 +1842,7 @@
     "number": "164",
     "shiny": false,
     "tags": [],
-    "type": ["flying", "normal"]
+    "types": ["flying", "normal"]
   },
   "165_00": {
     "genders": ["female", "male"],
@@ -1851,7 +1851,7 @@
     "number": "165",
     "shiny": false,
     "tags": [],
-    "type": ["flying", "bug"]
+    "types": ["flying", "bug"]
   },
   "166_00": {
     "genders": ["female", "male"],
@@ -1860,7 +1860,7 @@
     "number": "166",
     "shiny": false,
     "tags": [],
-    "type": ["flying", "bug"]
+    "types": ["flying", "bug"]
   },
   "167_00": {
     "genders": ["female", "male"],
@@ -1869,7 +1869,7 @@
     "number": "167",
     "shiny": false,
     "tags": [],
-    "type": ["poison", "bug"]
+    "types": ["poison", "bug"]
   },
   "168_00": {
     "genders": ["female", "male"],
@@ -1878,7 +1878,7 @@
     "number": "168",
     "shiny": false,
     "tags": [],
-    "type": ["poison", "bug"]
+    "types": ["poison", "bug"]
   },
   "169_00": {
     "genders": ["female", "male"],
@@ -1887,7 +1887,7 @@
     "number": "169",
     "shiny": false,
     "tags": [],
-    "type": ["flying", "poison"]
+    "types": ["flying", "poison"]
   },
   "170_00": {
     "genders": ["female", "male"],
@@ -1896,7 +1896,7 @@
     "number": "170",
     "shiny": false,
     "tags": [],
-    "type": ["electric", "water"]
+    "types": ["electric", "water"]
   },
   "171_00": {
     "genders": ["female", "male"],
@@ -1905,7 +1905,7 @@
     "number": "171",
     "shiny": false,
     "tags": [],
-    "type": ["electric", "water"]
+    "types": ["electric", "water"]
   },
   "172_00": {
     "genders": ["female", "male"],
@@ -1914,7 +1914,7 @@
     "number": "172",
     "shiny": true,
     "tags": ["baby"],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "172_00_01": {
     "genders": ["female", "male"],
@@ -1923,7 +1923,7 @@
     "number": "172",
     "shiny": true,
     "tags": ["baby"],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "172_00_02": {
     "genders": ["female", "male"],
@@ -1932,7 +1932,7 @@
     "number": "172",
     "shiny": true,
     "tags": ["baby"],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "172_00_03": {
     "genders": ["female", "male"],
@@ -1941,7 +1941,7 @@
     "number": "172",
     "shiny": false,
     "tags": ["baby"],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "172_00_04": {
     "genders": ["female", "male"],
@@ -1950,7 +1950,7 @@
     "number": "172",
     "shiny": true,
     "tags": ["baby"],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "172_00_05": {
     "genders": ["female", "male"],
@@ -1959,7 +1959,7 @@
     "number": "172",
     "shiny": false,
     "tags": ["baby"],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "173_00": {
     "genders": ["female", "male"],
@@ -1968,7 +1968,7 @@
     "number": "173",
     "shiny": true,
     "tags": ["baby"],
-    "type": ["fairy"]
+    "types": ["fairy"]
   },
   "174_00": {
     "genders": ["female", "male"],
@@ -1977,7 +1977,7 @@
     "number": "174",
     "shiny": true,
     "tags": ["baby"],
-    "type": ["fairy", "normal"]
+    "types": ["fairy", "normal"]
   },
   "175_00": {
     "genders": ["female", "male"],
@@ -1986,7 +1986,7 @@
     "number": "175",
     "shiny": true,
     "tags": ["baby"],
-    "type": ["fairy"]
+    "types": ["fairy"]
   },
   "176_00": {
     "genders": ["female", "male"],
@@ -1995,7 +1995,7 @@
     "number": "176",
     "shiny": true,
     "tags": [],
-    "type": ["flying", "fairy"]
+    "types": ["flying", "fairy"]
   },
   "177_00": {
     "genders": ["female", "male"],
@@ -2004,7 +2004,7 @@
     "number": "177",
     "shiny": true,
     "tags": [],
-    "type": ["flying", "psychic"]
+    "types": ["flying", "psychic"]
   },
   "178_00": {
     "genders": ["female", "male"],
@@ -2013,7 +2013,7 @@
     "number": "178",
     "shiny": true,
     "tags": [],
-    "type": ["flying", "psychic"]
+    "types": ["flying", "psychic"]
   },
   "179_00": {
     "genders": ["female", "male"],
@@ -2022,7 +2022,7 @@
     "number": "179",
     "shiny": true,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "180_00": {
     "genders": ["female", "male"],
@@ -2031,7 +2031,7 @@
     "number": "180",
     "shiny": true,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "181_00": {
     "genders": ["female", "male"],
@@ -2040,7 +2040,7 @@
     "number": "181",
     "shiny": true,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "182_00": {
     "genders": ["female", "male"],
@@ -2049,7 +2049,7 @@
     "number": "182",
     "shiny": false,
     "tags": [],
-    "type": ["grass"]
+    "types": ["grass"]
   },
   "183_00": {
     "genders": ["female", "male"],
@@ -2058,7 +2058,7 @@
     "number": "183",
     "shiny": true,
     "tags": [],
-    "type": ["fairy", "water"]
+    "types": ["fairy", "water"]
   },
   "184_00": {
     "genders": ["female", "male"],
@@ -2067,7 +2067,7 @@
     "number": "184",
     "shiny": true,
     "tags": [],
-    "type": ["fairy", "water"]
+    "types": ["fairy", "water"]
   },
   "185_00": {
     "genders": ["female", "male"],
@@ -2076,7 +2076,7 @@
     "number": "185",
     "shiny": false,
     "tags": [],
-    "type": ["rock"]
+    "types": ["rock"]
   },
   "186_00": {
     "genders": ["female", "male"],
@@ -2085,7 +2085,7 @@
     "number": "186",
     "shiny": false,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "187_00": {
     "genders": ["female", "male"],
@@ -2094,7 +2094,7 @@
     "number": "187",
     "shiny": false,
     "tags": [],
-    "type": ["flying", "grass"]
+    "types": ["flying", "grass"]
   },
   "188_00": {
     "genders": ["female", "male"],
@@ -2103,7 +2103,7 @@
     "number": "188",
     "shiny": false,
     "tags": [],
-    "type": ["flying", "grass"]
+    "types": ["flying", "grass"]
   },
   "189_00": {
     "genders": ["female", "male"],
@@ -2112,7 +2112,7 @@
     "number": "189",
     "shiny": false,
     "tags": [],
-    "type": ["flying", "grass"]
+    "types": ["flying", "grass"]
   },
   "190_00": {
     "genders": ["female", "male"],
@@ -2121,7 +2121,7 @@
     "number": "190",
     "shiny": true,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "191_00": {
     "genders": ["female", "male"],
@@ -2130,7 +2130,7 @@
     "number": "191",
     "shiny": true,
     "tags": [],
-    "type": ["grass"]
+    "types": ["grass"]
   },
   "192_00": {
     "genders": ["female", "male"],
@@ -2139,7 +2139,7 @@
     "number": "192",
     "shiny": true,
     "tags": [],
-    "type": ["grass"]
+    "types": ["grass"]
   },
   "193_00": {
     "genders": ["female", "male"],
@@ -2148,7 +2148,7 @@
     "number": "193",
     "shiny": false,
     "tags": [],
-    "type": ["flying", "bug"]
+    "types": ["flying", "bug"]
   },
   "194_00": {
     "genders": ["female", "male"],
@@ -2157,7 +2157,7 @@
     "number": "194",
     "shiny": false,
     "tags": [],
-    "type": ["ground", "water"]
+    "types": ["ground", "water"]
   },
   "195_00": {
     "genders": ["female", "male"],
@@ -2166,7 +2166,7 @@
     "number": "195",
     "shiny": false,
     "tags": [],
-    "type": ["ground", "water"]
+    "types": ["ground", "water"]
   },
   "196_00": {
     "genders": ["female", "male"],
@@ -2175,7 +2175,7 @@
     "number": "196",
     "shiny": true,
     "tags": [],
-    "type": ["psychic"]
+    "types": ["psychic"]
   },
   "196_00_07": {
     "genders": ["female", "male"],
@@ -2184,7 +2184,7 @@
     "number": "196",
     "shiny": true,
     "tags": [],
-    "type": ["psychic"]
+    "types": ["psychic"]
   },
   "197_00": {
     "genders": ["female", "male"],
@@ -2193,7 +2193,7 @@
     "number": "197",
     "shiny": true,
     "tags": [],
-    "type": ["dark"]
+    "types": ["dark"]
   },
   "197_00_07": {
     "genders": ["female", "male"],
@@ -2202,7 +2202,7 @@
     "number": "197",
     "shiny": true,
     "tags": [],
-    "type": ["dark"]
+    "types": ["dark"]
   },
   "198_00": {
     "genders": ["female", "male"],
@@ -2211,7 +2211,7 @@
     "number": "198",
     "shiny": true,
     "tags": [],
-    "type": ["flying", "dark"]
+    "types": ["flying", "dark"]
   },
   "199_00": {
     "genders": ["female", "male"],
@@ -2220,7 +2220,7 @@
     "number": "199",
     "shiny": false,
     "tags": [],
-    "type": ["psychic", "water"]
+    "types": ["psychic", "water"]
   },
   "200_00": {
     "genders": ["female", "male"],
@@ -2229,7 +2229,7 @@
     "number": "200",
     "shiny": true,
     "tags": [],
-    "type": ["ghost"]
+    "types": ["ghost"]
   },
   "201_00": {
     "genders": ["female", "male"],
@@ -2238,7 +2238,7 @@
     "number": "201",
     "shiny": false,
     "tags": [],
-    "type": ["psychic"]
+    "types": ["psychic"]
   },
   "202_00": {
     "genders": ["female", "male"],
@@ -2247,7 +2247,7 @@
     "number": "202",
     "shiny": true,
     "tags": [],
-    "type": ["psychic"]
+    "types": ["psychic"]
   },
   "203_00": {
     "genders": ["female", "male"],
@@ -2256,7 +2256,7 @@
     "number": "203",
     "shiny": false,
     "tags": [],
-    "type": ["psychic", "normal"]
+    "types": ["psychic", "normal"]
   },
   "204_00": {
     "genders": ["female", "male"],
@@ -2265,7 +2265,7 @@
     "number": "204",
     "shiny": true,
     "tags": [],
-    "type": ["bug"]
+    "types": ["bug"]
   },
   "205_00": {
     "genders": ["female", "male"],
@@ -2274,7 +2274,7 @@
     "number": "205",
     "shiny": true,
     "tags": [],
-    "type": ["steel", "bug"]
+    "types": ["steel", "bug"]
   },
   "206_00": {
     "genders": ["female", "male"],
@@ -2283,7 +2283,7 @@
     "number": "206",
     "shiny": false,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "207_00": {
     "genders": ["female", "male"],
@@ -2292,7 +2292,7 @@
     "number": "207",
     "shiny": false,
     "tags": [],
-    "type": ["flying", "ground"]
+    "types": ["flying", "ground"]
   },
   "208_00": {
     "genders": ["female", "male"],
@@ -2301,7 +2301,7 @@
     "number": "208",
     "shiny": true,
     "tags": [],
-    "type": ["ground", "steel"]
+    "types": ["ground", "steel"]
   },
   "209_00": {
     "genders": ["female", "male"],
@@ -2310,7 +2310,7 @@
     "number": "209",
     "shiny": true,
     "tags": [],
-    "type": ["fairy"]
+    "types": ["fairy"]
   },
   "210_00": {
     "genders": ["female", "male"],
@@ -2319,7 +2319,7 @@
     "number": "210",
     "shiny": true,
     "tags": [],
-    "type": ["fairy"]
+    "types": ["fairy"]
   },
   "211_00": {
     "genders": ["female", "male"],
@@ -2328,7 +2328,7 @@
     "number": "211",
     "shiny": false,
     "tags": [],
-    "type": ["poison", "water"]
+    "types": ["poison", "water"]
   },
   "212_00": {
     "genders": ["female", "male"],
@@ -2337,7 +2337,7 @@
     "number": "212",
     "shiny": true,
     "tags": [],
-    "type": ["steel", "bug"]
+    "types": ["steel", "bug"]
   },
   "213_00": {
     "genders": ["female", "male"],
@@ -2346,7 +2346,7 @@
     "number": "213",
     "shiny": true,
     "tags": [],
-    "type": ["rock", "bug"]
+    "types": ["rock", "bug"]
   },
   "214_00": {
     "genders": ["female", "male"],
@@ -2355,7 +2355,7 @@
     "number": "214",
     "shiny": false,
     "tags": ["regional"],
-    "type": ["fighting", "bug"]
+    "types": ["fighting", "bug"]
   },
   "215_00": {
     "genders": ["female", "male"],
@@ -2364,7 +2364,7 @@
     "number": "215",
     "shiny": false,
     "tags": [],
-    "type": ["ice", "dark"]
+    "types": ["ice", "dark"]
   },
   "216_00": {
     "genders": ["female", "male"],
@@ -2373,7 +2373,7 @@
     "number": "216",
     "shiny": false,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "217_00": {
     "genders": ["female", "male"],
@@ -2382,7 +2382,7 @@
     "number": "217",
     "shiny": false,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "218_00": {
     "genders": ["female", "male"],
@@ -2391,7 +2391,7 @@
     "number": "218",
     "shiny": false,
     "tags": [],
-    "type": ["fire"]
+    "types": ["fire"]
   },
   "219_00": {
     "genders": ["female", "male"],
@@ -2400,7 +2400,7 @@
     "number": "219",
     "shiny": false,
     "tags": [],
-    "type": ["rock", "fire"]
+    "types": ["rock", "fire"]
   },
   "220_00": {
     "genders": ["female", "male"],
@@ -2409,7 +2409,7 @@
     "number": "220",
     "shiny": true,
     "tags": [],
-    "type": ["ground", "ice"]
+    "types": ["ground", "ice"]
   },
   "221_00": {
     "genders": ["female", "male"],
@@ -2418,7 +2418,7 @@
     "number": "221",
     "shiny": true,
     "tags": [],
-    "type": ["ground", "ice"]
+    "types": ["ground", "ice"]
   },
   "222_00": {
     "genders": ["female", "male"],
@@ -2427,7 +2427,7 @@
     "number": "222",
     "shiny": false,
     "tags": ["regional"],
-    "type": ["rock", "water"]
+    "types": ["rock", "water"]
   },
   "223_00": {
     "genders": ["female", "male"],
@@ -2436,7 +2436,7 @@
     "number": "223",
     "shiny": false,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "224_00": {
     "genders": ["female", "male"],
@@ -2445,7 +2445,7 @@
     "number": "224",
     "shiny": false,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "225_00": {
     "genders": ["female", "male"],
@@ -2454,7 +2454,7 @@
     "number": "225",
     "shiny": true,
     "tags": [],
-    "type": ["flying", "ice"]
+    "types": ["flying", "ice"]
   },
   "226_00": {
     "genders": ["female", "male"],
@@ -2463,7 +2463,7 @@
     "number": "226",
     "shiny": false,
     "tags": [],
-    "type": ["flying", "water"]
+    "types": ["flying", "water"]
   },
   "227_00": {
     "genders": ["female", "male"],
@@ -2472,7 +2472,7 @@
     "number": "227",
     "shiny": false,
     "tags": [],
-    "type": ["flying", "steel"]
+    "types": ["flying", "steel"]
   },
   "228_00": {
     "genders": ["female", "male"],
@@ -2481,7 +2481,7 @@
     "number": "228",
     "shiny": true,
     "tags": [],
-    "type": ["fire", "dark"]
+    "types": ["fire", "dark"]
   },
   "229_00": {
     "genders": ["female", "male"],
@@ -2490,7 +2490,7 @@
     "number": "229",
     "shiny": true,
     "tags": [],
-    "type": ["fire", "dark"]
+    "types": ["fire", "dark"]
   },
   "230_00": {
     "genders": ["female", "male"],
@@ -2499,7 +2499,7 @@
     "number": "230",
     "shiny": false,
     "tags": [],
-    "type": ["dragon", "water"]
+    "types": ["dragon", "water"]
   },
   "231_00": {
     "genders": ["female", "male"],
@@ -2508,7 +2508,7 @@
     "number": "231",
     "shiny": false,
     "tags": [],
-    "type": ["ground"]
+    "types": ["ground"]
   },
   "232_00": {
     "genders": ["female", "male"],
@@ -2517,16 +2517,16 @@
     "number": "232",
     "shiny": false,
     "tags": [],
-    "type": ["ground"]
+    "types": ["ground"]
   },
   "233_00": {
     "genders": ["female", "male"],
     "generation": 2,
-    "name": "Porygon2_00",
+    "name": "Porygon2",
     "number": "233",
     "shiny": false,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "234_00": {
     "genders": ["female", "male"],
@@ -2535,7 +2535,7 @@
     "number": "234",
     "shiny": false,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "235_00": {
     "genders": ["female", "male"],
@@ -2544,7 +2544,7 @@
     "number": "235",
     "shiny": false,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "236_00": {
     "genders": ["male"],
@@ -2553,7 +2553,7 @@
     "number": "236",
     "shiny": false,
     "tags": ["baby"],
-    "type": ["fighting"]
+    "types": ["fighting"]
   },
   "237_00": {
     "genders": ["male"],
@@ -2562,7 +2562,7 @@
     "number": "237",
     "shiny": false,
     "tags": [],
-    "type": ["fighting"]
+    "types": ["fighting"]
   },
   "238_01": {
     "genders": ["female"],
@@ -2571,7 +2571,7 @@
     "number": "238",
     "shiny": true,
     "tags": ["baby"],
-    "type": ["psychic", "ice"]
+    "types": ["psychic", "ice"]
   },
   "239_00": {
     "genders": ["female", "male"],
@@ -2580,7 +2580,7 @@
     "number": "239",
     "shiny": true,
     "tags": ["baby"],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "240_00": {
     "genders": ["female", "male"],
@@ -2589,7 +2589,7 @@
     "number": "240",
     "shiny": true,
     "tags": ["baby"],
-    "type": ["fire"]
+    "types": ["fire"]
   },
   "241_01": {
     "genders": ["female"],
@@ -2598,7 +2598,7 @@
     "number": "241",
     "shiny": false,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "242_01": {
     "genders": ["female"],
@@ -2607,7 +2607,7 @@
     "number": "242",
     "shiny": false,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "243_00": {
     "genders": ["female", "male"],
@@ -2616,7 +2616,7 @@
     "number": "243",
     "shiny": true,
     "tags": ["legendary"],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "244_00": {
     "genders": ["female", "male"],
@@ -2625,7 +2625,7 @@
     "number": "244",
     "shiny": false,
     "tags": ["legendary"],
-    "type": ["fire"]
+    "types": ["fire"]
   },
   "245_00": {
     "genders": ["female", "male"],
@@ -2634,7 +2634,7 @@
     "number": "245",
     "shiny": false,
     "tags": ["legendary"],
-    "type": ["water"]
+    "types": ["water"]
   },
   "246_00": {
     "genders": ["female", "male"],
@@ -2643,7 +2643,7 @@
     "number": "246",
     "shiny": true,
     "tags": [],
-    "type": ["ground", "rock"]
+    "types": ["ground", "rock"]
   },
   "247_00": {
     "genders": ["female", "male"],
@@ -2652,7 +2652,7 @@
     "number": "247",
     "shiny": true,
     "tags": [],
-    "type": ["ground", "rock"]
+    "types": ["ground", "rock"]
   },
   "248_00": {
     "genders": ["female", "male"],
@@ -2661,7 +2661,7 @@
     "number": "248",
     "shiny": true,
     "tags": [],
-    "type": ["dark", "rock"]
+    "types": ["dark", "rock"]
   },
   "249_00": {
     "genders": ["female", "male"],
@@ -2670,7 +2670,7 @@
     "number": "249",
     "shiny": true,
     "tags": ["legendary"],
-    "type": ["flying", "psychic"]
+    "types": ["flying", "psychic"]
   },
   "250_00": {
     "genders": ["female", "male"],
@@ -2679,7 +2679,7 @@
     "number": "250",
     "shiny": true,
     "tags": ["legendary"],
-    "type": ["flying", "fire"]
+    "types": ["flying", "fire"]
   },
   "251_00": {
     "genders": ["female", "male"],
@@ -2687,8 +2687,8 @@
     "name": "Celebi",
     "number": "251",
     "shiny": false,
-    "tags": ["mythical"],
-    "type": ["grass", "psychic"]
+    "tags": ["mythical", "not_tradable"],
+    "types": ["grass", "psychic"]
   },
   "252_00": {
     "genders": ["female", "male"],
@@ -2697,7 +2697,7 @@
     "number": "252",
     "shiny": true,
     "tags": [],
-    "type": ["grass"]
+    "types": ["grass"]
   },
   "253_00": {
     "genders": ["female", "male"],
@@ -2706,7 +2706,7 @@
     "number": "253",
     "shiny": true,
     "tags": [],
-    "type": ["grass"]
+    "types": ["grass"]
   },
   "254_00": {
     "genders": ["female", "male"],
@@ -2715,7 +2715,7 @@
     "number": "254",
     "shiny": true,
     "tags": [],
-    "type": ["grass"]
+    "types": ["grass"]
   },
   "255_00": {
     "genders": ["female", "male"],
@@ -2724,7 +2724,7 @@
     "number": "255",
     "shiny": true,
     "tags": [],
-    "type": ["fire"]
+    "types": ["fire"]
   },
   "256_00": {
     "genders": ["female", "male"],
@@ -2733,7 +2733,7 @@
     "number": "256",
     "shiny": true,
     "tags": [],
-    "type": ["fighting", "fire"]
+    "types": ["fighting", "fire"]
   },
   "257_00": {
     "genders": ["female", "male"],
@@ -2742,7 +2742,7 @@
     "number": "257",
     "shiny": true,
     "tags": [],
-    "type": ["fighting", "fire"]
+    "types": ["fighting", "fire"]
   },
   "258_00": {
     "genders": ["female", "male"],
@@ -2751,7 +2751,7 @@
     "number": "258",
     "shiny": false,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "259_00": {
     "genders": ["female", "male"],
@@ -2760,7 +2760,7 @@
     "number": "259",
     "shiny": false,
     "tags": [],
-    "type": ["ground", "water"]
+    "types": ["ground", "water"]
   },
   "260_00": {
     "genders": ["female", "male"],
@@ -2769,7 +2769,7 @@
     "number": "260",
     "shiny": false,
     "tags": [],
-    "type": ["ground", "water"]
+    "types": ["ground", "water"]
   },
   "261_00": {
     "genders": ["female", "male"],
@@ -2778,7 +2778,7 @@
     "number": "261",
     "shiny": true,
     "tags": [],
-    "type": ["dark"]
+    "types": ["dark"]
   },
   "262_00": {
     "genders": ["female", "male"],
@@ -2787,7 +2787,7 @@
     "number": "262",
     "shiny": true,
     "tags": [],
-    "type": ["dark"]
+    "types": ["dark"]
   },
   "263_00": {
     "genders": ["female", "male"],
@@ -2796,7 +2796,7 @@
     "number": "263",
     "shiny": true,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "264_00": {
     "genders": ["female", "male"],
@@ -2805,7 +2805,7 @@
     "number": "264",
     "shiny": true,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "265_00": {
     "genders": ["female", "male"],
@@ -2814,7 +2814,7 @@
     "number": "265",
     "shiny": false,
     "tags": [],
-    "type": ["bug"]
+    "types": ["bug"]
   },
   "266_00": {
     "genders": ["female", "male"],
@@ -2823,7 +2823,7 @@
     "number": "266",
     "shiny": false,
     "tags": [],
-    "type": ["bug"]
+    "types": ["bug"]
   },
   "267_00": {
     "genders": ["female", "male"],
@@ -2832,7 +2832,7 @@
     "number": "267",
     "shiny": false,
     "tags": [],
-    "type": ["flying", "bug"]
+    "types": ["flying", "bug"]
   },
   "268_00": {
     "genders": ["female", "male"],
@@ -2841,7 +2841,7 @@
     "number": "268",
     "shiny": false,
     "tags": [],
-    "type": ["bug"]
+    "types": ["bug"]
   },
   "269_00": {
     "genders": ["female", "male"],
@@ -2850,7 +2850,7 @@
     "number": "269",
     "shiny": false,
     "tags": [],
-    "type": ["poison", "bug"]
+    "types": ["poison", "bug"]
   },
   "270_00": {
     "genders": ["female", "male"],
@@ -2859,7 +2859,7 @@
     "number": "270",
     "shiny": true,
     "tags": [],
-    "type": ["grass", "water"]
+    "types": ["grass", "water"]
   },
   "271_00": {
     "genders": ["female", "male"],
@@ -2868,7 +2868,7 @@
     "number": "271",
     "shiny": true,
     "tags": [],
-    "type": ["grass", "water"]
+    "types": ["grass", "water"]
   },
   "272_00": {
     "genders": ["female", "male"],
@@ -2877,7 +2877,7 @@
     "number": "272",
     "shiny": true,
     "tags": [],
-    "type": ["grass", "water"]
+    "types": ["grass", "water"]
   },
   "273_00": {
     "genders": ["female", "male"],
@@ -2886,7 +2886,7 @@
     "number": "273",
     "shiny": false,
     "tags": [],
-    "type": ["grass"]
+    "types": ["grass"]
   },
   "274_00": {
     "genders": ["female", "male"],
@@ -2895,7 +2895,7 @@
     "number": "274",
     "shiny": false,
     "tags": [],
-    "type": ["dark", "grass"]
+    "types": ["dark", "grass"]
   },
   "275_00": {
     "genders": ["female", "male"],
@@ -2904,7 +2904,7 @@
     "number": "275",
     "shiny": false,
     "tags": [],
-    "type": ["dark", "grass"]
+    "types": ["dark", "grass"]
   },
   "276_00": {
     "genders": ["female", "male"],
@@ -2913,7 +2913,7 @@
     "number": "276",
     "shiny": true,
     "tags": [],
-    "type": ["flying", "normal"]
+    "types": ["flying", "normal"]
   },
   "277_00": {
     "genders": ["female", "male"],
@@ -2922,7 +2922,7 @@
     "number": "277",
     "shiny": true,
     "tags": [],
-    "type": ["flying", "normal"]
+    "types": ["flying", "normal"]
   },
   "278_00": {
     "genders": ["female", "male"],
@@ -2931,7 +2931,7 @@
     "number": "278",
     "shiny": true,
     "tags": [],
-    "type": ["flying", "water"]
+    "types": ["flying", "water"]
   },
   "279_00": {
     "genders": ["female", "male"],
@@ -2940,7 +2940,7 @@
     "number": "279",
     "shiny": true,
     "tags": [],
-    "type": ["flying", "water"]
+    "types": ["flying", "water"]
   },
   "280_00": {
     "genders": ["female", "male"],
@@ -2949,7 +2949,7 @@
     "number": "280",
     "shiny": false,
     "tags": [],
-    "type": ["fairy", "psychic"]
+    "types": ["fairy", "psychic"]
   },
   "281_00": {
     "genders": ["female", "male"],
@@ -2958,7 +2958,7 @@
     "number": "281",
     "shiny": false,
     "tags": [],
-    "type": ["fairy", "psychic"]
+    "types": ["fairy", "psychic"]
   },
   "282_00": {
     "genders": ["female", "male"],
@@ -2967,7 +2967,7 @@
     "number": "282",
     "shiny": false,
     "tags": [],
-    "type": ["fairy", "psychic"]
+    "types": ["fairy", "psychic"]
   },
   "283_00": {
     "genders": ["female", "male"],
@@ -2976,7 +2976,7 @@
     "number": "283",
     "shiny": false,
     "tags": [],
-    "type": ["water", "bug"]
+    "types": ["water", "bug"]
   },
   "284_00": {
     "genders": ["female", "male"],
@@ -2985,7 +2985,7 @@
     "number": "284",
     "shiny": false,
     "tags": [],
-    "type": ["flying", "bug"]
+    "types": ["flying", "bug"]
   },
   "285_00": {
     "genders": ["female", "male"],
@@ -2994,7 +2994,7 @@
     "number": "285",
     "shiny": false,
     "tags": [],
-    "type": ["grass"]
+    "types": ["grass"]
   },
   "286_00": {
     "genders": ["female", "male"],
@@ -3003,7 +3003,7 @@
     "number": "286",
     "shiny": false,
     "tags": [],
-    "type": ["fighting", "grass"]
+    "types": ["fighting", "grass"]
   },
   "287_00": {
     "genders": ["female", "male"],
@@ -3012,7 +3012,7 @@
     "number": "287",
     "shiny": true,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "288_00": {
     "genders": ["female", "male"],
@@ -3021,7 +3021,7 @@
     "number": "288",
     "shiny": true,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "289_00": {
     "genders": ["female", "male"],
@@ -3030,7 +3030,7 @@
     "number": "289",
     "shiny": true,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "290_00": {
     "genders": ["female", "male"],
@@ -3039,7 +3039,7 @@
     "number": "290",
     "shiny": false,
     "tags": [],
-    "type": ["ground", "bug"]
+    "types": ["ground", "bug"]
   },
   "291_00": {
     "genders": ["female", "male"],
@@ -3048,7 +3048,7 @@
     "number": "291",
     "shiny": false,
     "tags": [],
-    "type": ["flying", "bug"]
+    "types": ["flying", "bug"]
   },
   "292_00": {
     "genders": ["female", "male"],
@@ -3057,7 +3057,7 @@
     "number": "292",
     "shiny": false,
     "tags": [],
-    "type": ["ghost", "bug"]
+    "types": ["ghost", "bug"]
   },
   "293_00": {
     "genders": ["female", "male"],
@@ -3066,7 +3066,7 @@
     "number": "293",
     "shiny": false,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "294_00": {
     "genders": ["female", "male"],
@@ -3075,7 +3075,7 @@
     "number": "294",
     "shiny": false,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "295_00": {
     "genders": ["female", "male"],
@@ -3084,7 +3084,7 @@
     "number": "295",
     "shiny": false,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "296_00": {
     "genders": ["female", "male"],
@@ -3093,7 +3093,7 @@
     "number": "296",
     "shiny": true,
     "tags": [],
-    "type": ["fighting"]
+    "types": ["fighting"]
   },
   "297_00": {
     "genders": ["female", "male"],
@@ -3102,7 +3102,7 @@
     "number": "297",
     "shiny": true,
     "tags": [],
-    "type": ["fighting"]
+    "types": ["fighting"]
   },
   "298_00": {
     "genders": ["female", "male"],
@@ -3111,7 +3111,7 @@
     "number": "298",
     "shiny": true,
     "tags": ["baby"],
-    "type": ["fairy", "normal"]
+    "types": ["fairy", "normal"]
   },
   "299_00": {
     "genders": ["female", "male"],
@@ -3120,7 +3120,7 @@
     "number": "299",
     "shiny": false,
     "tags": [],
-    "type": ["rock"]
+    "types": ["rock"]
   },
   "300_00": {
     "genders": ["female", "male"],
@@ -3129,7 +3129,7 @@
     "number": "300",
     "shiny": false,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "301_00": {
     "genders": ["female", "male"],
@@ -3138,7 +3138,7 @@
     "number": "301",
     "shiny": false,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "302_00": {
     "genders": ["female", "male"],
@@ -3147,7 +3147,7 @@
     "number": "302",
     "shiny": true,
     "tags": [],
-    "type": ["ghost", "dark"]
+    "types": ["ghost", "dark"]
   },
   "303_00": {
     "genders": ["female", "male"],
@@ -3156,7 +3156,7 @@
     "number": "303",
     "shiny": true,
     "tags": [],
-    "type": ["fairy", "steel"]
+    "types": ["fairy", "steel"]
   },
   "304_00": {
     "genders": ["female", "male"],
@@ -3165,7 +3165,7 @@
     "number": "304",
     "shiny": true,
     "tags": [],
-    "type": ["rock", "steel"]
+    "types": ["rock", "steel"]
   },
   "305_00": {
     "genders": ["female", "male"],
@@ -3174,7 +3174,7 @@
     "number": "305",
     "shiny": true,
     "tags": [],
-    "type": ["rock", "steel"]
+    "types": ["rock", "steel"]
   },
   "306_00": {
     "genders": ["female", "male"],
@@ -3183,7 +3183,7 @@
     "number": "306",
     "shiny": true,
     "tags": [],
-    "type": ["rock", "steel"]
+    "types": ["rock", "steel"]
   },
   "307_00": {
     "genders": ["female", "male"],
@@ -3192,7 +3192,7 @@
     "number": "307",
     "shiny": true,
     "tags": [],
-    "type": ["psychic", "fighting"]
+    "types": ["psychic", "fighting"]
   },
   "308_00": {
     "genders": ["female", "male"],
@@ -3201,7 +3201,7 @@
     "number": "308",
     "shiny": true,
     "tags": [],
-    "type": ["psychic", "fighting"]
+    "types": ["psychic", "fighting"]
   },
   "309_00": {
     "genders": ["female", "male"],
@@ -3210,7 +3210,7 @@
     "number": "309",
     "shiny": false,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "310_00": {
     "genders": ["female", "male"],
@@ -3219,7 +3219,7 @@
     "number": "310",
     "shiny": false,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "311_00": {
     "genders": ["female", "male"],
@@ -3228,7 +3228,7 @@
     "number": "311",
     "shiny": true,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "312_00": {
     "genders": ["female", "male"],
@@ -3237,7 +3237,7 @@
     "number": "312",
     "shiny": true,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "313_00": {
     "genders": ["male"],
@@ -3246,7 +3246,7 @@
     "number": "313",
     "shiny": false,
     "tags": ["regional"],
-    "type": ["bug"]
+    "types": ["bug"]
   },
   "314_01": {
     "genders": ["female"],
@@ -3255,7 +3255,7 @@
     "number": "314",
     "shiny": false,
     "tags": ["regional"],
-    "type": ["bug"]
+    "types": ["bug"]
   },
   "315_00": {
     "genders": ["female", "male"],
@@ -3264,7 +3264,7 @@
     "number": "315",
     "shiny": true,
     "tags": [],
-    "type": ["poison", "grass"]
+    "types": ["poison", "grass"]
   },
   "316_00": {
     "genders": ["female", "male"],
@@ -3273,7 +3273,7 @@
     "number": "316",
     "shiny": false,
     "tags": [],
-    "type": ["poison"]
+    "types": ["poison"]
   },
   "317_00": {
     "genders": ["female", "male"],
@@ -3282,7 +3282,7 @@
     "number": "317",
     "shiny": false,
     "tags": [],
-    "type": ["poison"]
+    "types": ["poison"]
   },
   "318_00": {
     "genders": ["female", "male"],
@@ -3291,7 +3291,7 @@
     "number": "318",
     "shiny": false,
     "tags": [],
-    "type": ["dark", "water"]
+    "types": ["dark", "water"]
   },
   "319_00": {
     "genders": ["female", "male"],
@@ -3300,7 +3300,7 @@
     "number": "319",
     "shiny": false,
     "tags": [],
-    "type": ["dark", "water"]
+    "types": ["dark", "water"]
   },
   "320_00": {
     "genders": ["female", "male"],
@@ -3309,7 +3309,7 @@
     "number": "320",
     "shiny": true,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "321_00": {
     "genders": ["female", "male"],
@@ -3318,7 +3318,7 @@
     "number": "321",
     "shiny": true,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "322_00": {
     "genders": ["female", "male"],
@@ -3327,7 +3327,7 @@
     "number": "322",
     "shiny": false,
     "tags": [],
-    "type": ["ground", "fire"]
+    "types": ["ground", "fire"]
   },
   "323_00": {
     "genders": ["female", "male"],
@@ -3336,7 +3336,7 @@
     "number": "323",
     "shiny": false,
     "tags": [],
-    "type": ["ground", "fire"]
+    "types": ["ground", "fire"]
   },
   "324_00": {
     "genders": ["female", "male"],
@@ -3345,7 +3345,7 @@
     "number": "324",
     "shiny": false,
     "tags": ["regional"],
-    "type": ["fire"]
+    "types": ["fire"]
   },
   "325_00": {
     "genders": ["female", "male"],
@@ -3354,7 +3354,7 @@
     "number": "325",
     "shiny": true,
     "tags": [],
-    "type": ["psychic"]
+    "types": ["psychic"]
   },
   "326_00": {
     "genders": ["female", "male"],
@@ -3363,7 +3363,7 @@
     "number": "326",
     "shiny": true,
     "tags": [],
-    "type": ["psychic"]
+    "types": ["psychic"]
   },
   "327_00": {
     "genders": ["female", "male"],
@@ -3372,7 +3372,7 @@
     "number": "327",
     "shiny": false,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "328_00": {
     "genders": ["female", "male"],
@@ -3381,7 +3381,7 @@
     "number": "328",
     "shiny": false,
     "tags": [],
-    "type": ["ground"]
+    "types": ["ground"]
   },
   "329_00": {
     "genders": ["female", "male"],
@@ -3390,7 +3390,7 @@
     "number": "329",
     "shiny": false,
     "tags": [],
-    "type": ["dragon", "ground"]
+    "types": ["dragon", "ground"]
   },
   "330_00": {
     "genders": ["female", "male"],
@@ -3399,7 +3399,7 @@
     "number": "330",
     "shiny": false,
     "tags": [],
-    "type": ["dragon", "ground"]
+    "types": ["dragon", "ground"]
   },
   "331_00": {
     "genders": ["female", "male"],
@@ -3408,7 +3408,7 @@
     "number": "331",
     "shiny": false,
     "tags": [],
-    "type": ["grass"]
+    "types": ["grass"]
   },
   "332_00": {
     "genders": ["female", "male"],
@@ -3417,7 +3417,7 @@
     "number": "332",
     "shiny": false,
     "tags": [],
-    "type": ["dark", "grass"]
+    "types": ["dark", "grass"]
   },
   "333_00": {
     "genders": ["female", "male"],
@@ -3426,7 +3426,7 @@
     "number": "333",
     "shiny": true,
     "tags": [],
-    "type": ["flying", "normal"]
+    "types": ["flying", "normal"]
   },
   "334_00": {
     "genders": ["female", "male"],
@@ -3435,7 +3435,7 @@
     "number": "334",
     "shiny": true,
     "tags": [],
-    "type": ["flying", "dragon"]
+    "types": ["flying", "dragon"]
   },
   "335_00": {
     "genders": ["female", "male"],
@@ -3444,7 +3444,7 @@
     "number": "335",
     "shiny": false,
     "tags": ["regional"],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "336_00": {
     "genders": ["female", "male"],
@@ -3453,7 +3453,7 @@
     "number": "336",
     "shiny": false,
     "tags": ["regional"],
-    "type": ["poison"]
+    "types": ["poison"]
   },
   "337_00": {
     "genders": ["female", "male"],
@@ -3462,7 +3462,7 @@
     "number": "337",
     "shiny": true,
     "tags": ["regional"],
-    "type": ["psychic", "rock"]
+    "types": ["psychic", "rock"]
   },
   "338_00": {
     "genders": ["female", "male"],
@@ -3471,7 +3471,7 @@
     "number": "338",
     "shiny": true,
     "tags": ["regional"],
-    "type": ["psychic", "rock"]
+    "types": ["psychic", "rock"]
   },
   "339_00": {
     "genders": ["female", "male"],
@@ -3480,7 +3480,7 @@
     "number": "339",
     "shiny": false,
     "tags": [],
-    "type": ["ground", "water"]
+    "types": ["ground", "water"]
   },
   "340_00": {
     "genders": ["female", "male"],
@@ -3489,7 +3489,7 @@
     "number": "340",
     "shiny": false,
     "tags": [],
-    "type": ["ground", "water"]
+    "types": ["ground", "water"]
   },
   "341_00": {
     "genders": ["female", "male"],
@@ -3498,7 +3498,7 @@
     "number": "341",
     "shiny": false,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "342_00": {
     "genders": ["female", "male"],
@@ -3507,7 +3507,7 @@
     "number": "342",
     "shiny": false,
     "tags": [],
-    "type": ["dark", "water"]
+    "types": ["dark", "water"]
   },
   "343_00": {
     "genders": ["female", "male"],
@@ -3516,7 +3516,7 @@
     "number": "343",
     "shiny": false,
     "tags": [],
-    "type": ["psychic", "ground"]
+    "types": ["psychic", "ground"]
   },
   "344_00": {
     "genders": ["female", "male"],
@@ -3525,7 +3525,7 @@
     "number": "344",
     "shiny": false,
     "tags": [],
-    "type": ["psychic", "ground"]
+    "types": ["psychic", "ground"]
   },
   "345_00": {
     "genders": ["female", "male"],
@@ -3534,7 +3534,7 @@
     "number": "345",
     "shiny": true,
     "tags": [],
-    "type": ["grass", "rock"]
+    "types": ["grass", "rock"]
   },
   "346_00": {
     "genders": ["female", "male"],
@@ -3543,7 +3543,7 @@
     "number": "346",
     "shiny": true,
     "tags": [],
-    "type": ["grass", "rock"]
+    "types": ["grass", "rock"]
   },
   "347_00": {
     "genders": ["female", "male"],
@@ -3552,7 +3552,7 @@
     "number": "347",
     "shiny": true,
     "tags": [],
-    "type": ["bug", "rock"]
+    "types": ["bug", "rock"]
   },
   "348_00": {
     "genders": ["female", "male"],
@@ -3561,7 +3561,7 @@
     "number": "348",
     "shiny": true,
     "tags": [],
-    "type": ["bug", "rock"]
+    "types": ["bug", "rock"]
   },
   "349_00": {
     "genders": ["female", "male"],
@@ -3570,7 +3570,7 @@
     "number": "349",
     "shiny": true,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "350_00": {
     "genders": ["female", "male"],
@@ -3579,7 +3579,7 @@
     "number": "350",
     "shiny": true,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "351_00": {
     "genders": ["female", "male"],
@@ -3588,7 +3588,7 @@
     "number": "351",
     "shiny": true,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "351_12": {
     "genders": ["female", "male"],
@@ -3597,7 +3597,7 @@
     "number": "351",
     "shiny": false,
     "tags": [],
-    "type": ["fire"]
+    "types": ["fire"]
   },
   "351_13": {
     "genders": ["female", "male"],
@@ -3606,7 +3606,7 @@
     "number": "351",
     "shiny": false,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "351_14": {
     "genders": ["female", "male"],
@@ -3615,7 +3615,7 @@
     "number": "351",
     "shiny": false,
     "tags": [],
-    "type": ["ice"]
+    "types": ["ice"]
   },
   "352_00": {
     "genders": ["female", "male"],
@@ -3624,7 +3624,7 @@
     "number": "352",
     "shiny": false,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "353_00": {
     "genders": ["female", "male"],
@@ -3633,7 +3633,7 @@
     "number": "353",
     "shiny": true,
     "tags": [],
-    "type": ["ghost"]
+    "types": ["ghost"]
   },
   "354_00": {
     "genders": ["female", "male"],
@@ -3642,7 +3642,7 @@
     "number": "354",
     "shiny": true,
     "tags": [],
-    "type": ["ghost"]
+    "types": ["ghost"]
   },
   "355_00": {
     "genders": ["female", "male"],
@@ -3651,7 +3651,7 @@
     "number": "355",
     "shiny": true,
     "tags": [],
-    "type": ["ghost"]
+    "types": ["ghost"]
   },
   "356_00": {
     "genders": ["female", "male"],
@@ -3660,7 +3660,7 @@
     "number": "356",
     "shiny": true,
     "tags": [],
-    "type": ["ghost"]
+    "types": ["ghost"]
   },
   "357_00": {
     "genders": ["female", "male"],
@@ -3669,7 +3669,7 @@
     "number": "357",
     "shiny": false,
     "tags": ["regional"],
-    "type": ["flying", "grass"]
+    "types": ["flying", "grass"]
   },
   "358_00": {
     "genders": ["female", "male"],
@@ -3678,7 +3678,7 @@
     "number": "358",
     "shiny": false,
     "tags": [],
-    "type": ["psychic"]
+    "types": ["psychic"]
   },
   "359_00": {
     "genders": ["female", "male"],
@@ -3687,7 +3687,7 @@
     "number": "359",
     "shiny": true,
     "tags": [],
-    "type": ["dark"]
+    "types": ["dark"]
   },
   "360_00": {
     "genders": ["female", "male"],
@@ -3696,7 +3696,7 @@
     "number": "360",
     "shiny": true,
     "tags": ["baby"],
-    "type": ["psychic"]
+    "types": ["psychic"]
   },
   "361_00": {
     "genders": ["female", "male"],
@@ -3705,7 +3705,7 @@
     "number": "361",
     "shiny": true,
     "tags": [],
-    "type": ["ice"]
+    "types": ["ice"]
   },
   "362_00": {
     "genders": ["female", "male"],
@@ -3714,7 +3714,7 @@
     "number": "362",
     "shiny": true,
     "tags": [],
-    "type": ["ice"]
+    "types": ["ice"]
   },
   "363_00": {
     "genders": ["female", "male"],
@@ -3723,7 +3723,7 @@
     "number": "363",
     "shiny": false,
     "tags": [],
-    "type": ["water", "ice"]
+    "types": ["water", "ice"]
   },
   "364_00": {
     "genders": ["female", "male"],
@@ -3732,7 +3732,7 @@
     "number": "364",
     "shiny": false,
     "tags": [],
-    "type": ["water", "ice"]
+    "types": ["water", "ice"]
   },
   "365_00": {
     "genders": ["female", "male"],
@@ -3741,7 +3741,7 @@
     "number": "365",
     "shiny": false,
     "tags": [],
-    "type": ["water", "ice"]
+    "types": ["water", "ice"]
   },
   "366_00": {
     "genders": ["female", "male"],
@@ -3750,7 +3750,7 @@
     "number": "366",
     "shiny": true,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "367_00": {
     "genders": ["female", "male"],
@@ -3759,7 +3759,7 @@
     "number": "367",
     "shiny": true,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "368_00": {
     "genders": ["female", "male"],
@@ -3768,7 +3768,7 @@
     "number": "368",
     "shiny": true,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "369_00": {
     "genders": ["female", "male"],
@@ -3777,7 +3777,7 @@
     "number": "369",
     "shiny": false,
     "tags": ["regional"],
-    "type": ["rock", "water"]
+    "types": ["rock", "water"]
   },
   "370_00": {
     "genders": ["female", "male"],
@@ -3786,7 +3786,7 @@
     "number": "370",
     "shiny": true,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "371_00": {
     "genders": ["female", "male"],
@@ -3795,7 +3795,7 @@
     "number": "371",
     "shiny": true,
     "tags": [],
-    "type": ["dragon"]
+    "types": ["dragon"]
   },
   "372_00": {
     "genders": ["female", "male"],
@@ -3804,7 +3804,7 @@
     "number": "372",
     "shiny": true,
     "tags": [],
-    "type": ["dragon"]
+    "types": ["dragon"]
   },
   "373_00": {
     "genders": ["female", "male"],
@@ -3813,7 +3813,7 @@
     "number": "373",
     "shiny": true,
     "tags": [],
-    "type": ["flying", "dragon"]
+    "types": ["flying", "dragon"]
   },
   "374_00": {
     "genders": ["female", "male"],
@@ -3822,7 +3822,7 @@
     "number": "374",
     "shiny": true,
     "tags": [],
-    "type": ["psychic", "steel"]
+    "types": ["psychic", "steel"]
   },
   "375_00": {
     "genders": ["female", "male"],
@@ -3831,7 +3831,7 @@
     "number": "375",
     "shiny": true,
     "tags": [],
-    "type": ["psychic", "steel"]
+    "types": ["psychic", "steel"]
   },
   "376_00": {
     "genders": ["female", "male"],
@@ -3840,7 +3840,7 @@
     "number": "376",
     "shiny": true,
     "tags": [],
-    "type": ["psychic", "steel"]
+    "types": ["psychic", "steel"]
   },
   "377_00": {
     "genders": ["female", "male"],
@@ -3849,7 +3849,7 @@
     "number": "377",
     "shiny": false,
     "tags": ["legendary"],
-    "type": ["rock"]
+    "types": ["rock"]
   },
   "378_00": {
     "genders": ["female", "male"],
@@ -3858,7 +3858,7 @@
     "number": "378",
     "shiny": false,
     "tags": ["legendary"],
-    "type": ["ice"]
+    "types": ["ice"]
   },
   "379_00": {
     "genders": ["female", "male"],
@@ -3867,7 +3867,7 @@
     "number": "379",
     "shiny": false,
     "tags": ["legendary"],
-    "type": ["steel"]
+    "types": ["steel"]
   },
   "380_01": {
     "genders": ["female"],
@@ -3876,7 +3876,7 @@
     "number": "380",
     "shiny": true,
     "tags": ["legendary"],
-    "type": ["dragon", "psychic"]
+    "types": ["dragon", "psychic"]
   },
   "381_00": {
     "genders": ["male"],
@@ -3885,7 +3885,7 @@
     "number": "381",
     "shiny": true,
     "tags": ["legendary"],
-    "type": ["psychic", "dragon"]
+    "types": ["psychic", "dragon"]
   },
   "382_00": {
     "genders": ["female", "male"],
@@ -3894,7 +3894,7 @@
     "number": "382",
     "shiny": true,
     "tags": ["legendary"],
-    "type": ["water"]
+    "types": ["water"]
   },
   "383_00": {
     "genders": ["female", "male"],
@@ -3903,7 +3903,7 @@
     "number": "383",
     "shiny": true,
     "tags": ["legendary"],
-    "type": ["ground"]
+    "types": ["ground"]
   },
   "384_00": {
     "genders": ["female", "male"],
@@ -3912,7 +3912,7 @@
     "number": "384",
     "shiny": false,
     "tags": ["legendary"],
-    "type": ["flying", "dragon"]
+    "types": ["flying", "dragon"]
   },
   "385_00": {
     "genders": ["female", "male"],
@@ -3920,8 +3920,8 @@
     "name": "Jirachi",
     "number": "385",
     "shiny": false,
-    "tags": ["mythical"],
-    "type": ["psychic", "steel"]
+    "tags": ["mythical", "not_tradable"],
+    "types": ["psychic", "steel"]
   },
   "386_11": {
     "genders": ["female", "male"],
@@ -3929,8 +3929,8 @@
     "name": "Deoxys - Normal Form",
     "number": "386",
     "shiny": false,
-    "tags": ["mythical"],
-    "type": ["psychic"]
+    "tags": ["mythical", "not_tradable"],
+    "types": ["psychic"]
   },
   "386_12": {
     "genders": ["female", "male"],
@@ -3938,8 +3938,8 @@
     "name": "Deoxys - Attack Form",
     "number": "386",
     "shiny": false,
-    "tags": ["mythical"],
-    "type": ["psychic"]
+    "tags": ["mythical", "not_tradable"],
+    "types": ["psychic"]
   },
   "386_13": {
     "genders": ["female", "male"],
@@ -3947,8 +3947,8 @@
     "name": "Deoxys - Defense Form",
     "number": "386",
     "shiny": false,
-    "tags": ["mythical"],
-    "type": ["psychic"]
+    "tags": ["mythical", "not_tradable"],
+    "types": ["psychic"]
   },
   "386_14": {
     "genders": ["female", "male"],
@@ -3956,8 +3956,8 @@
     "name": "Deoxys - Speed Form",
     "number": "386",
     "shiny": false,
-    "tags": ["mythical"],
-    "type": ["psychic"]
+    "tags": ["mythical", "not_tradable"],
+    "types": ["psychic"]
   },
   "387_00": {
     "genders": ["female", "male"],
@@ -3966,7 +3966,7 @@
     "number": "387",
     "shiny": false,
     "tags": [],
-    "type": ["grass"]
+    "types": ["grass"]
   },
   "388_00": {
     "genders": ["female", "male"],
@@ -3975,7 +3975,7 @@
     "number": "388",
     "shiny": false,
     "tags": [],
-    "type": ["grass"]
+    "types": ["grass"]
   },
   "389_00": {
     "genders": ["female", "male"],
@@ -3984,7 +3984,7 @@
     "number": "389",
     "shiny": false,
     "tags": [],
-    "type": ["ground", "grass"]
+    "types": ["ground", "grass"]
   },
   "390_00": {
     "genders": ["female", "male"],
@@ -3993,7 +3993,7 @@
     "number": "390",
     "shiny": false,
     "tags": [],
-    "type": ["fire"]
+    "types": ["fire"]
   },
   "391_00": {
     "genders": ["female", "male"],
@@ -4002,7 +4002,7 @@
     "number": "391",
     "shiny": false,
     "tags": [],
-    "type": ["fighting", "fire"]
+    "types": ["fighting", "fire"]
   },
   "392_00": {
     "genders": ["female", "male"],
@@ -4011,7 +4011,7 @@
     "number": "392",
     "shiny": false,
     "tags": [],
-    "type": ["fighting", "fire"]
+    "types": ["fighting", "fire"]
   },
   "393_00": {
     "genders": ["female", "male"],
@@ -4020,7 +4020,7 @@
     "number": "393",
     "shiny": false,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "394_00": {
     "genders": ["female", "male"],
@@ -4029,7 +4029,7 @@
     "number": "394",
     "shiny": false,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "395_00": {
     "genders": ["female", "male"],
@@ -4038,7 +4038,7 @@
     "number": "395",
     "shiny": false,
     "tags": [],
-    "type": ["steel", "water"]
+    "types": ["steel", "water"]
   },
   "396_00": {
     "genders": ["female", "male"],
@@ -4047,7 +4047,7 @@
     "number": "396",
     "shiny": false,
     "tags": [],
-    "type": ["flying", "normal"]
+    "types": ["flying", "normal"]
   },
   "397_00": {
     "genders": ["female", "male"],
@@ -4056,7 +4056,7 @@
     "number": "397",
     "shiny": false,
     "tags": [],
-    "type": ["flying", "normal"]
+    "types": ["flying", "normal"]
   },
   "398_00": {
     "genders": ["female", "male"],
@@ -4065,7 +4065,7 @@
     "number": "398",
     "shiny": false,
     "tags": [],
-    "type": ["flying", "normal"]
+    "types": ["flying", "normal"]
   },
   "399_00": {
     "genders": ["female", "male"],
@@ -4074,7 +4074,7 @@
     "number": "399",
     "shiny": false,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "400_00": {
     "genders": ["female", "male"],
@@ -4083,7 +4083,7 @@
     "number": "400",
     "shiny": false,
     "tags": [],
-    "type": ["water", "normal"]
+    "types": ["water", "normal"]
   },
   "401_00": {
     "genders": ["female", "male"],
@@ -4092,7 +4092,7 @@
     "number": "401",
     "shiny": false,
     "tags": [],
-    "type": ["bug"]
+    "types": ["bug"]
   },
   "402_00": {
     "genders": ["female", "male"],
@@ -4101,7 +4101,7 @@
     "number": "402",
     "shiny": false,
     "tags": [],
-    "type": ["bug"]
+    "types": ["bug"]
   },
   "403_00": {
     "genders": ["female", "male"],
@@ -4110,7 +4110,7 @@
     "number": "403",
     "shiny": true,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "404_00": {
     "genders": ["female", "male"],
@@ -4119,7 +4119,7 @@
     "number": "404",
     "shiny": true,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "405_00": {
     "genders": ["female", "male"],
@@ -4128,7 +4128,7 @@
     "number": "405",
     "shiny": true,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "406_00": {
     "genders": ["female", "male"],
@@ -4137,7 +4137,7 @@
     "number": "406",
     "shiny": true,
     "tags": ["baby"],
-    "type": ["poison", "grass"]
+    "types": ["poison", "grass"]
   },
   "407_00": {
     "genders": ["female", "male"],
@@ -4146,7 +4146,7 @@
     "number": "407",
     "shiny": true,
     "tags": [],
-    "type": ["poison", "grass"]
+    "types": ["poison", "grass"]
   },
   "408_00": {
     "genders": ["female", "male"],
@@ -4155,7 +4155,7 @@
     "number": "408",
     "shiny": false,
     "tags": [],
-    "type": ["rock"]
+    "types": ["rock"]
   },
   "409_00": {
     "genders": ["female", "male"],
@@ -4164,7 +4164,7 @@
     "number": "409",
     "shiny": false,
     "tags": [],
-    "type": ["rock"]
+    "types": ["rock"]
   },
   "410_00": {
     "genders": ["female", "male"],
@@ -4173,7 +4173,7 @@
     "number": "410",
     "shiny": false,
     "tags": [],
-    "type": ["steel", "rock"]
+    "types": ["steel", "rock"]
   },
   "411_00": {
     "genders": ["female", "male"],
@@ -4182,7 +4182,7 @@
     "number": "411",
     "shiny": false,
     "tags": [],
-    "type": ["steel", "rock"]
+    "types": ["steel", "rock"]
   },
   "412_11": {
     "genders": ["female", "male"],
@@ -4191,7 +4191,7 @@
     "number": "412",
     "shiny": false,
     "tags": [],
-    "type": ["bug"]
+    "types": ["bug"]
   },
   "412_12": {
     "genders": ["female", "male"],
@@ -4200,7 +4200,7 @@
     "number": "412",
     "shiny": false,
     "tags": [],
-    "type": ["bug"]
+    "types": ["bug"]
   },
   "412_13": {
     "genders": ["female", "male"],
@@ -4209,16 +4209,16 @@
     "number": "412",
     "shiny": false,
     "tags": [],
-    "type": ["bug"]
+    "types": ["bug"]
   },
   "413_11": {
     "genders": ["female"],
     "generation": 4,
-    "name": "Wormadam",
+    "name": "Wormadam - Plant Cloak",
     "number": "413",
     "shiny": false,
     "tags": [],
-    "type": ["bug", "grass"]
+    "types": ["bug", "grass"]
   },
   "413_12": {
     "genders": ["female", "male"],
@@ -4227,7 +4227,7 @@
     "number": "413",
     "shiny": false,
     "tags": [],
-    "type": ["bug", "ground"]
+    "types": ["bug", "ground"]
   },
   "413_13": {
     "genders": ["female", "male"],
@@ -4236,7 +4236,7 @@
     "number": "413",
     "shiny": false,
     "tags": [],
-    "type": ["bug", "steel"]
+    "types": ["bug", "steel"]
   },
   "414_00": {
     "genders": ["male"],
@@ -4245,7 +4245,7 @@
     "number": "414",
     "shiny": false,
     "tags": [],
-    "type": ["flying", "bug"]
+    "types": ["flying", "bug"]
   },
   "415_00": {
     "genders": ["female", "male"],
@@ -4254,7 +4254,7 @@
     "number": "415",
     "shiny": false,
     "tags": [],
-    "type": ["flying", "bug"]
+    "types": ["flying", "bug"]
   },
   "416_01": {
     "genders": ["female"],
@@ -4263,7 +4263,7 @@
     "number": "416",
     "shiny": false,
     "tags": [],
-    "type": ["bug", "flying"]
+    "types": ["bug", "flying"]
   },
   "417_00": {
     "genders": ["female", "male"],
@@ -4272,7 +4272,7 @@
     "number": "417",
     "shiny": false,
     "tags": ["regional"],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "418_00": {
     "genders": ["female", "male"],
@@ -4281,7 +4281,7 @@
     "number": "418",
     "shiny": false,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "419_00": {
     "genders": ["female", "male"],
@@ -4290,7 +4290,7 @@
     "number": "419",
     "shiny": false,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "420_00": {
     "genders": ["female", "male"],
@@ -4299,7 +4299,7 @@
     "number": "420",
     "shiny": false,
     "tags": [],
-    "type": ["grass"]
+    "types": ["grass"]
   },
   "421_00": {
     "genders": ["female", "male"],
@@ -4308,7 +4308,7 @@
     "number": "421",
     "shiny": false,
     "tags": [],
-    "type": ["grass"]
+    "types": ["grass"]
   },
   "421_12": {
     "genders": ["female", "male"],
@@ -4317,7 +4317,7 @@
     "number": "421",
     "shiny": false,
     "tags": [],
-    "type": ["grass"]
+    "types": ["grass"]
   },
   "422_00": {
     "genders": ["female", "male"],
@@ -4326,7 +4326,7 @@
     "number": "422",
     "shiny": false,
     "tags": ["regional"],
-    "type": ["water"]
+    "types": ["water"]
   },
   "422_12": {
     "genders": ["female", "male"],
@@ -4335,7 +4335,7 @@
     "number": "422",
     "shiny": false,
     "tags": ["regional"],
-    "type": ["water"]
+    "types": ["water"]
   },
   "423_00": {
     "genders": ["female", "male"],
@@ -4344,7 +4344,7 @@
     "number": "423",
     "shiny": false,
     "tags": ["regional"],
-    "type": ["water", "ground"]
+    "types": ["water", "ground"]
   },
   "423_12": {
     "genders": ["female", "male"],
@@ -4353,7 +4353,7 @@
     "number": "423",
     "shiny": false,
     "tags": ["regional"],
-    "type": ["water", "ground"]
+    "types": ["water", "ground"]
   },
   "424_00": {
     "genders": ["female", "male"],
@@ -4362,7 +4362,7 @@
     "number": "424",
     "shiny": true,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "425_00": {
     "genders": ["female", "male"],
@@ -4371,7 +4371,7 @@
     "number": "425",
     "shiny": true,
     "tags": [],
-    "type": ["flying", "ghost"]
+    "types": ["flying", "ghost"]
   },
   "426_00": {
     "genders": ["female", "male"],
@@ -4380,7 +4380,7 @@
     "number": "426",
     "shiny": true,
     "tags": [],
-    "type": ["flying", "ghost"]
+    "types": ["flying", "ghost"]
   },
   "427_00": {
     "genders": ["female", "male"],
@@ -4389,7 +4389,7 @@
     "number": "427",
     "shiny": true,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "428_00": {
     "genders": ["female", "male"],
@@ -4398,7 +4398,7 @@
     "number": "428",
     "shiny": true,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "429_00": {
     "genders": ["female", "male"],
@@ -4407,7 +4407,7 @@
     "number": "429",
     "shiny": true,
     "tags": [],
-    "type": ["ghost"]
+    "types": ["ghost"]
   },
   "430_00": {
     "genders": ["female", "male"],
@@ -4416,7 +4416,7 @@
     "number": "430",
     "shiny": true,
     "tags": [],
-    "type": ["flying", "dark"]
+    "types": ["flying", "dark"]
   },
   "431_00": {
     "genders": ["female", "male"],
@@ -4425,7 +4425,7 @@
     "number": "431",
     "shiny": false,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "432_00": {
     "genders": ["female", "male"],
@@ -4434,7 +4434,7 @@
     "number": "432",
     "shiny": false,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "433_00": {
     "genders": ["female", "male"],
@@ -4443,7 +4443,7 @@
     "number": "433",
     "shiny": false,
     "tags": ["baby"],
-    "type": ["psychic"]
+    "types": ["psychic"]
   },
   "434_00": {
     "genders": ["female", "male"],
@@ -4452,7 +4452,7 @@
     "number": "434",
     "shiny": false,
     "tags": [],
-    "type": ["dark", "poison"]
+    "types": ["dark", "poison"]
   },
   "435_00": {
     "genders": ["female", "male"],
@@ -4461,7 +4461,7 @@
     "number": "435",
     "shiny": false,
     "tags": [],
-    "type": ["dark", "poison"]
+    "types": ["dark", "poison"]
   },
   "436_00": {
     "genders": ["female", "male"],
@@ -4470,7 +4470,7 @@
     "number": "436",
     "shiny": true,
     "tags": [],
-    "type": ["psychic", "steel"]
+    "types": ["psychic", "steel"]
   },
   "437_00": {
     "genders": ["female", "male"],
@@ -4479,7 +4479,7 @@
     "number": "437",
     "shiny": true,
     "tags": [],
-    "type": ["psychic", "steel"]
+    "types": ["psychic", "steel"]
   },
   "438_00": {
     "genders": ["female", "male"],
@@ -4488,7 +4488,7 @@
     "number": "438",
     "shiny": false,
     "tags": ["baby"],
-    "type": ["rock"]
+    "types": ["rock"]
   },
   "439_00": {
     "genders": ["female", "male"],
@@ -4497,7 +4497,7 @@
     "number": "439",
     "shiny": false,
     "tags": ["baby"],
-    "type": ["fairy", "psychic"]
+    "types": ["fairy", "psychic"]
   },
   "440_01": {
     "genders": ["female"],
@@ -4506,7 +4506,7 @@
     "number": "440",
     "shiny": false,
     "tags": ["baby"],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "441_00": {
     "genders": ["female", "male"],
@@ -4515,7 +4515,7 @@
     "number": "441",
     "shiny": false,
     "tags": ["regional"],
-    "type": ["flying", "normal"]
+    "types": ["flying", "normal"]
   },
   "442_00": {
     "genders": ["female", "male"],
@@ -4524,7 +4524,7 @@
     "number": "442",
     "shiny": false,
     "tags": [],
-    "type": ["dark", "ghost"]
+    "types": ["dark", "ghost"]
   },
   "443_00": {
     "genders": ["female", "male"],
@@ -4533,7 +4533,7 @@
     "number": "443",
     "shiny": false,
     "tags": [],
-    "type": ["ground", "dragon"]
+    "types": ["ground", "dragon"]
   },
   "444_00": {
     "genders": ["female", "male"],
@@ -4542,7 +4542,7 @@
     "number": "444",
     "shiny": false,
     "tags": [],
-    "type": ["ground", "dragon"]
+    "types": ["ground", "dragon"]
   },
   "445_00": {
     "genders": ["female", "male"],
@@ -4551,7 +4551,7 @@
     "number": "445",
     "shiny": false,
     "tags": [],
-    "type": ["ground", "dragon"]
+    "types": ["ground", "dragon"]
   },
   "446_00": {
     "genders": ["female", "male"],
@@ -4560,7 +4560,7 @@
     "number": "446",
     "shiny": false,
     "tags": ["baby"],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "447_00": {
     "genders": ["female", "male"],
@@ -4569,7 +4569,7 @@
     "number": "447",
     "shiny": false,
     "tags": [],
-    "type": ["fighting"]
+    "types": ["fighting"]
   },
   "448_00": {
     "genders": ["female", "male"],
@@ -4578,7 +4578,7 @@
     "number": "448",
     "shiny": false,
     "tags": [],
-    "type": ["steel", "fighting"]
+    "types": ["steel", "fighting"]
   },
   "449_00": {
     "genders": ["female", "male"],
@@ -4587,7 +4587,7 @@
     "number": "449",
     "shiny": false,
     "tags": [],
-    "type": ["ground"]
+    "types": ["ground"]
   },
   "450_00": {
     "genders": ["female", "male"],
@@ -4596,7 +4596,7 @@
     "number": "450",
     "shiny": false,
     "tags": [],
-    "type": ["ground"]
+    "types": ["ground"]
   },
   "451_00": {
     "genders": ["female", "male"],
@@ -4605,7 +4605,7 @@
     "number": "451",
     "shiny": false,
     "tags": [],
-    "type": ["bug", "poison"]
+    "types": ["bug", "poison"]
   },
   "452_00": {
     "genders": ["female", "male"],
@@ -4614,7 +4614,7 @@
     "number": "452",
     "shiny": false,
     "tags": [],
-    "type": ["dark", "poison"]
+    "types": ["dark", "poison"]
   },
   "453_00": {
     "genders": ["female", "male"],
@@ -4623,7 +4623,7 @@
     "number": "453",
     "shiny": false,
     "tags": [],
-    "type": ["fighting", "poison"]
+    "types": ["fighting", "poison"]
   },
   "454_00": {
     "genders": ["female", "male"],
@@ -4632,7 +4632,7 @@
     "number": "454",
     "shiny": false,
     "tags": [],
-    "type": ["fighting", "poison"]
+    "types": ["fighting", "poison"]
   },
   "455_00": {
     "genders": ["female", "male"],
@@ -4641,7 +4641,7 @@
     "number": "455",
     "shiny": false,
     "tags": ["regional"],
-    "type": ["grass"]
+    "types": ["grass"]
   },
   "456_00": {
     "genders": ["female", "male"],
@@ -4650,7 +4650,7 @@
     "number": "456",
     "shiny": false,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "457_00": {
     "genders": ["female", "male"],
@@ -4659,7 +4659,7 @@
     "number": "457",
     "shiny": false,
     "tags": [],
-    "type": ["water"]
+    "types": ["water"]
   },
   "458_00": {
     "genders": ["female", "male"],
@@ -4668,7 +4668,7 @@
     "number": "458",
     "shiny": false,
     "tags": ["baby"],
-    "type": ["flying", "water"]
+    "types": ["flying", "water"]
   },
   "459_00": {
     "genders": ["female", "male"],
@@ -4677,7 +4677,7 @@
     "number": "459",
     "shiny": false,
     "tags": [],
-    "type": ["ice", "grass"]
+    "types": ["ice", "grass"]
   },
   "460_00": {
     "genders": ["female", "male"],
@@ -4686,7 +4686,7 @@
     "number": "460",
     "shiny": false,
     "tags": [],
-    "type": ["ice", "grass"]
+    "types": ["ice", "grass"]
   },
   "461_00": {
     "genders": ["female", "male"],
@@ -4695,7 +4695,7 @@
     "number": "461",
     "shiny": false,
     "tags": [],
-    "type": ["ice", "dark"]
+    "types": ["ice", "dark"]
   },
   "462_00": {
     "genders": ["female", "male"],
@@ -4704,7 +4704,7 @@
     "number": "462",
     "shiny": true,
     "tags": [],
-    "type": ["steel", "electric"]
+    "types": ["steel", "electric"]
   },
   "463_00": {
     "genders": ["female", "male"],
@@ -4713,7 +4713,7 @@
     "number": "463",
     "shiny": false,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "464_00": {
     "genders": ["female", "male"],
@@ -4722,7 +4722,7 @@
     "number": "464",
     "shiny": false,
     "tags": [],
-    "type": ["rock", "ground"]
+    "types": ["rock", "ground"]
   },
   "465_00": {
     "genders": ["female", "male"],
@@ -4731,7 +4731,7 @@
     "number": "465",
     "shiny": false,
     "tags": [],
-    "type": ["grass"]
+    "types": ["grass"]
   },
   "466_00": {
     "genders": ["female", "male"],
@@ -4740,7 +4740,7 @@
     "number": "466",
     "shiny": true,
     "tags": [],
-    "type": ["electric"]
+    "types": ["electric"]
   },
   "467_00": {
     "genders": ["female", "male"],
@@ -4749,7 +4749,7 @@
     "number": "467",
     "shiny": true,
     "tags": [],
-    "type": ["fire"]
+    "types": ["fire"]
   },
   "468_00": {
     "genders": ["female", "male"],
@@ -4758,7 +4758,7 @@
     "number": "468",
     "shiny": true,
     "tags": [],
-    "type": ["flying", "fairy"]
+    "types": ["flying", "fairy"]
   },
   "469_00": {
     "genders": ["female", "male"],
@@ -4767,7 +4767,7 @@
     "number": "469",
     "shiny": false,
     "tags": [],
-    "type": ["flying", "bug"]
+    "types": ["flying", "bug"]
   },
   "470_00": {
     "genders": ["female", "male"],
@@ -4776,7 +4776,7 @@
     "number": "470",
     "shiny": true,
     "tags": [],
-    "type": ["grass"]
+    "types": ["grass"]
   },
   "470_00_07": {
     "genders": ["female", "male"],
@@ -4785,7 +4785,7 @@
     "number": "470",
     "shiny": true,
     "tags": [],
-    "type": ["grass"]
+    "types": ["grass"]
   },
   "471_00": {
     "genders": ["female", "male"],
@@ -4794,7 +4794,7 @@
     "number": "471",
     "shiny": true,
     "tags": [],
-    "type": ["ice"]
+    "types": ["ice"]
   },
   "471_00_07": {
     "genders": ["female", "male"],
@@ -4803,7 +4803,7 @@
     "number": "471",
     "shiny": true,
     "tags": [],
-    "type": ["ice"]
+    "types": ["ice"]
   },
   "472_00": {
     "genders": ["female", "male"],
@@ -4812,7 +4812,7 @@
     "number": "472",
     "shiny": false,
     "tags": [],
-    "type": ["flying", "ground"]
+    "types": ["flying", "ground"]
   },
   "473_00": {
     "genders": ["female", "male"],
@@ -4821,7 +4821,7 @@
     "number": "473",
     "shiny": true,
     "tags": [],
-    "type": ["ground", "ice"]
+    "types": ["ground", "ice"]
   },
   "474_00": {
     "genders": ["female", "male"],
@@ -4830,7 +4830,7 @@
     "number": "474",
     "shiny": false,
     "tags": [],
-    "type": ["normal"]
+    "types": ["normal"]
   },
   "475_00": {
     "genders": ["male"],
@@ -4839,7 +4839,7 @@
     "number": "475",
     "shiny": false,
     "tags": [],
-    "type": ["fighting", "psychic"]
+    "types": ["fighting", "psychic"]
   },
   "476_00": {
     "genders": ["female", "male"],
@@ -4848,7 +4848,7 @@
     "number": "476",
     "shiny": false,
     "tags": [],
-    "type": ["steel", "rock"]
+    "types": ["steel", "rock"]
   },
   "477_00": {
     "genders": ["female", "male"],
@@ -4857,7 +4857,7 @@
     "number": "477",
     "shiny": true,
     "tags": [],
-    "type": ["ghost"]
+    "types": ["ghost"]
   },
   "478_01": {
     "genders": ["female"],
@@ -4866,7 +4866,61 @@
     "number": "478",
     "shiny": true,
     "tags": [],
-    "type": ["ghost", "ice"]
+    "types": ["ghost", "ice"]
+  },
+  "479_00": {
+    "genders": [],
+    "generation": 4,
+    "name": "Rotom",
+    "number": "479",
+    "shiny": false,
+    "tags": [],
+    "types": ["electric", "ghost"]
+  },
+  "479_12": {
+    "genders": [],
+    "generation": 4,
+    "name": "Heat Rotom",
+    "number": "479",
+    "shiny": false,
+    "tags": [],
+    "types": ["electric", "fire"]
+  },
+  "479_13": {
+    "genders": [],
+    "generation": 4,
+    "name": "Wash Rotom",
+    "number": "479",
+    "shiny": false,
+    "tags": [],
+    "types": ["electric", "water"]
+  },
+  "479_14": {
+    "genders": [],
+    "generation": 4,
+    "name": "Frost Rotom",
+    "number": "479",
+    "shiny": false,
+    "tags": [],
+    "types": ["electric", "ice"]
+  },
+  "479_15": {
+    "genders": [],
+    "generation": 4,
+    "name": "Fan Rotom",
+    "number": "479",
+    "shiny": false,
+    "tags": [],
+    "types": ["electric", "flying"]
+  },
+  "479_16": {
+    "genders": [],
+    "generation": 4,
+    "name": "Mow Rotom",
+    "number": "479",
+    "shiny": false,
+    "tags": [],
+    "types": ["electric", "grass"]
   },
   "480_00": {
     "genders": ["female", "male"],
@@ -4875,7 +4929,7 @@
     "number": "480",
     "shiny": false,
     "tags": ["regional"],
-    "type": ["psychic"]
+    "types": ["psychic"]
   },
   "481_00": {
     "genders": ["female", "male"],
@@ -4884,7 +4938,7 @@
     "number": "481",
     "shiny": false,
     "tags": ["regional"],
-    "type": ["psychic"]
+    "types": ["psychic"]
   },
   "482_00": {
     "genders": ["female", "male"],
@@ -4893,7 +4947,7 @@
     "number": "482",
     "shiny": false,
     "tags": ["legendary", "regional"],
-    "type": ["psychic"]
+    "types": ["psychic"]
   },
   "483_00": {
     "genders": ["female", "male"],
@@ -4902,7 +4956,7 @@
     "number": "483",
     "shiny": false,
     "tags": ["legendary"],
-    "type": ["dragon", "steel"]
+    "types": ["dragon", "steel"]
   },
   "484_00": {
     "genders": ["female", "male"],
@@ -4911,7 +4965,7 @@
     "number": "484",
     "shiny": false,
     "tags": ["legendary"],
-    "type": ["dragon", "water"]
+    "types": ["dragon", "water"]
   },
   "485_00": {
     "genders": ["female", "male"],
@@ -4920,7 +4974,16 @@
     "number": "485",
     "shiny": false,
     "tags": ["legendary"],
-    "type": ["steel", "fire"]
+    "types": ["steel", "fire"]
+  },
+  "486_00": {
+    "genders": [],
+    "generation": 4,
+    "name": "Regigigas",
+    "number": "486",
+    "shiny": false,
+    "tags": ["legendary"],
+    "types": ["normal"]
   },
   "487_00": {
     "genders": ["female", "male"],
@@ -4929,7 +4992,7 @@
     "number": "487",
     "shiny": false,
     "tags": ["legendary"],
-    "type": ["ghost", "dragon"]
+    "types": ["ghost", "dragon"]
   },
   "487_12": {
     "genders": ["female", "male"],
@@ -4938,7 +5001,7 @@
     "number": "487",
     "shiny": false,
     "tags": ["legendary"],
-    "type": ["ghost", "dragon"]
+    "types": ["ghost", "dragon"]
   },
   "488_01": {
     "genders": ["female"],
@@ -4947,7 +5010,7 @@
     "number": "488",
     "shiny": false,
     "tags": ["legendary"],
-    "type": ["psychic"]
+    "types": ["psychic"]
   },
   "808_00": {
     "genders": ["female", "male"],
@@ -4956,7 +5019,7 @@
     "number": "808",
     "shiny": true,
     "tags": ["mythical"],
-    "type": ["steel"]
+    "types": ["steel"]
   },
   "809_00": {
     "genders": ["female", "male"],
@@ -4965,6 +5028,6 @@
     "number": "809",
     "shiny": true,
     "tags": ["mythical"],
-    "type": ["steel"]
+    "types": ["steel"]
   }
 }

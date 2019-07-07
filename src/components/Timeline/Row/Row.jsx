@@ -8,7 +8,8 @@ import {
   Image,
   Label,
   Responsive,
-  Segment
+  Segment,
+  Popup
 } from "semantic-ui-react";
 
 import styles from "./Row.module.css";
@@ -216,24 +217,27 @@ class Row extends React.PureComponent {
               )}
               {!expanded && mouseInside && admins.includes(user.uid) && (
                 // displays the edit event modal
-                <Responsive
-                  as={Icon}
-                  className={styles["row-edit"]}
+                <Popup
+                  content={`Edit ${title}`}
                   inverted
-                  minWidth={Responsive.onlyTablet.minWidth}
-                  name="cogs"
-                  onClick={() => this.setState({ showEventModal: true })}
-                  title={`Edit ${title}`}
+                  position="bottom center"
+                  trigger={
+                    <Responsive
+                      as={Icon}
+                      className={styles["row-edit"]}
+                      inverted
+                      minWidth={Responsive.onlyTablet.minWidth}
+                      name="cogs"
+                      onClick={() => this.setState({ showEventModal: true })}
+                      title={`Edit ${title}`}
+                    />
+                  }
                 />
               )}
               {mouseInside &&
                 !expanded &&
                 window.innerWidth > Responsive.onlyComputer.minWidth && (
-                  <Label
-                    attached="bottom"
-                    className={styles["row-open"]}
-                    color="teal"
-                  >
+                  <Label attached="bottom" className={styles["row-open"]}>
                     <Icon
                       className={styles["row-open-icon"]}
                       inverted
