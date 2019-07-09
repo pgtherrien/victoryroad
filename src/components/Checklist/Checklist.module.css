@@ -52,6 +52,11 @@
   background: #282b33 !important;
 }
 
+.entry-content-mobile {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
 .entry-font {
   color: white !important;
 }

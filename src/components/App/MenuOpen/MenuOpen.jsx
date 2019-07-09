@@ -34,6 +34,7 @@ export default class MenuOpen extends React.PureComponent {
         <Menu.Item
           as={Link}
           className={styles["menu-item"]}
+          onClick={() => onHide()}
           name="events"
           to=""
         >
@@ -43,6 +44,7 @@ export default class MenuOpen extends React.PureComponent {
         <Menu.Item
           as={Link}
           className={styles["menu-item"]}
+          onClick={() => onHide()}
           name="checklists"
           to="checklist"
         >
@@ -52,6 +54,7 @@ export default class MenuOpen extends React.PureComponent {
         <Menu.Item
           as={Link}
           className={styles["menu-item"]}
+          onClick={() => onHide()}
           name="pokebox"
           to="pokebox"
         >

@@ -69,7 +69,13 @@ export default class Entry extends React.PureComponent {
               size="large"
             />
           )}
-          <Card.Content className={styles["entry-content"]}>
+          <Card.Content
+            className={
+              window.innerWidth > Responsive.onlyMobile.maxWidth
+                ? styles["entry-content"]
+                : `${styles["entry-content"]} ${styles["entry-content-mobile"]}`
+            }
+          >
             <Responsive
               as={Card.Header}
               className={styles["entry-font"]}
