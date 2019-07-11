@@ -33,7 +33,17 @@ const ENTRIES_PER_ROW =
     : 5;
 
 const ROW_HEIGHT =
-  window.innerWidth < Responsive.onlyMobile.maxWidth ? 150 : 200;
+  window.innerWidth < Responsive.onlyMobile.maxWidth
+    ? 175
+    : window.innerWidth < 1400
+    ? 220
+    : window.innerWidth < 1700
+    ? 260
+    : window.innerWidth < 1900
+    ? 280
+    : window.innerWidth < 2100
+    ? 300
+    : 320;
 
 export default class Checklist extends React.PureComponent {
   constructor(props) {
@@ -332,7 +342,7 @@ export default class Checklist extends React.PureComponent {
   render() {
     const { filteredDex, filters, lists, rowCount, saveState } = this.state;
     let totalCount = filteredDex ? Object.keys(filteredDex).length : 0;
-    const { user } = this.props;
+    const { admins, user } = this.props;
     const { type } = filters;
 
     if (lists[type]) {
@@ -377,7 +387,7 @@ export default class Checklist extends React.PureComponent {
             </Menu>
           </div>
           <List
-            height={window.innerHeight}
+            height={window.innerHeight - 220}
             overscanRowCount={2}
             ref={c => (this.list = c)}
             rowCount={rowCount}
@@ -387,6 +397,7 @@ export default class Checklist extends React.PureComponent {
             width={window.innerWidth * 0.8}
           />
           <ChecklistSidebar
+            admins={admins}
             filters={filters}
             handleSave={this.handleSave}
             saveState={saveState}
@@ -406,5 +417,6 @@ export default class Checklist extends React.PureComponent {
 }
 
 Checklist.propTypes = {
+  admins: PropTypes.array.isRequired,
   user: PropTypes.object.isRequired
 };

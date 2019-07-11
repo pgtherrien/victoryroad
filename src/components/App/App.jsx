@@ -105,7 +105,10 @@ class App extends React.PureComponent {
       return;
     }
 
-    auth2.signIn({ prompt: "select_account" }).catch(error => {
+    auth2.signIn({ prompt: "select_account" }).then(() => {
+      window.location.reload();
+    })    
+    .catch(error => {
       alert(`Sign in error: ${error}`);
     });
   };
@@ -136,7 +139,9 @@ class App extends React.PureComponent {
           console.log("Firebase: Sign out complete");
         }
         this.setState({ user: undefined });
+        window.location.reload();
       });
+
   };
 
   // Creates an event in the user's Google Calendar
@@ -191,7 +196,7 @@ class App extends React.PureComponent {
         <Route
           exact
           path="/checklist"
-          render={() => <Checklist user={user || {}} />}
+          render={() => <Checklist admins={admins} user={user || {}} />}
         />
         <Route exact path="/pokemonbox" component={PokemonBox} />
         <Footer />

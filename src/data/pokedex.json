@@ -499,7 +499,7 @@
     "generation": 1,
     "name": "Nidoran♂",
     "number": "032",
-    "shiny": false,
+    "shiny": true,
     "tags": [],
     "types": ["poison"]
   },
@@ -508,7 +508,7 @@
     "generation": 1,
     "name": "Nidorino",
     "number": "033",
-    "shiny": false,
+    "shiny": true,
     "tags": [],
     "types": ["poison"]
   },
@@ -517,7 +517,7 @@
     "generation": 1,
     "name": "Nidoking",
     "number": "034",
-    "shiny": false,
+    "shiny": true,
     "tags": [],
     "types": ["ground", "poison"]
   },
@@ -1713,6 +1713,15 @@
     "genders": ["female", "male"],
     "generation": 1,
     "name": "Mewtwo",
+    "number": "150",
+    "shiny": false,
+    "tags": ["legendary"],
+    "types": ["psychic"]
+  },
+  "150_01": {
+    "genders": ["female", "male"],
+    "generation": 1,
+    "name": "Armored Mewtwo",
     "number": "150",
     "shiny": false,
     "tags": ["legendary"],
