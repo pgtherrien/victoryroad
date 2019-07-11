@@ -1718,6 +1718,15 @@
     "tags": ["legendary"],
     "types": ["psychic"]
   },
+  "150_01": {
+    "genders": ["female", "male"],
+    "generation": 1,
+    "name": "Armored Mewtwo",
+    "number": "150",
+    "shiny": false,
+    "tags": ["legendary"],
+    "types": ["psychic"]
+  },
   "151_00": {
     "genders": ["female", "male"],
     "generation": 1,
