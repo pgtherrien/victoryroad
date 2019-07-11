@@ -1,4 +1,6 @@
 const functions = require("firebase-functions");
+const admin = require("firebase-admin");
+admin.initializeApp(functions.config().firebase);
 
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
@@ -7,9 +9,7 @@ const functions = require("firebase-functions");
 //  response.send("Hello from Firebase!");
 // });
 
-export const accountCreate = functions.auth.user().onCreate(user => {
-  console.log(user.data);
-
+functions.auth.user().onCreate(user => {
   checklist = {
     lucky: "[]",
     normal: "[]",
