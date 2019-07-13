@@ -65,9 +65,15 @@
   cursor: pointer;
 }
 
+.entry-open {
+  position: absolute;
+  right: -2px;
+  bottom: 5px;
+}
+
 /* FilterSidebar CSS */
 .filter-sidebar {
-  background: #121212 !important;
+  background: #282b33 !important;
   margin-top: -18% !important;
   position: fixed !important;
   right: 0;

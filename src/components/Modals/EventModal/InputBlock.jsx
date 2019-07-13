@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Button, Divider, Form, Icon } from "semantic-ui-react";
 
-import styles from "./Modals.module.css";
+import styles from "./EventModal.module.css";
 
 export default class InputBlock extends React.Component {
   constructor(props) {

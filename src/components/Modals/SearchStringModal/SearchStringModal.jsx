@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import CopyToClipboard from "react-copy-to-clipboard";
 import { Button, Divider, Grid, Icon, Modal } from "semantic-ui-react";
 
-import styles from "./Modals.module.css";
+import styles from "../Modals.module.css";
 
 export default class SearchStringModal extends React.PureComponent {
   constructor(props) {
@@ -66,7 +66,7 @@ export default class SearchStringModal extends React.PureComponent {
         </Modal.Header>
         <Divider className={styles["modal-divider"]} />
         <Modal.Content className={styles["modal-background"]}>
-          <Grid className={styles["search-center"]} inverted stackable>
+          <Grid inverted stackable>
             {this.renderSearchStrings()}
           </Grid>
         </Modal.Content>

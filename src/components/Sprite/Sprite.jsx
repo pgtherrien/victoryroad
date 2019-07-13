@@ -34,12 +34,6 @@ export default class Sprite extends React.PureComponent {
 
     return (
       <React.Fragment>
-        {src.indexOf("_shiny.png") > -1 && (
-          <Image
-            className={styles["sprite-shiny"]}
-            src="images/misc/shiny_white.png"
-          />
-        )}
         <Image
           className={styles["sprite"]}
           onMouseEnter={

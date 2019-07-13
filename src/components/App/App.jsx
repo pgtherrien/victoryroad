@@ -32,7 +32,7 @@ class App extends React.PureComponent {
       admins: [],
       showEventModal: false,
       showSidebar: false,
-      user: JSON.parse(localStorage.getItem("user"))
+      user: JSON.parse(localStorage.getItem("user")) || {}
     };
   }
 
@@ -105,12 +105,14 @@ class App extends React.PureComponent {
       return;
     }
 
-    auth2.signIn({ prompt: "select_account" }).then(() => {
-      window.location.reload();
-    })    
-    .catch(error => {
-      alert(`Sign in error: ${error}`);
-    });
+    auth2
+      .signIn({ prompt: "select_account" })
+      .then(() => {
+        window.location.reload();
+      })
+      .catch(error => {
+        alert(`Sign in error: ${error}`);
+      });
   };
 
   // Sign the user out of the GAPI client and Firebase
@@ -141,7 +143,6 @@ class App extends React.PureComponent {
         this.setState({ user: undefined });
         window.location.reload();
       });
-
   };
 
   // Creates an event in the user's Google Calendar

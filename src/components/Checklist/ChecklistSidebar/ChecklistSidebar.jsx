@@ -47,7 +47,7 @@ export default class ChecklistSidebar extends React.PureComponent {
         }
       });
 
-      if (add) {
+      if (add && item.templateId.includes("_POKEMON_")) {
         index = item.templateId.split("_")[0];
         index = index.split("V0")[1];
 

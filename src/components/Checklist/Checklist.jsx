@@ -8,6 +8,7 @@ import pokedex from "../../data/pokedex";
 import styles from "./Checklist.module.css";
 import ChecklistSidebar from "./ChecklistSidebar";
 import Entry from "./Entry";
+import { PokemonModal } from "../Modals";
 import Progress from "./Progress";
 
 const DEFAULT_FILTERS = {
@@ -57,6 +58,7 @@ export default class Checklist extends React.PureComponent {
       filters:
         localFilters === null ? DEFAULT_FILTERS : JSON.parse(localFilters),
       lists: {},
+      openPokemon: "",
       rowCount: rowCount,
       rowData: this.buildRowData(pokedex, rowCount),
       saveState: DEFAULT_SAVE_STATE
@@ -327,6 +329,7 @@ export default class Checklist extends React.PureComponent {
           key={i}
           listType={filters.type}
           number={number}
+          openPokemon={number => oThis.setState({ openPokemon: number })}
         />
       );
       i++;
@@ -340,7 +343,14 @@ export default class Checklist extends React.PureComponent {
   };
 
   render() {
-    const { filteredDex, filters, lists, rowCount, saveState } = this.state;
+    const {
+      filteredDex,
+      filters,
+      lists,
+      openPokemon,
+      rowCount,
+      saveState
+    } = this.state;
     let totalCount = filteredDex ? Object.keys(filteredDex).length : 0;
     const { admins, user } = this.props;
     const { type } = filters;
@@ -404,6 +414,13 @@ export default class Checklist extends React.PureComponent {
             setFilters={filters => this.handleSetFilters(filters)}
             user={user}
           />
+          {openPokemon.length > 0 && (
+            <PokemonModal
+              number={openPokemon}
+              onClose={() => this.setState({ openPokemon: "" })}
+              shinyImg={type === "shiny"}
+            />
+          )}
         </div>
       );
     } else {

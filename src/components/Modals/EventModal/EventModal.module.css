@@ -1,0 +1,48 @@
+/* EventModal CSS */
+.event-modal-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.event-modal-container {
+  position: unset !important;
+}
+
+.event-modal-datepicker {
+  margin-top: 4px !important;
+}
+
+.event-modal-label {
+  font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* InputBlock CSS */
+.input-block {
+  padding: 40px 40px 0 40px;
+}
+
+.input-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0 30px 0;
+}
+
+.input-buttons-add {
+  margin-right: 20px !important;
+}
+
+/* Modal CSS */
+.modal-background {
+  color: white !important;
+}
+
+.modal-divider {
+  margin: 0 !important;
+}
+
+.modal-header {
+  text-align: center !important;
+}
