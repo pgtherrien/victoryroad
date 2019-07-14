@@ -40,7 +40,7 @@ class MetaChallenges extends React.PureComponent {
         >
           Challenges
         </Divider>
-        <Table basic="very" celled inverted>
+        <Table basic="very" celled inverted unstackable>
           <Table.Header>
             <Table.Row>
               <Table.HeaderCell>Challenge</Table.HeaderCell>

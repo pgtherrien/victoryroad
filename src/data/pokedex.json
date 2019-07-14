@@ -195,6 +195,7 @@
     "number": "019",
     "shiny": true,
     "tags": [],
+    "templateId": "V0019_POKEMON_RATTATA",
     "types": ["normal"]
   },
   "019_61": {
@@ -204,6 +205,7 @@
     "number": "019",
     "shiny": true,
     "tags": ["alolan"],
+    "templateId": "V0019_POKEMON_RATTATA_ALOLA",
     "types": ["dark", "normal"]
   },
   "020_00": {
@@ -213,6 +215,7 @@
     "number": "020",
     "shiny": true,
     "tags": [],
+    "templateId": "V0020_POKEMON_RATICATE",
     "types": ["normal"]
   },
   "020_61": {
@@ -222,6 +225,7 @@
     "number": "020",
     "shiny": true,
     "tags": ["alolan"],
+    "templateId": "V0020_POKEMON_RATICATE_ALOLA",
     "types": ["dark", "normal"]
   },
   "021_00": {
@@ -348,6 +352,7 @@
     "number": "026",
     "shiny": true,
     "tags": [],
+    "templateId": "V0026_POKEMON_RAICHU",
     "types": ["electric"]
   },
   "026_00_01": {
@@ -357,6 +362,7 @@
     "number": "026",
     "shiny": true,
     "tags": [],
+    "templateId": "V0026_POKEMON_RAICHU",
     "types": ["electric"]
   },
   "026_00_02": {
@@ -366,6 +372,7 @@
     "number": "026",
     "shiny": true,
     "tags": [],
+    "templateId": "V0026_POKEMON_RAICHU",
     "types": ["electric"]
   },
   "026_00_03": {
@@ -375,6 +382,7 @@
     "number": "026",
     "shiny": true,
     "tags": [],
+    "templateId": "V0026_POKEMON_RAICHU",
     "types": ["electric"]
   },
   "026_00_04": {
@@ -384,6 +392,7 @@
     "number": "026",
     "shiny": true,
     "tags": [],
+    "templateId": "V0026_POKEMON_RAICHU",
     "types": ["electric"]
   },
   "026_00_05": {
@@ -393,6 +402,7 @@
     "number": "026",
     "shiny": false,
     "tags": [],
+    "templateId": "V0026_POKEMON_RAICHU",
     "types": ["electric"]
   },
   "026_00_06": {
@@ -402,6 +412,7 @@
     "number": "026",
     "shiny": true,
     "tags": [],
+    "templateId": "V0026_POKEMON_RAICHU",
     "types": ["electric"]
   },
   "026_00_07": {
@@ -411,6 +422,7 @@
     "number": "026",
     "shiny": true,
     "tags": [],
+    "templateId": "V0026_POKEMON_RAICHU",
     "types": ["electric"]
   },
   "026_00_09": {
@@ -420,6 +432,7 @@
     "number": "026",
     "shiny": false,
     "tags": [],
+    "templateId": "V0026_POKEMON_RAICHU",
     "types": ["electric"]
   },
   "026_61": {
@@ -429,6 +442,7 @@
     "number": "026",
     "shiny": true,
     "tags": ["alolan"],
+    "templateId": "V0026_POKEMON_RAICHU_ALOLA",
     "types": ["electric", "psychic"]
   },
   "027_00": {
@@ -438,6 +452,7 @@
     "number": "027",
     "shiny": true,
     "tags": [],
+    "templateId": "V0027_POKEMON_SANDSHREW",
     "types": ["ground"]
   },
   "027_61": {
@@ -447,6 +462,7 @@
     "number": "027",
     "shiny": true,
     "tags": ["alolan"],
+    "templateId": "V0027_POKEMON_SANDSHREW_ALOLA",
     "types": ["ice", "steel"]
   },
   "028_00": {
@@ -456,6 +472,7 @@
     "number": "028",
     "shiny": true,
     "tags": [],
+    "templateId": "V0028_POKEMON_SANDSLASH",
     "types": ["ground"]
   },
   "028_61": {
@@ -465,6 +482,7 @@
     "number": "028",
     "shiny": true,
     "tags": ["alolan"],
+    "templateId": "V0028_POKEMON_SANDSLASH_ALOLA",
     "types": ["ice", "steel"]
   },
   "029_01": {
@@ -546,6 +564,7 @@
     "number": "037",
     "shiny": false,
     "tags": [],
+    "templateId": "V0037_POKEMON_VULPIX",
     "types": ["fire"]
   },
   "037_61": {
@@ -555,6 +574,7 @@
     "number": "037",
     "shiny": true,
     "tags": ["alolan"],
+    "templateId": "V0037_POKEMON_VULPIX_ALOLA",
     "types": ["ice"]
   },
   "038_00": {
@@ -564,6 +584,7 @@
     "number": "038",
     "shiny": false,
     "tags": [],
+    "templateId": "V0038_POKEMON_NINETALES",
     "types": ["fire"]
   },
   "038_61": {
@@ -573,6 +594,7 @@
     "number": "038",
     "shiny": true,
     "tags": ["alolan"],
+    "templateId": "V0038_POKEMON_NINETALES_ALOLA",
     "types": ["ice", "fairy"]
   },
   "039_00": {
@@ -681,6 +703,7 @@
     "number": "050",
     "shiny": true,
     "tags": [],
+    "templateId": "V0050_POKEMON_DIGLETT",
     "types": ["ground"]
   },
   "050_61": {
@@ -690,6 +713,7 @@
     "number": "050",
     "shiny": true,
     "tags": ["alolan"],
+    "templateId": "V0050_POKEMON_DIGLETT_ALOLA",
     "types": ["ground", "steel"]
   },
   "051_00": {
@@ -699,6 +723,7 @@
     "number": "051",
     "shiny": true,
     "tags": [],
+    "templateId": "V0051_POKEMON_DUGTRIO",
     "types": ["ground"]
   },
   "051_61": {
@@ -708,6 +733,7 @@
     "number": "051",
     "shiny": true,
     "tags": ["alolan"],
+    "templateId": "V0051_POKEMON_DUGTRIO_ALOLA",
     "types": ["ground", "steel"]
   },
   "052_00": {
@@ -717,6 +743,7 @@
     "number": "052",
     "shiny": false,
     "tags": [],
+    "templateId": "V0052_POKEMON_MEOWTH",
     "types": ["normal"]
   },
   "052_61": {
@@ -726,6 +753,7 @@
     "number": "052",
     "shiny": true,
     "tags": ["alolan"],
+    "templateId": "V0052_POKEMON_MEOWTH_ALOLA",
     "types": ["dark"]
   },
   "053_00": {
@@ -735,6 +763,7 @@
     "number": "053",
     "shiny": false,
     "tags": [],
+    "templateId": "V0053_POKEMON_PERSIAN",
     "types": ["normal"]
   },
   "053_61": {
@@ -744,6 +773,7 @@
     "number": "053",
     "shiny": true,
     "tags": ["alolan"],
+    "templateId": "V0053_POKEMON_PERSIAN_ALOLA",
     "types": ["dark"]
   },
   "054_00": {
@@ -933,6 +963,7 @@
     "number": "074",
     "shiny": true,
     "tags": [],
+    "templateId": "V0074_POKEMON_GEODUDE",
     "types": ["ground", "rock"]
   },
   "074_61": {
@@ -942,6 +973,7 @@
     "number": "074",
     "shiny": true,
     "tags": ["alolan"],
+    "templateId": "V0074_POKEMON_GEODUDE_ALOLA",
     "types": ["rock", "electric"]
   },
   "075_00": {
@@ -951,6 +983,7 @@
     "number": "075",
     "shiny": true,
     "tags": [],
+    "templateId": "V0075_POKEMON_GRAVELER",
     "types": ["ground", "rock"]
   },
   "075_61": {
@@ -960,6 +993,7 @@
     "number": "075",
     "shiny": true,
     "tags": ["alolan"],
+    "templateId": "V0075_POKEMON_GRAVELER_ALOLA",
     "types": ["rock", "electric"]
   },
   "076_00": {
@@ -969,6 +1003,7 @@
     "number": "076",
     "shiny": true,
     "tags": [],
+    "templateId": "V0076_POKEMON_GOLEM",
     "types": ["ground", "rock"]
   },
   "076_61": {
@@ -978,6 +1013,7 @@
     "number": "076",
     "shiny": true,
     "tags": ["alolan"],
+    "templateId": "V0076_POKEMON_GOLEM_ALOLA",
     "types": ["rock", "electric"]
   },
   "077_00": {
@@ -1017,7 +1053,7 @@
     "types": ["psychic", "water"]
   },
   "081_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 1,
     "name": "Magnemite",
     "number": "081",
@@ -1026,7 +1062,7 @@
     "types": ["steel", "electric"]
   },
   "082_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 1,
     "name": "Magneton",
     "number": "082",
@@ -1086,6 +1122,7 @@
     "number": "088",
     "shiny": true,
     "tags": [],
+    "templateId": "V0088_POKEMON_GRIMER",
     "types": ["poison"]
   },
   "088_61": {
@@ -1095,6 +1132,7 @@
     "number": "088",
     "shiny": true,
     "tags": ["alolan"],
+    "templateId": "V0088_POKEMON_GRIMER_ALOLA",
     "types": ["poison", "dark"]
   },
   "089_00": {
@@ -1104,6 +1142,7 @@
     "number": "089",
     "shiny": true,
     "tags": [],
+    "templateId": "V0089_POKEMON_MUK",
     "types": ["poison"]
   },
   "089_61": {
@@ -1113,6 +1152,7 @@
     "number": "089",
     "shiny": true,
     "tags": ["alolan"],
+    "templateId": "V0089_POKEMON_MUK_ALOLA",
     "types": ["poison", "dark"]
   },
   "090_00": {
@@ -1206,7 +1246,7 @@
     "types": ["water"]
   },
   "100_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 1,
     "name": "Voltorb",
     "number": "100",
@@ -1215,7 +1255,7 @@
     "types": ["electric"]
   },
   "101_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 1,
     "name": "Electrode",
     "number": "101",
@@ -1239,6 +1279,7 @@
     "number": "103",
     "shiny": false,
     "tags": [],
+    "templateId": "V0103_POKEMON_EXEGGUTOR",
     "types": ["psychic", "grass"]
   },
   "103_61": {
@@ -1248,6 +1289,7 @@
     "number": "103",
     "shiny": true,
     "tags": ["alolan"],
+    "templateId": "V0103_POKEMON_EXEGGUTOR_ALOLA",
     "types": ["grass", "dragon"]
   },
   "104_00": {
@@ -1266,6 +1308,7 @@
     "number": "105",
     "shiny": true,
     "tags": [],
+    "templateId": "V0105_POKEMON_MAROWAK",
     "types": ["ground"]
   },
   "105_61": {
@@ -1275,6 +1318,7 @@
     "number": "105",
     "shiny": true,
     "tags": ["alolan"],
+    "templateId": "V0105_POKEMON_MAROWAK_ALOLA",
     "types": ["fire", "ghost"]
   },
   "106_00": {
@@ -1404,7 +1448,7 @@
     "types": ["water"]
   },
   "120_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 1,
     "name": "Staryu",
     "number": "120",
@@ -1413,7 +1457,7 @@
     "types": ["water"]
   },
   "121_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 1,
     "name": "Starmie",
     "number": "121",
@@ -1512,7 +1556,7 @@
     "types": ["ice", "water"]
   },
   "132_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 1,
     "name": "Ditto",
     "number": "132",
@@ -1593,7 +1637,7 @@
     "types": ["fire"]
   },
   "137_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 1,
     "name": "Porygon",
     "number": "137",
@@ -1656,7 +1700,7 @@
     "types": ["normal"]
   },
   "144_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 1,
     "name": "Articuno",
     "number": "144",
@@ -1665,7 +1709,7 @@
     "types": ["flying", "ice"]
   },
   "145_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 1,
     "name": "Zapdos",
     "number": "145",
@@ -1674,7 +1718,7 @@
     "types": ["flying", "electric"]
   },
   "146_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 1,
     "name": "Moltres",
     "number": "146",
@@ -1710,7 +1754,7 @@
     "types": ["flying", "dragon"]
   },
   "150_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 1,
     "name": "Mewtwo",
     "number": "150",
@@ -1720,7 +1764,7 @@
     "types": ["psychic"]
   },
   "150_01": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 1,
     "name": "Armored Mewtwo",
     "number": "150",
@@ -1730,7 +1774,7 @@
     "types": ["psychic"]
   },
   "151_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 1,
     "name": "Mew",
     "number": "151",
@@ -2243,7 +2287,7 @@
     "types": ["ghost"]
   },
   "201_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 2,
     "name": "Unown",
     "number": "201",
@@ -2531,7 +2575,7 @@
     "types": ["ground"]
   },
   "233_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 2,
     "name": "Porygon2",
     "number": "233",
@@ -2621,7 +2665,7 @@
     "types": ["normal"]
   },
   "243_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 2,
     "name": "Raikou",
     "number": "243",
@@ -2630,7 +2674,7 @@
     "types": ["electric"]
   },
   "244_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 2,
     "name": "Entei",
     "number": "244",
@@ -2639,7 +2683,7 @@
     "types": ["fire"]
   },
   "245_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 2,
     "name": "Suicune",
     "number": "245",
@@ -2675,7 +2719,7 @@
     "types": ["dark", "rock"]
   },
   "249_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 2,
     "name": "Lugia",
     "number": "249",
@@ -2684,7 +2728,7 @@
     "types": ["flying", "psychic"]
   },
   "250_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 2,
     "name": "Ho-Oh",
     "number": "250",
@@ -2693,7 +2737,7 @@
     "types": ["flying", "fire"]
   },
   "251_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 2,
     "name": "Celebi",
     "number": "251",
@@ -3062,7 +3106,7 @@
     "types": ["flying", "bug"]
   },
   "292_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 3,
     "name": "Shedinja",
     "number": "292",
@@ -3467,7 +3511,7 @@
     "types": ["poison"]
   },
   "337_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 3,
     "name": "Lunatone",
     "number": "337",
@@ -3476,7 +3520,7 @@
     "types": ["psychic", "rock"]
   },
   "338_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 3,
     "name": "Solrock",
     "number": "338",
@@ -3521,7 +3565,7 @@
     "types": ["dark", "water"]
   },
   "343_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 3,
     "name": "Baltoy",
     "number": "343",
@@ -3530,7 +3574,7 @@
     "types": ["psychic", "ground"]
   },
   "344_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 3,
     "name": "Claydol",
     "number": "344",
@@ -3831,7 +3875,7 @@
     "types": ["flying", "dragon"]
   },
   "374_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 3,
     "name": "Beldum",
     "number": "374",
@@ -3840,7 +3884,7 @@
     "types": ["psychic", "steel"]
   },
   "375_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 3,
     "name": "Metang",
     "number": "375",
@@ -3849,7 +3893,7 @@
     "types": ["psychic", "steel"]
   },
   "376_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 3,
     "name": "Metagross",
     "number": "376",
@@ -3858,7 +3902,7 @@
     "types": ["psychic", "steel"]
   },
   "377_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 3,
     "name": "Regirock",
     "number": "377",
@@ -3867,7 +3911,7 @@
     "types": ["rock"]
   },
   "378_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 3,
     "name": "Regice",
     "number": "378",
@@ -3876,7 +3920,7 @@
     "types": ["ice"]
   },
   "379_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 3,
     "name": "Registeel",
     "number": "379",
@@ -3903,7 +3947,7 @@
     "types": ["psychic", "dragon"]
   },
   "382_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 3,
     "name": "Kyogre",
     "number": "382",
@@ -3912,7 +3956,7 @@
     "types": ["water"]
   },
   "383_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 3,
     "name": "Groudon",
     "number": "383",
@@ -3921,7 +3965,7 @@
     "types": ["ground"]
   },
   "384_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 3,
     "name": "Rayquaza",
     "number": "384",
@@ -3930,7 +3974,7 @@
     "types": ["flying", "dragon"]
   },
   "385_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 3,
     "name": "Jirachi",
     "number": "385",
@@ -3939,7 +3983,7 @@
     "types": ["psychic", "steel"]
   },
   "386_11": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 3,
     "name": "Deoxys - Normal Form",
     "number": "386",
@@ -3949,7 +3993,7 @@
     "types": ["psychic"]
   },
   "386_12": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 3,
     "name": "Deoxys - Attack Form",
     "number": "386",
@@ -3959,7 +4003,7 @@
     "types": ["psychic"]
   },
   "386_13": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 3,
     "name": "Deoxys - Defense Form",
     "number": "386",
@@ -3969,7 +4013,7 @@
     "types": ["psychic"]
   },
   "386_14": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 3,
     "name": "Deoxys - Speed Form",
     "number": "386",
@@ -4333,6 +4377,7 @@
     "number": "421",
     "shiny": false,
     "tags": [],
+    "templateId": "V0421_POKEMON_CHERRIM_OVERCAST",
     "types": ["grass"]
   },
   "421_12": {
@@ -4342,6 +4387,7 @@
     "number": "421",
     "shiny": false,
     "tags": [],
+    "templateId": "V0421_POKEMON_CHERRIM_SUNNY",
     "types": ["grass"]
   },
   "422_00": {
@@ -4493,7 +4539,7 @@
     "types": ["dark", "poison"]
   },
   "436_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 4,
     "name": "Bronzor",
     "number": "436",
@@ -4502,7 +4548,7 @@
     "types": ["psychic", "steel"]
   },
   "437_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 4,
     "name": "Bronzong",
     "number": "437",
@@ -4727,7 +4773,7 @@
     "types": ["ice", "dark"]
   },
   "462_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 4,
     "name": "Magnezone",
     "number": "462",
@@ -4853,7 +4899,7 @@
     "types": ["ground", "ice"]
   },
   "474_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 4,
     "name": "Porygon-Z",
     "number": "474",
@@ -4958,7 +5004,7 @@
     "types": ["electric", "grass"]
   },
   "480_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 4,
     "name": "Uxie",
     "number": "480",
@@ -4967,7 +5013,7 @@
     "types": ["psychic"]
   },
   "481_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 4,
     "name": "Mesprit",
     "number": "481",
@@ -4976,7 +5022,7 @@
     "types": ["psychic"]
   },
   "482_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 4,
     "name": "Azelf",
     "number": "482",
@@ -4985,7 +5031,7 @@
     "types": ["psychic"]
   },
   "483_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 4,
     "name": "Dialga",
     "number": "483",
@@ -4994,7 +5040,7 @@
     "types": ["dragon", "steel"]
   },
   "484_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 4,
     "name": "Palkia",
     "number": "484",
@@ -5021,7 +5067,7 @@
     "types": ["normal"]
   },
   "487_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 4,
     "name": "Giratina - Altered Form",
     "number": "487",
@@ -5031,7 +5077,7 @@
     "types": ["ghost", "dragon"]
   },
   "487_12": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 4,
     "name": "Giratina - Origin Form",
     "number": "487",
@@ -5050,7 +5096,7 @@
     "types": ["psychic"]
   },
   "808_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 7,
     "name": "Meltan",
     "number": "808",
@@ -5059,7 +5105,7 @@
     "types": ["steel"]
   },
   "809_00": {
-    "genders": ["female", "male"],
+    "genders": [],
     "generation": 7,
     "name": "Melmetal",
     "number": "809",

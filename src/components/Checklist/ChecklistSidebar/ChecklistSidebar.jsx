@@ -55,6 +55,12 @@ export default class ChecklistSidebar extends React.PureComponent {
           output[index] = [];
         }
         output[index].push(item);
+      } else if (
+        item.templateId.includes("_MOVE_") &&
+        !item.templateId.includes("COMBAT_") &&
+        !item.templateId.includes("ITEM")
+      ) {
+        output[item.moveSettings.movementId] = item;
       }
     });
 

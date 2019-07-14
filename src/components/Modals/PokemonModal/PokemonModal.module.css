@@ -1,22 +1,13 @@
 .pokemon-centered {
-  margin: 0 auto !important;
   text-align: center;
-}
-
-.pokemon-close {
-  cursor: pointer;
-  margin: 15px 15px 0 0 !important;
-  position: absolute;
-  right: 0;
 }
 
 .pokemon-content {
   background: #282b33 !important;
 }
 
-.pokemon-data-grid {
-  margin-top: 30px !important;
-  padding-bottom: 20px !important;
+.pokemon-divider {
+  padding: 0 18px 0 18px;
 }
 
 .pokemon-sprite {
@@ -36,9 +27,22 @@
   margin-left: 20px !important;
 }
 
+.pokemon-stat {
+  margin-right: 5px !important;
+}
+
 .pokemon-stats {
   background: #282b33 !important;
-  padding: 20px !important;
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+.pokemon-table-header {
+  background: #1c1e23 !important;
+}
+
+.pokemon-table-row {
+  background: #22242b !important;
 }
 
 .pokemon-title {
@@ -59,7 +63,6 @@
 }
 
 .pokemon-type {
-  height: 20px !important;
-  margin-top: 5px !important;
-  width: 20px !important;
+  height: 25px !important;
+  width: 25px !important;
 }
