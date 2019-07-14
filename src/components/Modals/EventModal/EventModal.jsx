@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import { Divider, Form, Modal } from "semantic-ui-react";
 import { DateTimeInput } from "semantic-ui-calendar-react";
 
-import { db } from "../../firebase";
+import { db } from "../../../firebase";
 import InputBlock from "./InputBlock";
-import styles from "./Modals.module.css";
+import styles from "./EventModal.module.css";
 
 class EventModal extends React.PureComponent {
   constructor(props) {

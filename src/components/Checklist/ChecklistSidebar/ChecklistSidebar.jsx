@@ -47,7 +47,7 @@ export default class ChecklistSidebar extends React.PureComponent {
         }
       });
 
-      if (add) {
+      if (add && item.templateId.includes("_POKEMON_")) {
         index = item.templateId.split("_")[0];
         index = index.split("V0")[1];
 
@@ -55,6 +55,12 @@ export default class ChecklistSidebar extends React.PureComponent {
           output[index] = [];
         }
         output[index].push(item);
+      } else if (
+        item.templateId.includes("_MOVE_") &&
+        !item.templateId.includes("COMBAT_") &&
+        !item.templateId.includes("ITEM")
+      ) {
+        output[item.moveSettings.movementId] = item;
       }
     });
 

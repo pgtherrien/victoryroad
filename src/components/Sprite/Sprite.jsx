@@ -13,6 +13,14 @@ export default class Sprite extends React.PureComponent {
     };
   }
 
+  componentDidUpdate = prevProps => {
+    if (prevProps.src !== this.props.src) {
+      this.setState({
+        src: this.props.src
+      });
+    }
+  };
+
   toggleSprite = () => {
     let { src } = this.state;
     let strings;
@@ -34,12 +42,6 @@ export default class Sprite extends React.PureComponent {
 
     return (
       <React.Fragment>
-        {src.indexOf("_shiny.png") > -1 && (
-          <Image
-            className={styles["sprite-shiny"]}
-            src="images/misc/shiny_white.png"
-          />
-        )}
         <Image
           className={styles["sprite"]}
           onMouseEnter={

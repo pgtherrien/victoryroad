@@ -8,7 +8,8 @@ export default class Entry extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      checked: props.checked
+      checked: props.checked,
+      mouseInside: false
     };
   }
 
@@ -43,8 +44,8 @@ export default class Entry extends React.PureComponent {
   };
 
   render() {
-    const { entry, number } = this.props;
-    const { checked } = this.state;
+    const { entry, number, openPokemon } = this.props;
+    const { checked, mouseInside } = this.state;
 
     return (
       <Grid.Column key={entry.number} mobile={5} tablet={3} computer={2}>
@@ -75,6 +76,9 @@ export default class Entry extends React.PureComponent {
                 ? styles["entry-content"]
                 : `${styles["entry-content"]} ${styles["entry-content-mobile"]}`
             }
+            onClick={() => openPokemon(number)}
+            onMouseEnter={() => this.setState({ mouseInside: true })}
+            onMouseLeave={() => this.setState({ mouseInside: false })}
           >
             <Responsive
               as={Card.Header}
@@ -86,6 +90,13 @@ export default class Entry extends React.PureComponent {
             <Card.Meta className={styles["entry-font"]}>
               {window.innerWidth > 1400 ? `#${entry.number}` : `${entry.name}`}
             </Card.Meta>
+            {mouseInside && (
+              <Icon
+                className={styles["entry-open"]}
+                inverted
+                name="external alternate"
+              />
+            )}
           </Card.Content>
         </Card>
       </Grid.Column>
@@ -98,5 +109,6 @@ Entry.propTypes = {
   entry: PropTypes.object.isRequired,
   handleCheck: PropTypes.func.isRequired,
   listType: PropTypes.string.isRequired,
-  number: PropTypes.string.isRequired
+  number: PropTypes.string.isRequired,
+  openPokemon: PropTypes.func.isRequired
 };

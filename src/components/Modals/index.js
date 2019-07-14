@@ -1,4 +1,5 @@
-import EventModal from "./EventModal.jsx";
-import SearchStringModal from "./SearchStringModal.jsx";
+import EventModal from "./EventModal/EventModal.jsx";
+import PokemonModal from "./PokemonModal/PokemonModal.jsx";
+import SearchStringModal from "./SearchStringModal/SearchStringModal.jsx";
 
-export { EventModal, SearchStringModal };
+export { EventModal, PokemonModal, SearchStringModal };
