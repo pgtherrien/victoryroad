@@ -1716,6 +1716,7 @@
     "number": "150",
     "shiny": false,
     "tags": ["legendary"],
+    "templateId": "V0150_POKEMON_MEWTWO",
     "types": ["psychic"]
   },
   "150_01": {
@@ -1725,6 +1726,7 @@
     "number": "150",
     "shiny": false,
     "tags": ["legendary"],
+    "templateId": "V0150_POKEMON_MEWTWO_A",
     "types": ["psychic"]
   },
   "151_00": {
@@ -3597,6 +3599,7 @@
     "number": "351",
     "shiny": true,
     "tags": [],
+    "templateId": "V0351_POKEMON_CASTFORM",
     "types": ["normal"]
   },
   "351_12": {
@@ -3606,6 +3609,7 @@
     "number": "351",
     "shiny": false,
     "tags": [],
+    "templateId": "V0351_POKEMON_CASTFORM_SUNNY",
     "types": ["fire"]
   },
   "351_13": {
@@ -3615,6 +3619,7 @@
     "number": "351",
     "shiny": false,
     "tags": [],
+    "templateId": "V0351_POKEMON_CASTFORM_RAINY",
     "types": ["water"]
   },
   "351_14": {
@@ -3624,6 +3629,7 @@
     "number": "351",
     "shiny": false,
     "tags": [],
+    "templateId": "V0351_POKEMON_CASTFORM_SNOWY",
     "types": ["ice"]
   },
   "352_00": {
@@ -3939,6 +3945,7 @@
     "number": "386",
     "shiny": false,
     "tags": ["mythical", "not_tradable"],
+    "templateId": "V0386_POKEMON_DEOXYS",
     "types": ["psychic"]
   },
   "386_12": {
@@ -3948,6 +3955,7 @@
     "number": "386",
     "shiny": false,
     "tags": ["mythical", "not_tradable"],
+    "templateId": "V0386_POKEMON_DEOXYS_ATTACK",
     "types": ["psychic"]
   },
   "386_13": {
@@ -3957,6 +3965,7 @@
     "number": "386",
     "shiny": false,
     "tags": ["mythical", "not_tradable"],
+    "templateId": "V0386_POKEMON_DEOXYS_DEFENSE",
     "types": ["psychic"]
   },
   "386_14": {
@@ -3966,6 +3975,7 @@
     "number": "386",
     "shiny": false,
     "tags": ["mythical", "not_tradable"],
+    "templateId": "V0386_POKEMON_DEOXYS_SPEED",
     "types": ["psychic"]
   },
   "387_00": {
@@ -4200,6 +4210,7 @@
     "number": "412",
     "shiny": false,
     "tags": [],
+    "templateId": "V0412_POKEMON_BURMY_PLANT",
     "types": ["bug"]
   },
   "412_12": {
@@ -4209,6 +4220,7 @@
     "number": "412",
     "shiny": false,
     "tags": [],
+    "templateId": "V0412_POKEMON_BURMY_SANDY",
     "types": ["bug"]
   },
   "412_13": {
@@ -4218,6 +4230,7 @@
     "number": "412",
     "shiny": false,
     "tags": [],
+    "templateId": "V0412_POKEMON_BURMY_TRASH",
     "types": ["bug"]
   },
   "413_11": {
@@ -4227,6 +4240,7 @@
     "number": "413",
     "shiny": false,
     "tags": [],
+    "templateId": "V0413_POKEMON_WORMADAM_PLANT",
     "types": ["bug", "grass"]
   },
   "413_12": {
@@ -4236,6 +4250,7 @@
     "number": "413",
     "shiny": false,
     "tags": [],
+    "templateId": "V0413_POKEMON_WORMADAM_SANDY",
     "types": ["bug", "ground"]
   },
   "413_13": {
@@ -4245,6 +4260,7 @@
     "number": "413",
     "shiny": false,
     "tags": [],
+    "templateId": "V0413_POKEMON_WORMADAM_TRASH",
     "types": ["bug", "steel"]
   },
   "414_00": {
@@ -4335,6 +4351,7 @@
     "number": "422",
     "shiny": false,
     "tags": ["regional"],
+    "templateId": "V0422_POKEMON_SHELLOS_WEST_SEA",
     "types": ["water"]
   },
   "422_12": {
@@ -4344,6 +4361,7 @@
     "number": "422",
     "shiny": false,
     "tags": ["regional"],
+    "templateId": "V0422_POKEMON_SHELLOS_EAST_SEA",
     "types": ["water"]
   },
   "423_00": {
@@ -4353,6 +4371,7 @@
     "number": "423",
     "shiny": false,
     "tags": ["regional"],
+    "templateId": "V0423_POKEMON_GASTRODON_WEST_SEA",
     "types": ["water", "ground"]
   },
   "423_12": {
@@ -4362,6 +4381,7 @@
     "number": "423",
     "shiny": false,
     "tags": ["regional"],
+    "templateId": "V0423_POKEMON_GASTRODON_EAST_SEA",
     "types": ["water", "ground"]
   },
   "424_00": {
@@ -4884,6 +4904,7 @@
     "number": "479",
     "shiny": false,
     "tags": [],
+    "templateId": "V0479_POKEMON_ROTOM",
     "types": ["electric", "ghost"]
   },
   "479_12": {
@@ -4893,6 +4914,7 @@
     "number": "479",
     "shiny": false,
     "tags": [],
+    "templateId": "V0479_POKEMON_ROTOM_HEAT",
     "types": ["electric", "fire"]
   },
   "479_13": {
@@ -4902,6 +4924,7 @@
     "number": "479",
     "shiny": false,
     "tags": [],
+    "templateId": "V0479_POKEMON_ROTOM_WASH",
     "types": ["electric", "water"]
   },
   "479_14": {
@@ -4911,6 +4934,7 @@
     "number": "479",
     "shiny": false,
     "tags": [],
+    "templateId": "V0479_POKEMON_ROTOM_FROST",
     "types": ["electric", "ice"]
   },
   "479_15": {
@@ -4920,6 +4944,7 @@
     "number": "479",
     "shiny": false,
     "tags": [],
+    "templateId": "V0479_POKEMON_ROTOM_FAN",
     "types": ["electric", "flying"]
   },
   "479_16": {
@@ -4929,6 +4954,7 @@
     "number": "479",
     "shiny": false,
     "tags": [],
+    "templateId": "V0479_POKEMON_ROTOM_MOW",
     "types": ["electric", "grass"]
   },
   "480_00": {
@@ -5001,6 +5027,7 @@
     "number": "487",
     "shiny": false,
     "tags": ["legendary"],
+    "templateId": "V0487_POKEMON_GIRATINA_ALTERED",
     "types": ["ghost", "dragon"]
   },
   "487_12": {
@@ -5010,6 +5037,7 @@
     "number": "487",
     "shiny": false,
     "tags": ["legendary"],
+    "templateId": "V0487_POKEMON_GIRATINA_ORIGIN",
     "types": ["ghost", "dragon"]
   },
   "488_01": {

@@ -52,26 +52,28 @@ class App extends React.PureComponent {
 
   // Initialize the GAPI client
   initClient = () => {
-    gapi.load("client:auth2", () => {
-      gapi.client.init({
-        apiKey: process.env.REACT_APP_API_KEY,
-        clientId: process.env.REACT_APP_OATH_CLIENT_ID,
-        discoveryDocs: [
-          "https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"
-        ],
-        scope: "https://www.googleapis.com/auth/calendar"
-      });
+    if (gapi) {
+      gapi.load("client:auth2", () => {
+        gapi.client.init({
+          apiKey: process.env.REACT_APP_API_KEY,
+          clientId: process.env.REACT_APP_OATH_CLIENT_ID,
+          discoveryDocs: [
+            "https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"
+          ],
+          scope: "https://www.googleapis.com/auth/calendar"
+        });
 
-      gapi.client.load("calendar", "v3", () => {
-        if (process.env.NODE_ENV !== "production") {
-          console.log("Loaded GAPI Calendar Client");
-        }
-      });
+        gapi.client.load("calendar", "v3", () => {
+          if (process.env.NODE_ENV !== "production") {
+            console.log("Loaded GAPI Calendar Client");
+          }
+        });
 
-      const auth2 = gapi.auth2.getAuthInstance();
-      auth2.isSignedIn.listen(this.handleIsSignedIn);
-      this.handleIsSignedIn(auth2.isSignedIn.get());
-    });
+        const auth2 = gapi.auth2.getAuthInstance();
+        auth2.isSignedIn.listen(this.handleIsSignedIn);
+        this.handleIsSignedIn(auth2.isSignedIn.get());
+      });
+    }
   };
 
   // Check if the user is signed into the GAPI client and Firebase

@@ -1,6 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Grid, Header, Icon, Image, Modal, Statistic } from "semantic-ui-react";
+import {
+  Grid,
+  Header,
+  Icon,
+  Image,
+  Modal,
+  Progress,
+  Statistic,
+  Table
+} from "semantic-ui-react";
 
 import gamemaster from "../../../data/gamemaster";
 import pokedex from "../../../data/pokedex";
@@ -39,8 +48,57 @@ export default class PokemonModal extends React.PureComponent {
     return retval;
   };
 
+  handlePokemonChange = direction => {
+    const { filteredDex } = this.props;
+    const { number } = this.state;
+    let newIndex;
+    let i = 0;
+
+    Object.keys(filteredDex).forEach(function(dexNumber) {
+      if (dexNumber === number) {
+        newIndex = direction === "next" ? i + 1 : i - 1;
+      }
+      i++;
+    });
+
+    let newNumber = Object.keys(filteredDex)[newIndex];
+    this.setState({
+      dexData: pokedex[newNumber],
+      gmData: this.getGMData(pokedex[newNumber]),
+      number: newNumber
+    });
+  };
+
+  renderBaseStats = () => {
+    const { stats } = this.state.gmData.pokemonSettings;
+
+    return (
+      <Table className={styles["pokemon-stats"]} inverted>
+        <Table.Body>
+          <Table.Row>
+            <Table.Cell>
+              Base HP:{" "}
+              <Progress color="red" value={stats.baseStamina} total={500} />
+            </Table.Cell>
+          </Table.Row>
+          <Table.Row>
+            <Table.Cell>
+              Base Attack:{" "}
+              <Progress color="yellow" value={stats.baseAttack} total={500} />
+            </Table.Cell>
+          </Table.Row>
+          <Table.Row>
+            <Table.Cell>
+              Base Defense: <Progress color="blue" value={stats.baseDefense} />
+            </Table.Cell>
+          </Table.Row>
+        </Table.Body>
+      </Table>
+    );
+  };
+
   renderDataGrid = () => {
-    const { dexData, gmData } = this.state;
+    const { gmData } = this.state;
     let hasCaptureRate =
       gmData.pokemonSettings.encounter.baseCaptureRate !== undefined;
 
@@ -54,17 +112,9 @@ export default class PokemonModal extends React.PureComponent {
         <Grid.Column textAlign="center">
           <Statistic inverted size="tiny">
             <Statistic.Value>
-              <Icon
-                name={
-                  dexData.genders.length === 2
-                    ? "venus mars"
-                    : dexData.genders.indexOf("male") > -1
-                    ? "mars"
-                    : "venus"
-                }
-              />
+              {gmData.pokemonSettings.kmBuddyDistance}km
             </Statistic.Value>
-            <Statistic.Label>Gender</Statistic.Label>
+            <Statistic.Label>Buddy Distance</Statistic.Label>
           </Statistic>
         </Grid.Column>
         {hasCaptureRate && (
@@ -80,9 +130,9 @@ export default class PokemonModal extends React.PureComponent {
         <Grid.Column textAlign="center">
           <Statistic inverted size="tiny">
             <Statistic.Value>
-              {gmData.pokemonSettings.kmBuddyDistance}km
+              {Math.floor(gmData.pokemonSettings.encounter.baseFleeRate * 100)}%
             </Statistic.Value>
-            <Statistic.Label>Buddy Distance</Statistic.Label>
+            <Statistic.Label>Base Flee Rate</Statistic.Label>
           </Statistic>
         </Grid.Column>
       </Grid>
@@ -110,17 +160,32 @@ export default class PokemonModal extends React.PureComponent {
   };
 
   render() {
-    const { dexData, gmData, shinyImg } = this.state;
-    const { number, onClose } = this.props;
+    const { dexData, number, shinyImg } = this.state;
+    const { onClose } = this.props;
     let image = shinyImg
       ? `images/pokemon_icons/pokemon_icon_${number}_shiny.png`
       : `images/pokemon_icons/pokemon_icon_${number}.png`;
     let types = this.renderTypes(dexData);
-    console.log(gmData);
+    console.log(number);
+    console.log(image);
     return (
       <Modal basic onClose={onClose} open={true} size="small">
-        <div>
+        <div className={styles["pokemon-sprite"]}>
+          <Icon
+            className={styles["pokemon-sprite-previous"]}
+            inverted
+            name="angle left"
+            size="huge"
+            onClick={() => this.handlePokemonChange("previous")}
+          />
           <Sprite showShiny={true} src={image} />
+          <Icon
+            className={styles["pokemon-sprite-next"]}
+            inverted
+            name="angle right"
+            size="huge"
+            onClick={() => this.handlePokemonChange("next")}
+          />
         </div>
         <div className={styles["pokemon-content"]}>
           <Icon
@@ -134,7 +199,17 @@ export default class PokemonModal extends React.PureComponent {
             </span>
             <span className={styles["pokemon-title-name"]}>{dexData.name}</span>
             {types}
+            {/* <Icon
+              name={
+                dexData.genders.length === 2
+                  ? "venus mars"
+                  : dexData.genders.indexOf("male") > -1
+                  ? "mars"
+                  : "venus"
+              }
+            /> */}
           </Header>
+          {this.renderBaseStats()}
           {this.renderDataGrid()}
         </div>
       </Modal>
@@ -143,6 +218,7 @@ export default class PokemonModal extends React.PureComponent {
 }
 
 PokemonModal.propTypes = {
+  filteredDex: PropTypes.object.isRequired,
   number: PropTypes.string.isRequired,
   onClose: PropTypes.func.isRequired,
   shinyImg: PropTypes.bool.isRequired

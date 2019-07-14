@@ -13,6 +13,18 @@ export default class Sprite extends React.PureComponent {
     };
   }
 
+  componentDidUpdate = prevProps => {
+    let currentNumber = this.props.src.split("_")[3];
+    let previousNumber = prevProps.src.split("_")[3];
+    const { src } = this.props;
+
+    if (previousNumber !== currentNumber) {
+      this.setState({
+        src: src
+      });
+    }
+  };
+
   toggleSprite = () => {
     let { src } = this.state;
     let strings;

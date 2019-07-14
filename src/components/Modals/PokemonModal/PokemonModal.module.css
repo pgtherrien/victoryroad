@@ -19,12 +19,26 @@
   padding-bottom: 20px !important;
 }
 
-.pokemon-shiny {
-  height: 20px;
-  position: absolute !important;
-  right: 0;
-  top: 0;
-  width: 20px;
+.pokemon-sprite {
+  align-items: center;
+  display: flex !important;
+  justify-content: center !important;
+  width: 100%;
+}
+
+.pokemon-sprite-next {
+  cursor: pointer;
+  margin-right: 20px !important;
+}
+
+.pokemon-sprite-previous {
+  cursor: pointer;
+  margin-left: 20px !important;
+}
+
+.pokemon-stats {
+  background: #282b33 !important;
+  padding: 20px !important;
 }
 
 .pokemon-title {

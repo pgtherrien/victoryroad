@@ -416,6 +416,7 @@ export default class Checklist extends React.PureComponent {
           />
           {openPokemon.length > 0 && (
             <PokemonModal
+              filteredDex={filteredDex}
               number={openPokemon}
               onClose={() => this.setState({ openPokemon: "" })}
               shinyImg={type === "shiny"}
