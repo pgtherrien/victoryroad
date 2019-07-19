@@ -5,7 +5,6 @@ import {
   Grid,
   Header,
   Icon,
-  Label,
   Modal,
   Responsive,
   Statistic,
@@ -16,28 +15,8 @@ import gamemaster from "../../../data/gamemaster";
 import pokedex from "../../../data/pokedex";
 import styles from "./PokemonModal.module.css";
 import Sprite from "../../Sprite";
+import { Tag, Type } from "../../Badges";
 import utils from "../../utils";
-
-const TYPE_COLORS = {
-  normal: "#A8A77A",
-  fire: "#EE8130",
-  water: "#6390F0",
-  electric: "#F7D02C",
-  grass: "#7AC74C",
-  ice: "#96D9D6",
-  fighting: "#C22E28",
-  poison: "#A33EA1",
-  ground: "#E2BF65",
-  flying: "#A98FF3",
-  psychic: "#F95587",
-  bug: "#A6B91A",
-  rock: "#B6A136",
-  ghost: "#735797",
-  dragon: "#6F35FC",
-  dark: "#705746",
-  steel: "#B7B7CE",
-  fairy: "#D685AD"
-};
 
 export default class PokemonModal extends React.PureComponent {
   constructor(props) {
@@ -270,19 +249,23 @@ export default class PokemonModal extends React.PureComponent {
     );
   };
 
+  renderTags = tags => {
+    let retval = [];
+    let i = 0;
+    tags.forEach(function(tag) {
+      retval.push(<Tag key={i} tag={tag} />);
+      i++;
+    });
+
+    return retval;
+  };
+
   renderTypes = types => {
     let retval = [];
     let i = 0;
 
     types.forEach(function(type) {
-      retval.push(
-        <Label
-          key={i}
-          style={{ background: TYPE_COLORS[type], color: "#ffffff" }}
-        >
-          {utils.toTitleCase(type)}
-        </Label>
-      );
+      retval.push(<Type key={i} type={type} />);
       i++;
     });
 
@@ -325,15 +308,35 @@ export default class PokemonModal extends React.PureComponent {
           />
         </div>
         <div className={styles["pokemon-content"]}>
+          <Icon
+            className={styles["pokemon-close"]}
+            inverted
+            name="close"
+            onClick={onClose}
+            size="large"
+          />
           <Header as="h2" className={styles["pokemon-title"]} inverted>
             <span className={styles["pokemon-title-number"]}>
               #{dexData.number}
             </span>
             <span className={styles["pokemon-title-name"]}>{dexData.name}</span>
           </Header>
-          <div className={styles["pokemon-centered"]}>{types}</div>
+          <div className={styles["pokemon-types"]}>{types}</div>
           {this.renderMetadata()}
-
+          {dexData.tags.length > 0 && (
+            <React.Fragment>
+              <Divider
+                className={styles["pokemon-divider"]}
+                horizontal
+                inverted
+              >
+                Tags
+              </Divider>
+              <div className={styles["pokemon-tags"]}>
+                {this.renderTags(dexData.tags)}
+              </div>
+            </React.Fragment>
+          )}
           {gmData.pokemonSettings.quickMoves &&
             gmData.pokemonSettings.cinematicMoves && (
               <React.Fragment>

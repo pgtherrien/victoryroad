@@ -105,16 +105,26 @@ export default class ChecklistSidebar extends React.PureComponent {
   };
 
   render() {
-    const { admins, filters, handleSave, saveState, user } = this.props;
+    const {
+      admins,
+      clearFilters,
+      filters,
+      handleSave,
+      saveState,
+      setFilters,
+      user
+    } = this.props;
     const { showSidebar } = this.state;
 
     return (
       <React.Fragment>
         <ChecklistSidebarOpen
+          clearFilters={clearFilters}
           filters={filters}
           handleChange={this.handleChange}
           handleSearch={this.handleSearch}
           onHide={() => this.setState({ showSidebar: false })}
+          setFilters={setFilters}
           showSidebar={showSidebar}
         />
         <Menu
@@ -217,6 +227,7 @@ export default class ChecklistSidebar extends React.PureComponent {
 
 ChecklistSidebar.propTypes = {
   admins: PropTypes.array.isRequired,
+  clearFilters: PropTypes.func.isRequired,
   filters: PropTypes.object.isRequired,
   handleSave: PropTypes.func.isRequired,
   saveState: PropTypes.object.isRequired,

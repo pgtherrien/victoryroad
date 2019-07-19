@@ -17,6 +17,7 @@ const DEFAULT_FILTERS = {
   onlyUnchecked: false,
   search: "",
   showEventForms: false,
+  tags: [],
   type: "normal"
 };
 
@@ -56,7 +57,9 @@ export default class Checklist extends React.PureComponent {
     this.state = {
       filteredPokedex: pokedex,
       filters:
-        localFilters === null ? DEFAULT_FILTERS : JSON.parse(localFilters),
+        localFilters === null
+          ? Object.assign({}, DEFAULT_FILTERS)
+          : JSON.parse(localFilters),
       lists: {},
       openPokemon: "",
       rowCount: rowCount,
@@ -110,6 +113,14 @@ export default class Checklist extends React.PureComponent {
       rowData: this.buildRowData(filteredDex, rowCount)
     });
   }
+
+  clearFilters = () => {
+    let filters = Object.assign({}, DEFAULT_FILTERS);
+    filters.generations = [];
+    filters.tags = [];
+
+    this.handleSetFilters(filters);
+  };
 
   // Group the pokedex entries into rows
   buildRowData = (filteredDex, rowCount) => {
@@ -166,6 +177,7 @@ export default class Checklist extends React.PureComponent {
       onlyUnchecked,
       showEventForms,
       search,
+      tags,
       type
     } = filters;
     let entries = {};
@@ -211,6 +223,15 @@ export default class Checklist extends React.PureComponent {
         generations.indexOf(pokedex[number].generation) === -1
       ) {
         add = false;
+      }
+
+      if (add && tags.length > 0) {
+        add = false;
+        for (let tag of tags) {
+          if (pokedex[number].tags.indexOf(tag) > -1) {
+            add = true;
+          }
+        }
       }
 
       if (add) {
@@ -408,6 +429,7 @@ export default class Checklist extends React.PureComponent {
           />
           <ChecklistSidebar
             admins={admins}
+            clearFilters={this.clearFilters}
             filters={filters}
             handleSave={this.handleSave}
             saveState={saveState}
