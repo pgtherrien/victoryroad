@@ -62,7 +62,7 @@ export default class MenuOpen extends React.PureComponent {
           >
             <Icon inverted name="hdd outline" size="big" /> <span>Pokébox</span>
           </Menu.Item>
-          {user ? (
+          {user.uid ? (
             <div className={styles["menu-open-auth"]}>
               <Image
                 as={Image}
