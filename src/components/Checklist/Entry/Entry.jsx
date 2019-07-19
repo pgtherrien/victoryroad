@@ -85,18 +85,14 @@ export default class Entry extends React.PureComponent {
               className={styles["entry-font"]}
               minWidth={1400}
             >
-              {entry.name}
+              {entry.name}{" "}
+              {mouseInside && (
+                <Icon inverted name="external alternate" size="small" />
+              )}
             </Responsive>
             <Card.Meta className={styles["entry-font"]}>
               {window.innerWidth > 1400 ? `#${entry.number}` : `${entry.name}`}
             </Card.Meta>
-            {mouseInside && (
-              <Icon
-                className={styles["entry-open"]}
-                inverted
-                name="external alternate"
-              />
-            )}
           </Card.Content>
         </Card>
       </Grid.Column>

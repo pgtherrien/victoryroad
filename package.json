@@ -12,6 +12,7 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
+    "react-swipeable": "^5.3.0",
     "react-virtualized": "^9.21.1",
     "semantic-ui-calendar-react": "^0.15.0",
     "semantic-ui-css": "^2.4.1",

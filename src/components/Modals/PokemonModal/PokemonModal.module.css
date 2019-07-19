@@ -1,9 +1,13 @@
-.pokemon-centered {
-  text-align: center;
+.pokemon-close {
+  cursor: pointer;
+  margin: 10px 10px 0 0 !important;
+  position: absolute;
+  right: 0;
 }
 
 .pokemon-content {
   background: #282b33 !important;
+  border-radius: 15px !important;
 }
 
 .pokemon-divider {
@@ -45,12 +49,17 @@
   background: #22242b !important;
 }
 
+.pokemon-tags {
+  text-align: center;
+}
+
 .pokemon-title {
   display: flex !important;
   justify-content: center;
   margin-top: 0 !important;
   padding-top: 15px !important;
   text-align: center;
+  width: 100%;
 }
 
 .pokemon-title-name {
@@ -65,4 +74,9 @@
 .pokemon-type {
   height: 25px !important;
   width: 25px !important;
+}
+
+.pokemon-types {
+  margin-bottom: 15px !important;
+  text-align: center;
 }

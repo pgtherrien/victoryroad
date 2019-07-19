@@ -65,18 +65,28 @@
   cursor: pointer;
 }
 
-.entry-open {
-  position: absolute;
-  right: -2px;
-  bottom: 5px;
-}
-
 /* FilterSidebar CSS */
 .filter-sidebar {
   background: #282b33 !important;
   margin-top: -18% !important;
   position: fixed !important;
   right: 0;
+}
+
+.filter-sidebar-clear-all {
+  cursor: pointer;
+  bottom: 0;
+  display: flex !important;
+  height: 50px !important;
+  justify-content: center !important;
+  position: absolute !important;
+  text-align: center !important;
+  width: 100%;
+}
+
+.filter-sidebar-clear-all-mobile {
+  text-align: center !important;
+  width: 100%;
 }
 
 .filter-sidebar-close {
@@ -103,8 +113,16 @@
   cursor: pointer;
 }
 
+.filter-sidebar-hover {
+  cursor: pointer;
+}
+
 .filter-sidebar-item {
   height: 50px !important;
+}
+
+.filter-sidebar-item-bottom:before {
+  height: 0% !important;
 }
 
 .filter-sidebar-radio {
