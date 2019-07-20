@@ -2678,7 +2678,7 @@
     "generation": 2,
     "name": "Entei",
     "number": "244",
-    "shiny": false,
+    "shiny": true,
     "tags": ["legendary"],
     "types": ["fire"]
   },
