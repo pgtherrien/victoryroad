@@ -2804,7 +2804,7 @@
     "generation": 3,
     "name": "Mudkip",
     "number": "258",
-    "shiny": false,
+    "shiny": true,
     "tags": [],
     "types": ["water"]
   },
@@ -2813,7 +2813,7 @@
     "generation": 3,
     "name": "Marshtomp",
     "number": "259",
-    "shiny": false,
+    "shiny": true,
     "tags": [],
     "types": ["ground", "water"]
   },
@@ -2822,7 +2822,7 @@
     "generation": 3,
     "name": "Swampert",
     "number": "260",
-    "shiny": false,
+    "shiny": true,
     "tags": [],
     "types": ["ground", "water"]
   },

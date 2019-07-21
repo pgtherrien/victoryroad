@@ -122,31 +122,40 @@ export default class Checklist extends React.PureComponent {
     this.handleSetFilters(filters);
   };
 
+  buildIndividualRow = (filteredDex, index) => {
+    let row = {};
+
+    if (Object.keys(filteredDex).length <= ENTRIES_PER_ROW) {
+      Object.keys(filteredDex).forEach(function(number) {
+        row[number] = filteredDex[number];
+      });
+    } else {
+      while (
+        filteredDex[Object.keys(filteredDex)[index]] &&
+        Object.keys(row).length < ENTRIES_PER_ROW
+      ) {
+        row[Object.keys(filteredDex)[index]] =
+          filteredDex[Object.keys(filteredDex)[index]];
+        index++;
+      }
+    }
+
+    return { row: row, index: index };
+  };
+
   // Group the pokedex entries into rows
   buildRowData = (filteredDex, rowCount) => {
-    let rows = [];
-    let row;
+    let oThis = this;
     let rowIndex = 0;
+    let rows = [];
     let index = 0;
+    let retval;
 
     if (filteredDex) {
       while (rowIndex < rowCount) {
-        row = {};
-        if (Object.keys(filteredDex).length <= ENTRIES_PER_ROW) {
-          Object.keys(filteredDex).forEach(function(number) {
-            row[number] = filteredDex[number];
-          });
-        } else {
-          while (
-            filteredDex[Object.keys(filteredDex)[index]] &&
-            Object.keys(row).length < ENTRIES_PER_ROW
-          ) {
-            row[Object.keys(filteredDex)[index]] =
-              filteredDex[Object.keys(filteredDex)[index]];
-            index++;
-          }
-        }
-        rows.push(row);
+        retval = oThis.buildIndividualRow(filteredDex, index);
+        index = retval.index;
+        rows.push(retval.row);
         rowIndex++;
       }
     }
@@ -439,9 +448,11 @@ export default class Checklist extends React.PureComponent {
           {openPokemon.length > 0 && (
             <PokemonModal
               filteredDex={filteredDex}
+              list={lists[type]}
               number={openPokemon}
               onClose={() => this.setState({ openPokemon: "" })}
               shinyImg={type === "shiny"}
+              type={type}
             />
           )}
         </div>

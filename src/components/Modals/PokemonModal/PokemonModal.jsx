@@ -5,6 +5,7 @@ import {
   Grid,
   Header,
   Icon,
+  Image,
   Modal,
   Responsive,
   Statistic,
@@ -181,71 +182,84 @@ export default class PokemonModal extends React.PureComponent {
     let maxCP = this.calculateMaxCP(stats);
 
     return (
-      <Grid className={styles["pokemon-stats"]} columns={3} inverted>
-        <Grid.Column textAlign="center">
-          <Statistic inverted size="tiny">
-            <Statistic.Value>
-              {gmData.pokemonSettings.kmBuddyDistance}km
-            </Statistic.Value>
-            <Statistic.Label>Buddy Distance</Statistic.Label>
-          </Statistic>
-        </Grid.Column>
-        <Grid.Column textAlign="center">
-          <Statistic inverted size="tiny">
-            <Statistic.Value>{maxCP}</Statistic.Value>
-            <Statistic.Label>Max CP</Statistic.Label>
-          </Statistic>
-        </Grid.Column>
-        <Grid.Column textAlign="center">
-          <Statistic inverted size="tiny">
-            <Statistic.Value>
-              <Icon
-                name={
-                  dexData.genders.length === 2
-                    ? "venus mars"
-                    : dexData.genders.length === 0
-                    ? "genderless"
-                    : dexData.genders.indexOf("male") > -1
-                    ? "mars"
-                    : "venus"
-                }
-              />
-            </Statistic.Value>
-            <Statistic.Label>Genders</Statistic.Label>
-          </Statistic>
-        </Grid.Column>
-        <Grid.Column textAlign="center">
-          <Statistic inverted size="tiny">
-            <Statistic.Value>
-              <Icon className={styles["pokemon-stat"]} inverted name="heart" />
-              {stats.baseStamina}
-            </Statistic.Value>
-            <Statistic.Label>Base HP</Statistic.Label>
-          </Statistic>
-        </Grid.Column>
-        <Grid.Column textAlign="center">
-          <Statistic inverted size="tiny">
-            <Statistic.Value>
-              <Icon
-                className={styles["pokemon-stat"]}
-                inverted
-                name="hand rock"
-              />
-              {stats.baseAttack}
-            </Statistic.Value>
-            <Statistic.Label>Base Attack</Statistic.Label>
-          </Statistic>
-        </Grid.Column>
-        <Grid.Column textAlign="center">
-          <Statistic inverted size="tiny">
-            <Statistic.Value>
-              <Icon className={styles["pokemon-stat"]} inverted name="shield" />
-              {stats.baseDefense}
-            </Statistic.Value>
-            <Statistic.Label>Base Defense</Statistic.Label>
-          </Statistic>
-        </Grid.Column>
-      </Grid>
+      <React.Fragment>
+        <Divider className={styles["pokemon-divider"]} horizontal inverted>
+          Stats
+        </Divider>
+        <Grid className={styles["pokemon-stats"]} columns={3} inverted>
+          <Grid.Column textAlign="center">
+            <Statistic inverted size="tiny">
+              <Statistic.Value>
+                {gmData.pokemonSettings.kmBuddyDistance}km
+              </Statistic.Value>
+              <Statistic.Label>Buddy Distance</Statistic.Label>
+            </Statistic>
+          </Grid.Column>
+          <Grid.Column textAlign="center">
+            <Statistic inverted size="tiny">
+              <Statistic.Value>{maxCP}</Statistic.Value>
+              <Statistic.Label>Max CP</Statistic.Label>
+            </Statistic>
+          </Grid.Column>
+          <Grid.Column textAlign="center">
+            <Statistic inverted size="tiny">
+              <Statistic.Value>
+                <Icon
+                  name={
+                    dexData.genders.length === 2
+                      ? "venus mars"
+                      : dexData.genders.length === 0
+                      ? "genderless"
+                      : dexData.genders.indexOf("male") > -1
+                      ? "mars"
+                      : "venus"
+                  }
+                />
+              </Statistic.Value>
+              <Statistic.Label>Genders</Statistic.Label>
+            </Statistic>
+          </Grid.Column>
+          <Grid.Column textAlign="center">
+            <Statistic inverted size="tiny">
+              <Statistic.Value>
+                <Icon
+                  className={styles["pokemon-stat"]}
+                  inverted
+                  name="heart"
+                />
+                {stats.baseStamina}
+              </Statistic.Value>
+              <Statistic.Label>Base HP</Statistic.Label>
+            </Statistic>
+          </Grid.Column>
+          <Grid.Column textAlign="center">
+            <Statistic inverted size="tiny">
+              <Statistic.Value>
+                <Icon
+                  className={styles["pokemon-stat"]}
+                  inverted
+                  name="hand rock"
+                />
+                {stats.baseAttack}
+              </Statistic.Value>
+              <Statistic.Label>Base Attack</Statistic.Label>
+            </Statistic>
+          </Grid.Column>
+          <Grid.Column textAlign="center">
+            <Statistic inverted size="tiny">
+              <Statistic.Value>
+                <Icon
+                  className={styles["pokemon-stat"]}
+                  inverted
+                  name="shield"
+                />
+                {stats.baseDefense}
+              </Statistic.Value>
+              <Statistic.Label>Base Defense</Statistic.Label>
+            </Statistic>
+          </Grid.Column>
+        </Grid>
+      </React.Fragment>
     );
   };
 
@@ -274,7 +288,7 @@ export default class PokemonModal extends React.PureComponent {
 
   render() {
     const { dexData, gmData, number, shinyImg } = this.state;
-    const { onClose } = this.props;
+    const { list, onClose, type } = this.props;
     let image = shinyImg
       ? `images/pokemon_icons/pokemon_icon_${number}_shiny.png`
       : `images/pokemon_icons/pokemon_icon_${number}.png`;
@@ -308,18 +322,34 @@ export default class PokemonModal extends React.PureComponent {
           />
         </div>
         <div className={styles["pokemon-content"]}>
+          {list.indexOf(number) > -1 && (
+            <Image
+              avatar
+              className={styles["pokemon-corner-left"]}
+              src="images/misc/pokeball_white.png"
+              title="Pokémon Marked as Caught"
+            />
+          )}
           <Icon
-            className={styles["pokemon-close"]}
+            className={styles["pokemon-corner-right"]}
             inverted
             name="close"
             onClick={onClose}
-            size="large"
+            size="big"
+            title="Close Pokémon"
           />
           <Header as="h2" className={styles["pokemon-title"]} inverted>
             <span className={styles["pokemon-title-number"]}>
               #{dexData.number}
             </span>
             <span className={styles["pokemon-title-name"]}>{dexData.name}</span>
+            {type === "shiny" && (
+              <Image
+                avatar
+                className={styles["pokemon-shiny"]}
+                src="images/misc/shiny_white.png"
+              />
+            )}
           </Header>
           <div className={styles["pokemon-types"]}>{types}</div>
           {this.renderMetadata()}
@@ -358,7 +388,9 @@ export default class PokemonModal extends React.PureComponent {
 
 PokemonModal.propTypes = {
   filteredDex: PropTypes.object.isRequired,
+  list: PropTypes.array.isRequired,
   number: PropTypes.string.isRequired,
   onClose: PropTypes.func.isRequired,
-  shinyImg: PropTypes.bool.isRequired
+  shinyImg: PropTypes.bool.isRequired,
+  type: PropTypes.string.isRequired
 };

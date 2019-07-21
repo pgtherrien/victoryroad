@@ -87,7 +87,7 @@ export default class Entry extends React.PureComponent {
             >
               {entry.name}{" "}
               {mouseInside && (
-                <Icon inverted name="external alternate" size="small" />
+                <Icon inverted name="angle double right" size="small" />
               )}
             </Responsive>
             <Card.Meta className={styles["entry-font"]}>

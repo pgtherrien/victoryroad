@@ -1,4 +1,10 @@
-.pokemon-close {
+.pokemon-corner-left {
+  left: 0 !important;
+  margin: 10px 0 0 10px !important;
+  position: absolute !important;
+}
+
+.pokemon-corner-right {
   cursor: pointer;
   margin: 10px 10px 0 0 !important;
   position: absolute;
@@ -12,6 +18,11 @@
 
 .pokemon-divider {
   padding: 0 18px 0 18px;
+}
+
+.pokemon-shiny {
+  height: 25px !important;
+  width: 25px !important;
 }
 
 .pokemon-sprite {
@@ -54,10 +65,11 @@
 }
 
 .pokemon-title {
+  border-radius: 15px !important;
   display: flex !important;
   justify-content: center;
-  margin-top: 0 !important;
-  padding-top: 15px !important;
+  margin: 0 !important;
+  padding: 15px 0 15px 0 !important;
   text-align: center;
   width: 100%;
 }
@@ -77,6 +89,6 @@
 }
 
 .pokemon-types {
-  margin-bottom: 15px !important;
+  padding-bottom: 15px !important;
   text-align: center;
 }
