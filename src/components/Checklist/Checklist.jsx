@@ -427,7 +427,7 @@ export default class Checklist extends React.PureComponent {
             </Menu>
           </div>
           <List
-            height={window.innerHeight - 100}
+            height={window.innerHeight - 175}
             overscanRowCount={2}
             ref={c => (this.list = c)}
             rowCount={rowCount}

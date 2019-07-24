@@ -267,8 +267,10 @@ export default class PokemonModal extends React.PureComponent {
     let retval = [];
     let i = 0;
     tags.forEach(function(tag) {
-      retval.push(<Tag key={i} tag={tag} />);
-      i++;
+      if (tag !== "not_tradable") {
+        retval.push(<Tag key={i} tag={tag} />);
+        i++;
+      }
     });
 
     return retval;

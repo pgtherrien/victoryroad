@@ -37,8 +37,8 @@ export default class ChecklistSidebarOpen extends React.PureComponent {
       "baby",
       "legendary",
       "mythical",
-      "not_tradable",
-      "regional"
+      "regional",
+      "starter"
     ];
     let oThis = this;
     let retval = [];
@@ -211,11 +211,7 @@ export default class ChecklistSidebarOpen extends React.PureComponent {
           </Divider>
           {this.renderTagFilters()}
           <Menu.Item
-            className={
-              window.innerWidth > Responsive.onlyMobile.maxWidth
-                ? styles["filter-sidebar-clear-all"]
-                : styles["filter-sidebar-clear-all-mobile"]
-            }
+            className={styles["filter-sidebar-clear-all"]}
             onClick={clearFilters}
           >
             <span>Clear All Filters</span>
