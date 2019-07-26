@@ -7,7 +7,6 @@ import {
   Image,
   Menu,
   Radio,
-  Responsive,
   Sidebar
 } from "semantic-ui-react";
 import { Swipeable } from "react-swipeable";

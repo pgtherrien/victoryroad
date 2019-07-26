@@ -251,7 +251,7 @@
     "generation": 1,
     "name": "Ekans",
     "number": "023",
-    "shiny": false,
+    "shiny": true,
     "tags": [],
     "types": ["poison"]
   },
@@ -260,7 +260,7 @@
     "generation": 1,
     "name": "Arbok",
     "number": "024",
-    "shiny": false,
+    "shiny": true,
     "tags": [],
     "types": ["poison"]
   },
@@ -620,7 +620,7 @@
     "generation": 1,
     "name": "Zubat",
     "number": "041",
-    "shiny": false,
+    "shiny": true,
     "tags": [],
     "types": ["flying", "poison"]
   },
@@ -629,7 +629,7 @@
     "generation": 1,
     "name": "Golbat",
     "number": "042",
-    "shiny": false,
+    "shiny": true,
     "tags": [],
     "types": ["flying", "poison"]
   },
@@ -1353,7 +1353,7 @@
     "generation": 1,
     "name": "Koffing",
     "number": "109",
-    "shiny": false,
+    "shiny": true,
     "tags": [],
     "types": ["poison"]
   },
@@ -1362,7 +1362,7 @@
     "generation": 1,
     "name": "Weezing",
     "number": "110",
-    "shiny": false,
+    "shiny": true,
     "tags": [],
     "types": ["poison"]
   },
@@ -1940,7 +1940,7 @@
     "generation": 2,
     "name": "Crobat",
     "number": "169",
-    "shiny": false,
+    "shiny": true,
     "tags": [],
     "types": ["flying", "poison"]
   },
@@ -2417,7 +2417,7 @@
     "generation": 2,
     "name": "Sneasel",
     "number": "215",
-    "shiny": false,
+    "shiny": true,
     "tags": [],
     "types": ["ice", "dark"]
   },
@@ -4768,7 +4768,7 @@
     "generation": 4,
     "name": "Weavile",
     "number": "461",
-    "shiny": false,
+    "shiny": true,
     "tags": [],
     "types": ["ice", "dark"]
   },
