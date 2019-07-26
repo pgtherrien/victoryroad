@@ -79,7 +79,7 @@ export default class MenuCollapsed extends React.PureComponent {
             </Menu.Item>
           }
         />
-        {user.uid ? (
+        {user && user.uid ? (
           <Responsive
             as={Popup}
             content="Sign Out"

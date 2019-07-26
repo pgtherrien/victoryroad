@@ -5,12 +5,12 @@ import { Label } from "semantic-ui-react";
 import styles from "./Badges.module.css";
 import utils from "../utils";
 const TAG_COLORS = {
-  alolan: "orange",
-  baby: "blue",
+  alolan: "yellow",
+  baby: "teal",
   legendary: "red",
   mythical: "purple",
-  not_tradable: "black",
-  regional: "green"
+  regional: "green",
+  starter: "blue"
 };
 
 export default class Tag extends React.PureComponent {

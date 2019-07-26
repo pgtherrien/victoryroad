@@ -5,7 +5,7 @@
     "name": "Bulbasaur",
     "number": "001",
     "shiny": true,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["poison", "grass"]
   },
   "002_00": {
@@ -14,7 +14,7 @@
     "name": "Ivysaur",
     "number": "002",
     "shiny": true,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["poison", "grass"]
   },
   "003_00": {
@@ -23,7 +23,7 @@
     "name": "Venusaur",
     "number": "003",
     "shiny": true,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["poison", "grass"]
   },
   "004_00": {
@@ -32,7 +32,7 @@
     "name": "Charmander",
     "number": "004",
     "shiny": true,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["fire"]
   },
   "005_00": {
@@ -41,7 +41,7 @@
     "name": "Charmeleon",
     "number": "005",
     "shiny": true,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["fire"]
   },
   "006_00": {
@@ -50,7 +50,7 @@
     "name": "Charizard",
     "number": "006",
     "shiny": true,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["flying", "fire"]
   },
   "007_00": {
@@ -59,7 +59,7 @@
     "name": "Squirtle",
     "number": "007",
     "shiny": true,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["water"]
   },
   "007_00_05": {
@@ -68,7 +68,7 @@
     "name": "Sunglasses Squirtle",
     "number": "007",
     "shiny": true,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["water"]
   },
   "008_00": {
@@ -77,7 +77,7 @@
     "name": "Wartortle",
     "number": "008",
     "shiny": true,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["water"]
   },
   "008_00_05": {
@@ -86,7 +86,7 @@
     "name": "Sunglasses Wartortle",
     "number": "008",
     "shiny": true,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["water"]
   },
   "009_00": {
@@ -95,7 +95,7 @@
     "name": "Blastoise",
     "number": "009",
     "shiny": true,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["water"]
   },
   "009_00_05": {
@@ -104,7 +104,7 @@
     "name": "Sunglasses Blastoise",
     "number": "009",
     "shiny": true,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["water"]
   },
   "010_00": {
@@ -251,7 +251,7 @@
     "generation": 1,
     "name": "Ekans",
     "number": "023",
-    "shiny": false,
+    "shiny": true,
     "tags": [],
     "types": ["poison"]
   },
@@ -260,7 +260,7 @@
     "generation": 1,
     "name": "Arbok",
     "number": "024",
-    "shiny": false,
+    "shiny": true,
     "tags": [],
     "types": ["poison"]
   },
@@ -620,7 +620,7 @@
     "generation": 1,
     "name": "Zubat",
     "number": "041",
-    "shiny": false,
+    "shiny": true,
     "tags": [],
     "types": ["flying", "poison"]
   },
@@ -629,7 +629,7 @@
     "generation": 1,
     "name": "Golbat",
     "number": "042",
-    "shiny": false,
+    "shiny": true,
     "tags": [],
     "types": ["flying", "poison"]
   },
@@ -1353,7 +1353,7 @@
     "generation": 1,
     "name": "Koffing",
     "number": "109",
-    "shiny": false,
+    "shiny": true,
     "tags": [],
     "types": ["poison"]
   },
@@ -1362,7 +1362,7 @@
     "generation": 1,
     "name": "Weezing",
     "number": "110",
-    "shiny": false,
+    "shiny": true,
     "tags": [],
     "types": ["poison"]
   },
@@ -1788,7 +1788,7 @@
     "name": "Chikorita",
     "number": "152",
     "shiny": true,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["grass"]
   },
   "153_00": {
@@ -1797,7 +1797,7 @@
     "name": "Bayleef",
     "number": "153",
     "shiny": true,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["grass"]
   },
   "154_00": {
@@ -1806,7 +1806,7 @@
     "name": "Meganium",
     "number": "154",
     "shiny": true,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["grass"]
   },
   "155_00": {
@@ -1815,7 +1815,7 @@
     "name": "Cyndaquil",
     "number": "155",
     "shiny": true,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["fire"]
   },
   "156_00": {
@@ -1824,7 +1824,7 @@
     "name": "Quilava",
     "number": "156",
     "shiny": true,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["fire"]
   },
   "157_00": {
@@ -1833,7 +1833,7 @@
     "name": "Typhlosion",
     "number": "157",
     "shiny": true,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["fire"]
   },
   "158_00": {
@@ -1842,7 +1842,7 @@
     "name": "Totodile",
     "number": "158",
     "shiny": true,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["water"]
   },
   "159_00": {
@@ -1851,7 +1851,7 @@
     "name": "Croconaw",
     "number": "159",
     "shiny": true,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["water"]
   },
   "160_00": {
@@ -1860,7 +1860,7 @@
     "name": "Feraligatr",
     "number": "160",
     "shiny": true,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["water"]
   },
   "161_00": {
@@ -1940,7 +1940,7 @@
     "generation": 2,
     "name": "Crobat",
     "number": "169",
-    "shiny": false,
+    "shiny": true,
     "tags": [],
     "types": ["flying", "poison"]
   },
@@ -2417,7 +2417,7 @@
     "generation": 2,
     "name": "Sneasel",
     "number": "215",
-    "shiny": false,
+    "shiny": true,
     "tags": [],
     "types": ["ice", "dark"]
   },
@@ -2751,7 +2751,7 @@
     "name": "Treecko",
     "number": "252",
     "shiny": true,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["grass"]
   },
   "253_00": {
@@ -2760,7 +2760,7 @@
     "name": "Grovyle",
     "number": "253",
     "shiny": true,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["grass"]
   },
   "254_00": {
@@ -2769,7 +2769,7 @@
     "name": "Sceptile",
     "number": "254",
     "shiny": true,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["grass"]
   },
   "255_00": {
@@ -2778,7 +2778,7 @@
     "name": "Torchic",
     "number": "255",
     "shiny": true,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["fire"]
   },
   "256_00": {
@@ -2787,7 +2787,7 @@
     "name": "Combusken",
     "number": "256",
     "shiny": true,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["fighting", "fire"]
   },
   "257_00": {
@@ -2796,7 +2796,7 @@
     "name": "Blaziken",
     "number": "257",
     "shiny": true,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["fighting", "fire"]
   },
   "258_00": {
@@ -2805,7 +2805,7 @@
     "name": "Mudkip",
     "number": "258",
     "shiny": true,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["water"]
   },
   "259_00": {
@@ -2814,7 +2814,7 @@
     "name": "Marshtomp",
     "number": "259",
     "shiny": true,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["ground", "water"]
   },
   "260_00": {
@@ -2823,7 +2823,7 @@
     "name": "Swampert",
     "number": "260",
     "shiny": true,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["ground", "water"]
   },
   "261_00": {
@@ -4028,7 +4028,7 @@
     "name": "Turtwig",
     "number": "387",
     "shiny": false,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["grass"]
   },
   "388_00": {
@@ -4037,7 +4037,7 @@
     "name": "Grotle",
     "number": "388",
     "shiny": false,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["grass"]
   },
   "389_00": {
@@ -4046,7 +4046,7 @@
     "name": "Torterra",
     "number": "389",
     "shiny": false,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["ground", "grass"]
   },
   "390_00": {
@@ -4055,7 +4055,7 @@
     "name": "Chimchar",
     "number": "390",
     "shiny": false,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["fire"]
   },
   "391_00": {
@@ -4064,7 +4064,7 @@
     "name": "Monferno",
     "number": "391",
     "shiny": false,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["fighting", "fire"]
   },
   "392_00": {
@@ -4073,7 +4073,7 @@
     "name": "Infernape",
     "number": "392",
     "shiny": false,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["fighting", "fire"]
   },
   "393_00": {
@@ -4082,7 +4082,7 @@
     "name": "Piplup",
     "number": "393",
     "shiny": false,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["water"]
   },
   "394_00": {
@@ -4091,7 +4091,7 @@
     "name": "Prinplup",
     "number": "394",
     "shiny": false,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["water"]
   },
   "395_00": {
@@ -4100,7 +4100,7 @@
     "name": "Empoleon",
     "number": "395",
     "shiny": false,
-    "tags": [],
+    "tags": ["starter"],
     "types": ["steel", "water"]
   },
   "396_00": {
@@ -4768,7 +4768,7 @@
     "generation": 4,
     "name": "Weavile",
     "number": "461",
-    "shiny": false,
+    "shiny": true,
     "tags": [],
     "types": ["ice", "dark"]
   },
@@ -5009,7 +5009,7 @@
     "name": "Uxie",
     "number": "480",
     "shiny": false,
-    "tags": ["regional"],
+    "tags": ["legendary", "regional"],
     "types": ["psychic"]
   },
   "481_00": {
@@ -5018,7 +5018,7 @@
     "name": "Mesprit",
     "number": "481",
     "shiny": false,
-    "tags": ["regional"],
+    "tags": ["legendary", "regional"],
     "types": ["psychic"]
   },
   "482_00": {
