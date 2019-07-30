@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Divider, Form, Modal } from "semantic-ui-react";
-import { DateTimeInput } from "semantic-ui-calendar-react";
 
 import { db } from "../../../firebase";
 import InputBlock from "./InputBlock";
@@ -68,28 +67,10 @@ class EventModal extends React.PureComponent {
       });
   };
 
-  renderDatePicker = (name, placeholder, value) => {
-    return (
-      <DateTimeInput
-        animation=""
-        className={styles["event-modal-datepicker"]}
-        closable={true}
-        dateFormat="YYYY-MM-DDTHH:mm:ss"
-        iconPosition="left"
-        name={name}
-        onChange={this.handleChange}
-        placeholder={placeholder}
-        popupPosition="bottom center"
-        value={value}
-      />
-    );
-  };
-
   render() {
     let {
       bonuses,
       challenges,
-      endDate,
       eventImage,
       eventType,
       features,
@@ -97,7 +78,6 @@ class EventModal extends React.PureComponent {
       link,
       newShinies,
       perfectIV,
-      startDate,
       summary,
       title
     } = this.state.form;
@@ -160,18 +140,6 @@ class EventModal extends React.PureComponent {
             <Divider className={styles["modal-divider"]} horizontal inverted>
               Date Range
             </Divider>
-            <label className={styles["event-modal-label"]}>Start Date</label>
-            {this.renderDatePicker(
-              "startDate",
-              "Start Date...",
-              startDate ? startDate.toString() : ""
-            )}
-            <label className={styles["event-modal-label"]}>End Date</label>
-            {this.renderDatePicker(
-              "endDate",
-              "End Date...",
-              endDate ? endDate.toString() : ""
-            )}
             <Form.Input
               label="Level 20 Perfect CP"
               name="perfectIV20"

@@ -202,7 +202,7 @@ class App extends React.PureComponent {
           render={() => <Checklist admins={admins} user={user || {}} />}
         />
         <Route exact path="/pokemonbox" component={PokemonBox} />
-        <Footer />
+        {/* <Footer /> */}
         {showEventModal && (
           <EventModal
             onClose={() => {
