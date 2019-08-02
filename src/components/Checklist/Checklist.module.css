@@ -1,6 +1,6 @@
 /* Checklist CSS */
 .checklist-container {
-  min-height: 100% - 60px !important;
+  min-height: 100% !important;
   padding: 0 10% 0 10%;
 }
 

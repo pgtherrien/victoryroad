@@ -3969,7 +3969,7 @@
     "generation": 3,
     "name": "Rayquaza",
     "number": "384",
-    "shiny": false,
+    "shiny": true,
     "tags": ["legendary"],
     "types": ["flying", "dragon"]
   },
