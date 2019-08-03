@@ -4,5 +4,6 @@ body,
   background: #121212 !important;
   font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif !important;
   height: 100%;
+  position: fixed;
   width: 100%;
 }

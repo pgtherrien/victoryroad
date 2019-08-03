@@ -81,7 +81,9 @@ export default class Checklist extends React.PureComponent {
           let lists = {
             lucky: JSON.parse(data.lucky),
             normal: JSON.parse(data.normal),
-            shiny: JSON.parse(data.shiny)
+            purified: JSON.parse(data.purified),
+            shiny: JSON.parse(data.shiny),
+            shadow: JSON.parse(data.shadow)
           };
           let filteredDex = oThis.getFilteredDex(filters, lists);
           let rowCount = Math.ceil(
@@ -102,7 +104,9 @@ export default class Checklist extends React.PureComponent {
     let lists = {
       lucky: [],
       normal: [],
-      shiny: []
+      purified: [],
+      shiny: [],
+      shadow: []
     };
     let filteredDex = oThis.getFilteredDex(filters, lists);
     let rowCount = Math.ceil(Object.keys(filteredDex).length / ENTRIES_PER_ROW);
@@ -200,8 +204,10 @@ export default class Checklist extends React.PureComponent {
             add = false;
           }
           break;
+        case "purified":
         case "shiny":
-          if (!pokedex[number].shiny) {
+        case "shadow":
+          if (!pokedex[number][type]) {
             add = false;
           }
           break;
@@ -282,7 +288,9 @@ export default class Checklist extends React.PureComponent {
       .set({
         lucky: JSON.stringify(lists.lucky),
         normal: JSON.stringify(lists.normal),
-        shiny: JSON.stringify(lists.shiny)
+        purified: JSON.stringify(lists.purified),
+        shiny: JSON.stringify(lists.shiny),
+        shadow: JSON.stringify(lists.shadow)
       })
       .then(() =>
         this.setState({
@@ -420,9 +428,19 @@ export default class Checklist extends React.PureComponent {
                 onClick={() => this.handleTypeChange("normal")}
               />
               <Menu.Item
+                active={filters.type === "purified"}
+                name="purified"
+                onClick={() => this.handleTypeChange("purified")}
+              />
+              <Menu.Item
                 active={filters.type === "shiny"}
                 name="shiny"
                 onClick={() => this.handleTypeChange("shiny")}
+              />
+              <Menu.Item
+                active={filters.type === "shadow"}
+                name="shadow"
+                onClick={() => this.handleTypeChange("shadow")}
               />
             </Menu>
           </div>

@@ -28,9 +28,10 @@ export default class Progress extends React.PureComponent {
   render() {
     const { counts } = this.state;
     return (
-      <Grid className={styles["progress"]} columns={2} stackable>
+      <Grid className={styles["progress-container"]} columns={2} stackable>
         <Grid.Column textAlign="center" verticalAlign="middle" width="16">
           <SemanticProgress
+            className={styles["progress"]}
             indicating
             progress="ratio"
             total={counts.total}

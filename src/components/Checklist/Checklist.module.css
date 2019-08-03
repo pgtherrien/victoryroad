@@ -137,6 +137,10 @@
 }
 
 /* Progress CSS */
-.progress {
+.progress-container {
   padding-top: 50px !important;
+}
+
+.progress div div {
+  color: #121212 !important;
 }

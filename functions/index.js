@@ -13,7 +13,9 @@ functions.auth.user().onCreate(user => {
   checklist = {
     lucky: "[]",
     normal: "[]",
-    shiny: "[]"
+    purified: "[]",
+    shiny: "[]",
+    shadow: "[]"
   };
 
   admin

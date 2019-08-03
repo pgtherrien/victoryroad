@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { DateTimeInput } from "semantic-ui-calendar-react";
 import { Divider, Form, Modal } from "semantic-ui-react";
 
 import { db } from "../../../firebase";
@@ -71,6 +72,7 @@ class EventModal extends React.PureComponent {
     let {
       bonuses,
       challenges,
+      endDate,
       eventImage,
       eventType,
       features,
@@ -78,6 +80,7 @@ class EventModal extends React.PureComponent {
       link,
       newShinies,
       perfectIV,
+      startDate,
       summary,
       title
     } = this.state.form;
@@ -139,6 +142,29 @@ class EventModal extends React.PureComponent {
             />
             <Divider className={styles["modal-divider"]} horizontal inverted>
               Date Range
+            </Divider>
+            <label className={styles["event-modal-label"]}>Start Date</label>
+            <DateTimeInput
+              animation=""
+              dateFormat="YYYY-MM-DDTHH:mm:ss"
+              name="startDate"
+              onChange={this.handleChange}
+              placeholder="Start Date..."
+              popupPosition="top center"
+              value={startDate || ""}
+            />
+            <label className={styles["event-modal-label"]}>End Date</label>
+            <DateTimeInput
+              animation=""
+              dateFormat="YYYY-MM-DDTHH:mm:ss"
+              name="endDate"
+              onChange={this.handleChange}
+              placeholder="End Date..."
+              popupPosition="top center"
+              value={endDate || ""}
+            />
+            <Divider className={styles["modal-divider"]} horizontal inverted>
+              Perfect CP's
             </Divider>
             <Form.Input
               label="Level 20 Perfect CP"
