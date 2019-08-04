@@ -2,14 +2,22 @@ import React from "react";
 import PropTypes from "prop-types";
 import { db } from "../../firebase";
 import { List } from "react-virtualized";
-import { Dimmer, Grid, Loader, Menu, Responsive } from "semantic-ui-react";
+import {
+  Dimmer,
+  Dropdown,
+  Grid,
+  Loader,
+  Menu,
+  Responsive
+} from "semantic-ui-react";
 
-import pokedex from "../../data/pokedex";
-import styles from "./Checklist.module.css";
+import { PokemonModal } from "../Modals";
 import ChecklistSidebar from "./ChecklistSidebar";
 import Entry from "./Entry";
-import { PokemonModal } from "../Modals";
+import pokedex from "../../data/pokedex";
 import Progress from "./Progress";
+import styles from "./Checklist.module.css";
+import utils from "../utils";
 
 const DEFAULT_FILTERS = {
   generations: [],
@@ -416,33 +424,60 @@ export default class Checklist extends React.PureComponent {
             user={user}
           />
           <div className={styles["checklist-button-wrapper"]}>
-            <Menu inverted pointing secondary>
-              <Menu.Item
-                active={filters.type === "lucky"}
-                name="lucky"
-                onClick={() => this.handleTypeChange("lucky")}
-              />
-              <Menu.Item
-                active={filters.type === "normal"}
-                name="normal"
-                onClick={() => this.handleTypeChange("normal")}
-              />
-              <Menu.Item
-                active={filters.type === "purified"}
-                name="purified"
-                onClick={() => this.handleTypeChange("purified")}
-              />
-              <Menu.Item
-                active={filters.type === "shiny"}
-                name="shiny"
-                onClick={() => this.handleTypeChange("shiny")}
-              />
-              <Menu.Item
-                active={filters.type === "shadow"}
-                name="shadow"
-                onClick={() => this.handleTypeChange("shadow")}
-              />
-            </Menu>
+            {window.innerWidth > Responsive.onlyMobile.maxWidth ? (
+              <Menu inverted pointing secondary>
+                <Menu.Item
+                  active={filters.type === "lucky"}
+                  name="lucky"
+                  onClick={() => this.handleTypeChange("lucky")}
+                />
+                <Menu.Item
+                  active={filters.type === "normal"}
+                  name="normal"
+                  onClick={() => this.handleTypeChange("normal")}
+                />
+                <Menu.Item
+                  active={filters.type === "purified"}
+                  name="purified"
+                  onClick={() => this.handleTypeChange("purified")}
+                />
+                <Menu.Item
+                  active={filters.type === "shiny"}
+                  name="shiny"
+                  onClick={() => this.handleTypeChange("shiny")}
+                />
+                <Menu.Item
+                  active={filters.type === "shadow"}
+                  name="shadow"
+                  onClick={() => this.handleTypeChange("shadow")}
+                />
+              </Menu>
+            ) : (
+              <Dropdown text={utils.toTitleCase(filters.type)}>
+                <Dropdown.Menu>
+                  <Dropdown.Item
+                    onClick={() => this.handleTypeChange("lucky")}
+                    text="Lucky"
+                  />
+                  <Dropdown.Item
+                    onClick={() => this.handleTypeChange("normal")}
+                    text="Normal"
+                  />
+                  <Dropdown.Item
+                    onClick={() => this.handleTypeChange("purified")}
+                    text="Purified"
+                  />
+                  <Dropdown.Item
+                    onClick={() => this.handleTypeChange("shiny")}
+                    text="Shiny"
+                  />
+                  <Dropdown.Item
+                    onClick={() => this.handleTypeChange("shadow")}
+                    text="Shadow"
+                  />
+                </Dropdown.Menu>
+              </Dropdown>
+            )}
           </div>
           <List
             height={window.innerHeight - 150}

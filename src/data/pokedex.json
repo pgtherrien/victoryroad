@@ -2105,9 +2105,9 @@
     "generation": 1,
     "name": "Dratini",
     "number": "147",
-    "purified": false,
+    "purified": true,
     "shiny": true,
-    "shadow": false,
+    "shadow": true,
     "tags": [],
     "types": ["dragon"]
   },
@@ -2116,9 +2116,9 @@
     "generation": 1,
     "name": "Dragonair",
     "number": "148",
-    "purified": false,
+    "purified": true,
     "shiny": true,
-    "shadow": false,
+    "shadow": true,
     "tags": [],
     "types": ["dragon"]
   },
@@ -2127,9 +2127,9 @@
     "generation": 1,
     "name": "Dragonite",
     "number": "149",
-    "purified": false,
+    "purified": true,
     "shiny": true,
-    "shadow": false,
+    "shadow": true,
     "tags": [],
     "types": ["flying", "dragon"]
   },
@@ -3659,7 +3659,7 @@
     "name": "Ralts",
     "number": "280",
     "purified": true,
-    "shiny": false,
+    "shiny": true,
     "shadow": true,
     "tags": [],
     "types": ["fairy", "psychic"]
@@ -3670,7 +3670,7 @@
     "name": "Kirlia",
     "number": "281",
     "purified": true,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["fairy", "psychic"]
@@ -3681,7 +3681,7 @@
     "name": "Gardevoir",
     "number": "282",
     "purified": true,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["fairy", "psychic"]
@@ -5989,7 +5989,7 @@
     "name": "Gallade",
     "number": "475",
     "purified": true,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["fighting", "psychic"]
