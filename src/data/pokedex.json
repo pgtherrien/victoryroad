@@ -1014,7 +1014,7 @@
     "name": "Poliwag",
     "number": "060",
     "purified": true,
-    "shiny": false,
+    "shiny": true,
     "shadow": true,
     "tags": [],
     "types": ["water"]
@@ -1025,8 +1025,8 @@
     "name": "Poliwhirl",
     "number": "061",
     "purified": true,
-    "shiny": false,
-    "shadow": false,
+    "shiny": true,
+    "shadow": true,
     "tags": [],
     "types": ["water"]
   },
@@ -1036,8 +1036,8 @@
     "name": "Poliwrath",
     "number": "062",
     "purified": true,
-    "shiny": false,
-    "shadow": false,
+    "shiny": true,
+    "shadow": true,
     "tags": [],
     "types": ["fighting", "water"]
   },
@@ -2603,8 +2603,8 @@
     "name": "Politoed",
     "number": "186",
     "purified": true,
-    "shiny": false,
-    "shadow": false,
+    "shiny": true,
+    "shadow": true,
     "tags": [],
     "types": ["water"]
   },
