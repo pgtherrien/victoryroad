@@ -2592,7 +2592,7 @@
     "name": "Sudowoodo",
     "number": "185",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["rock"]
@@ -3274,7 +3274,7 @@
     "name": "Suicune",
     "number": "245",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": ["legendary"],
     "types": ["water"]
@@ -5560,7 +5560,7 @@
     "name": "Bonsly",
     "number": "438",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": ["baby"],
     "types": ["rock"]
