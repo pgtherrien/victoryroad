@@ -540,18 +540,6 @@
     "templateId": "V0026_POKEMON_RAICHU",
     "types": ["electric"]
   },
-  "026_00_10": {
-    "genders": ["female", "male"],
-    "generation": 1,
-    "name": "Raichu - Straw Hat",
-    "number": "026",
-    "purified": false,
-    "shiny": true,
-    "shadow": false,
-    "tags": [],
-    "templateId": "V0026_POKEMON_RAICHU",
-    "types": ["electric"]
-  },
   "026_61": {
     "genders": ["female", "male"],
     "generation": 7,
