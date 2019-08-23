@@ -383,7 +383,7 @@
     "name": "Pikachu - Summer Style",
     "number": "025",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["electric"]
@@ -416,7 +416,18 @@
     "name": "Pikachu - Detective",
     "number": "025",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
+    "shadow": false,
+    "tags": [],
+    "types": ["electric"]
+  },
+  "025_00_10": {
+    "genders": ["female", "male"],
+    "generation": 1,
+    "name": "Pikachu - Straw Hat",
+    "number": "025",
+    "purified": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["electric"]
@@ -487,7 +498,7 @@
     "name": "Raichu - Summer Style",
     "number": "026",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "templateId": "V0026_POKEMON_RAICHU",
@@ -523,7 +534,19 @@
     "name": "Raichu - Detective",
     "number": "026",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
+    "shadow": false,
+    "tags": [],
+    "templateId": "V0026_POKEMON_RAICHU",
+    "types": ["electric"]
+  },
+  "026_00_10": {
+    "genders": ["female", "male"],
+    "generation": 1,
+    "name": "Raichu - Straw Hat",
+    "number": "026",
+    "purified": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "templateId": "V0026_POKEMON_RAICHU",
@@ -2427,7 +2450,7 @@
     "name": "Pichu - Original Style",
     "number": "172",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": ["baby"],
     "types": ["electric"]
@@ -2449,7 +2472,7 @@
     "name": "Pichu - Summer Style",
     "number": "172",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": ["baby"],
     "types": ["electric"]
@@ -4077,7 +4100,7 @@
     "name": "Carvanha",
     "number": "318",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["dark", "water"]
@@ -4088,7 +4111,7 @@
     "name": "Sharpedo",
     "number": "319",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["dark", "water"]
@@ -4308,7 +4331,7 @@
     "name": "Barboach",
     "number": "339",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["ground", "water"]
@@ -4319,7 +4342,7 @@
     "name": "Whiscash",
     "number": "340",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["ground", "water"]
