@@ -223,6 +223,9 @@ export default class Checklist extends React.PureComponent {
           break;
       }
 
+      if (!pokedex[number].enabled) {
+        add = false;
+      }
       if (add && search.length > 0) {
         if (
           !pokedex[number].name.toLowerCase().includes(search.toLowerCase()) &&
