@@ -3112,7 +3112,7 @@
     "name": "Gligar",
     "number": "207",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["flying", "ground"]
@@ -6492,7 +6492,7 @@
     "name": "Gliscor",
     "number": "472",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["flying", "ground"]
