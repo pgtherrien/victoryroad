@@ -2476,7 +2476,7 @@
     "name": "Sentret",
     "number": "161",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["normal"]
@@ -2488,7 +2488,7 @@
     "name": "Furret",
     "number": "162",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["normal"]
@@ -4336,7 +4336,7 @@
     "name": "Electrike",
     "number": "309",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["electric"]
@@ -4348,7 +4348,7 @@
     "name": "Manectric",
     "number": "310",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["electric"]
