@@ -2,14 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { db } from "../../firebase";
 import { List } from "react-virtualized";
-import {
-  Dimmer,
-  Dropdown,
-  Grid,
-  Loader,
-  Menu,
-  Responsive
-} from "semantic-ui-react";
+import { Dimmer, Grid, Loader, Menu, Responsive } from "semantic-ui-react";
 
 import { PokemonModal } from "../Modals";
 import ChecklistSidebar from "./ChecklistSidebar";
@@ -17,7 +10,6 @@ import Entry from "./Entry";
 import pokedex from "../../data/pokedex";
 import Progress from "./Progress";
 import styles from "./Checklist.module.css";
-import utils from "../utils";
 
 const DEFAULT_FILTERS = {
   generations: [],
@@ -89,9 +81,7 @@ export default class Checklist extends React.PureComponent {
           let lists = {
             lucky: JSON.parse(data.lucky),
             normal: JSON.parse(data.normal),
-            purified: JSON.parse(data.purified),
-            shiny: JSON.parse(data.shiny),
-            shadow: JSON.parse(data.shadow)
+            shiny: JSON.parse(data.shiny)
           };
           let filteredDex = oThis.getFilteredDex(filters, lists);
           let rowCount = Math.ceil(
@@ -112,9 +102,7 @@ export default class Checklist extends React.PureComponent {
     let lists = {
       lucky: [],
       normal: [],
-      purified: [],
-      shiny: [],
-      shadow: []
+      shiny: []
     };
     let filteredDex = oThis.getFilteredDex(filters, lists);
     let rowCount = Math.ceil(Object.keys(filteredDex).length / ENTRIES_PER_ROW);
@@ -212,9 +200,7 @@ export default class Checklist extends React.PureComponent {
             add = false;
           }
           break;
-        case "purified":
         case "shiny":
-        case "shadow":
           if (!pokedex[number][type]) {
             add = false;
           }
@@ -299,9 +285,7 @@ export default class Checklist extends React.PureComponent {
       .set({
         lucky: JSON.stringify(lists.lucky),
         normal: JSON.stringify(lists.normal),
-        purified: JSON.stringify(lists.purified),
-        shiny: JSON.stringify(lists.shiny),
-        shadow: JSON.stringify(lists.shadow)
+        shiny: JSON.stringify(lists.shiny)
       })
       .then(() =>
         this.setState({
@@ -427,60 +411,23 @@ export default class Checklist extends React.PureComponent {
             user={user}
           />
           <div className={styles["checklist-button-wrapper"]}>
-            {window.innerWidth > Responsive.onlyMobile.maxWidth ? (
-              <Menu inverted pointing secondary>
-                <Menu.Item
-                  active={filters.type === "lucky"}
-                  name="lucky"
-                  onClick={() => this.handleTypeChange("lucky")}
-                />
-                <Menu.Item
-                  active={filters.type === "normal"}
-                  name="normal"
-                  onClick={() => this.handleTypeChange("normal")}
-                />
-                <Menu.Item
-                  active={filters.type === "purified"}
-                  name="purified"
-                  onClick={() => this.handleTypeChange("purified")}
-                />
-                <Menu.Item
-                  active={filters.type === "shiny"}
-                  name="shiny"
-                  onClick={() => this.handleTypeChange("shiny")}
-                />
-                <Menu.Item
-                  active={filters.type === "shadow"}
-                  name="shadow"
-                  onClick={() => this.handleTypeChange("shadow")}
-                />
-              </Menu>
-            ) : (
-              <Dropdown text={utils.toTitleCase(filters.type)}>
-                <Dropdown.Menu>
-                  <Dropdown.Item
-                    onClick={() => this.handleTypeChange("lucky")}
-                    text="Lucky"
-                  />
-                  <Dropdown.Item
-                    onClick={() => this.handleTypeChange("normal")}
-                    text="Normal"
-                  />
-                  <Dropdown.Item
-                    onClick={() => this.handleTypeChange("purified")}
-                    text="Purified"
-                  />
-                  <Dropdown.Item
-                    onClick={() => this.handleTypeChange("shiny")}
-                    text="Shiny"
-                  />
-                  <Dropdown.Item
-                    onClick={() => this.handleTypeChange("shadow")}
-                    text="Shadow"
-                  />
-                </Dropdown.Menu>
-              </Dropdown>
-            )}
+            <Menu inverted pointing secondary>
+              <Menu.Item
+                active={filters.type === "lucky"}
+                name="lucky"
+                onClick={() => this.handleTypeChange("lucky")}
+              />
+              <Menu.Item
+                active={filters.type === "normal"}
+                name="normal"
+                onClick={() => this.handleTypeChange("normal")}
+              />
+              <Menu.Item
+                active={filters.type === "shiny"}
+                name="shiny"
+                onClick={() => this.handleTypeChange("shiny")}
+              />
+            </Menu>
           </div>
           <List
             height={window.innerHeight - 150}
