@@ -7046,7 +7046,7 @@
     "types": ["dark"]
   },
   "511_00": {
-    "enabled": false,
+    "enabled": true,
     "genders": ["female", "male"],
     "generation": 5,
     "name": "Pansage",
@@ -7058,7 +7058,7 @@
     "types": ["grass"]
   },
   "512_00": {
-    "enabled": false,
+    "enabled": true,
     "genders": ["female", "male"],
     "generation": 5,
     "name": "Simisage",
@@ -7070,7 +7070,7 @@
     "types": ["grass"]
   },
   "513_00": {
-    "enabled": false,
+    "enabled": true,
     "genders": ["female", "male"],
     "generation": 5,
     "name": "Pansear",
@@ -7082,7 +7082,7 @@
     "types": ["fire"]
   },
   "514_00": {
-    "enabled": false,
+    "enabled": true,
     "genders": ["female", "male"],
     "generation": 5,
     "name": "Simisear",
@@ -7094,7 +7094,7 @@
     "types": ["fire"]
   },
   "515_00": {
-    "enabled": false,
+    "enabled": true,
     "genders": ["female", "male"],
     "generation": 5,
     "name": "Panpour",
@@ -7106,7 +7106,7 @@
     "types": ["water"]
   },
   "516_00": {
-    "enabled": false,
+    "enabled": true,
     "genders": ["female", "male"],
     "generation": 5,
     "name": "Simipour",
@@ -8510,7 +8510,7 @@
     "types": ["flying", "dark"]
   },
   "631_00": {
-    "enabled": false,
+    "enabled": true,
     "genders": ["female", "male"],
     "generation": 5,
     "name": "Heatmor",
@@ -8522,7 +8522,7 @@
     "types": ["fire"]
   },
   "632_00": {
-    "enabled": false,
+    "enabled": true,
     "genders": ["female", "male"],
     "generation": 5,
     "name": "Durant",
