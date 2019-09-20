@@ -2920,7 +2920,7 @@
     "name": "Yanma",
     "number": "193",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["flying", "bug"]
@@ -6432,7 +6432,7 @@
     "name": "Yanmega",
     "number": "469",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["flying", "bug"]
