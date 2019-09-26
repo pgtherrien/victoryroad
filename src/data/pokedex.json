@@ -9,6 +9,7 @@
     "shiny": true,
     "shadow": true,
     "tags": ["starter"],
+    "templateId": "V0001_POKEMON_BULBASAUR",
     "types": ["poison", "grass"]
   },
   "002_00": {
@@ -21,6 +22,7 @@
     "shiny": true,
     "shadow": true,
     "tags": ["starter"],
+    "templateId": "V0002_POKEMON_IVYSAUR",
     "types": ["poison", "grass"]
   },
   "003_00": {
@@ -33,6 +35,7 @@
     "shiny": true,
     "shadow": true,
     "tags": ["starter"],
+    "templateId": "V0003_POKEMON_VENUSAUR",
     "types": ["poison", "grass"]
   },
   "004_00": {
@@ -45,6 +48,7 @@
     "shiny": true,
     "shadow": true,
     "tags": ["starter"],
+    "templateId": "V0004_POKEMON_CHARMANDER",
     "types": ["fire"]
   },
   "005_00": {
@@ -57,6 +61,7 @@
     "shiny": true,
     "shadow": true,
     "tags": ["starter"],
+    "templateId": "V0005_POKEMON_CHARMELEON",
     "types": ["fire"]
   },
   "006_00": {
@@ -69,6 +74,7 @@
     "shiny": true,
     "shadow": true,
     "tags": ["starter"],
+    "templateId": "V0006_POKEMON_CHARIZARD",
     "types": ["flying", "fire"]
   },
   "007_00": {
@@ -81,6 +87,7 @@
     "shiny": true,
     "shadow": true,
     "tags": ["starter"],
+    "templateId": "V0007_POKEMON_SQUIRTLE",
     "types": ["water"]
   },
   "007_00_05": {
@@ -105,6 +112,7 @@
     "shiny": true,
     "shadow": true,
     "tags": ["starter"],
+    "templateId": "V0008_POKEMON_WARTORTLE",
     "types": ["water"]
   },
   "008_00_05": {
@@ -129,6 +137,7 @@
     "shiny": true,
     "shadow": true,
     "tags": ["starter"],
+    "templateId": "V0009_POKEMON_BLASTOISE",
     "types": ["water"]
   },
   "009_00_05": {
@@ -823,6 +832,7 @@
     "shiny": true,
     "shadow": true,
     "tags": [],
+    "templateId": "V0041_POKEMON_ZUBAT",
     "types": ["flying", "poison"]
   },
   "042_00": {
@@ -835,6 +845,7 @@
     "shiny": true,
     "shadow": true,
     "tags": [],
+    "templateId": "V0042_POKEMON_GOLBAT",
     "types": ["flying", "poison"]
   },
   "043_00": {
@@ -847,6 +858,7 @@
     "shiny": false,
     "shadow": true,
     "tags": [],
+    "templateId": "V0043_POKEMON_ODDISH",
     "types": ["poison", "grass"]
   },
   "044_00": {
@@ -859,6 +871,7 @@
     "shiny": false,
     "shadow": true,
     "tags": [],
+    "templateId": "V0044_POKEMON_GLOOM",
     "types": ["poison", "grass"]
   },
   "045_00": {
@@ -871,6 +884,7 @@
     "shiny": false,
     "shadow": true,
     "tags": [],
+    "templateId": "V0045_POKEMON_VILEPLUME",
     "types": ["poison", "grass"]
   },
   "046_00": {
@@ -907,6 +921,7 @@
     "shiny": false,
     "shadow": true,
     "tags": [],
+    "templateId": "V0048_POKEMON_VENONAT",
     "types": ["poison", "bug"]
   },
   "049_00": {
@@ -919,6 +934,7 @@
     "shiny": false,
     "shadow": true,
     "tags": [],
+    "templateId": "V0049_POKEMON_VENOMOTH",
     "types": ["poison", "bug"]
   },
   "050_00": {
@@ -1035,6 +1051,7 @@
     "shiny": true,
     "shadow": true,
     "tags": [],
+    "templateId": "V0054_POKEMON_PSYDUCK",
     "types": ["water"]
   },
   "055_00": {
@@ -1047,6 +1064,7 @@
     "shiny": true,
     "shadow": true,
     "tags": [],
+    "templateId": "V0055_POKEMON_GOLDUCK",
     "types": ["water"]
   },
   "056_00": {
@@ -1083,6 +1101,7 @@
     "shiny": true,
     "shadow": true,
     "tags": [],
+    "templateId": "V0058_POKEMON_GROWLITHE",
     "types": ["fire"]
   },
   "059_00": {
@@ -1095,6 +1114,7 @@
     "shiny": true,
     "shadow": true,
     "tags": [],
+    "templateId": "V0059_POKEMON_ARCANINE",
     "types": ["fire"]
   },
   "060_00": {
@@ -1107,6 +1127,7 @@
     "shiny": true,
     "shadow": true,
     "tags": [],
+    "templateId": "V0060_POKEMON_POLIWAG",
     "types": ["water"]
   },
   "061_00": {
@@ -1119,6 +1140,7 @@
     "shiny": true,
     "shadow": true,
     "tags": [],
+    "templateId": "V0061_POKEMON_POLIWHIRL",
     "types": ["water"]
   },
   "062_00": {
@@ -1131,6 +1153,7 @@
     "shiny": true,
     "shadow": true,
     "tags": [],
+    "templateId": "V0062_POKEMON_POLIWRATH",
     "types": ["fighting", "water"]
   },
   "063_00": {
@@ -1143,6 +1166,7 @@
     "shiny": false,
     "shadow": true,
     "tags": [],
+    "templateId": "V0063_POKEMON_ABRA",
     "types": ["psychic"]
   },
   "064_00": {
@@ -1155,6 +1179,7 @@
     "shiny": false,
     "shadow": true,
     "tags": [],
+    "templateId": "V0064_POKEMON_KADABRA",
     "types": ["psychic"]
   },
   "065_00": {
@@ -1167,6 +1192,7 @@
     "shiny": false,
     "shadow": true,
     "tags": [],
+    "templateId": "V0065_POKEMON_ALAKAZAM",
     "types": ["psychic"]
   },
   "066_00": {
@@ -1609,6 +1635,7 @@
     "shiny": true,
     "shadow": true,
     "tags": [],
+    "templateId": "V0096_POKEMON_DROWZEE",
     "types": ["psychic"]
   },
   "097_00": {
@@ -1621,6 +1648,7 @@
     "shiny": true,
     "shadow": true,
     "tags": [],
+    "templateId": "V0097_POKEMON_HYPNO",
     "types": ["psychic"]
   },
   "098_00": {
@@ -1719,6 +1747,7 @@
     "shiny": true,
     "shadow": true,
     "tags": [],
+    "templateId": "V0104_POKEMON_CUBONE",
     "types": ["ground"]
   },
   "105_00": {
@@ -1769,6 +1798,7 @@
     "shiny": false,
     "shadow": true,
     "tags": [],
+    "templateId": "V0107_POKEMON_HITMONCHAN",
     "types": ["fighting"]
   },
   "108_00": {
@@ -1961,6 +1991,7 @@
     "shiny": true,
     "shadow": true,
     "tags": [],
+    "templateId": "V0123_POKEMON_SCYTHER",
     "types": ["flying", "bug"]
   },
   "124_01": {
@@ -2033,6 +2064,7 @@
     "shiny": true,
     "shadow": true,
     "tags": [],
+    "templateId": "V0129_POKEMON_MAGIKARP",
     "types": ["water"]
   },
   "130_00": {
@@ -2045,6 +2077,7 @@
     "shiny": true,
     "shadow": false,
     "tags": [],
+    "templateId": "V0130_POKEMON_GYARADOS",
     "types": ["flying", "water"]
   },
   "131_00": {
@@ -2057,6 +2090,7 @@
     "shiny": true,
     "shadow": false,
     "tags": [],
+    "templateId": "V0131_POKEMON_LAPRAS",
     "types": ["ice", "water"]
   },
   "132_00": {
@@ -2249,6 +2283,7 @@
     "shiny": false,
     "shadow": true,
     "tags": [],
+    "templateId": "V0143_POKEMON_SNORLAX",
     "types": ["normal"]
   },
   "144_00": {
@@ -2297,6 +2332,7 @@
     "shiny": true,
     "shadow": true,
     "tags": [],
+    "templateId": "V0147_POKEMON_DRATINI",
     "types": ["dragon"]
   },
   "148_00": {
@@ -2309,6 +2345,7 @@
     "shiny": true,
     "shadow": true,
     "tags": [],
+    "templateId": "V0148_POKEMON_DRAGONAIR",
     "types": ["dragon"]
   },
   "149_00": {
@@ -2321,6 +2358,7 @@
     "shiny": true,
     "shadow": true,
     "tags": [],
+    "templateId": "V0149_POKEMON_DRAGONITE",
     "types": ["flying", "dragon"]
   },
   "150_00": {
@@ -2575,6 +2613,7 @@
     "shiny": true,
     "shadow": true,
     "tags": [],
+    "templateId": "V0169_POKEMON_CROBAT",
     "types": ["flying", "poison"]
   },
   "170_00": {
@@ -2791,6 +2830,7 @@
     "shiny": false,
     "shadow": true,
     "tags": [],
+    "templateId": "V0182_POKEMON_BELLOSSOM",
     "types": ["grass"]
   },
   "183_00": {
@@ -2839,6 +2879,7 @@
     "shiny": true,
     "shadow": true,
     "tags": [],
+    "templateId": "V0186_POKEMON_POLITOED",
     "types": ["water"]
   },
   "187_00": {
@@ -3175,6 +3216,7 @@
     "shiny": true,
     "shadow": false,
     "tags": [],
+    "templateId": "V0212_POKEMON_SCIZOR",
     "types": ["steel", "bug"]
   },
   "213_00": {
@@ -3367,6 +3409,7 @@
     "shiny": true,
     "shadow": true,
     "tags": [],
+    "templateId": "V0228_POKEMON_HOUNDOUR",
     "types": ["fire", "dark"]
   },
   "229_00": {
@@ -3379,6 +3422,7 @@
     "shiny": true,
     "shadow": true,
     "tags": [],
+    "templateId": "V0229_POKEMON_HOUNDOOM",
     "types": ["fire", "dark"]
   },
   "230_00": {
@@ -3583,6 +3627,7 @@
     "shiny": true,
     "shadow": true,
     "tags": [],
+    "templateId": "V0246_POKEMON_LARVITAR",
     "types": ["ground", "rock"]
   },
   "247_00": {
@@ -3595,6 +3640,7 @@
     "shiny": true,
     "shadow": true,
     "tags": [],
+    "templateId": "V0247_POKEMON_PUPITAR",
     "types": ["ground", "rock"]
   },
   "248_00": {
@@ -3607,6 +3653,7 @@
     "shiny": true,
     "shadow": true,
     "tags": [],
+    "templateId": "V0248_POKEMON_TYRANITAR",
     "types": ["dark", "rock"]
   },
   "249_00": {
@@ -3727,6 +3774,7 @@
     "shiny": true,
     "shadow": false,
     "tags": ["starter"],
+    "templateId": "V0258_POKEMON_MUDKIP",
     "types": ["water"]
   },
   "259_00": {
@@ -3739,6 +3787,7 @@
     "shiny": true,
     "shadow": false,
     "tags": ["starter"],
+    "templateId": "V0259_POKEMON_MARSHTOMP",
     "types": ["ground", "water"]
   },
   "260_00": {
@@ -3751,6 +3800,7 @@
     "shiny": true,
     "shadow": false,
     "tags": ["starter"],
+    "templateId": "V0260_POKEMON_SWAMPERT",
     "types": ["ground", "water"]
   },
   "261_00": {
@@ -3991,6 +4041,7 @@
     "shiny": true,
     "shadow": true,
     "tags": [],
+    "templateId": "V0280_POKEMON_RALTS",
     "types": ["fairy", "psychic"]
   },
   "281_00": {
@@ -4003,6 +4054,7 @@
     "shiny": true,
     "shadow": false,
     "tags": [],
+    "templateId": "V0281_POKEMON_KIRLIA",
     "types": ["fairy", "psychic"]
   },
   "282_00": {
@@ -4015,6 +4067,7 @@
     "shiny": true,
     "shadow": false,
     "tags": [],
+    "templateId": "V0282_POKEMON_GARDEVOIR",
     "types": ["fairy", "psychic"]
   },
   "283_00": {
@@ -4648,7 +4701,7 @@
     "name": "Zangoose",
     "number": "335",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": ["regional"],
     "types": ["normal"]
@@ -4660,7 +4713,7 @@
     "name": "Seviper",
     "number": "336",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": ["regional"],
     "types": ["poison"]
@@ -5355,6 +5408,7 @@
     "shiny": true,
     "shadow": true,
     "tags": ["starter"],
+    "templateId": "V0387_POKEMON_TURTWIG",
     "types": ["grass"]
   },
   "388_00": {
@@ -5367,6 +5421,7 @@
     "shiny": true,
     "shadow": true,
     "tags": ["starter"],
+    "templateId": "V0388_POKEMON_GROTLE",
     "types": ["grass"]
   },
   "389_00": {
@@ -5379,6 +5434,7 @@
     "shiny": true,
     "shadow": true,
     "tags": ["starter"],
+    "templateId": "V0389_POKEMON_TORTERRA",
     "types": ["ground", "grass"]
   },
   "390_00": {
@@ -6066,15 +6122,15 @@
     "types": ["rock"]
   },
   "439_00": {
-    "enabled": false,
+    "enabled": true,
     "genders": ["female", "male"],
     "generation": 4,
     "name": "Mime Jr.",
     "number": "439",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
-    "tags": ["baby"],
+    "tags": ["baby", "regional"],
     "types": ["fairy", "psychic"]
   },
   "440_01": {
@@ -6531,6 +6587,7 @@
     "shiny": true,
     "shadow": false,
     "tags": [],
+    "templateId": "V0475_POKEMON_GALLADE",
     "types": ["fighting", "psychic"]
   },
   "476_00": {
@@ -6738,7 +6795,7 @@
     "name": "Giratina - Altered Form",
     "number": "487",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": ["legendary"],
     "templateId": "V0487_POKEMON_GIRATINA_ALTERED",

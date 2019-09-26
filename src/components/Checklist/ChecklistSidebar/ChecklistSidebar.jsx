@@ -76,6 +76,7 @@ export default class ChecklistSidebar extends React.PureComponent {
       case 2:
       case 3:
       case 4:
+      case 5:
         if (newFilters.generations.indexOf(filter) > -1) {
           newFilters.generations.splice(
             newFilters.generations.indexOf(filter),

@@ -1,14 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {
-  Divider,
-  Icon,
-  Input,
-  Image,
-  Menu,
-  Radio,
-  Sidebar
-} from "semantic-ui-react";
+import { Divider, Icon, Input, Menu, Radio, Sidebar } from "semantic-ui-react";
 import { Swipeable } from "react-swipeable";
 
 import styles from "../Checklist.module.css";
@@ -163,7 +155,7 @@ export default class ChecklistSidebarOpen extends React.PureComponent {
             className={styles["filter-sidebar-item"]}
             onClick={() => handleChange(1)}
           >
-            <Image avatar src="images/gens/kanto_white.ico" /> Kanto
+            Kanto Region
             <Radio
               className={styles["filter-sidebar-radio"]}
               checked={generations.indexOf(1) > -1}
@@ -174,7 +166,7 @@ export default class ChecklistSidebarOpen extends React.PureComponent {
             className={styles["filter-sidebar-item"]}
             onClick={() => handleChange(2)}
           >
-            <Image avatar src="images/gens/johto_white.ico" /> Johto
+            Johto Region
             <Radio
               className={styles["filter-sidebar-radio"]}
               checked={generations.indexOf(2) > -1}
@@ -185,7 +177,7 @@ export default class ChecklistSidebarOpen extends React.PureComponent {
             className={styles["filter-sidebar-item"]}
             onClick={() => handleChange(3)}
           >
-            <Image avatar src="images/gens/hoenn_white.ico" /> Hoenn
+            Hoenn Region
             <Radio
               className={styles["filter-sidebar-radio"]}
               checked={generations.indexOf(3) > -1}
@@ -198,10 +190,23 @@ export default class ChecklistSidebarOpen extends React.PureComponent {
             }`}
             onClick={() => handleChange(4)}
           >
-            <Image avatar src="images/gens/sinnoh_white.ico" /> Sinnoh
+            Sinnoh Region
             <Radio
               className={styles["filter-sidebar-radio"]}
               checked={generations.indexOf(4) > -1}
+              toggle
+            />
+          </Menu.Item>
+          <Menu.Item
+            className={`${styles["filter-sidebar-item"]} ${
+              styles["filter-sidebar-item-bottom"]
+            }`}
+            onClick={() => handleChange(5)}
+          >
+            Unova Region
+            <Radio
+              className={styles["filter-sidebar-radio"]}
+              checked={generations.indexOf(5) > -1}
               toggle
             />
           </Menu.Item>
