@@ -213,10 +213,20 @@ export default class Checklist extends React.PureComponent {
         add = false;
       }
       if (add && search.length > 0) {
-        if (
-          !pokedex[number].name.toLowerCase().includes(search.toLowerCase()) &&
-          !pokedex[number].number.toLowerCase().includes(search.toLowerCase())
-        ) {
+        let splitSearch = search.split(",");
+        let passedSearch = false;
+
+        splitSearch.forEach(split => {
+          let value = split.toLowerCase();
+          if (
+            pokedex[number].name.toLowerCase().includes(value) ||
+            pokedex[number].number.toLowerCase().includes(value)
+          ) {
+            passedSearch = true;
+          }
+        });
+
+        if (!passedSearch) {
           add = false;
         }
       }
