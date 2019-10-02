@@ -1904,7 +1904,7 @@
     "name": "Horsea",
     "number": "116",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["water"]
@@ -1916,7 +1916,7 @@
     "name": "Seadra",
     "number": "117",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["water"]
@@ -3432,7 +3432,7 @@
     "name": "Kingdra",
     "number": "230",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["dragon", "water"]
