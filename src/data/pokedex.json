@@ -12,6 +12,19 @@
     "templateId": "V0001_POKEMON_BULBASAUR",
     "types": ["poison", "grass"]
   },
+  "001_00_01": {
+    "enabled": true,
+    "genders": ["female", "male"],
+    "generation": 1,
+    "name": "Bulbasaur - Halloween Costume",
+    "number": "001",
+    "purified": true,
+    "shiny": true,
+    "shadow": true,
+    "tags": ["starter"],
+    "templateId": "V0001_POKEMON_BULBASAUR",
+    "types": ["poison", "grass"]
+  },
   "002_00": {
     "enabled": true,
     "genders": ["female", "male"],
@@ -51,6 +64,19 @@
     "templateId": "V0004_POKEMON_CHARMANDER",
     "types": ["fire"]
   },
+  "004_00_01": {
+    "enabled": true,
+    "genders": ["female", "male"],
+    "generation": 1,
+    "name": "Charmander - Halloween Costume",
+    "number": "004",
+    "purified": true,
+    "shiny": true,
+    "shadow": true,
+    "tags": ["starter"],
+    "templateId": "V0004_POKEMON_CHARMANDER",
+    "types": ["fire"]
+  },
   "005_00": {
     "enabled": true,
     "genders": ["female", "male"],
@@ -82,6 +108,19 @@
     "genders": ["female", "male"],
     "generation": 1,
     "name": "Squirtle",
+    "number": "007",
+    "purified": true,
+    "shiny": true,
+    "shadow": true,
+    "tags": ["starter"],
+    "templateId": "V0007_POKEMON_SQUIRTLE",
+    "types": ["water"]
+  },
+  "007_00_01": {
+    "enabled": true,
+    "genders": ["female", "male"],
+    "generation": 1,
+    "name": "Squirtle - Halloween Costume",
     "number": "007",
     "purified": true,
     "shiny": true,
@@ -464,6 +503,18 @@
     "number": "025",
     "purified": false,
     "shiny": false,
+    "shadow": false,
+    "tags": [],
+    "types": ["electric"]
+  },
+  "025_00_11": {
+    "enabled": true,
+    "genders": ["female", "male"],
+    "generation": 1,
+    "name": "Pikachu - Halloween Costume",
+    "number": "025",
+    "purified": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["electric"]
@@ -6851,7 +6902,7 @@
     "types": ["water"]
   },
   "491_00": {
-    "enabled": false,
+    "enabled": true,
     "genders": [],
     "generation": 4,
     "name": "Darkrai",
@@ -7739,25 +7790,25 @@
     "types": ["flying", "psychic"]
   },
   "562_00": {
-    "enabled": false,
+    "enabled": true,
     "genders": ["female", "male"],
     "generation": 5,
     "name": "Yamask",
     "number": "562",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["ghost"]
   },
   "563_00": {
-    "enabled": false,
+    "enabled": true,
     "genders": ["female", "male"],
     "generation": 5,
     "name": "Cofagrigus",
     "number": "563",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["ghost"]
