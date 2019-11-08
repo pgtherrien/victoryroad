@@ -1047,7 +1047,7 @@
     "name": "Meowth",
     "number": "052",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "templateId": "V0052_POKEMON_MEOWTH",
@@ -1073,7 +1073,7 @@
     "name": "Persian",
     "number": "053",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "templateId": "V0053_POKEMON_PERSIAN",
@@ -5296,7 +5296,7 @@
     "name": "Regirock",
     "number": "377",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": ["legendary"],
     "types": ["rock"]
@@ -5308,7 +5308,7 @@
     "name": "Regice",
     "number": "378",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": ["legendary"],
     "types": ["ice"]
@@ -5320,7 +5320,7 @@
     "name": "Registeel",
     "number": "379",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": ["legendary"],
     "types": ["steel"]
@@ -6828,7 +6828,7 @@
     "types": ["steel", "fire"]
   },
   "486_00": {
-    "enabled": false,
+    "enabled": true,
     "genders": [],
     "generation": 4,
     "name": "Regigigas",
@@ -8702,7 +8702,7 @@
     "types": ["fire", "bug"]
   },
   "638_00": {
-    "enabled": false,
+    "enabled": true,
     "genders": [],
     "generation": 5,
     "name": "Cobalion",
