@@ -4,15 +4,7 @@ import { Icon, Menu, Popup, Responsive } from "semantic-ui-react";
 
 import styles from "../Checklist.module.css";
 import ChecklistSidebarOpen from "./ChecklistSidebarOpen";
-
-let IGNORE_STRINGS = [
-  "FORMS",
-  "SPAWN",
-  "BELUGA",
-  "SETTINGS",
-  "STORAGE",
-  "NORMAL"
-];
+import { IGNORE_STRINGS } from "../../../data/constants";
 
 let FILE_READER;
 
@@ -131,9 +123,7 @@ export default class ChecklistSidebar extends React.PureComponent {
         <Menu
           className={
             window.innerWidth > Responsive.onlyMobile.maxWidth
-              ? `${styles["filter-sidebar-collapsed"]} ${
-                  styles["filter-sidebar-collapsed-full"]
-                }`
+              ? `${styles["filter-sidebar-collapsed"]} ${styles["filter-sidebar-collapsed-full"]}`
               : styles["filter-sidebar-collapsed"]
           }
           inverted

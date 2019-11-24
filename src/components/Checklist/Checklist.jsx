@@ -11,21 +11,7 @@ import pokedex from "../../data/pokedex";
 import Progress from "./Progress";
 import styles from "./Checklist.module.css";
 
-const DEFAULT_FILTERS = {
-  generations: [],
-  onlyChecked: false,
-  onlyUnchecked: false,
-  search: "",
-  showEventForms: false,
-  tags: [],
-  type: "normal"
-};
-
-const DEFAULT_SAVE_STATE = {
-  color: "grey",
-  label: "Click to save changes",
-  name: "save"
-};
+import { DEFAULT_FILTERS, DEFAULT_SAVE_STATE } from "../../data/constants";
 
 const ENTRIES_PER_ROW =
   window.innerWidth < Responsive.onlyMobile.maxWidth

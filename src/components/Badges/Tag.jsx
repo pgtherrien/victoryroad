@@ -4,31 +4,22 @@ import { Label } from "semantic-ui-react";
 
 import styles from "./Badges.module.css";
 import utils from "../utils";
-const TAG_COLORS = {
-  alolan: "yellow",
-  baby: "teal",
-  legendary: "red",
-  mythical: "purple",
-  regional: "green",
-  starter: "blue"
-};
+import { TAG_COLORS } from "../../data/constants";
 
-export default class Tag extends React.PureComponent {
-  render() {
-    const { key, onClick, tag } = this.props;
-    let displayTag = tag.split("_").join(" ");
+function Tag(props) {
+  const { key, onClick, tag } = props;
+  let displayTag = tag.split("_").join(" ");
 
-    return (
-      <Label
-        className={styles["badge"]}
-        key={key}
-        onClick={onClick}
-        color={TAG_COLORS[tag]}
-      >
-        {utils.toTitleCase(displayTag)}
-      </Label>
-    );
-  }
+  return (
+    <Label
+      className={styles["badge"]}
+      key={key}
+      onClick={onClick}
+      color={TAG_COLORS[tag]}
+    >
+      {utils.toTitleCase(displayTag)}
+    </Label>
+  );
 }
 
 Tag.propTypes = {
@@ -36,3 +27,5 @@ Tag.propTypes = {
   onClick: PropTypes.func,
   tag: PropTypes.string.isRequired
 };
+
+export default Tag;

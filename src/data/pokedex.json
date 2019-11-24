@@ -1325,7 +1325,7 @@
     "name": "Tentacool",
     "number": "072",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["poison", "water"]
@@ -1337,7 +1337,7 @@
     "name": "Tentacruel",
     "number": "073",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["poison", "water"]
