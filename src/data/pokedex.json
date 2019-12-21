@@ -8726,7 +8726,7 @@
     "types": ["fighting", "rock"]
   },
   "640_00": {
-    "enabled": false,
+    "enabled": true,
     "genders": [],
     "generation": 5,
     "name": "Virizion",
