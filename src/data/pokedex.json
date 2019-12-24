@@ -495,6 +495,18 @@
     "tags": [],
     "types": ["electric"]
   },
+  "025_00_08": {
+    "enabled": true,
+    "genders": ["female", "male"],
+    "generation": 1,
+    "name": "Pikachu - Winter Beanie",
+    "number": "025",
+    "purified": false,
+    "shiny": true,
+    "shadow": false,
+    "tags": [],
+    "types": ["electric"]
+  },
   "025_00_09": {
     "enabled": true,
     "genders": ["female", "male"],
@@ -621,6 +633,18 @@
     "shadow": false,
     "tags": [],
     "templateId": "V0026_POKEMON_RAICHU",
+    "types": ["electric"]
+  },
+  "026_00_08": {
+    "enabled": true,
+    "genders": ["female", "male"],
+    "generation": 1,
+    "name": "Raichu - Winter Beanie",
+    "number": "025",
+    "purified": false,
+    "shiny": true,
+    "shadow": false,
+    "tags": [],
     "types": ["electric"]
   },
   "026_00_09": {
@@ -2751,6 +2775,18 @@
     "tags": ["baby"],
     "types": ["electric"]
   },
+  "172_00_08": {
+    "enabled": true,
+    "genders": ["female", "male"],
+    "generation": 2,
+    "name": "Pichu - Winter Beanie",
+    "number": "172",
+    "purified": false,
+    "shiny": true,
+    "shadow": false,
+    "tags": ["baby"],
+    "types": ["electric"]
+  },
   "172_00_05": {
     "enabled": true,
     "genders": ["female", "male"],
@@ -3532,6 +3568,18 @@
     "number": "234",
     "purified": false,
     "shiny": false,
+    "shadow": false,
+    "tags": [],
+    "types": ["normal"]
+  },
+  "234_00_08": {
+    "enabled": true,
+    "genders": ["female", "male"],
+    "generation": 2,
+    "name": "Stantler - Holidays Form",
+    "number": "234",
+    "purified": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["normal"]
@@ -6419,7 +6467,7 @@
     "name": "Snover",
     "number": "459",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["ice", "grass"]
@@ -6431,7 +6479,7 @@
     "name": "Abomasnow",
     "number": "460",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["ice", "grass"]
