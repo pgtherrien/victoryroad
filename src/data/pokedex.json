@@ -338,6 +338,19 @@
     "templateId": "V0020_POKEMON_RATICATE",
     "types": ["normal"]
   },
+  "020_00_11": {
+    "enabled": true,
+    "genders": ["female", "male"],
+    "generation": 1,
+    "name": "Raticate - Party Hat",
+    "number": "020",
+    "purified": true,
+    "shiny": true,
+    "shadow": false,
+    "tags": [],
+    "templateId": "V0020_POKEMON_RATICATE",
+    "types": ["normal"]
+  },
   "020_61": {
     "enabled": true,
     "genders": ["female", "male"],
@@ -3185,6 +3198,18 @@
     "tags": [],
     "types": ["psychic"]
   },
+  "202_00_11": {
+    "enabled": true,
+    "genders": ["female", "male"],
+    "generation": 2,
+    "name": "Wobbuffet - Party Hat",
+    "number": "202",
+    "purified": false,
+    "shiny": true,
+    "shadow": false,
+    "tags": [],
+    "types": ["psychic"]
+  },
   "203_00": {
     "enabled": true,
     "genders": ["female", "male"],
@@ -3957,7 +3982,19 @@
     "name": "Wurmple",
     "number": "265",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
+    "shadow": false,
+    "tags": [],
+    "types": ["bug"]
+  },
+  "265_00_11": {
+    "enabled": true,
+    "genders": ["female", "male"],
+    "generation": 3,
+    "name": "Wurmple - Party Hat",
+    "number": "265",
+    "purified": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["bug"]
@@ -3969,7 +4006,7 @@
     "name": "Silcoon",
     "number": "266",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["bug"]
@@ -3981,7 +4018,7 @@
     "name": "Beautifly",
     "number": "267",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["flying", "bug"]
@@ -3993,7 +4030,7 @@
     "name": "Cascoon",
     "number": "268",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["bug"]
@@ -4005,7 +4042,7 @@
     "name": "Dustox",
     "number": "269",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["poison", "bug"]
@@ -8450,7 +8487,7 @@
     "types": ["dragon"]
   },
   "613_00": {
-    "enabled": false,
+    "enabled": true,
     "genders": ["female", "male"],
     "generation": 5,
     "name": "Cubchoo",
@@ -8462,7 +8499,7 @@
     "types": ["ice"]
   },
   "614_00": {
-    "enabled": false,
+    "enabled": true,
     "genders": ["female", "male"],
     "generation": 5,
     "name": "Beartic",
@@ -8474,7 +8511,7 @@
     "types": ["ice"]
   },
   "615_00": {
-    "enabled": false,
+    "enabled": true,
     "genders": [],
     "generation": 5,
     "name": "Cryogonal",
