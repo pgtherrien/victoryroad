@@ -6312,7 +6312,7 @@
     "name": "Gible",
     "number": "443",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["ground", "dragon"]
@@ -6324,7 +6324,7 @@
     "name": "Gabite",
     "number": "444",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["ground", "dragon"]
@@ -6336,7 +6336,7 @@
     "name": "Garchomp",
     "number": "445",
     "purified": false,
-    "shiny": false,
+    "shiny": true,
     "shadow": false,
     "tags": [],
     "types": ["ground", "dragon"]
