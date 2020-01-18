@@ -284,7 +284,7 @@ export default function App() {
         open={isMenuOpen}
         transformOrigin={{ vertical: "top", horizontal: "right" }}
       >
-        {admins.includes(googleUser.uid) && (
+        {googleUser && admins.includes(googleUser.uid) && (
           <MenuItem onClick={() => setIsEventFormOpen(true)}>
             <Add className={classes.accountIcon} /> Add Event
           </MenuItem>
