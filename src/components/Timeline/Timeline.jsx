@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 
-import { CircularProgress, Grid, Typography } from "@material-ui/core";
+import { Button, CircularProgress, Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import GitHubIcon from "@material-ui/icons/GitHub";
 
 import { db } from "../../firebase";
-import Event from "../Event";
+import EventModal from "../EventModal";
+import EventRow from "../EventRow";
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -20,6 +22,14 @@ const useStyles = makeStyles(theme => ({
     margin: "0 auto",
     marginBottom: "20px",
     marginTop: "20px"
+  },
+  footer: {
+    backgroundColor: "#333333",
+    display: "flex",
+    height: "50px",
+    justifyContent: "center",
+    marginTop: "20px",
+    width: "100%"
   },
   loading: {
     color: "#FFFFFF",
@@ -40,12 +50,13 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function Timeline(props) {
-  const { admins, insertEvent, setEditEvent, user } = props;
+  const { admins, handleSelectEditEvent, insertEvent, user } = props;
   const [events, setEvents] = useState({
     current: [],
     past: [],
     upcoming: []
   });
+  const [selectedEventID, setSelectedEventID] = useState("");
   const classes = useStyles();
   let i = 0;
   let renderedEvents = [
@@ -58,6 +69,7 @@ export default function Timeline(props) {
       ACTIVE
     </Typography>
   ];
+  let selectedEvent = {};
 
   // Get and set the events into state
   useEffect(() => {
@@ -97,13 +109,19 @@ export default function Timeline(props) {
   }, []);
 
   events.current.forEach(function(event) {
+    if (event.id === selectedEventID) {
+      selectedEvent = event;
+    }
+
     renderedEvents.push(
-      <Event
+      <EventRow
         event={event}
+        handleSelectEditEvent={handleSelectEditEvent}
+        handleSelectEvent={setSelectedEventID}
+        insertEvent={insertEvent}
         isAdmin={admins.includes(user.uid)}
         key={i}
-        setEditEvent={setEditEvent}
-        updateEvent={insertEvent}
+        user={user}
       />
     );
     i++;
@@ -121,13 +139,19 @@ export default function Timeline(props) {
   );
 
   events.upcoming.forEach(function(event) {
+    if (event.id === selectedEventID) {
+      selectedEvent = event;
+    }
+
     renderedEvents.push(
-      <Event
+      <EventRow
         event={event}
+        handleSelectEditEvent={handleSelectEditEvent}
+        handleSelectEvent={setSelectedEventID}
+        insertEvent={insertEvent}
         isAdmin={admins.includes(user.uid)}
         key={i}
-        setEditEvent={setEditEvent}
-        updateEvent={insertEvent}
+        user={user}
       />
     );
     i++;
@@ -139,6 +163,20 @@ export default function Timeline(props) {
         <Grid className={classes.container} container spacing={3}>
           {renderedEvents}
         </Grid>
+        <div className={classes.footer}>
+          <Button
+            href="https://github.com/pgtherrien/victoryroad"
+            startIcon={<GitHubIcon />}
+          >
+            Victory Road
+          </Button>
+        </div>
+        {selectedEventID !== "" && (
+          <EventModal
+            event={selectedEvent}
+            handleClose={() => setSelectedEventID("")}
+          />
+        )}
       </div>
     );
   } else {

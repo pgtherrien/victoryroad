@@ -307,8 +307,8 @@ export default function App() {
         render={() => (
           <Timeline
             admins={admins}
+            handleSelectEditEvent={handleSelectEditEvent}
             insertEvent={insertEvent}
-            setEditEvent={handleSelectEditEvent}
             user={googleUser || {}}
           />
         )}

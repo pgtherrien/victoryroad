@@ -1,3 +1,13 @@
+.full {
+  height: 256px !important;
+  width: 256px !important;
+}
+
+.small {
+  height: 75px !important;
+  width: 75px !important;
+}
+
 .sprite {
   margin: 0 auto !important;
 }
