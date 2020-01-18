@@ -41,9 +41,14 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(3, 4, 5)
   },
   sectionTitle: {
-    marginTop: "20px",
+    marginTop: "10px",
     textAlign: "center",
     width: "100%"
+  },
+  shinies: {
+    [theme.breakpoints.down("md")]: {
+      marginTop: "30px !important"
+    }
   },
   title: {
     margin: "0 auto",
@@ -164,7 +169,11 @@ export default function EventModal(props) {
             {event.summary}
           </Typography>
           {event.newShinies && event.newShinies.length > 0 && (
-            <GridList cellHeight={matches ? 250 : 100} cols={shinyCols}>
+            <GridList
+              cellHeight={matches ? 250 : 100}
+              className={classes.shinies}
+              cols={shinyCols}
+            >
               {event.newShinies.map(shiny => (
                 <GridListTile
                   cols={1}
