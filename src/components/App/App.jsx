@@ -72,6 +72,7 @@ const gapi = window.gapi;
 
 export default function App() {
   const [admins, setAdmins] = useState([]);
+  const [editEvent, setEditEvent] = useState({});
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isEventFormOpen, setIsEventFormOpen] = useState(false);
   const [googleUser, setGoogleUser] = useState(
@@ -220,6 +221,11 @@ export default function App() {
   const isMenuOpen = Boolean(anchorEl);
   const menuId = "primary-search-account-menu";
 
+  const handleSelectEditEvent = event => {
+    setEditEvent(event);
+    setIsEventFormOpen(true);
+  };
+
   const handleMenuClose = () => {
     setAnchorEl(null);
   };
@@ -302,6 +308,7 @@ export default function App() {
           <Timeline
             admins={admins}
             insertEvent={insertEvent}
+            setEditEvent={handleSelectEditEvent}
             user={googleUser || {}}
           />
         )}
@@ -312,7 +319,10 @@ export default function App() {
         render={() => <Checklist admins={admins} user={googleUser || {}} />}
       />
       {isEventFormOpen && (
-        <EventForm handleClose={() => setIsEventFormOpen(false)} />
+        <EventForm
+          event={editEvent}
+          handleClose={() => setIsEventFormOpen(false)}
+        />
       )}
     </Router>
   );

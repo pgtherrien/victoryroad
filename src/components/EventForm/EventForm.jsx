@@ -60,11 +60,13 @@ export default function EventForm(props) {
   let defaultForm = {
     background: props.event.background || "",
     bonuses: props.event.bonuses || [],
+    endDate: props.event.endDate || "",
     features: props.event.features || [],
     icon: props.event.icon || "",
     link: props.event.link || "",
     newShinies: props.event.newShinies || [],
     perfectIV: props.event.perfectIV || ["", ""],
+    startDate: props.event.startDate || "",
     summary: props.event.summary || "",
     title: props.event.title || "",
     type: props.event.type || "unique"
@@ -108,6 +110,7 @@ export default function EventForm(props) {
   const renderPairs = field => {
     let pairs = [];
     for (var i = 0; i < form[field].length; i++) {
+      let index = i;
       pairs.push(
         <React.Fragment key={i}>
           <TextField
@@ -117,7 +120,7 @@ export default function EventForm(props) {
             }}
             label="Image"
             onChange={event =>
-              updateNestedArray(i, field, "image", event.target.value)
+              updateNestedArray(index, "image", field, event.target.value)
             }
             value={form[field][i].image}
             variant="outlined"
@@ -129,13 +132,14 @@ export default function EventForm(props) {
             }}
             label="Text"
             onChange={event =>
-              updateNestedArray(i, field, "text", event.target.value)
+              updateNestedArray(index, "text", field, event.target.value)
             }
             value={form[field][i].text}
             variant="outlined"
           />
         </React.Fragment>
       );
+      i++;
     }
     return pairs;
   };
@@ -143,6 +147,7 @@ export default function EventForm(props) {
   const renderNewShinies = () => {
     let shinies = [];
     for (var i = 0; i < form.newShinies.length; i++) {
+      let index = i;
       shinies.push(
         <TextField
           fullWidth
@@ -151,8 +156,10 @@ export default function EventForm(props) {
           }}
           key={i}
           label="Image"
-          onChange={event => updateArray("newShinies", i, event.target.value)}
-          value={form.newShinies[i].image}
+          onChange={event =>
+            updateArray("newShinies", index, event.target.value)
+          }
+          value={form.newShinies[index].image}
           variant="outlined"
         />
       );
@@ -161,6 +168,12 @@ export default function EventForm(props) {
   };
 
   const renderDateField = (field, label) => {
+    let value = "";
+    if (form[field] !== "") {
+      let split = form[field].toISOString().split(":");
+      value = split[0] + ":" + split[1];
+    }
+
     return (
       <TextField
         fullWidth
@@ -168,9 +181,9 @@ export default function EventForm(props) {
           shrink: true
         }}
         label={label}
-        onChange={event => updateField(field, event.target.value)}
+        onChange={event => updateField(field, new Date(event.target.value))}
         type="datetime-local"
-        value={form[field]}
+        value={value}
       />
     );
   };

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { CircularProgress, Grid } from "@material-ui/core";
+import { CircularProgress, Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 
 import { db } from "../../firebase";
@@ -11,6 +11,15 @@ const useStyles = makeStyles(theme => ({
     height: "100%",
     margin: "0 auto !important",
     width: "100% !important"
+  },
+  divider: {
+    width: "100%"
+  },
+  dividerText: {
+    fontSize: "1.5em",
+    margin: "0 auto",
+    marginBottom: "20px",
+    marginTop: "20px"
   },
   loading: {
     color: "#FFFFFF",
@@ -31,11 +40,24 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function Timeline(props) {
+  const { admins, insertEvent, setEditEvent, user } = props;
   const [events, setEvents] = useState({
     current: [],
     past: [],
     upcoming: []
   });
+  const classes = useStyles();
+  let i = 0;
+  let renderedEvents = [
+    <Typography
+      className={classes.dividerText}
+      color="textSecondary"
+      key="dividerActive"
+      variant="caption"
+    >
+      ACTIVE
+    </Typography>
+  ];
 
   // Get and set the events into state
   useEffect(() => {
@@ -74,22 +96,29 @@ export default function Timeline(props) {
       });
   }, []);
 
-  const { admins, insertEvent, user } = props;
-  const classes = useStyles();
-  let i = 0;
-  let renderedEvents = [];
-
   events.current.forEach(function(event) {
     renderedEvents.push(
       <Event
         event={event}
         isAdmin={admins.includes(user.uid)}
         key={i}
+        setEditEvent={setEditEvent}
         updateEvent={insertEvent}
       />
     );
     i++;
   });
+
+  renderedEvents.push(
+    <Typography
+      className={classes.dividerText}
+      color="textSecondary"
+      key="dividerUpcoming"
+      variant="caption"
+    >
+      UPCOMING
+    </Typography>
+  );
 
   events.upcoming.forEach(function(event) {
     renderedEvents.push(
@@ -97,6 +126,7 @@ export default function Timeline(props) {
         event={event}
         isAdmin={admins.includes(user.uid)}
         key={i}
+        setEditEvent={setEditEvent}
         updateEvent={insertEvent}
       />
     );

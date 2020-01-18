@@ -1,5 +1,4 @@
 import React from "react";
-
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Card,
@@ -9,18 +8,18 @@ import {
   Grid,
   Typography
 } from "@material-ui/core";
+import SettingsIcon from "@material-ui/icons/Settings";
+
 import Countdown from "../Countdown";
 
 const useStyles = makeStyles(theme => ({
-  actionArea: {
-    display: "flex",
-    justifyContent: "space-between",
-    minHeight: "200px"
+  background: {
+    opacity: ".2"
   },
   card: {
     backgroundColor: "#333333",
-    margin: "0 2% 0 2%",
-    minHeight: "200px"
+    margin: "1% 2% 1% 2%",
+    minHeight: "300px"
   },
   countdown: {
     [theme.breakpoints.up("md")]: {
@@ -31,35 +30,31 @@ const useStyles = makeStyles(theme => ({
     alignItems: "center",
     display: "none",
     fontSize: "large",
-    height: "200px",
+    height: "250px",
+    position: "absolute",
+    right: 0,
+    top: 0,
     width: "40%"
   },
-  fullImage: {
-    [theme.breakpoints.up("md")]: {
-      display: "flex"
-    },
-    display: "none",
-    height: "140px",
-    marginLeft: "5%",
-    width: "140px"
+  edit: {
+    bottom: "20px",
+    position: "absolute",
+    right: "20px"
   },
-  mobileImage: {
+  icon: {
     [theme.breakpoints.up("md")]: {
-      display: "none"
+      left: "70px"
     },
-    display: "flex",
-    height: "140px",
-    margin: "0 auto",
-    width: "140px"
-  },
-  title: {
-    margin: "0 auto",
-    textAlign: "center"
+    height: "200px",
+    left: "25%",
+    position: "absolute",
+    top: "20px",
+    width: "200px"
   }
 }));
 
 export default function Event(props) {
-  const { event } = props;
+  const { event, isAdmin, setEditEvent } = props;
   const classes = useStyles();
 
   // Determine the best format of the date range to display
@@ -93,24 +88,36 @@ export default function Event(props) {
   return (
     <Grid item xs={12}>
       <Card className={classes.card}>
-        <CardActionArea className={classes.actionArea}>
-          <CardMedia className={classes.fullImage} image={event.icon} />
-          <CardContent className={classes.title}>
-            <CardMedia className={classes.mobileImage} image={event.icon} />
-            <Typography gutterBottom variant="h4" component="h1">
+        <CardActionArea>
+          <CardMedia
+            className={classes.background}
+            component="img"
+            height="250"
+            image={event.background}
+          />
+          <CardContent>
+            <Typography component="h2" gutterBottom variant="h4">
               {event.title}
             </Typography>
-            <Typography gutterBottom component="p">
+            <Typography color="textSecondary" component="p" variant="body2">
               {renderRange(event.startDate, event.endDate)}
             </Typography>
+            {isAdmin && (
+              <SettingsIcon
+                className={classes.edit}
+                onClick={() => setEditEvent(event)}
+                title="Edit Event"
+              />
+            )}
           </CardContent>
-          <CardContent className={classes.countdown}>
+          <CardMedia className={classes.icon} image={event.icon} />
+          <div className={classes.countdown}>
             {new Date() > event.startDate ? (
               <Countdown label={"Ends"} date={event.endDate} />
             ) : (
               <Countdown label={"Begins"} date={event.startDate} />
             )}
-          </CardContent>
+          </div>
         </CardActionArea>
       </Card>
     </Grid>
