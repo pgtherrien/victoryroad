@@ -58,8 +58,15 @@ const useStyles = makeStyles(theme => ({
     width: "200px"
   },
   icons: {
+    [theme.breakpoints.up("md")]: {
+      justifyContent: "flex-end",
+      paddingTop: "0px",
+      width: "50%"
+    },
     display: "flex",
-    justifyContent: "flex-end"
+    justifyContent: "center",
+    paddingTop: "20px",
+    width: "100%"
   }
 }));
 
@@ -156,7 +163,7 @@ export default function EventRow(props) {
                 style={{ marginRight: "15px" }}
                 title="Add Event to Google Calendar"
               >
-                Add to Calendar
+                Track Event
               </Button>
             )}
             <Button
@@ -168,7 +175,7 @@ export default function EventRow(props) {
               style={{ marginRight: "15px" }}
               title="Visit Pokémon GO Live Post"
             >
-              Link
+              Source
             </Button>
             {isAdmin && (
               <Button
