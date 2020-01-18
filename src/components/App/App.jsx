@@ -1,105 +1,106 @@
-import React from "react";
-import firebase from "firebase";
+import React, { useEffect, useState } from "react";
+import {
+  AppBar,
+  Button,
+  IconButton,
+  Menu,
+  MenuItem,
+  Toolbar,
+  Typography
+} from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+import {
+  AccountCircle,
+  Add,
+  ExitToApp,
+  Menu as MenuIcon
+} from "@material-ui/icons";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import "semantic-ui-css/semantic.min.css";
+import clsx from "clsx";
+import firebase from "firebase";
 
 import { auth, db } from "../../firebase";
-import { EventModal } from "../Modals";
 import Checklist from "../Checklist";
-import Footer from "./Footer";
-import MenuCollapsed from "./MenuCollapsed";
-import MenuOpen from "./MenuOpen";
-import PokemonBox from "../PokemonBox";
+import Drawer from "../Drawer";
+import EventForm from "../EventForm";
 import Timeline from "../Timeline";
+
+const useStyles = makeStyles(theme => ({
+  accountIcon: {
+    marginRight: "10px"
+  },
+  appBar: {
+    backgroundColor: "#333333",
+    transition: theme.transitions.create(["margin", "width"], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen
+    })
+  },
+  appBarShift: {
+    width: `calc(100% - ${240}px)`,
+    marginLeft: 240,
+    transition: theme.transitions.create(["margin", "width"], {
+      easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen
+    })
+  },
+  footer: {
+    alignItems: "center",
+    backgroundColor: "#333333",
+    display: "flex",
+    height: "50px",
+    justifyContent: "center",
+    marginTop: "50px",
+    width: "100%"
+  },
+  grow: {
+    flexGrow: 1
+  },
+  hide: { display: "none" },
+  menuButton: {
+    marginRight: theme.spacing(2)
+  },
+  sectionDesktop: {
+    display: "none",
+    [theme.breakpoints.up("md")]: {
+      display: "flex"
+    }
+  }
+}));
 
 const gapi = window.gapi;
 
-class App extends React.PureComponent {
-  constructor(props) {
-    super(props);
+export default function App() {
+  const [admins, setAdmins] = useState([]);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isEventFormOpen, setIsEventFormOpen] = useState(false);
+  const [googleUser, setGoogleUser] = useState(
+    JSON.parse(localStorage.getItem("user")) || {}
+  );
 
-    // Initialize the GAPI client for use with authorization
-    this.initClient();
+  useEffect(() => {
+    let updatedAdmins = [];
 
     // Capture the user from the localStorage / set the user in localStorage
-    auth.onAuthStateChanged(function(user) {
-      user
-        ? localStorage.setItem("user", JSON.stringify(user))
+    auth.onAuthStateChanged(function(updatedUser) {
+      updatedUser
+        ? localStorage.setItem("user", JSON.stringify(updatedUser))
         : localStorage.removeItem("user");
     });
 
-    this.state = {
-      admins: [],
-      showEventModal: false,
-      showSidebar: false,
-      user: JSON.parse(localStorage.getItem("user")) || {}
-    };
-  }
-
-  // Gather the admins data and set it into the state
-  componentWillMount() {
-    let admins = [];
-
+    initClient();
     db.collection("admins")
       .get()
       .then(querySnapshot => {
         querySnapshot.forEach(doc => {
-          admins.push(doc.id);
+          updatedAdmins.push(doc.id);
         });
-        this.setState({ admins: admins });
+        setAdmins(updatedAdmins);
       });
-  }
-
-  // Initialize the GAPI client
-  initClient = () => {
-    if (gapi) {
-      gapi.load("client:auth2", () => {
-        gapi.client.init({
-          apiKey: process.env.REACT_APP_API_KEY,
-          clientId: process.env.REACT_APP_OATH_CLIENT_ID,
-          discoveryDocs: [
-            "https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"
-          ],
-          scope: "https://www.googleapis.com/auth/calendar"
-        });
-
-        gapi.client.load("calendar", "v3", () => {
-          if (process.env.NODE_ENV !== "production") {
-            console.log("Loaded GAPI Calendar Client");
-          }
-        });
-
-        const auth2 = gapi.auth2.getAuthInstance();
-        auth2.isSignedIn.listen(this.handleIsSignedIn);
-        this.handleIsSignedIn(auth2.isSignedIn.get());
-      });
-    }
-  };
-
-  // Check if the user is signed into the GAPI client and Firebase
-  handleIsSignedIn = isSignedIn => {
-    if (isSignedIn) {
-      const auth2 = gapi.auth2.getAuthInstance();
-      const currentUser = auth2.currentUser.get();
-      const authResponse = currentUser.getAuthResponse(true);
-      const credential = firebase.auth.GoogleAuthProvider.credential(
-        authResponse.id_token,
-        authResponse.access_token
-      );
-
-      auth.signInAndRetrieveDataWithCredential(credential).then(({ user }) => {
-        localStorage.setItem("user", JSON.stringify(user));
-        this.setState({ user: user });
-      });
-    } else {
-      if (process.env.NODE_ENV !== "production") {
-        console.log("GAPI: User is not signed in");
-      }
-    }
-  };
+  }, []);
 
   // Sign the user into the GAPI client and Firebase
-  authSignIn = () => {
+  const authSignIn = () => {
     const auth2 = gapi.auth2.getAuthInstance();
 
     if (auth2.isSignedIn.get()) {
@@ -118,7 +119,7 @@ class App extends React.PureComponent {
   };
 
   // Sign the user out of the GAPI client and Firebase
-  authSignOut = () => {
+  const authSignOut = () => {
     const auth2 = gapi.auth2.getAuthInstance();
     localStorage.removeItem("user");
 
@@ -142,13 +143,61 @@ class App extends React.PureComponent {
         if (process.env.NODE_ENV !== "production") {
           console.log("Firebase: Sign out complete");
         }
-        this.setState({ user: undefined });
+        setGoogleUser(undefined);
         window.location.reload();
       });
   };
 
-  // Creates an event in the user's Google Calendar
-  async insertEvent(title, summary, startDate, endDate) {
+  // Check if the user is signed into the GAPI client and Firebase
+  const handleIsSignedIn = isSignedIn => {
+    if (isSignedIn) {
+      const auth2 = gapi.auth2.getAuthInstance();
+      const currentUser = auth2.currentUser.get();
+      const authResponse = currentUser.getAuthResponse(true);
+      const credential = firebase.auth.GoogleAuthProvider.credential(
+        authResponse.id_token,
+        authResponse.access_token
+      );
+
+      auth.signInAndRetrieveDataWithCredential(credential).then(({ user }) => {
+        localStorage.setItem("user", JSON.stringify(user));
+        setGoogleUser(user);
+      });
+    } else {
+      if (process.env.NODE_ENV !== "production") {
+        console.log("GAPI: User is not signed in");
+      }
+    }
+  };
+
+  // Initialize the GAPI client
+  const initClient = () => {
+    if (gapi) {
+      gapi.load("client:auth2", () => {
+        gapi.client.init({
+          apiKey: process.env.REACT_APP_API_KEY,
+          clientId: process.env.REACT_APP_OATH_CLIENT_ID,
+          discoveryDocs: [
+            "https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"
+          ],
+          scope: "https://www.googleapis.com/auth/calendar"
+        });
+
+        gapi.client.load("calendar", "v3", () => {
+          if (process.env.NODE_ENV !== "production") {
+            console.log("Loaded GAPI Calendar Client");
+          }
+        });
+
+        const auth2 = gapi.auth2.getAuthInstance();
+        auth2.isSignedIn.listen(handleIsSignedIn);
+        handleIsSignedIn(auth2.isSignedIn.get());
+      });
+    }
+  };
+
+  // // Creates an event in the user's Google Calendar
+  const insertEvent = async (title, summary, startDate, endDate) => {
     const insert = await gapi.client.calendar.events.insert({
       calendarId: "primary",
       start: {
@@ -164,56 +213,107 @@ class App extends React.PureComponent {
     });
 
     return insert;
-  }
+  };
 
-  render() {
-    const { admins, showEventModal, showSidebar, user } = this.state;
+  const [anchorEl, setAnchorEl] = useState(null);
+  const classes = useStyles();
+  const isMenuOpen = Boolean(anchorEl);
+  const menuId = "primary-search-account-menu";
 
-    return (
-      <Router>
-        <MenuOpen
-          authSignIn={this.authSignIn}
-          authSignOut={this.authSignOut}
-          onHide={() => this.setState({ showSidebar: false })}
-          showSidebar={showSidebar}
-          user={user}
-        />
-        <MenuCollapsed
-          authSignIn={this.authSignIn}
-          authSignOut={this.authSignOut}
-          handleShowSidebar={() => this.setState({ showSidebar: true })}
-          user={user}
-        />
-        <Route
-          exact
-          path="/"
-          render={() => (
-            <Timeline
-              admins={admins}
-              handleSubmitEvent={() => this.setState({ showEventModal: true })}
-              insertEvent={this.insertEvent}
-              user={user || {}}
-            />
-          )}
-        />
-        <Route
-          exact
-          path="/checklist"
-          render={() => <Checklist admins={admins} user={user || {}} />}
-        />
-        <Route exact path="/pokemonbox" component={PokemonBox} />
-        {/* <Footer /> */}
-        {showEventModal && (
-          <EventModal
-            onClose={() => {
-              this.setState({ showEventModal: false });
-            }}
-            user={user}
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
+
+  const handleProfileMenuOpen = event => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  return (
+    <Router>
+      <AppBar
+        position="fixed"
+        className={clsx(classes.appBar, {
+          [classes.appBarShift]: isDrawerOpen
+        })}
+      >
+        <Toolbar>
+          <IconButton
+            aria-label="open drawer"
+            className={clsx(classes.menuButton, isDrawerOpen && classes.hide)}
+            color="inherit"
+            edge="start"
+            onClick={() => setIsDrawerOpen(!isDrawerOpen)}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" noWrap>
+            Victory Road
+          </Typography>
+          <div className={classes.grow} />
+          <div className={classes.account}>
+            {googleUser && googleUser.uid ? (
+              <IconButton
+                edge="end"
+                aria-label="account of current user"
+                aria-haspopup="true"
+                color="inherit"
+                onClick={handleProfileMenuOpen}
+              >
+                <AccountCircle />
+              </IconButton>
+            ) : (
+              <Button color="inherit" onClick={authSignIn}>
+                Login
+              </Button>
+            )}
+          </div>
+        </Toolbar>
+      </AppBar>
+      <Menu
+        anchorEl={anchorEl}
+        anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        id={menuId}
+        keepMounted
+        onClose={handleMenuClose}
+        open={isMenuOpen}
+        transformOrigin={{ vertical: "top", horizontal: "right" }}
+      >
+        {admins.includes(googleUser.uid) && (
+          <MenuItem onClick={() => setIsEventFormOpen(true)}>
+            <Add className={classes.accountIcon} /> Add Event
+          </MenuItem>
+        )}
+        <MenuItem
+          onClick={() => {
+            authSignOut();
+            handleMenuClose();
+          }}
+        >
+          <ExitToApp className={classes.accountIcon} /> Log Out
+        </MenuItem>
+      </Menu>
+      {isDrawerOpen && (
+        <Drawer handleDrawerClose={() => setIsDrawerOpen(false)} />
+      )}
+      <Route
+        exact
+        path="/"
+        render={() => (
+          <Timeline
+            admins={admins}
+            insertEvent={insertEvent}
+            user={googleUser || {}}
           />
         )}
-      </Router>
-    );
-  }
+      />
+      <Route
+        exact
+        path="/checklist"
+        render={() => <Checklist admins={admins} user={googleUser || {}} />}
+      />
+      {isEventFormOpen && (
+        <EventForm handleClose={() => setIsEventFormOpen(false)} />
+      )}
+    </Router>
+  );
 }
-
-export default App;

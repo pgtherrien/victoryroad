@@ -3,20 +3,13 @@ import React, { Component } from "react";
 class Countdown extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      days: 0,
-      hours: 0,
-      min: 0,
-      sec: 0
-    };
-  }
 
-  componentDidMount() {
-    // update every second
     this.interval = setInterval(() => {
       const date = this.calculateCountdown(this.props.date);
       date ? this.setState(date) : this.stop();
     }, 1000);
+
+    this.state = this.calculateCountdown(this.props.date);
   }
 
   componentWillUnmount() {
@@ -76,9 +69,12 @@ class Countdown extends Component {
 
   render() {
     const countDown = this.state;
+    const { label } = this.props;
 
     return (
       <div>
+        <span>{label} In</span>
+        <br />
         <span>
           <strong>{this.addLeadingZeros(countDown.days)}</strong>
           <span> {countDown.days === 1 ? "Day" : "Days"}</span>

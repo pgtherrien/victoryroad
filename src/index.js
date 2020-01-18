@@ -1,13 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { CssBaseline } from "@material-ui/core";
+import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 
 import App from "./components/App";
 
+const theme = createMuiTheme({
+  palette: {
+    type: "dark"
+  }
+});
+
 ReactDOM.render(
-  <div>
-    Too many changes need to be made to improve this site, and it takes too much
-    to maintain the event data for it to be worth only me using it so I'm
-    shutting it down. Use Leekduck.
-  </div>,
+  <MuiThemeProvider theme={theme}>
+    <CssBaseline />
+    <App />
+  </MuiThemeProvider>,
   document.getElementById("root")
 );
