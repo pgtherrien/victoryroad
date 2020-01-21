@@ -33,7 +33,10 @@ const useStyles = makeStyles(theme => ({
     minHeight: "300px"
   },
   cardContent: {
-    display: "flex",
+    [theme.breakpoints.up("md")]: {
+      display: "flex"
+    },
+    display: "block",
     padding: "20px 25px"
   },
   countdown: {
@@ -53,8 +56,10 @@ const useStyles = makeStyles(theme => ({
   },
   icon: {
     [theme.breakpoints.up("md")]: {
+      display: "block",
       left: "70px"
     },
+    display: "none",
     height: "255px",
     left: "25%",
     position: "absolute",
@@ -71,6 +76,13 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "center",
     paddingTop: "20px",
     width: "100%"
+  },
+  title: {
+    [theme.breakpoints.down("md")]: {
+      textAlign: "center",
+      width: "100%"
+    },
+    width: "75%"
   }
 }));
 
@@ -148,14 +160,14 @@ export default function EventRow(props) {
           </div>
         </CardActionArea>
         <div className={classes.cardContent}>
-          <div style={{ width: "75%" }}>
+          <div className={classes.title}>
             <Typography component="h2" variant="h4">
               {event.title}
             </Typography>
             <Typography
               color="textSecondary"
               component="p"
-              style={{ float: "left", width: "50%" }}
+              style={{ width: "100%" }}
               variant="body2"
             >
               {renderRange(event.startDate, event.endDate)}
