@@ -20,9 +20,9 @@ import clsx from "clsx";
 import firebase from "firebase";
 
 import { auth, db } from "../../firebase";
-import Checklist from "../Checklist";
 import Drawer from "../Drawer";
 import EventForm from "../EventForm";
+import List from "../List";
 import Timeline from "../Timeline";
 
 const useStyles = makeStyles(theme => ({
@@ -316,7 +316,7 @@ export default function App() {
       <Route
         exact
         path="/checklist"
-        render={() => <Checklist admins={admins} user={googleUser || {}} />}
+        render={() => <List user={googleUser || {}} />}
       />
       {isEventFormOpen && (
         <EventForm

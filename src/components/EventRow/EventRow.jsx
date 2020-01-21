@@ -3,7 +3,6 @@ import {
   Button,
   Card,
   CardActionArea,
-  CardContent,
   CardMedia,
   Grid,
   Snackbar,
@@ -25,12 +24,17 @@ function Alert(props) {
 
 const useStyles = makeStyles(theme => ({
   background: {
+    minHeight: "300px",
     opacity: ".2"
   },
   card: {
     backgroundColor: "#333333",
     margin: "1% 2% 1% 2%",
     minHeight: "300px"
+  },
+  cardContent: {
+    display: "flex",
+    padding: "20px 25px"
   },
   countdown: {
     [theme.breakpoints.up("md")]: {
@@ -51,11 +55,11 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up("md")]: {
       left: "70px"
     },
-    height: "200px",
+    height: "255px",
     left: "25%",
     position: "absolute",
     top: "20px",
-    width: "200px"
+    width: "25%"
   },
   icons: {
     [theme.breakpoints.up("md")]: {
@@ -143,18 +147,20 @@ export default function EventRow(props) {
             )}
           </div>
         </CardActionArea>
-        <CardContent>
-          <Typography component="h2" gutterBottom variant="h4">
-            {event.title}
-          </Typography>
-          <Typography
-            color="textSecondary"
-            component="p"
-            style={{ float: "left", width: "50%" }}
-            variant="body2"
-          >
-            {renderRange(event.startDate, event.endDate)}
-          </Typography>
+        <div className={classes.cardContent}>
+          <div style={{ width: "75%" }}>
+            <Typography component="h2" variant="h4">
+              {event.title}
+            </Typography>
+            <Typography
+              color="textSecondary"
+              component="p"
+              style={{ float: "left", width: "50%" }}
+              variant="body2"
+            >
+              {renderRange(event.startDate, event.endDate)}
+            </Typography>
+          </div>
           <div className={classes.icons}>
             {user.uid && (
               <Button
@@ -190,7 +196,7 @@ export default function EventRow(props) {
               </Button>
             )}
           </div>
-        </CardContent>
+        </div>
       </Card>
       <Snackbar
         open={alert.length > 0}
