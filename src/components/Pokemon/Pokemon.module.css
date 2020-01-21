@@ -1,0 +1,21 @@
+.checked {
+  background-color: #212121 !important;
+  background-repeat: repeat-y !important;
+  background-size: 100% 88px !important;
+  background-position: 0% 0% !important;
+  background-image: repeating-linear-gradient(
+    -25deg,
+    #212121,
+    #212121 20px,
+    #333333 20px,
+    #333333 40px,
+    #212121 40px,
+    #212121 60px,
+    #333333 60px,
+    #333333 80px
+  ) !important;
+}
+
+.image {
+  background-color: #212121;
+}
