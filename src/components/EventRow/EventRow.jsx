@@ -48,7 +48,8 @@ const useStyles = makeStyles(theme => ({
     alignItems: "center",
     display: "none",
     fontSize: "large",
-    height: "250px",
+    height: "100%",
+    lineHeight: "55px",
     position: "absolute",
     right: 0,
     top: 0,
@@ -56,15 +57,14 @@ const useStyles = makeStyles(theme => ({
   },
   icon: {
     [theme.breakpoints.up("md")]: {
-      display: "block",
-      left: "70px"
+      display: "block"
     },
     display: "none",
-    height: "255px",
-    left: "25%",
+    height: "300px",
+    left: "5%",
     position: "absolute",
-    top: "20px",
-    width: "25%"
+    top: 0,
+    width: "300px"
   },
   icons: {
     [theme.breakpoints.up("md")]: {
@@ -78,10 +78,11 @@ const useStyles = makeStyles(theme => ({
     width: "100%"
   },
   title: {
-    [theme.breakpoints.down("md")]: {
+    [theme.breakpoints.down("sm")]: {
       textAlign: "center",
       width: "100%"
     },
+    textAlign: "left",
     width: "75%"
   }
 }));

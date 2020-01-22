@@ -35,10 +35,21 @@ const useStyles = makeStyles(theme => ({
     right: "50%",
     top: "50%",
     transform: "translate(-50%, -50%)",
-    width: "75%"
+    width: "75%",
+    "&::-webkit-scrollbar": {
+      width: "0.4em !important"
+    },
+    "&::-webkit-scrollbar-track": {
+      boxShadow: "inset 0 0 6px rgba(0,0,0,0.00) !important",
+      webkitBoxShadow: "inset 0 0 6px rgba(0,0,0,0.00) !important"
+    },
+    "&::-webkit-scrollbar-thumb": {
+      backgroundColor: "#212121 !important",
+      outline: "1px solid #212121 !important"
+    }
   },
   content: {
-    padding: theme.spacing(3, 4, 5)
+    padding: theme.spacing(3)
   },
   sectionTitle: {
     marginTop: "10px",

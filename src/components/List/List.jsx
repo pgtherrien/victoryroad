@@ -1,37 +1,47 @@
 import React, { useEffect, useState } from "react";
-import { Button, Fab, Grid, LinearProgress } from "@material-ui/core";
-import { green } from "@material-ui/core/colors";
 import {
-  lighten,
-  makeStyles,
-  useTheme,
-  withStyles
-} from "@material-ui/core/styles";
-
+  Button,
+  Fab,
+  Grid,
+  LinearProgress,
+  Paper,
+  Tab,
+  Tabs,
+  Snackbar
+} from "@material-ui/core";
+import { lightBlue } from "@material-ui/core/colors";
+import { makeStyles, useTheme, withStyles } from "@material-ui/core/styles";
 import { Save as SaveIcon, GitHub as GitHubIcon } from "@material-ui/icons";
+import MuiAlert from "@material-ui/lab/Alert";
 import { List as VirtualizedList } from "react-virtualized";
 
 import { db } from "../../firebase";
 import pokedex from "../../data/pokedex";
 import Pokemon from "../Pokemon";
 
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
+
 const BorderLinearProgress = withStyles({
   root: {
     height: 15,
-    backgroundColor: lighten(green[400], 0.5)
+    backgroundColor: "#333333"
   },
   bar: {
-    backgroundColor: green[400]
+    backgroundColor: lightBlue[400]
   }
 })(LinearProgress);
 
 const useStyles = makeStyles(theme => ({
   footer: {
+    alignItems: "center",
     backgroundColor: "#333333",
     display: "flex",
     height: "50px",
     justifyContent: "center",
     marginTop: "20px",
+    verticalAlign: "middle",
     width: "100%"
   },
   list: {
@@ -47,8 +57,18 @@ const useStyles = makeStyles(theme => ({
   },
   save: {
     bottom: "80px",
-    right: "30px",
+    right: "20px",
     position: "absolute"
+  },
+  tabs: {
+    [theme.breakpoints.down("sm")]: {
+      width: "55%"
+    },
+    backgroundColor: "#212121",
+    boxShadow: "none",
+    margin: "0 auto",
+    marginTop: "10px",
+    width: "500px"
   },
   virtualized: {
     "&::-webkit-scrollbar": {
@@ -59,14 +79,15 @@ const useStyles = makeStyles(theme => ({
       webkitBoxShadow: "inset 0 0 6px rgba(0,0,0,0.00) !important"
     },
     "&::-webkit-scrollbar-thumb": {
-      backgroundColor: "#000000 !important",
-      outline: "1px solid black !important"
+      backgroundColor: "#333333 !important",
+      outline: "1px solid #333333 !important"
     }
   }
 }));
 
 const DEFAULT_FILTERS = {
   available: {
+    lucky: [],
     normal: [],
     shiny: []
   },
@@ -84,6 +105,7 @@ export default function List(props) {
   const ENTRIES_PER_ROW = LARGE ? 12 : SMALL ? 3 : 6;
   const ROW_HEIGHT = LARGE ? 250 : SMALL ? 170 : 234;
 
+  const [alert, setAlert] = useState({ type: "", value: "" });
   const [filteredDex, setFilteredDex] = useState({});
   const [filters, setFilters] = useState(DEFAULT_FILTERS);
   const [userLists, setUserLists] = useState({
@@ -106,6 +128,7 @@ export default function List(props) {
           let available = doc.data();
           let updatedFilters = Object.assign({}, DEFAULT_FILTERS);
           updatedFilters.available = {
+            lucky: JSON.parse(available.lucky),
             normal: JSON.parse(available.normal),
             shiny: JSON.parse(available.shiny)
           };
@@ -175,10 +198,6 @@ export default function List(props) {
       add = true;
       switch (type) {
         case "lucky":
-          if (pokedex[number].tags.indexOf("not_tradable") > -1) {
-            add = false;
-          }
-          break;
         case "normal":
         case "shiny":
         default:
@@ -274,11 +293,17 @@ export default function List(props) {
         shiny: JSON.stringify(userLists.shiny)
       })
       .then(() => {
-        // update the save state here
+        setAlert({
+          type: "success",
+          value: "Saved the checklist!"
+        });
       })
       .catch(function(error) {
         console.error("Error updating the checklists: ", error);
-        // update the save state here
+        setAlert({
+          type: "error",
+          value: "Failed to save the checklist"
+        });
       });
   };
 
@@ -298,7 +323,8 @@ export default function List(props) {
   };
 
   // handleUpdateType applies the type change to the filters
-  const handleUpdateType = type => {
+  const handleUpdateType = (e, type) => {
+    e.stopPropagation();
     let updatedFilters = Object.assign({}, filters);
     updatedFilters.type = type;
     handleUpdateFilters(updatedFilters);
@@ -354,9 +380,21 @@ export default function List(props) {
         variant="determinate"
         value={progress * 100}
       />
+      <Paper className={classes.tabs} square>
+        <Tabs
+          indicatorColor="secondary"
+          onChange={handleUpdateType}
+          textColor="secondary"
+          value={filters.type}
+        >
+          <Tab label="Lucky" value="lucky" />
+          <Tab label="Normal" value="normal" />
+          <Tab label="Shiny" value="shiny" />
+        </Tabs>
+      </Paper>
       <VirtualizedList
         className={classes.virtualized}
-        height={window.innerHeight - 185}
+        height={window.innerHeight - 243}
         overscanRowCount={2}
         ref={c => (list = c)}
         rowCount={rowCount}
@@ -372,17 +410,30 @@ export default function List(props) {
         aria-label="save"
         className={classes.save}
         onClick={handleSave}
-        style={{ backgroundColor: green[400], color: "white" }}
+        style={{ backgroundColor: "#2AB6F6", color: "white" }}
         title="Save Checklist"
       >
         <SaveIcon />
       </Fab>
+      <Snackbar
+        open={alert.value.length > 0}
+        autoHideDuration={6000}
+        onClose={() => setAlert({ type: "", value: "" })}
+      >
+        <Alert
+          onClose={() => setAlert({ type: "", value: "" })}
+          severity={alert.type}
+        >
+          {alert.value}
+        </Alert>
+      </Snackbar>
       <div className={classes.footer}>
         <Button
           href="https://github.com/pgtherrien/victoryroad"
           startIcon={<GitHubIcon />}
+          style={{ height: "50%" }}
         >
-          Victory Road
+          GitHub
         </Button>
       </div>
     </div>

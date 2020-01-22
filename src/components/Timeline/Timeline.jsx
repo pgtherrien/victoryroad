@@ -24,11 +24,13 @@ const useStyles = makeStyles(theme => ({
     marginTop: "20px"
   },
   footer: {
+    alignItems: "center",
     backgroundColor: "#333333",
     display: "flex",
     height: "50px",
     justifyContent: "center",
     marginTop: "20px",
+    verticalAlign: "middle",
     width: "100%"
   },
   loading: {
@@ -167,8 +169,9 @@ export default function Timeline(props) {
           <Button
             href="https://github.com/pgtherrien/victoryroad"
             startIcon={<GitHubIcon />}
+            style={{ height: "50%" }}
           >
-            Victory Road
+            GitHub
           </Button>
         </div>
         {selectedEventID !== "" && (

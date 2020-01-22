@@ -72,7 +72,7 @@ class Countdown extends Component {
     const { label } = this.props;
 
     return (
-      <div style={{ lineHeight: "55px" }}>
+      <div>
         <span>{label} In</span>
         <br />
         <span>

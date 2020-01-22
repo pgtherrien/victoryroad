@@ -139,7 +139,6 @@ export default function EventForm(props) {
           />
         </React.Fragment>
       );
-      i++;
     }
     return pairs;
   };
