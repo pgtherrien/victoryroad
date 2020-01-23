@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import {
+  Button,
   ClickAwayListener,
   Drawer as MaterialDrawer,
   Divider,
@@ -17,6 +18,10 @@ import {
 } from "@material-ui/icons";
 
 const useStyles = makeStyles(theme => ({
+  close: {
+    borderRadius: 0,
+    width: "100%"
+  },
   drawer: {
     flexShrink: 0,
     width: 240
@@ -47,6 +52,11 @@ export default function Drawer(props) {
         open={true}
         variant="persistent"
       >
+        <div>
+          <Button className={classes.close} onClick={handleDrawerClose}>
+            Close
+          </Button>
+        </div>
         <Divider />
         <List component="nav">
           <ListItem button component={Link} to="">
@@ -60,7 +70,7 @@ export default function Drawer(props) {
               <CheckBoxIcon />
             </ListItemIcon>
             <ListItemText primary={"Checklists"} />
-          </ListItem>{" "}
+          </ListItem>
         </List>
       </MaterialDrawer>
     </ClickAwayListener>

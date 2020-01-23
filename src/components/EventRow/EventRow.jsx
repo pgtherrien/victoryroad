@@ -60,11 +60,11 @@ const useStyles = makeStyles(theme => ({
       display: "block"
     },
     display: "none",
-    height: "300px",
+    height: "250px",
     left: "5%",
     position: "absolute",
-    top: 0,
-    width: "300px"
+    top: "25px",
+    width: "250px"
   },
   icons: {
     [theme.breakpoints.up("md")]: {

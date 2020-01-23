@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
     borderRadius: "20px",
     boxShadow: theme.shadows[5],
     left: "50%",
-    maxHeight: "75%",
+    maxHeight: "90%",
     minHeight: "400px",
     outline: 0,
     overflowY: "auto",
@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
     right: "50%",
     top: "50%",
     transform: "translate(-50%, -50%)",
-    width: "75%",
+    width: "60%",
     "&::-webkit-scrollbar": {
       width: "0.4em !important"
     },
@@ -171,14 +171,6 @@ export default function EventModal(props) {
           </Typography>
         </div>
         <div className={classes.content}>
-          <Typography
-            align="center"
-            color="textSecondary"
-            component="p"
-            variant="body2"
-          >
-            {event.summary}
-          </Typography>
           {event.newShinies && event.newShinies.length > 0 && (
             <GridList
               cellHeight={matches ? 250 : 100}
@@ -200,6 +192,14 @@ export default function EventModal(props) {
               ))}
             </GridList>
           )}
+          <Typography
+            align="center"
+            color="textSecondary"
+            component="p"
+            variant="body2"
+          >
+            {event.summary}
+          </Typography>
           {event.perfectIV && event.perfectIV[0].length > 0 && (
             <React.Fragment>
               <ListSubheader component="div" className={classes.sectionTitle}>
