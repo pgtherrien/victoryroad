@@ -23,6 +23,9 @@ const useStyles = makeStyles(theme => ({
     opacity: ".2"
   },
   card: {
+    [theme.breakpoints.down("md")]: {
+      width: "90%"
+    },
     backgroundColor: theme.palette.background.paper,
     borderRadius: "20px",
     boxShadow: theme.shadows[5],
@@ -49,6 +52,9 @@ const useStyles = makeStyles(theme => ({
     }
   },
   content: {
+    [theme.breakpoints.down("md")]: {
+      padding: theme.spacing(1)
+    },
     padding: theme.spacing(3)
   },
   sectionTitle: {

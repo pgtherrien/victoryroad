@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import {
-  Button,
   Fab,
   Grid,
   LinearProgress,
@@ -11,11 +10,12 @@ import {
 } from "@material-ui/core";
 import { lightBlue } from "@material-ui/core/colors";
 import { makeStyles, useTheme, withStyles } from "@material-ui/core/styles";
-import { Save as SaveIcon, GitHub as GitHubIcon } from "@material-ui/icons";
+import { FilterList, Save as SaveIcon } from "@material-ui/icons";
 import MuiAlert from "@material-ui/lab/Alert";
 import { List as VirtualizedList } from "react-virtualized";
 
 import { db } from "../../firebase";
+import Filters from "./Filters";
 import pokedex from "../../data/pokedex";
 import Pokemon from "../Pokemon";
 
@@ -34,21 +34,16 @@ const BorderLinearProgress = withStyles({
 })(LinearProgress);
 
 const useStyles = makeStyles(theme => ({
-  footer: {
-    alignItems: "center",
-    backgroundColor: "#333333",
-    display: "flex",
-    height: "50px",
-    justifyContent: "center",
-    marginTop: "20px",
-    verticalAlign: "middle",
-    width: "100%"
+  filter: {
+    bottom: "90px",
+    right: "10px",
+    position: "absolute"
   },
   list: {
     backgroundColor: "#212121 !important",
     flexGrow: 1,
     height: "100%",
-    paddingTop: "100px",
+    paddingTop: "85px",
     width: "100%"
   },
   progress: {
@@ -56,18 +51,18 @@ const useStyles = makeStyles(theme => ({
     width: "80%"
   },
   save: {
-    bottom: "80px",
-    right: "20px",
+    bottom: "20px",
+    right: "10px",
     position: "absolute"
   },
   tabs: {
     [theme.breakpoints.down("sm")]: {
-      width: "55%"
+      justifyContent: "center",
+      width: "100%"
     },
     backgroundColor: "#212121",
     boxShadow: "none",
     margin: "0 auto",
-    marginTop: "10px",
     width: "500px"
   },
   virtualized: {
@@ -93,7 +88,7 @@ const DEFAULT_FILTERS = {
   },
   onlyChecked: false,
   onlyUnchecked: true,
-  showEventForms: true,
+  showEventForms: false,
   type: "normal"
 };
 
@@ -101,13 +96,13 @@ export default function List(props) {
   const theme = useTheme();
 
   const SMALL = window.innerWidth < theme.breakpoints.values.md;
-  const LARGE = window.innerWidth > theme.breakpoints.values.lg;
-  const ENTRIES_PER_ROW = LARGE ? 12 : SMALL ? 3 : 6;
-  const ROW_HEIGHT = LARGE ? 250 : SMALL ? 170 : 234;
+  const ENTRIES_PER_ROW = SMALL ? 3 : 12;
+  const ROW_HEIGHT = SMALL ? 170 : 170;
 
   const [alert, setAlert] = useState({ type: "", value: "" });
   const [filteredDex, setFilteredDex] = useState({});
   const [filters, setFilters] = useState(DEFAULT_FILTERS);
+  const [showFilters, setShowFilters] = useState(false);
   const [userLists, setUserLists] = useState({
     lucky: [],
     normal: [],
@@ -223,19 +218,6 @@ export default function List(props) {
     return entries;
   };
 
-  // getCheckedCount returns the sum total of checked entries in the applicable user list
-  const getCheckedCount = () => {
-    let count = 0;
-    if (filteredDex) {
-      Object.keys(filteredDex).forEach(number => {
-        if (userLists[filters.type].indexOf(number) > -1) {
-          count++;
-        }
-      });
-    }
-    return count;
-  };
-
   // getUserChecklists attempts to pull the active user's checklists from the db
   const getUserChecklists = updatedFilters => {
     let dex, count;
@@ -263,6 +245,21 @@ export default function List(props) {
 
     dex = filterDex(updatedFilters, userLists);
     count = Math.ceil(Object.keys(dex).length / ENTRIES_PER_ROW);
+    setFilteredDex(dex);
+    setRowCount(count);
+    setRowData(buildRowData(count, dex));
+  };
+
+  // handleApplyFilters applies the filter changes to the data and updates the state
+  const handleApplyFilters = updatedFilters => {
+    let dex = filterDex(updatedFilters, userLists);
+    let count = Math.ceil(Object.keys(dex).length / ENTRIES_PER_ROW);
+
+    if (list) {
+      list.forceUpdateGrid();
+    }
+
+    setFilters(updatedFilters);
     setFilteredDex(dex);
     setRowCount(count);
     setRowData(buildRowData(count, dex));
@@ -307,19 +304,10 @@ export default function List(props) {
       });
   };
 
-  // handleUpdateFilters applies the filter changes to the data and updates the state
-  const handleUpdateFilters = updatedFilters => {
-    let dex = filterDex(updatedFilters, userLists);
-    let count = Math.ceil(Object.keys(dex).length / ENTRIES_PER_ROW);
-
-    if (list) {
-      list.forceUpdateGrid();
-    }
-
-    setFilters(updatedFilters);
-    setFilteredDex(dex);
-    setRowCount(count);
-    setRowData(buildRowData(count, dex));
+  const handleUpdateBoolFilter = field => {
+    let updatedFilters = Object.assign({}, filters);
+    updatedFilters[field] = !filters[field];
+    handleApplyFilters(updatedFilters);
   };
 
   // handleUpdateType applies the type change to the filters
@@ -327,7 +315,7 @@ export default function List(props) {
     e.stopPropagation();
     let updatedFilters = Object.assign({}, filters);
     updatedFilters.type = type;
-    handleUpdateFilters(updatedFilters);
+    handleApplyFilters(updatedFilters);
   };
 
   // renderRow renders a single row
@@ -394,7 +382,7 @@ export default function List(props) {
       </Paper>
       <VirtualizedList
         className={classes.virtualized}
-        height={window.innerHeight - 243}
+        height={window.innerHeight - 148}
         overscanRowCount={2}
         ref={c => (list = c)}
         rowCount={rowCount}
@@ -406,6 +394,15 @@ export default function List(props) {
         }}
         width={window.innerWidth * 0.9}
       />
+      <Fab
+        aria-label="filter"
+        className={classes.filter}
+        onClick={() => setShowFilters(!showFilters)}
+        style={{ backgroundColor: "#2AB6F6", color: "white" }}
+        title="Filter Checklist"
+      >
+        <FilterList />
+      </Fab>
       <Fab
         aria-label="save"
         className={classes.save}
@@ -427,15 +424,13 @@ export default function List(props) {
           {alert.value}
         </Alert>
       </Snackbar>
-      <div className={classes.footer}>
-        <Button
-          href="https://github.com/pgtherrien/victoryroad"
-          startIcon={<GitHubIcon />}
-          style={{ height: "50%" }}
-        >
-          GitHub
-        </Button>
-      </div>
+      <Filters
+        clearFilters={clearFilters}
+        filters={filters}
+        handleUpdateBoolFilter={handleUpdateBoolFilter}
+        onClose={() => setShowFilters(false)}
+        open={showFilters}
+      />
     </div>
   );
 }

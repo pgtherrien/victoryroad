@@ -20,6 +20,7 @@ import {
 const useStyles = makeStyles(theme => ({
   close: {
     borderRadius: 0,
+    padding: "15px",
     width: "100%"
   },
   drawer: {

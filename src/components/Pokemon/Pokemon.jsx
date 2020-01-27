@@ -39,8 +39,8 @@ export default function Pokemon(props) {
       [theme.breakpoints.up("sm")]: {
         width: "15%"
       },
-      height: `${rowHeight - 50}px !important`,
-      padding: "18px !important",
+      height: `${rowHeight - 20}px !important`,
+      padding: "5px !important",
       width: "33%"
     }
   }));
@@ -61,7 +61,7 @@ export default function Pokemon(props) {
   };
 
   const classes = useStyles();
-  let xs = entriesPerRow === 12 ? 1 : entriesPerRow === 6 ? 2 : 4;
+  let xs = entriesPerRow === 12 ? 1 : 4;
 
   return (
     <Grid className={classes.wrapper} item xs={xs}>
