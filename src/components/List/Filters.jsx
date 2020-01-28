@@ -18,7 +18,9 @@ export default function Filters({
 }) {
   return (
     <Dialog onClose={onClose} aria-labelledby="simple-dialog-title" open={open}>
-      <DialogTitle>Checklist Filters</DialogTitle>
+      <DialogTitle style={{ textAlign: "center" }}>
+        Checklist Filters
+      </DialogTitle>
       <List>
         <ListItem>
           <FormControlLabel

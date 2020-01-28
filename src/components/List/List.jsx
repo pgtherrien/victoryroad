@@ -57,8 +57,7 @@ const useStyles = makeStyles(theme => ({
   },
   tabs: {
     [theme.breakpoints.down("sm")]: {
-      justifyContent: "center",
-      width: "100%"
+      width: "228px"
     },
     backgroundColor: "#212121",
     boxShadow: "none",

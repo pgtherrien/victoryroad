@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
       width: "90%"
     },
     backgroundColor: theme.palette.background.paper,
-    borderRadius: "20px",
+    borderRadius: "30px",
     boxShadow: theme.shadows[5],
     left: "50%",
     maxHeight: "90%",
@@ -76,7 +76,7 @@ const useStyles = makeStyles(theme => ({
       top: "150px"
     },
     position: "absolute",
-    top: "100px",
+    top: "50px",
     width: "100%"
   }
 }));
