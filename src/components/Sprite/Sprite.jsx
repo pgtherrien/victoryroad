@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import clsx from "clsx";
 
 import styles from "./Sprite.module.css";
 
@@ -37,16 +36,13 @@ export default class Sprite extends React.PureComponent {
   };
 
   render() {
-    const { showShiny, size } = this.props;
+    const { showShiny } = this.props;
     const { src } = this.state;
 
     return (
       <img
         alt={src}
-        className={clsx(styles["sprite"], {
-          [styles.small]: size === "small",
-          [styles.full]: size === "full"
-        })}
+        className={styles["sprite"]}
         onMouseEnter={this.toggleSprite}
         onMouseLeave={this.toggleSprite}
         onClick={showShiny ? this.toggleSprite : () => null}

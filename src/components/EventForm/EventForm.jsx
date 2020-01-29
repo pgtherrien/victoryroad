@@ -11,16 +11,11 @@ import {
   Typography
 } from "@material-ui/core";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
-import { db } from "../../firebase";
+import { db } from "../../utils/firebase";
 
 const useStyles = makeStyles(theme => ({
   leftField: {
     marginRight: "32px",
-    marginTop: "20px",
-    width: "300px"
-  },
-  rightField: {
-    marginLeft: "32px",
     marginTop: "20px",
     width: "300px"
   },
@@ -48,6 +43,11 @@ const useStyles = makeStyles(theme => ({
   },
   plus: {
     cursor: "pointer"
+  },
+  rightField: {
+    marginLeft: "32px",
+    marginTop: "20px",
+    width: "300px"
   },
   submit: {
     margin: "0 auto"

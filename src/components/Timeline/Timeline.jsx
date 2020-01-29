@@ -4,7 +4,7 @@ import { Button, CircularProgress, Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import GitHubIcon from "@material-ui/icons/GitHub";
 
-import { db } from "../../firebase";
+import { db } from "../../utils/firebase";
 import EventModal from "../EventModal";
 import EventRow from "../EventRow";
 
@@ -52,7 +52,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function Timeline(props) {
-  const { admins, handleSelectEditEvent, insertEvent, user } = props;
+  const { admins, handleSelectEditEvent, user } = props;
   const [events, setEvents] = useState({
     current: [],
     past: [],
@@ -120,7 +120,6 @@ export default function Timeline(props) {
         event={event}
         handleSelectEditEvent={handleSelectEditEvent}
         handleSelectEvent={setSelectedEventID}
-        insertEvent={insertEvent}
         isAdmin={admins.includes(user.uid)}
         key={i}
         user={user}
@@ -150,7 +149,6 @@ export default function Timeline(props) {
         event={event}
         handleSelectEditEvent={handleSelectEditEvent}
         handleSelectEvent={setSelectedEventID}
-        insertEvent={insertEvent}
         isAdmin={admins.includes(user.uid)}
         key={i}
         user={user}

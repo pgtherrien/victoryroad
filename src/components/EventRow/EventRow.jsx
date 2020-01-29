@@ -16,6 +16,7 @@ import {
 import MuiAlert from "@material-ui/lab/Alert";
 import { makeStyles } from "@material-ui/core/styles";
 
+import { insertEvent } from "../../utils/gapi";
 import Countdown from "../Countdown";
 
 function Alert(props) {
@@ -24,6 +25,9 @@ function Alert(props) {
 
 const useStyles = makeStyles(theme => ({
   background: {
+    [theme.breakpoints.down("sm")]: {
+      opacity: ".6"
+    },
     minHeight: "300px",
     opacity: ".2"
   },
@@ -87,15 +91,13 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function EventRow(props) {
-  const {
-    event,
-    handleSelectEditEvent,
-    handleSelectEvent,
-    insertEvent,
-    isAdmin,
-    user
-  } = props;
+export default function EventRow({
+  event,
+  handleSelectEditEvent,
+  handleSelectEvent,
+  isAdmin,
+  user
+}) {
   const [alert, setAlert] = useState("");
   const classes = useStyles();
 

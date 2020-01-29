@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import {
-  Fab,
   Grid,
   LinearProgress,
   Paper,
@@ -11,10 +10,11 @@ import {
 import { lightBlue } from "@material-ui/core/colors";
 import { makeStyles, useTheme, withStyles } from "@material-ui/core/styles";
 import { FilterList, Save as SaveIcon } from "@material-ui/icons";
+import { SpeedDial, SpeedDialAction, SpeedDialIcon } from "@material-ui/lab";
 import MuiAlert from "@material-ui/lab/Alert";
 import { List as VirtualizedList } from "react-virtualized";
 
-import { db } from "../../firebase";
+import { db } from "../../utils/firebase";
 import Filters from "./Filters";
 import pokedex from "../../data/pokedex";
 import Pokemon from "../Pokemon";
@@ -34,11 +34,6 @@ const BorderLinearProgress = withStyles({
 })(LinearProgress);
 
 const useStyles = makeStyles(theme => ({
-  filter: {
-    bottom: "90px",
-    right: "10px",
-    position: "absolute"
-  },
   list: {
     backgroundColor: "#212121 !important",
     flexGrow: 1,
@@ -50,10 +45,13 @@ const useStyles = makeStyles(theme => ({
     margin: "0 auto",
     width: "80%"
   },
-  save: {
+  speeddial: {
     bottom: "20px",
     right: "10px",
-    position: "absolute"
+    position: "absolute",
+    "&&>button": {
+      backgroundColor: "#29B6F6"
+    }
   },
   tabs: {
     [theme.breakpoints.down("sm")]: {
@@ -99,8 +97,8 @@ export default function List(props) {
   const ROW_HEIGHT = SMALL ? 170 : 170;
 
   const [alert, setAlert] = useState({ type: "", value: "" });
-  const [filteredDex, setFilteredDex] = useState({});
   const [filters, setFilters] = useState(DEFAULT_FILTERS);
+  const [isActionsOpen, setIsActionsOpen] = useState(false);
   const [showFilters, setShowFilters] = useState(false);
   const [userLists, setUserLists] = useState({
     lucky: [],
@@ -233,7 +231,6 @@ export default function List(props) {
           };
           dex = filterDex(updatedFilters, lists);
           count = Math.ceil(Object.keys(dex).length / ENTRIES_PER_ROW);
-          setFilteredDex(dex);
           setRowCount(count);
           setRowData(buildRowData(count, dex));
           setUserLists(lists);
@@ -244,7 +241,6 @@ export default function List(props) {
 
     dex = filterDex(updatedFilters, userLists);
     count = Math.ceil(Object.keys(dex).length / ENTRIES_PER_ROW);
-    setFilteredDex(dex);
     setRowCount(count);
     setRowData(buildRowData(count, dex));
   };
@@ -259,7 +255,6 @@ export default function List(props) {
     }
 
     setFilters(updatedFilters);
-    setFilteredDex(dex);
     setRowCount(count);
     setRowData(buildRowData(count, dex));
   };
@@ -393,24 +388,6 @@ export default function List(props) {
         }}
         width={window.innerWidth * 0.9}
       />
-      <Fab
-        aria-label="filter"
-        className={classes.filter}
-        onClick={() => setShowFilters(!showFilters)}
-        style={{ backgroundColor: "#2AB6F6", color: "white" }}
-        title="Filter Checklist"
-      >
-        <FilterList />
-      </Fab>
-      <Fab
-        aria-label="save"
-        className={classes.save}
-        onClick={handleSave}
-        style={{ backgroundColor: "#2AB6F6", color: "white" }}
-        title="Save Checklist"
-      >
-        <SaveIcon />
-      </Fab>
       <Snackbar
         open={alert.value.length > 0}
         autoHideDuration={6000}
@@ -423,11 +400,36 @@ export default function List(props) {
           {alert.value}
         </Alert>
       </Snackbar>
+      <SpeedDial
+        ariaLabel="SpeedDial example"
+        className={classes.speeddial}
+        direction="up"
+        icon={<SpeedDialIcon />}
+        onClose={() => setIsActionsOpen(false)}
+        onOpen={() => setIsActionsOpen(true)}
+        open={isActionsOpen}
+      >
+        <SpeedDialAction
+          key="filters"
+          icon={<FilterList />}
+          tooltipTitle="Filters"
+          onClick={() => setShowFilters(!showFilters)}
+        />
+        <SpeedDialAction
+          key="save"
+          icon={<SaveIcon />}
+          tooltipTitle="Save"
+          onClick={handleSave}
+        />
+      </SpeedDial>
       <Filters
         clearFilters={clearFilters}
         filters={filters}
         handleUpdateBoolFilter={handleUpdateBoolFilter}
-        onClose={() => setShowFilters(false)}
+        onClose={() => {
+          setIsActionsOpen(false);
+          setShowFilters(false);
+        }}
         open={showFilters}
       />
     </div>

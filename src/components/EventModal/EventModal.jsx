@@ -1,6 +1,7 @@
 import React from "react";
 import {
   Avatar,
+  Button,
   Card,
   CardMedia,
   GridList,
@@ -9,7 +10,6 @@ import {
   ListItem,
   ListItemAvatar,
   ListItemText,
-  ListSubheader,
   Modal,
   Typography,
   useMediaQuery
@@ -20,69 +20,58 @@ import Sprite from "../Sprite";
 
 const useStyles = makeStyles(theme => ({
   background: {
+    height: "200px",
     opacity: ".2"
   },
   card: {
-    [theme.breakpoints.down("md")]: {
+    [theme.breakpoints.down("sm")]: {
       width: "90%"
     },
     backgroundColor: theme.palette.background.paper,
-    borderRadius: "30px",
-    boxShadow: theme.shadows[5],
+    borderRadius: "15px",
     left: "50%",
     maxHeight: "90%",
-    minHeight: "400px",
     outline: 0,
-    overflowY: "auto",
     position: "absolute",
     right: "50%",
     top: "50%",
     transform: "translate(-50%, -50%)",
-    width: "60%",
-    "&::-webkit-scrollbar": {
-      width: "0.4em !important"
-    },
-    "&::-webkit-scrollbar-track": {
-      boxShadow: "inset 0 0 6px rgba(0,0,0,0.00) !important",
-      webkitBoxShadow: "inset 0 0 6px rgba(0,0,0,0.00) !important"
-    },
-    "&::-webkit-scrollbar-thumb": {
-      backgroundColor: "#212121 !important",
-      outline: "1px solid #212121 !important"
-    }
+    width: "50%"
+  },
+  close: {
+    marginTop: "15px",
+    textAlign: "center"
   },
   content: {
-    [theme.breakpoints.down("md")]: {
-      padding: theme.spacing(1)
+    [theme.breakpoints.down("sm")]: {
+      maxHeight: "450px",
+      padding: theme.spacing(3, 1, 1, 1)
     },
-    padding: theme.spacing(3)
+    maxHeight: "700px",
+    overflowY: "auto",
+    padding: theme.spacing(3, 3, 1, 3)
   },
   sectionTitle: {
-    marginTop: "10px",
-    textAlign: "center",
-    width: "100%"
+    textDecoration: "underline"
   },
   shinies: {
-    [theme.breakpoints.down("md")]: {
-      marginTop: "30px !important"
-    }
+    marginTop: "20px"
   },
   title: {
-    margin: "0 auto",
-    width: "90%"
-  },
-  titleContainer: {
-    [theme.breakpoints.up("md")]: {
-      top: "150px"
-    },
+    alignItems: "center",
+    display: "flex",
+    flexDirection: "column",
+    height: "200px",
+    justifyContent: "center",
+    padding: "30px",
     position: "absolute",
-    top: "50px",
+    textAlign: "center",
+    top: 0,
     width: "100%"
   }
 }));
 
-export default function EventModal(props) {
-  const { event, handleClose } = props;
+export default function EventModal({ event, handleClose }) {
   const classes = useStyles();
 
   const renderList = (field, label) => {
@@ -92,13 +81,13 @@ export default function EventModal(props) {
         aria-labelledby={`${field}-header`}
         style={{ marginTop: "20px" }}
         subheader={
-          <ListSubheader
-            component="div"
-            id={`${field}-header`}
+          <Typography
+            align="center"
             className={classes.sectionTitle}
+            color="textSecondary"
           >
             {label}
-          </ListSubheader>
+          </Typography>
         }
       >
         {event[field].map(item => (
@@ -143,112 +132,91 @@ export default function EventModal(props) {
 
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up("md"));
-  let shinyCols = event.newShinies ? event.newShinies.length : 0;
-  if (shinyCols > 3) {
+
+  let shinyCols = event.newShinies
+    ? matches
+      ? event.newShinies.length
+      : 1
+    : 0;
+  if (matches && shinyCols > 3) {
     shinyCols = 3;
   }
 
   return (
-    <Modal
-      aria-labelledby="simple-modal-title"
-      aria-describedby="simple-modal-description"
-      open={true}
-      onClose={handleClose}
-    >
+    <Modal onClose={handleClose} open={true}>
       <Card className={classes.card}>
         <CardMedia
           className={classes.background}
           component="img"
-          height="300"
           image={event.background}
         />
-        <div className={classes.titleContainer}>
-          <Typography
-            align="center"
-            className={classes.title}
-            component="h2"
-            gutterBottom
-            variant="h4"
-          >
-            {event.title}
-          </Typography>
-          <Typography align="center" component="p" variant="body2">
+        <div className={classes.title}>
+          <Typography variant="h4">{event.title}</Typography>
+          <Typography variant="body2">
             {renderRange(event.startDate, event.endDate)}
           </Typography>
         </div>
         <div className={classes.content}>
-          {event.newShinies && event.newShinies.length > 0 && (
-            <GridList
-              cellHeight={matches ? 250 : 100}
-              className={classes.shinies}
-              cols={shinyCols}
-            >
-              {event.newShinies.map(shiny => (
-                <GridListTile
-                  cols={1}
-                  key={shiny}
-                  style={{ display: "flex", justifyContent: "center" }}
-                >
-                  <Sprite
-                    size={matches ? "full" : "small"}
-                    showShiny={true}
-                    src={shiny}
-                  />
-                </GridListTile>
-              ))}
-            </GridList>
-          )}
-          <Typography
-            align="center"
-            color="textSecondary"
-            component="p"
-            variant="body2"
-          >
+          <Typography align="center" color="textSecondary" variant="body2">
             {event.summary}
           </Typography>
+          {event.newShinies && event.newShinies.length > 0 && (
+            <div className={classes.shinies}>
+              <Typography
+                align="center"
+                className={classes.sectionTitle}
+                color="textSecondary"
+              >
+                New Shinies
+              </Typography>
+              <GridList cellHeight={250} cols={shinyCols}>
+                {event.newShinies.map(shiny => (
+                  <GridListTile
+                    cols={1}
+                    key={shiny}
+                    style={{ display: "flex", justifyContent: "center" }}
+                  >
+                    <Sprite showShiny={true} src={shiny} />
+                  </GridListTile>
+                ))}
+              </GridList>
+            </div>
+          )}
           {event.perfectIV && event.perfectIV[0].length > 0 && (
-            <React.Fragment>
-              <ListSubheader component="div" className={classes.sectionTitle}>
-                Perfect IV's
-              </ListSubheader>
-              <div style={{ display: "flex", justifyContent: "center" }}>
-                <GridList cellHeight={100} cols={2} style={{ width: "300px" }}>
-                  <GridListTile
-                    col={1}
-                    style={{
-                      borderRight: "1px solid #C3C3BE",
-                      height: "45px"
-                    }}
-                  >
-                    <Typography
-                      align="center"
-                      color="textSecondary"
-                      variant="h4"
-                    >
-                      {event.perfectIV[0]}
-                    </Typography>
-                  </GridListTile>
-                  <GridListTile
-                    col={1}
-                    style={{
-                      borderLeft: "1px solid #C3C3BE",
-                      height: "45px"
-                    }}
-                  >
-                    <Typography
-                      align="center"
-                      color="textSecondary"
-                      variant="h4"
-                    >
-                      {event.perfectIV[1]}
-                    </Typography>
-                  </GridListTile>
-                </GridList>
-              </div>
-            </React.Fragment>
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <GridList cellHeight={100} cols={2} style={{ width: "300px" }}>
+                <GridListTile
+                  col={1}
+                  style={{
+                    borderRight: "1px solid #C3C3BE",
+                    height: "45px"
+                  }}
+                >
+                  <Typography align="center" color="textSecondary" variant="h4">
+                    {event.perfectIV[0]}
+                  </Typography>
+                </GridListTile>
+                <GridListTile
+                  col={1}
+                  style={{
+                    borderLeft: "1px solid #C3C3BE",
+                    height: "45px"
+                  }}
+                >
+                  <Typography align="center" color="textSecondary" variant="h4">
+                    {event.perfectIV[1]}
+                  </Typography>
+                </GridListTile>
+              </GridList>
+            </div>
           )}
           {renderList("bonuses", "Bonuses")}
           {renderList("features", "Features")}
+          <div className={classes.close}>
+            <Button color="secondary" onClick={handleClose}>
+              Close
+            </Button>
+          </div>
         </div>
       </Card>
     </Modal>

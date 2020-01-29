@@ -1,13 +1,5 @@
-.full {
-  height: 256px !important;
-  width: 256px !important;
-}
-
-.small {
-  height: 75px !important;
-  width: 75px !important;
-}
-
 .sprite {
+  height: 250px !important;
+  width: 250px !important;
   margin: 0 auto !important;
 }
