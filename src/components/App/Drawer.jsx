@@ -60,13 +60,18 @@ export default function Drawer(props) {
         </div>
         <Divider />
         <List component="nav">
-          <ListItem button component={Link} to="">
+          <ListItem button component={Link} onClick={handleDrawerClose} to="">
             <ListItemIcon>
               <EventIcon />
             </ListItemIcon>
             <ListItemText primary={"Events"} />
           </ListItem>
-          <ListItem button component={Link} to="checklist">
+          <ListItem
+            button
+            component={Link}
+            onClick={handleDrawerClose}
+            to="checklist"
+          >
             <ListItemIcon>
               <CheckBoxIcon />
             </ListItemIcon>

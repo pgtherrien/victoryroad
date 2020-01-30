@@ -26,7 +26,7 @@ function Alert(props) {
 const useStyles = makeStyles(theme => ({
   background: {
     [theme.breakpoints.down("sm")]: {
-      opacity: ".6"
+      opacity: ".8"
     },
     minHeight: "300px",
     opacity: ".2"
@@ -181,7 +181,7 @@ export default function EventRow({
               <Button
                 onClick={addToCalendar}
                 startIcon={<EventIcon />}
-                style={{ marginRight: "15px" }}
+                style={{ marginRight: "15px", padding: "6px 25px" }}
                 title="Add Event to Google Calendar"
               >
                 Track Event
@@ -193,7 +193,7 @@ export default function EventRow({
                 window.open(event.link, "_blank");
               }}
               startIcon={<LinkIcon />}
-              style={{ marginRight: "15px" }}
+              style={{ marginRight: "15px", padding: "6px 25px" }}
               title="Visit Pokémon GO Live Post"
             >
               Source
@@ -205,6 +205,7 @@ export default function EventRow({
                   handleSelectEditEvent(event);
                 }}
                 startIcon={<SettingsIcon />}
+                style={{ padding: "6px 25px" }}
                 title="Edit Event"
               >
                 Edit

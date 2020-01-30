@@ -1,0 +1,50 @@
+.list {
+  background-color: #212121 !important;
+  flex-grow: 1;
+  height: 100%;
+  padding-top: 85px;
+  width: 100%;
+}
+
+.progress {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.speeddial {
+  bottom: 20px;
+  right: 10px;
+  position: absolute;
+}
+
+.speeddial > button {
+  background-color: #29b6f6;
+}
+
+.tabs {
+  background-color: #212121 !important;
+  box-shadow: none;
+  margin: 0 auto;
+  width: 500px;
+}
+
+.tabsMobile {
+  background-color: #212121 !important;
+  box-shadow: none;
+  margin: 0 auto;
+  width: 228px;
+}
+
+.virtualized::-webkit-scrollbar {
+  width: 0.4em !important;
+}
+
+.virtualized::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0) !important;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0) !important;
+}
+
+.virtualized::-webkit-scrollbar-thumb {
+  background-color: #333333 !important;
+  outline: 1px solid #333333 !important;
+}

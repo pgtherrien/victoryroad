@@ -4,8 +4,8 @@ import firebase from "firebase";
 
 import { auth, db } from "../../utils/firebase";
 import AppBar from "./AppBar";
+import Checklist from "../Checklist";
 import EventForm from "../EventForm";
-import List from "../List";
 import Timeline from "../Timeline";
 
 const gapi = window.gapi;
@@ -132,7 +132,7 @@ export default class App extends React.PureComponent {
         <Route
           exact
           path="/checklist"
-          render={() => <List user={user || {}} />}
+          render={() => <Checklist user={user || {}} />}
         />
       </BrowserRouter>
     );
