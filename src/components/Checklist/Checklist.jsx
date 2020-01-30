@@ -9,12 +9,12 @@ import {
 } from "@material-ui/core";
 import { lightBlue } from "@material-ui/core/colors";
 import { withStyles, withTheme } from "@material-ui/core/styles";
-import { FilterList, Save as SaveIcon } from "@material-ui/icons";
-import { SpeedDial, SpeedDialAction, SpeedDialIcon } from "@material-ui/lab";
+
 import MuiAlert from "@material-ui/lab/Alert";
 import { List } from "react-virtualized";
 
 import { db } from "../../utils/firebase";
+import Actions from "./Actions";
 import Filters from "./Filters";
 import pokedex from "../../data/pokedex";
 import Pokemon from "../Pokemon";
@@ -62,7 +62,6 @@ class ChecklistRaw extends React.PureComponent {
       filters: Object.assign({}, DEFAULT_FILTERS),
       rowCount: 0,
       rowData: [],
-      showActions: false,
       showFilters: false,
       userLists: {
         lucky: [],
@@ -347,14 +346,7 @@ class ChecklistRaw extends React.PureComponent {
   };
 
   render() {
-    const {
-      alert,
-      filters,
-      rowCount,
-      showActions,
-      showFilters,
-      userLists
-    } = this.state;
+    const { alert, filters, rowCount, showFilters, userLists } = this.state;
     const { theme } = this.props;
     let progress =
       userLists[filters.type].length / filters.available[filters.type].length;
@@ -411,35 +403,16 @@ class ChecklistRaw extends React.PureComponent {
             {alert.value}
           </Alert>
         </Snackbar>
-        <SpeedDial
-          ariaLabel="SpeedDial example"
-          className={styles.speeddial}
-          direction="up"
-          icon={<SpeedDialIcon />}
-          onClose={() => this.setState({ showActions: false })}
-          onOpen={() => this.setState({ showActions: false })}
-          open={showActions}
-        >
-          <SpeedDialAction
-            key="filters"
-            icon={<FilterList />}
-            tooltipTitle="Filters"
-            onClick={() => this.setState({ showFilters: !showFilters })}
-          />
-          <SpeedDialAction
-            key="save"
-            icon={<SaveIcon />}
-            tooltipTitle="Save"
-            onClick={this.handleSave}
-          />
-        </SpeedDial>
+        <Actions
+          handleSave={this.handleSave}
+          handleShowFilters={() => this.setState({ showFilters: true })}
+        />
         <Filters
           resetFilters={this.handleResetFilters}
           filters={filters}
           handleUpdateFilter={this.handleUpdateFilter}
           onClose={() => {
             this.setState({
-              showActions: false,
               showFilters: false
             });
           }}
