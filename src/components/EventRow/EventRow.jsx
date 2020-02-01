@@ -25,9 +25,6 @@ function Alert(props) {
 
 const useStyles = makeStyles(theme => ({
   background: {
-    [theme.breakpoints.down("sm")]: {
-      opacity: ".8"
-    },
     minHeight: "300px",
     opacity: "0.2"
   },
@@ -60,10 +57,14 @@ const useStyles = makeStyles(theme => ({
     width: "40%"
   },
   icon: {
-    [theme.breakpoints.up("md")]: {
-      display: "block"
+    [theme.breakpoints.down("sm")]: {
+      height: "200px",
+      left: "50%",
+      right: "50%",
+      top: "50%",
+      transform: "translate(-50%, -50%)",
+      width: "200px"
     },
-    display: "none",
     height: "250px",
     left: "5%",
     position: "absolute",

@@ -35,14 +35,14 @@ const useStyles = makeStyles(theme => ({
     right: "50%",
     top: "50%",
     transform: "translate(-50%, -50%)",
-    width: "50%"
+    width: "83%"
   },
   content: {
     [theme.breakpoints.down("sm")]: {
       maxHeight: "450px",
       padding: theme.spacing(3, 1, 1, 1)
     },
-    maxHeight: "700px",
+    maxHeight: "90%",
     overflowY: "auto",
     padding: theme.spacing(3, 3, 1, 3)
   }
@@ -115,8 +115,10 @@ export default function EventModal({ event, handleClose }) {
       ? event.newShinies.length
       : 1
     : 0;
-  if (matches && shinyCols > 3) {
-    shinyCols = 3;
+  if (matches) {
+    if (shinyCols === 3 || shinyCols > 4) {
+      shinyCols = 3;
+    }
   }
 
   return (
@@ -160,7 +162,13 @@ export default function EventModal({ event, handleClose }) {
             </div>
           )}
           {event.perfectIV && event.perfectIV[0].length > 0 && (
-            <div style={{ display: "flex", justifyContent: "center" }}>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                marginTop: "15px"
+              }}
+            >
               <GridList cellHeight={100} cols={2} style={{ width: "300px" }}>
                 <GridListTile
                   col={1}
