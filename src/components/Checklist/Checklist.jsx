@@ -35,13 +35,8 @@ const BorderLinearProgress = withStyles({
 })(LinearProgress);
 
 const DEFAULT_FILTERS = {
-  available: {
-    lucky: [],
-    normal: [],
-    shiny: []
-  },
   onlyChecked: false,
-  onlyUnchecked: true,
+  onlyUnchecked: false,
   search: "",
   showEventForms: false,
   type: "normal"
@@ -59,7 +54,14 @@ class ChecklistRaw extends React.PureComponent {
     this.list = null;
     this.state = {
       alert: { type: "", value: "" },
-      filters: Object.assign({}, DEFAULT_FILTERS),
+      available: {
+        lucky: [],
+        normal: [],
+        shiny: []
+      },
+      filters:
+        JSON.parse(localStorage.getItem("vrFilters")) ||
+        Object.assign({}, DEFAULT_FILTERS),
       rowCount: 0,
       rowData: [],
       showFilters: false,
@@ -72,19 +74,19 @@ class ChecklistRaw extends React.PureComponent {
   }
 
   componentWillMount() {
+    const { filters } = this.state;
     db.collection("available")
       .get()
       .then(querySnapshot => {
         querySnapshot.forEach(doc => {
-          let available = doc.data();
-          let updatedFilters = Object.assign({}, DEFAULT_FILTERS);
-          updatedFilters.available = {
-            lucky: JSON.parse(available.lucky),
-            normal: JSON.parse(available.normal),
-            shiny: JSON.parse(available.shiny)
+          let data = doc.data();
+          let available = {
+            lucky: JSON.parse(data.lucky),
+            normal: JSON.parse(data.normal),
+            shiny: JSON.parse(data.shiny)
           };
-          this.getUserChecklists(updatedFilters);
-          this.setState({ filters: updatedFilters });
+          this.getUserChecklists(available, filters);
+          this.setState({ available: available });
         });
       });
   }
@@ -129,9 +131,8 @@ class ChecklistRaw extends React.PureComponent {
   };
 
   // filterDex returns the remaining entries after filters are applied
-  filterDex = (updatedFilters, updatedLists) => {
+  filterDex = (updatedAvailable, updatedFilters, updatedLists) => {
     const {
-      available,
       onlyChecked,
       onlyUnchecked,
       search,
@@ -148,7 +149,7 @@ class ChecklistRaw extends React.PureComponent {
         case "normal":
         case "shiny":
         default:
-          if (!available[type].includes(number)) {
+          if (!updatedAvailable[type].includes(number)) {
             add = false;
           }
       }
@@ -164,7 +165,7 @@ class ChecklistRaw extends React.PureComponent {
       }
       if (add && search.length > 0) {
         if (
-          !pokedex[number].name.includes(search) &&
+          !pokedex[number].name.toLowerCase().includes(search.toLowerCase()) &&
           !pokedex[number].number.includes(search)
         ) {
           add = false;
@@ -179,7 +180,7 @@ class ChecklistRaw extends React.PureComponent {
   };
 
   // getUserChecklists attempts to pull the active user's checklists from the db
-  getUserChecklists = updatedFilters => {
+  getUserChecklists = (available, updatedFilters) => {
     const { user } = this.props;
     const { userLists } = this.state;
     let dex, count;
@@ -194,7 +195,7 @@ class ChecklistRaw extends React.PureComponent {
             normal: JSON.parse(data.normal),
             shiny: JSON.parse(data.shiny)
           };
-          dex = this.filterDex(updatedFilters, lists);
+          dex = this.filterDex(available, updatedFilters, lists);
           count = Math.ceil(Object.keys(dex).length / this.ENTRIES_PER_ROW);
 
           this.setState({
@@ -207,7 +208,7 @@ class ChecklistRaw extends React.PureComponent {
       });
     }
 
-    dex = this.filterDex(updatedFilters, userLists);
+    dex = this.filterDex(available, updatedFilters, userLists);
     count = Math.ceil(Object.keys(dex).length / this.ENTRIES_PER_ROW);
     this.setState({
       rowCount: count,
@@ -217,14 +218,15 @@ class ChecklistRaw extends React.PureComponent {
 
   // handleApplyFilters applies the filter changes to the data and updates the state
   handleApplyFilters = updatedFilters => {
-    const { userLists } = this.state;
-    let dex = this.filterDex(updatedFilters, userLists);
+    const { available, userLists } = this.state;
+    let dex = this.filterDex(available, updatedFilters, userLists);
     let count = Math.ceil(Object.keys(dex).length / this.ENTRIES_PER_ROW);
 
     if (this.list) {
       this.list.forceUpdateGrid();
     }
 
+    localStorage.setItem("vrFilters", JSON.stringify(updatedFilters));
     this.setState({
       filters: updatedFilters,
       rowCount: count,
@@ -243,22 +245,13 @@ class ChecklistRaw extends React.PureComponent {
       lists[filters.type].push(number);
     }
 
+    this.handleSave(lists);
     this.setState({ userLists: lists });
   };
 
-  // handleResetFilters sets the filters back to their default state
-  handleResetFilters = () => {
-    const { filters } = this.state;
-    let updatedFilters = Object.assign({}, DEFAULT_FILTERS);
-
-    updatedFilters.available = filters.available;
-    this.handleApplyFilters(updatedFilters);
-  };
-
   // handleSave updates the user checklists in the database
-  handleSave = () => {
+  handleSave = userLists => {
     const { user } = this.props;
-    const { userLists } = this.state;
 
     db.collection("checklists")
       .doc(user.uid)
@@ -346,10 +339,17 @@ class ChecklistRaw extends React.PureComponent {
   };
 
   render() {
-    const { alert, filters, rowCount, showFilters, userLists } = this.state;
+    const {
+      alert,
+      available,
+      filters,
+      rowCount,
+      showFilters,
+      userLists
+    } = this.state;
     const { theme } = this.props;
     let progress =
-      userLists[filters.type].length / filters.available[filters.type].length;
+      userLists[filters.type].length / available[filters.type].length;
 
     return (
       <div className={styles.list}>
@@ -404,11 +404,12 @@ class ChecklistRaw extends React.PureComponent {
           </Alert>
         </Snackbar>
         <Actions
-          handleSave={this.handleSave}
           handleShowFilters={() => this.setState({ showFilters: true })}
         />
         <Filters
-          resetFilters={this.handleResetFilters}
+          resetFilters={() =>
+            this.handleApplyFilters(Object.assign({}, DEFAULT_FILTERS))
+          }
           filters={filters}
           handleUpdateFilter={this.handleUpdateFilter}
           onClose={() => {

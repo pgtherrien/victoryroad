@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import clsx from "clsx";
 import { Button, CircularProgress, Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import GitHubIcon from "@material-ui/icons/GitHub";
@@ -7,47 +7,13 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import { db } from "../../utils/firebase";
 import EventModal from "../EventModal";
 import EventRow from "../EventRow";
+import styles from "./Timeline.module.css";
 
 const useStyles = makeStyles(theme => ({
-  container: {
-    height: "100%",
-    margin: "0 auto !important",
-    width: "100% !important"
-  },
-  divider: {
-    width: "100%"
-  },
-  dividerText: {
-    fontSize: "1.5em",
-    margin: "0 auto",
-    marginBottom: "20px",
-    marginTop: "20px"
-  },
-  footer: {
-    alignItems: "center",
-    backgroundColor: "#333333",
-    display: "flex",
-    height: "50px",
-    justifyContent: "center",
-    marginTop: "20px",
-    verticalAlign: "middle",
-    width: "100%"
-  },
-  loading: {
-    color: "#FFFFFF",
-    left: "50%",
-    position: "fixed",
-    right: "50%",
-    top: "50%"
-  },
   timeline: {
     [theme.breakpoints.up("md")]: {
       paddingTop: "90px"
-    },
-    backgroundColor: "#212121",
-    flexGrow: 1,
-    height: "100%",
-    paddingTop: "70px"
+    }
   }
 }));
 
@@ -63,7 +29,7 @@ export default function Timeline(props) {
   let i = 0;
   let renderedEvents = [
     <Typography
-      className={classes.dividerText}
+      className={styles.dividerText}
       color="textSecondary"
       key="dividerActive"
       variant="caption"
@@ -130,7 +96,7 @@ export default function Timeline(props) {
 
   renderedEvents.push(
     <Typography
-      className={classes.dividerText}
+      className={styles.dividerText}
       color="textSecondary"
       key="dividerUpcoming"
       variant="caption"
@@ -159,11 +125,11 @@ export default function Timeline(props) {
 
   if (events.current.length > 0 || events.upcoming.length > 0) {
     return (
-      <div className={classes.timeline}>
-        <Grid className={classes.container} container spacing={3}>
+      <div className={clsx(classes.timeline, styles.timeline)}>
+        <Grid className={styles.container} container spacing={3}>
           {renderedEvents}
         </Grid>
-        <div className={classes.footer}>
+        <div className={styles.footer}>
           <Button
             href="https://github.com/pgtherrien/victoryroad"
             startIcon={<GitHubIcon />}
@@ -181,6 +147,6 @@ export default function Timeline(props) {
       </div>
     );
   } else {
-    return <CircularProgress className={classes.loading} />;
+    return <CircularProgress className={styles.loading} />;
   }
 }

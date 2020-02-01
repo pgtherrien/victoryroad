@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import clsx from "clsx";
 import {
   Button,
   Card,
@@ -18,6 +19,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import { insertEvent } from "../../utils/gapi";
 import Countdown from "../Countdown";
+import styles from "./EventRow.module.css";
 
 function Alert(props) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
@@ -27,67 +29,37 @@ const useStyles = makeStyles(theme => ({
   background: {
     [theme.breakpoints.down("sm")]: {
       opacity: ".8"
-    },
-    minHeight: "300px",
-    opacity: ".2"
-  },
-  card: {
-    backgroundColor: "#333333",
-    margin: "1% 2% 1% 2%",
-    minHeight: "300px"
+    }
   },
   cardContent: {
     [theme.breakpoints.up("md")]: {
       display: "flex"
-    },
-    display: "block",
-    padding: "20px 25px"
+    }
   },
   countdown: {
     [theme.breakpoints.up("md")]: {
       display: "flex",
       fontSize: "xx-large",
       width: "15%"
-    },
-    alignItems: "center",
-    display: "none",
-    fontSize: "large",
-    height: "100%",
-    lineHeight: "55px",
-    position: "absolute",
-    right: 0,
-    top: 0,
-    width: "40%"
+    }
   },
   icon: {
     [theme.breakpoints.up("md")]: {
       display: "block"
-    },
-    display: "none",
-    height: "250px",
-    left: "5%",
-    position: "absolute",
-    top: "25px",
-    width: "250px"
+    }
   },
   icons: {
     [theme.breakpoints.up("md")]: {
       justifyContent: "flex-end",
       paddingTop: "0px",
       width: "50%"
-    },
-    display: "flex",
-    justifyContent: "center",
-    paddingTop: "20px",
-    width: "100%"
+    }
   },
   title: {
     [theme.breakpoints.down("sm")]: {
       textAlign: "center",
       width: "100%"
-    },
-    textAlign: "left",
-    width: "75%"
+    }
   }
 }));
 
@@ -142,19 +114,19 @@ export default function EventRow({
 
   return (
     <Grid item xs={12}>
-      <Card
-        className={classes.card}
-        onClick={() => handleSelectEvent(event.id)}
-      >
+      <Card className={styles.card} onClick={() => handleSelectEvent(event.id)}>
         <CardActionArea>
           <CardMedia
-            className={classes.background}
+            className={clsx(classes.background, styles.background)}
             component="img"
             height="250"
             image={event.background}
           />
-          <CardMedia className={classes.icon} image={event.icon} />
-          <div className={classes.countdown}>
+          <CardMedia
+            className={clsx(classes.icon, styles.icon)}
+            image={event.icon}
+          />
+          <div className={clsx(classes.countdown, styles.countdown)}>
             {new Date() > event.startDate ? (
               <Countdown label={"Ends"} date={event.endDate} />
             ) : (
@@ -162,8 +134,8 @@ export default function EventRow({
             )}
           </div>
         </CardActionArea>
-        <div className={classes.cardContent}>
-          <div className={classes.title}>
+        <div className={clsx(classes.cardContent, styles.cardContent)}>
+          <div className={clsx(classes.title, styles.title)}>
             <Typography component="h2" variant="h4">
               {event.title}
             </Typography>
@@ -176,7 +148,7 @@ export default function EventRow({
               {renderRange(event.startDate, event.endDate)}
             </Typography>
           </div>
-          <div className={classes.icons}>
+          <div className={clsx(classes.icons, styles.icons)}>
             {user.uid && (
               <Button
                 onClick={addToCalendar}

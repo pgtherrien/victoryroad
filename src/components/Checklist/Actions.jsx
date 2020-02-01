@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { FilterList, Save as SaveIcon } from "@material-ui/icons";
+import { FilterList } from "@material-ui/icons";
 import { SpeedDial, SpeedDialAction, SpeedDialIcon } from "@material-ui/lab";
 
 import styles from "./Checklist.module.css";
 
-export default function Actions({ handleSave, handleShowFilters }) {
+export default function Actions({ handleShowFilters }) {
   const [showActions, setShowActions] = useState(false);
 
   return (
@@ -22,12 +22,6 @@ export default function Actions({ handleSave, handleShowFilters }) {
         icon={<FilterList />}
         tooltipTitle="Filters"
         onClick={handleShowFilters}
-      />
-      <SpeedDialAction
-        key="save"
-        icon={<SaveIcon />}
-        tooltipTitle="Save"
-        onClick={handleSave}
       />
     </SpeedDial>
   );

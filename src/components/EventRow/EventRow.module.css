@@ -1,0 +1,48 @@
+.background {
+  min-height: 300px;
+  opacity: 0.2;
+}
+
+.card {
+  background-color: #333333;
+  margin: 1% 2%;
+  min-height: 300px;
+}
+
+.cardContent {
+  display: block;
+  padding: 20px 25px;
+}
+
+.countdown {
+  align-items: center;
+  display: none;
+  font-size: large;
+  height: 100%;
+  line-height: 55px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40%;
+}
+
+.icon {
+  display: none;
+  height: 250px;
+  left: 5%;
+  position: absolute;
+  top: 25px;
+  width: 250px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  width: 100%;
+}
+
+.title {
+  text-align: left;
+  width: 75%;
+}

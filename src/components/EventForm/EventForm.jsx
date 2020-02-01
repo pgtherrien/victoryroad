@@ -1,52 +1,17 @@
 import React, { useState } from "react";
+import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import { Button, Modal, TextField, Typography } from "@material-ui/core";
 import AddCircleIcon from "@material-ui/icons/AddCircle";
+
 import { db } from "../../utils/firebase";
+import styles from "./EventForm.module.css";
 
 const useStyles = makeStyles(theme => ({
-  leftField: {
-    marginRight: "32px",
-    marginTop: "20px",
-    width: "300px"
-  },
-  form: {
-    "& .MuiTextField-root": {
-      marginBottom: "15px"
-    },
-    "& .MuiInputBase-root": {
-      marginBottom: "15px"
-    }
-  },
   modal: {
     backgroundColor: theme.palette.background.paper,
-    borderRadius: "15px",
     boxShadow: theme.shadows[5],
-    height: "78%",
-    left: "50%",
-    outline: 0,
-    overflowY: "auto",
-    padding: theme.spacing(4, 4, 3),
-    position: "absolute",
-    right: "50%",
-    top: "50%",
-    transform: "translate(-50%, -50%)",
-    width: "750px"
-  },
-  plus: {
-    cursor: "pointer"
-  },
-  rightField: {
-    marginLeft: "32px",
-    marginTop: "20px",
-    width: "300px"
-  },
-  submit: {
-    margin: "0 auto"
-  },
-  submitWrapper: {
-    textAlign: "center",
-    width: "100%"
+    padding: theme.spacing(4, 4, 3)
   }
 }));
 
@@ -109,7 +74,7 @@ export default function EventForm(props) {
       pairs.push(
         <React.Fragment key={i}>
           <TextField
-            className={classes.leftField}
+            className={styles.leftField}
             color="secondary"
             InputLabelProps={{
               shrink: true
@@ -122,7 +87,7 @@ export default function EventForm(props) {
             variant="outlined"
           />
           <TextField
-            className={classes.rightField}
+            className={styles.rightField}
             color="secondary"
             InputLabelProps={{
               shrink: true
@@ -227,11 +192,11 @@ export default function EventForm(props) {
       open={true}
       onClose={handleClose}
     >
-      <div className={classes.modal}>
+      <div className={clsx(classes.modal, styles.styles)}>
         <Typography align="center" variant="h6">
           Event Form
         </Typography>
-        <form autoComplete="off" className={classes.form} noValidate>
+        <form autoComplete="off" className={styles.form} noValidate>
           {renderTextField("title", "Title")}
           {renderTextField("summary", "Summary")}
           {renderTextField("background", "Background")}
@@ -244,7 +209,7 @@ export default function EventForm(props) {
           </Typography>
           {renderPairs("bonuses")}
           <AddCircleIcon
-            className={classes.plus}
+            className={styles.plus}
             onClick={() => incrementArray("bonuses")}
           />
           <Typography align="center" variant="h6">
@@ -252,7 +217,7 @@ export default function EventForm(props) {
           </Typography>
           {renderPairs("features")}
           <AddCircleIcon
-            className={classes.plus}
+            className={styles.plus}
             onClick={() => incrementArray("features")}
           />
           <Typography align="center" variant="h6">
@@ -260,14 +225,14 @@ export default function EventForm(props) {
           </Typography>
           {renderNewShinies()}
           <AddCircleIcon
-            className={classes.plus}
+            className={styles.plus}
             onClick={() => incrementArray("newShinies")}
           />
           <Typography align="center" variant="h6">
             Perfect IV's
           </Typography>
           <TextField
-            className={classes.leftField}
+            className={styles.leftField}
             color="secondary"
             InputLabelProps={{
               shrink: true
@@ -278,7 +243,7 @@ export default function EventForm(props) {
             variant="outlined"
           />
           <TextField
-            className={classes.rightField}
+            className={styles.rightField}
             color="secondary"
             InputLabelProps={{
               shrink: true
@@ -288,7 +253,7 @@ export default function EventForm(props) {
             value={form.perfectIV[1]}
             variant="outlined"
           />
-          <div className={classes.submitWrapper}>
+          <div className={styles.submitWrapper}>
             <Button
               onClick={handleClose}
               style={{ marginRight: "15px" }}
@@ -297,7 +262,7 @@ export default function EventForm(props) {
               Cancel
             </Button>
             <Button
-              className={classes.submit}
+              className={styles.submit}
               color="secondary"
               onClick={handleSubmit}
               variant="contained"

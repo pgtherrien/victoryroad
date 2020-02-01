@@ -1,4 +1,5 @@
 import React from "react";
+import clsx from "clsx";
 import {
   Avatar,
   Button,
@@ -17,57 +18,21 @@ import {
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 
 import Sprite from "../Sprite";
+import styles from "./EventModal.module.css";
 
 const useStyles = makeStyles(theme => ({
-  background: {
-    height: "200px",
-    opacity: ".2"
-  },
   card: {
     [theme.breakpoints.down("sm")]: {
       width: "90%"
     },
-    backgroundColor: theme.palette.background.paper,
-    borderRadius: "15px",
-    left: "50%",
-    maxHeight: "90%",
-    outline: 0,
-    position: "absolute",
-    right: "50%",
-    top: "50%",
-    transform: "translate(-50%, -50%)",
-    width: "50%"
-  },
-  close: {
-    marginTop: "15px",
-    textAlign: "center"
+    backgroundColor: theme.palette.background.paper
   },
   content: {
     [theme.breakpoints.down("sm")]: {
       maxHeight: "450px",
       padding: theme.spacing(3, 1, 1, 1)
     },
-    maxHeight: "700px",
-    overflowY: "auto",
     padding: theme.spacing(3, 3, 1, 3)
-  },
-  sectionTitle: {
-    textDecoration: "underline"
-  },
-  shinies: {
-    marginTop: "20px"
-  },
-  title: {
-    alignItems: "center",
-    display: "flex",
-    flexDirection: "column",
-    height: "200px",
-    justifyContent: "center",
-    padding: "30px",
-    position: "absolute",
-    textAlign: "center",
-    top: 0,
-    width: "100%"
   }
 }));
 
@@ -83,7 +48,7 @@ export default function EventModal({ event, handleClose }) {
         subheader={
           <Typography
             align="center"
-            className={classes.sectionTitle}
+            className={styles.sectionTitle}
             color="textSecondary"
           >
             {label}
@@ -144,27 +109,27 @@ export default function EventModal({ event, handleClose }) {
 
   return (
     <Modal onClose={handleClose} open={true}>
-      <Card className={classes.card}>
+      <Card className={clsx(classes.card, styles.card)}>
         <CardMedia
-          className={classes.background}
+          className={styles.background}
           component="img"
           image={event.background}
         />
-        <div className={classes.title}>
+        <div className={styles.title}>
           <Typography variant="h4">{event.title}</Typography>
           <Typography variant="body2">
             {renderRange(event.startDate, event.endDate)}
           </Typography>
         </div>
-        <div className={classes.content}>
+        <div className={clsx(classes.content, styles.content)}>
           <Typography align="center" color="textSecondary" variant="body2">
             {event.summary}
           </Typography>
           {event.newShinies && event.newShinies.length > 0 && (
-            <div className={classes.shinies}>
+            <div className={styles.shinies}>
               <Typography
                 align="center"
-                className={classes.sectionTitle}
+                className={styles.sectionTitle}
                 color="textSecondary"
               >
                 New Shinies
@@ -212,7 +177,7 @@ export default function EventModal({ event, handleClose }) {
           )}
           {renderList("bonuses", "Bonuses")}
           {renderList("features", "Features")}
-          <div className={classes.close}>
+          <div className={styles.close}>
             <Button color="secondary" onClick={handleClose}>
               Close
             </Button>

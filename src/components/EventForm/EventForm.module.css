@@ -1,0 +1,45 @@
+.leftField {
+  margin-right: 32px;
+  margin-top: 20px;
+  width: 300px;
+}
+
+.form .MuiTextField-root {
+  margin-bottom: 15px;
+}
+
+.form .MuiInputBase-root {
+  margin-bottom: 15px;
+}
+
+.modal {
+  border-radius: 15px;
+  height: 78%;
+  left: 50%;
+  outline: 0;
+  overflow-y: auto;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 750px;
+}
+
+.plus {
+  cursor: pointer;
+}
+
+.rightField {
+  margin-left: 32px;
+  margin-top: 20px;
+  width: 200px;
+}
+
+.submit {
+  margin: 0 auto;
+}
+
+.submitWrapper {
+  text-align: center;
+  width: 100%;
+}

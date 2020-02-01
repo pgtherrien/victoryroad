@@ -1,0 +1,49 @@
+.background {
+  height: 200px;
+  opacity: 0.2;
+}
+
+.card {
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  max-height: 90%;
+  outline: 0;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+}
+
+.close {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.content {
+  max-height: 700px;
+  overflow-y: auto;
+}
+
+.sectionTitle {
+  text-decoration: underline;
+}
+
+.shinies {
+  margin-top: 20px;
+}
+
+.title {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  justify-content: center;
+  padding: 30px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}

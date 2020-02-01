@@ -36,7 +36,7 @@ export default function Filters({
             value={search}
           />
         </ListItem>
-        <ListItem style={{ justifyContent: "center" }}>
+        <ListItem>
           <FormControlLabel
             control={
               <Switch
@@ -47,7 +47,7 @@ export default function Filters({
             label="Only Checked"
           />
         </ListItem>
-        <ListItem style={{ justifyContent: "center" }}>
+        <ListItem>
           <FormControlLabel
             control={
               <Switch
@@ -60,7 +60,7 @@ export default function Filters({
             label="Only Unchecked"
           />
         </ListItem>
-        <ListItem style={{ justifyContent: "center" }}>
+        <ListItem>
           <FormControlLabel
             control={
               <Switch
