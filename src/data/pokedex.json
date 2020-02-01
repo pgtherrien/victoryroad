@@ -8095,7 +8095,7 @@
     "tags": ["legendary"],
     "types": ["fighting", "grass"]
   },
-  "641_00": {
+  "641_11": {
     "genders": ["male"],
     "generation": 5,
     "name": "Tornadus",
@@ -8106,7 +8106,7 @@
     "tags": ["legendary"],
     "types": ["flying"]
   },
-  "642_00": {
+  "642_11": {
     "genders": ["male"],
     "generation": 5,
     "name": "Thundurus",

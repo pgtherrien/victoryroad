@@ -1,5 +1,4 @@
 import React from "react";
-import clsx from "clsx";
 import {
   Avatar,
   Button,
@@ -25,13 +24,26 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down("sm")]: {
       width: "90%"
     },
-    backgroundColor: theme.palette.background.paper
+    backgroundColor: theme.palette.background.paper,
+    borderRadius: "15px",
+    display: "flex",
+    flexDirection: "column",
+    left: "50%",
+    maxHeight: "90%",
+    outline: 0,
+    position: "absolute",
+    right: "50%",
+    top: "50%",
+    transform: "translate(-50%, -50%)",
+    width: "50%"
   },
   content: {
     [theme.breakpoints.down("sm")]: {
       maxHeight: "450px",
       padding: theme.spacing(3, 1, 1, 1)
     },
+    maxHeight: "700px",
+    overflowY: "auto",
     padding: theme.spacing(3, 3, 1, 3)
   }
 }));
@@ -109,7 +121,7 @@ export default function EventModal({ event, handleClose }) {
 
   return (
     <Modal onClose={handleClose} open={true}>
-      <Card className={clsx(classes.card, styles.card)}>
+      <Card className={classes.card}>
         <CardMedia
           className={styles.background}
           component="img"
@@ -121,7 +133,7 @@ export default function EventModal({ event, handleClose }) {
             {renderRange(event.startDate, event.endDate)}
           </Typography>
         </div>
-        <div className={clsx(classes.content, styles.content)}>
+        <div className={classes.content}>
           <Typography align="center" color="textSecondary" variant="body2">
             {event.summary}
           </Typography>

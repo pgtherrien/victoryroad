@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import clsx from "clsx";
 import { Button, CircularProgress, Grid, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import GitHubIcon from "@material-ui/icons/GitHub";
@@ -13,7 +12,10 @@ const useStyles = makeStyles(theme => ({
   timeline: {
     [theme.breakpoints.up("md")]: {
       paddingTop: "90px"
-    }
+    },
+    backgroundColor: "#212121",
+    height: "100%",
+    paddingTop: "70px"
   }
 }));
 
@@ -125,7 +127,7 @@ export default function Timeline(props) {
 
   if (events.current.length > 0 || events.upcoming.length > 0) {
     return (
-      <div className={clsx(classes.timeline, styles.timeline)}>
+      <div className={classes.timeline}>
         <Grid className={styles.container} container spacing={3}>
           {renderedEvents}
         </Grid>

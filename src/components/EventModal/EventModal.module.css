@@ -3,28 +3,9 @@
   opacity: 0.2;
 }
 
-.card {
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  left: 50%;
-  max-height: 90%;
-  outline: 0;
-  position: absolute;
-  right: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-}
-
 .close {
   margin-top: 15px;
   text-align: center;
-}
-
-.content {
-  max-height: 700px;
-  overflow-y: auto;
 }
 
 .sectionTitle {
