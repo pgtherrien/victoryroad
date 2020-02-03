@@ -35,6 +35,12 @@ const BorderLinearProgress = withStyles({
 })(LinearProgress);
 
 const DEFAULT_FILTERS = {
+  gen1: true,
+  gen2: true,
+  gen3: true,
+  gen4: true,
+  gen5: true,
+  gen7: true,
   onlyChecked: false,
   onlyUnchecked: false,
   search: "",
@@ -141,9 +147,11 @@ class ChecklistRaw extends React.PureComponent {
     } = updatedFilters;
     let entries = {};
     let add;
+    let gen;
 
     Object.keys(pokedex).forEach(number => {
       add = true;
+      gen = "gen" + pokedex[number].generation.toString();
       switch (type) {
         case "lucky":
         case "normal":
@@ -161,6 +169,9 @@ class ChecklistRaw extends React.PureComponent {
         add = false;
       }
       if (add && !showEventForms && number.length > 6) {
+        add = false;
+      }
+      if (add && updatedFilters[gen] === false) {
         add = false;
       }
       if (add && search.length > 0) {
