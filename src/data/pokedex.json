@@ -7138,10 +7138,10 @@
     "tags": [],
     "types": ["fire"]
   },
-  "555_00": {
+  "555_11": {
     "genders": ["female", "male"],
     "generation": 5,
-    "name": "Darmanitan - Normal Mode",
+    "name": "Darmanitan - Standard Mode",
     "number": "555",
     "purified": false,
 
@@ -7149,7 +7149,7 @@
     "tags": [],
     "types": ["fire"]
   },
-  "555_01": {
+  "555_12": {
     "genders": ["female", "male"],
     "generation": 5,
     "name": "Darmanitan - Zen Mode",

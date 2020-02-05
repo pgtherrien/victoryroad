@@ -11,10 +11,17 @@ import {
   ListItemAvatar,
   ListItemText,
   Modal,
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
   Typography,
   useMediaQuery
 } from "@material-ui/core";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
+import { makeStyles, useTheme, withStyles } from "@material-ui/core/styles";
 
 import Sprite from "../Sprite";
 import styles from "./EventModal.module.css";
@@ -35,7 +42,7 @@ const useStyles = makeStyles(theme => ({
     right: "50%",
     top: "50%",
     transform: "translate(-50%, -50%)",
-    width: "83%"
+    width: "60%"
   },
   content: {
     [theme.breakpoints.down("sm")]: {
@@ -47,6 +54,22 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(3, 3, 1, 3)
   }
 }));
+
+const StyledTableHeader = withStyles(theme => ({
+  root: {
+    "&:nth-of-type(odd)": {
+      backgroundColor: theme.palette.background.default
+    }
+  }
+}))(TableRow);
+
+const StyledTableRow = withStyles(theme => ({
+  root: {
+    "&:nth-of-type(even)": {
+      backgroundColor: theme.palette.background.default
+    }
+  }
+}))(TableRow);
 
 export default function EventModal({ event, handleClose }) {
   const classes = useStyles();
@@ -110,16 +133,7 @@ export default function EventModal({ event, handleClose }) {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up("md"));
 
-  let shinyCols = event.newShinies
-    ? matches
-      ? event.newShinies.length
-      : 1
-    : 0;
-  if (matches) {
-    if (shinyCols === 3 || shinyCols > 4) {
-      shinyCols = 3;
-    }
-  }
+  let shinyCols = event.newShinies ? (matches ? 2 : 1) : 0;
 
   return (
     <Modal onClose={handleClose} open={true}>
@@ -148,7 +162,11 @@ export default function EventModal({ event, handleClose }) {
               >
                 New Shinies
               </Typography>
-              <GridList cellHeight={250} cols={shinyCols}>
+              <GridList
+                cellHeight={250}
+                cols={shinyCols}
+                style={{ justifyContent: "center" }}
+              >
                 {event.newShinies.map(shiny => (
                   <GridListTile
                     cols={1}
@@ -165,11 +183,23 @@ export default function EventModal({ event, handleClose }) {
             <div
               style={{
                 display: "flex",
+                flexDirection: "column",
                 justifyContent: "center",
                 marginTop: "15px"
               }}
             >
-              <GridList cellHeight={100} cols={2} style={{ width: "300px" }}>
+              <Typography
+                align="center"
+                className={styles.sectionTitle}
+                color="textSecondary"
+              >
+                Perfect CP's
+              </Typography>
+              <GridList
+                cellHeight={100}
+                cols={2}
+                style={{ margin: "0 auto", marginTop: "10px", width: "300px" }}
+              >
                 <GridListTile
                   col={1}
                   style={{
@@ -195,10 +225,65 @@ export default function EventModal({ event, handleClose }) {
               </GridList>
             </div>
           )}
+          {event.counters && event.counters.length > 0 && (
+            <div style={{ marginTop: "15px" }}>
+              <Typography
+                align="center"
+                className={styles.sectionTitle}
+                color="textSecondary"
+                style={{ marginBottom: "10px" }}
+              >
+                Counters
+              </Typography>
+              <TableContainer component={Paper}>
+                <Table aria-label="simple table">
+                  <TableHead>
+                    <StyledTableHeader>
+                      <TableCell>Pokémon</TableCell>
+                      <TableCell>Fast Attack</TableCell>
+                      <TableCell>Charged Attack</TableCell>
+                    </StyledTableHeader>
+                  </TableHead>
+                  <TableBody>
+                    {event.counters.map(counter => (
+                      <StyledTableRow key={counter.name}>
+                        <TableCell>{counter.name}</TableCell>
+                        <TableCell>
+                          <div className={styles.attackCell}>
+                            <img
+                              alt="fast type"
+                              className={styles.typeImage}
+                              src={counter.fastImage}
+                            />
+                            {counter.fast}
+                          </div>
+                        </TableCell>
+                        <TableCell>
+                          <div className={styles.attackCell}>
+                            <img
+                              alt="charged type"
+                              className={styles.typeImage}
+                              src={counter.chargedImage}
+                            />
+                            {counter.charged}
+                          </div>
+                        </TableCell>
+                      </StyledTableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </div>
+          )}
           {renderList("bonuses", "Bonuses")}
           {renderList("features", "Features")}
+          {renderList("voteOptions", "Vote Options")}
           <div className={styles.close}>
-            <Button color="secondary" onClick={handleClose}>
+            <Button
+              color="secondary"
+              onClick={handleClose}
+              style={{ textDecoration: "underline" }}
+            >
               Close
             </Button>
           </div>

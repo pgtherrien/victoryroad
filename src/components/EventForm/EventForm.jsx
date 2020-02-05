@@ -56,6 +56,7 @@ export default function EventForm(props) {
   let defaultForm = {
     background: props.event.background || "",
     bonuses: props.event.bonuses || [],
+    counters: props.event.counters || [],
     endDate: props.event.endDate || "",
     features: props.event.features || [],
     icon: props.event.icon || "",
@@ -64,7 +65,8 @@ export default function EventForm(props) {
     perfectIV: props.event.perfectIV || ["", ""],
     startDate: props.event.startDate || "",
     summary: props.event.summary || "",
-    title: props.event.title || ""
+    title: props.event.title || "",
+    voteOptions: props.event.voteOptions || []
   };
 
   const [form, setForm] = useState(defaultForm);
@@ -86,20 +88,122 @@ export default function EventForm(props) {
   };
 
   const incrementArray = field => {
+    let counter = {
+      charged: "",
+      chargedImage: "",
+      fast: "",
+      fastImage: "",
+      name: ""
+    };
     let standard = { image: "", text: "" };
     let shiny = { image: "" };
     let updatedForm = Object.assign({}, form);
     switch (field) {
       case "bonuses":
       case "features":
+      case "voteOptions":
       default:
         updatedForm[field].push(standard);
+        break;
+      case "counters":
+        updatedForm[field].push(counter);
         break;
       case "newShinies":
         updatedForm[field].push(shiny);
         break;
     }
     setForm(updatedForm);
+  };
+
+  const renderCounters = () => {
+    let counters = [];
+    for (var i = 0; i < form.counters.length; i++) {
+      let index = i;
+      counters.push(
+        <React.Fragment key={i}>
+          <TextField
+            color="secondary"
+            fullWidth
+            InputLabelProps={{
+              shrink: true
+            }}
+            label="Name"
+            onChange={event =>
+              updateNestedArray(index, "name", "counters", event.target.value)
+            }
+            value={form.counters[i].name}
+          />
+          <TextField
+            className={classes.leftField}
+            color="secondary"
+            InputLabelProps={{
+              shrink: true
+            }}
+            label="Fast Attack"
+            onChange={event =>
+              updateNestedArray(index, "fast", "counters", event.target.value)
+            }
+            value={form.counters[i].fast}
+            variant="outlined"
+          />
+          <TextField
+            className={classes.rightField}
+            color="secondary"
+            InputLabelProps={{
+              shrink: true
+            }}
+            label="Type Image"
+            onChange={event =>
+              updateNestedArray(
+                index,
+                "fastImage",
+                "counters",
+                event.target.value
+              )
+            }
+            value={form.counters[i].fastImage}
+            variant="outlined"
+          />
+          <TextField
+            className={classes.leftField}
+            color="secondary"
+            InputLabelProps={{
+              shrink: true
+            }}
+            label="Charged Attack"
+            onChange={event =>
+              updateNestedArray(
+                index,
+                "charged",
+                "counters",
+                event.target.value
+              )
+            }
+            value={form.counters[i].charged}
+            variant="outlined"
+          />
+          <TextField
+            className={classes.rightField}
+            color="secondary"
+            InputLabelProps={{
+              shrink: true
+            }}
+            label="Type Image"
+            onChange={event =>
+              updateNestedArray(
+                index,
+                "chargedImage",
+                "counters",
+                event.target.value
+              )
+            }
+            value={form.counters[i].chargedImage}
+            variant="outlined"
+          />
+        </React.Fragment>
+      );
+    }
+    return counters;
   };
 
   const renderPairs = field => {
@@ -248,6 +352,14 @@ export default function EventForm(props) {
             onClick={() => incrementArray("bonuses")}
           />
           <Typography align="center" variant="h6">
+            Counters
+          </Typography>
+          {renderCounters()}
+          <AddCircleIcon
+            className={classes.plus}
+            onClick={() => incrementArray("counters")}
+          />
+          <Typography align="center" variant="h6">
             Features
           </Typography>
           {renderPairs("features")}
@@ -287,6 +399,14 @@ export default function EventForm(props) {
             onChange={event => updateArray("perfectIV", 1, event.target.value)}
             value={form.perfectIV[1]}
             variant="outlined"
+          />
+          <Typography align="center" variant="h6">
+            Vote Options
+          </Typography>
+          {renderPairs("voteOptions")}
+          <AddCircleIcon
+            className={classes.plus}
+            onClick={() => incrementArray("voteOptions")}
           />
           <div className={classes.submitWrapper}>
             <Button
