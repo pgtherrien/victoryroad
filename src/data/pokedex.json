@@ -21,6 +21,17 @@
     "templateId": "V0001_POKEMON_BULBASAUR",
     "types": ["poison", "grass"]
   },
+  "001_00_11": {
+    "genders": ["female", "male"],
+    "generation": 1,
+    "name": "Bulbasaur - Party Hat",
+    "number": "001",
+    "purified": true,
+    "shadow": true,
+    "tags": ["starter"],
+    "templateId": "V0001_POKEMON_BULBASAUR",
+    "types": ["poison", "grass"]
+  },
   "002_00": {
     "genders": ["female", "male"],
     "generation": 1,
@@ -60,6 +71,18 @@
     "genders": ["female", "male"],
     "generation": 1,
     "name": "Charmander - Halloween Costume",
+    "number": "004",
+    "purified": true,
+
+    "shadow": true,
+    "tags": ["starter"],
+    "templateId": "V0004_POKEMON_CHARMANDER",
+    "types": ["fire"]
+  },
+  "004_00_11": {
+    "genders": ["female", "male"],
+    "generation": 1,
+    "name": "Charmander - Party Hat",
     "number": "004",
     "purified": true,
 
@@ -120,6 +143,17 @@
     "genders": ["female", "male"],
     "generation": 1,
     "name": "Sunglasses Squirtle",
+    "number": "007",
+    "purified": false,
+
+    "shadow": false,
+    "tags": ["starter"],
+    "types": ["water"]
+  },
+  "007_00_11": {
+    "genders": ["female", "male"],
+    "generation": 1,
+    "name": "Squirtle - Party Hat",
     "number": "007",
     "purified": false,
 
@@ -311,7 +345,7 @@
   "020_00_11": {
     "genders": ["female", "male"],
     "generation": 1,
-    "name": "Raticate - Party Hat",
+    "name": "Raticate - New Years Hat",
     "number": "020",
     "purified": true,
 
@@ -401,10 +435,9 @@
   "025_00_02": {
     "genders": ["female", "male"],
     "generation": 1,
-    "name": "Pikachu - Party Hat",
+    "name": "Pikachu - New Years Hat",
     "number": "025",
     "purified": false,
-
     "shadow": false,
     "tags": [],
     "types": ["electric"]
@@ -497,6 +530,17 @@
     "tags": [],
     "types": ["electric"]
   },
+  "025_00_12": {
+    "genders": ["female", "male"],
+    "generation": 1,
+    "name": "Pikachu - Party Hat",
+    "number": "025",
+    "purified": false,
+
+    "shadow": false,
+    "tags": [],
+    "types": ["electric"]
+  },
   "026_00": {
     "genders": ["female", "male"],
     "generation": 1,
@@ -524,7 +568,7 @@
   "026_00_02": {
     "genders": ["female", "male"],
     "generation": 1,
-    "name": "Raichu - Party Hat",
+    "name": "Raichu - New Years Hat",
     "number": "026",
     "purified": false,
 
@@ -724,6 +768,17 @@
     "genders": ["male"],
     "generation": 1,
     "name": "Nidorino",
+    "number": "033",
+    "purified": false,
+
+    "shadow": false,
+    "tags": [],
+    "types": ["poison"]
+  },
+  "033_00_11": {
+    "genders": ["male"],
+    "generation": 1,
+    "name": "Nidorino - Party Hat",
     "number": "033",
     "purified": false,
 
@@ -1557,7 +1612,16 @@
     "name": "Gengar",
     "number": "094",
     "purified": false,
-
+    "shadow": false,
+    "tags": [],
+    "types": ["poison", "ghost"]
+  },
+  "094_00_11": {
+    "genders": ["female", "male"],
+    "generation": 1,
+    "name": "Gengar - Party Hat",
+    "number": "094",
+    "purified": false,
     "shadow": false,
     "tags": [],
     "types": ["poison", "ghost"]
@@ -2029,6 +2093,17 @@
     "genders": ["female", "male"],
     "generation": 1,
     "name": "Eevee - Flower Crown",
+    "number": "133",
+    "purified": false,
+
+    "shadow": false,
+    "tags": [],
+    "types": ["normal"]
+  },
+  "133_00_11": {
+    "genders": ["female", "male"],
+    "generation": 1,
+    "name": "Eevee - Party Hat",
     "number": "133",
     "purified": false,
 
@@ -2530,7 +2605,7 @@
   "172_00_02": {
     "genders": ["female", "male"],
     "generation": 2,
-    "name": "Pichu - Party Hat",
+    "name": "Pichu - New Years Hat",
     "number": "172",
     "purified": false,
 
@@ -2939,7 +3014,7 @@
   "202_00_11": {
     "genders": ["female", "male"],
     "generation": 2,
-    "name": "Wobbuffet - Party Hat",
+    "name": "Wobbuffet - New Years Hat",
     "number": "202",
     "purified": false,
 
@@ -3663,7 +3738,7 @@
   "265_00_11": {
     "genders": ["female", "male"],
     "generation": 3,
-    "name": "Wurmple - Party Hat",
+    "name": "Wurmple - New Years Hat",
     "number": "265",
     "purified": false,
 
