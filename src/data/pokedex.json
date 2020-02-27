@@ -49,7 +49,17 @@
     "name": "Venusaur",
     "number": "003",
     "purified": true,
-
+    "shadow": true,
+    "tags": ["starter"],
+    "templateId": "V0003_POKEMON_VENUSAUR",
+    "types": ["poison", "grass"]
+  },
+  "003_00_13": {
+    "genders": ["female", "male"],
+    "generation": 1,
+    "name": "Clone Venusaur",
+    "number": "003",
+    "purified": true,
     "shadow": true,
     "tags": ["starter"],
     "templateId": "V0003_POKEMON_VENUSAUR",
@@ -61,7 +71,6 @@
     "name": "Charmander",
     "number": "004",
     "purified": true,
-
     "shadow": true,
     "tags": ["starter"],
     "templateId": "V0004_POKEMON_CHARMANDER",
@@ -110,6 +119,17 @@
     "number": "006",
     "purified": true,
 
+    "shadow": true,
+    "tags": ["starter"],
+    "templateId": "V0006_POKEMON_CHARIZARD",
+    "types": ["flying", "fire"]
+  },
+  "006_00_13": {
+    "genders": ["female", "male"],
+    "generation": 1,
+    "name": "Clone Charizard",
+    "number": "006",
+    "purified": true,
     "shadow": true,
     "tags": ["starter"],
     "templateId": "V0006_POKEMON_CHARIZARD",
@@ -203,6 +223,16 @@
     "number": "009",
     "purified": false,
 
+    "shadow": false,
+    "tags": ["starter"],
+    "types": ["water"]
+  },
+  "009_00_13": {
+    "genders": ["female", "male"],
+    "generation": 1,
+    "name": "Clone Blastoise",
+    "number": "009",
+    "purified": false,
     "shadow": false,
     "tags": ["starter"],
     "types": ["water"]
@@ -534,6 +564,17 @@
     "genders": ["female", "male"],
     "generation": 1,
     "name": "Pikachu - Party Hat",
+    "number": "025",
+    "purified": false,
+
+    "shadow": false,
+    "tags": [],
+    "types": ["electric"]
+  },
+  "025_00_13": {
+    "genders": ["female", "male"],
+    "generation": 1,
+    "name": "Clone Pikachu",
     "number": "025",
     "purified": false,
 
