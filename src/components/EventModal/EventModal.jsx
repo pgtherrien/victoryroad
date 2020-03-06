@@ -42,7 +42,7 @@ const useStyles = makeStyles(theme => ({
     right: "50%",
     top: "50%",
     transform: "translate(-50%, -50%)",
-    width: "60%"
+    width: "75%"
   },
   content: {
     [theme.breakpoints.down("sm")]: {
@@ -52,6 +52,16 @@ const useStyles = makeStyles(theme => ({
     maxHeight: "90%",
     overflowY: "auto",
     padding: theme.spacing(3, 3, 1, 3)
+  },
+  standardImage: {
+    height: "40px",
+    marginRight: "5px",
+    width: "40px"
+  },
+  typeImage: {
+    height: "20px",
+    marginRight: "5px",
+    width: "20px"
   }
 }));
 
@@ -81,11 +91,7 @@ export default function EventModal({ event, handleClose }) {
         aria-labelledby={`${field}-header`}
         style={{ marginTop: "20px" }}
         subheader={
-          <Typography
-            align="center"
-            className={styles.sectionTitle}
-            color="textSecondary"
-          >
+          <Typography align="center" className={styles.sectionTitle}>
             {label}
           </Typography>
         }
@@ -133,7 +139,7 @@ export default function EventModal({ event, handleClose }) {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.up("md"));
 
-  let shinyCols = event.newShinies ? (matches ? 2 : 1) : 0;
+  let shinyCols = event.newShinies ? (matches ? 3 : 1) : 0;
 
   return (
     <Modal onClose={handleClose} open={true}>
@@ -150,16 +156,34 @@ export default function EventModal({ event, handleClose }) {
           </Typography>
         </div>
         <div className={classes.content}>
-          <Typography align="center" color="textSecondary" variant="body2">
+          <Typography align="center" variant="body2">
             {event.summary}
           </Typography>
+          {event.newPokemon && event.newPokemon.length > 0 && (
+            <div className={styles.shinies}>
+              <Typography align="center" className={styles.sectionTitle}>
+                New Pokémon
+              </Typography>
+              <GridList
+                cellHeight={250}
+                cols={shinyCols}
+                style={{ justifyContent: "center" }}
+              >
+                {event.newPokemon.map(pokemon => (
+                  <GridListTile
+                    cols={1}
+                    key={pokemon}
+                    style={{ display: "flex", justifyContent: "center" }}
+                  >
+                    <Sprite showShiny={false} src={pokemon} />
+                  </GridListTile>
+                ))}
+              </GridList>
+            </div>
+          )}
           {event.newShinies && event.newShinies.length > 0 && (
             <div className={styles.shinies}>
-              <Typography
-                align="center"
-                className={styles.sectionTitle}
-                color="textSecondary"
-              >
+              <Typography align="center" className={styles.sectionTitle}>
                 New Shinies
               </Typography>
               <GridList
@@ -188,11 +212,7 @@ export default function EventModal({ event, handleClose }) {
                 marginTop: "15px"
               }}
             >
-              <Typography
-                align="center"
-                className={styles.sectionTitle}
-                color="textSecondary"
-              >
+              <Typography align="center" className={styles.sectionTitle}>
                 Perfect CP's
               </Typography>
               <GridList
@@ -207,7 +227,7 @@ export default function EventModal({ event, handleClose }) {
                     height: "45px"
                   }}
                 >
-                  <Typography align="center" color="textSecondary" variant="h4">
+                  <Typography align="center" variant="h4">
                     {event.perfectIV[0]}
                   </Typography>
                 </GridListTile>
@@ -218,7 +238,7 @@ export default function EventModal({ event, handleClose }) {
                     height: "45px"
                   }}
                 >
-                  <Typography align="center" color="textSecondary" variant="h4">
+                  <Typography align="center" variant="h4">
                     {event.perfectIV[1]}
                   </Typography>
                 </GridListTile>
@@ -230,7 +250,6 @@ export default function EventModal({ event, handleClose }) {
               <Typography
                 align="center"
                 className={styles.sectionTitle}
-                color="textSecondary"
                 style={{ marginBottom: "10px" }}
               >
                 Counters
@@ -252,7 +271,7 @@ export default function EventModal({ event, handleClose }) {
                           <div className={styles.attackCell}>
                             <img
                               alt="fast type"
-                              className={styles.typeImage}
+                              className={classes.typeImage}
                               src={counter.fastImage}
                             />
                             {counter.fast}
@@ -262,7 +281,7 @@ export default function EventModal({ event, handleClose }) {
                           <div className={styles.attackCell}>
                             <img
                               alt="charged type"
-                              className={styles.typeImage}
+                              className={classes.typeImage}
                               src={counter.chargedImage}
                             />
                             {counter.charged}
@@ -275,8 +294,68 @@ export default function EventModal({ event, handleClose }) {
               </TableContainer>
             </div>
           )}
-          {renderList("bonuses", "Bonuses")}
-          {renderList("features", "Features")}
+          {event.bonuses && event.bonuses.length > 0 && (
+            <div style={{ marginTop: "15px" }}>
+              <TableContainer boxShadow={3} component={Paper}>
+                <Table aria-label="simple table">
+                  <TableHead>
+                    <StyledTableHeader>
+                      <TableCell colSpan={12} style={{ textAlign: "center" }}>
+                        Bonuses
+                      </TableCell>
+                    </StyledTableHeader>
+                  </TableHead>
+                  <TableBody>
+                    {event.bonuses.map(bonus => (
+                      <StyledTableRow key={bonus.image}>
+                        <TableCell>
+                          <div className={styles.attackCell}>
+                            <img
+                              alt="bonus"
+                              className={classes.standardImage}
+                              src={bonus.image}
+                            />
+                          </div>
+                        </TableCell>
+                        <TableCell>{bonus.text}</TableCell>
+                      </StyledTableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </div>
+          )}
+          {event.features && event.features.length > 0 && (
+            <div style={{ marginTop: "15px" }}>
+              <TableContainer boxShadow={3} component={Paper}>
+                <Table aria-label="simple table">
+                  <TableHead>
+                    <StyledTableHeader>
+                      <TableCell colSpan={12} style={{ textAlign: "center" }}>
+                        Features
+                      </TableCell>
+                    </StyledTableHeader>
+                  </TableHead>
+                  <TableBody>
+                    {event.features.map(feature => (
+                      <StyledTableRow key={feature.image}>
+                        <TableCell>
+                          <div className={styles.attackCell}>
+                            <img
+                              alt="feature"
+                              className={classes.standardImage}
+                              src={feature.image}
+                            />
+                          </div>
+                        </TableCell>
+                        <TableCell>{feature.text}</TableCell>
+                      </StyledTableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </div>
+          )}
           {renderList("voteOptions", "Vote Options")}
           <div className={styles.close}>
             <Button

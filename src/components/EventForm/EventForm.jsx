@@ -51,22 +51,53 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function EventForm(props) {
-  const { handleClose } = props;
+  const { event, handleClose } = props;
+  const {
+    background,
+    bonuses,
+    counters,
+    endDate,
+    features,
+    icon,
+    link,
+    newPokemon,
+    newShinies,
+    perfectIV,
+    startDate,
+    summary,
+    title,
+    voteOptions
+  } = event;
 
   let defaultForm = {
-    background: props.event.background || "",
-    bonuses: props.event.bonuses || [],
-    counters: props.event.counters || [],
-    endDate: props.event.endDate || "",
-    features: props.event.features || [],
-    icon: props.event.icon || "",
-    link: props.event.link || "",
-    newShinies: props.event.newShinies || [],
-    perfectIV: props.event.perfectIV || ["", ""],
-    startDate: props.event.startDate || "",
-    summary: props.event.summary || "",
-    title: props.event.title || "",
-    voteOptions: props.event.voteOptions || []
+    background: background || "",
+    bonuses: bonuses || [],
+    counters: counters || [],
+    endDate: endDate || "",
+    features: features || [],
+    icon: icon || "",
+    link: link || "",
+    newPokemon:
+      newPokemon && newPokemon.length > 0
+        ? newPokemon.map(pokemon => {
+            return {
+              image: pokemon
+            };
+          })
+        : [],
+    newShinies:
+      newShinies && newShinies.length > 0
+        ? newShinies.map(pokemon => {
+            return {
+              image: pokemon
+            };
+          })
+        : [],
+    perfectIV: perfectIV || ["", ""],
+    startDate: startDate || "",
+    summary: summary || "",
+    title: title || "",
+    voteOptions: voteOptions || []
   };
 
   const [form, setForm] = useState(defaultForm);
@@ -95,8 +126,8 @@ export default function EventForm(props) {
       fastImage: "",
       name: ""
     };
+    let pokemon = { image: "" };
     let standard = { image: "", text: "" };
-    let shiny = { image: "" };
     let updatedForm = Object.assign({}, form);
     switch (field) {
       case "bonuses":
@@ -108,8 +139,11 @@ export default function EventForm(props) {
       case "counters":
         updatedForm[field].push(counter);
         break;
+      case "newPokemon":
+        updatedForm[field].push(pokemon);
+        break;
       case "newShinies":
-        updatedForm[field].push(shiny);
+        updatedForm[field].push(pokemon);
         break;
     }
     setForm(updatedForm);
@@ -244,11 +278,11 @@ export default function EventForm(props) {
     return pairs;
   };
 
-  const renderNewShinies = () => {
-    let shinies = [];
-    for (var i = 0; i < form.newShinies.length; i++) {
+  const renderNew = field => {
+    let list = [];
+    for (var i = 0; i < form[field].length; i++) {
       let index = i;
-      shinies.push(
+      list.push(
         <TextField
           color="secondary"
           fullWidth
@@ -257,15 +291,13 @@ export default function EventForm(props) {
           }}
           key={i}
           label="Image"
-          onChange={event =>
-            updateArray("newShinies", index, event.target.value)
-          }
-          value={form.newShinies[index].image}
+          onChange={event => updateArray(field, index, event.target.value)}
+          value={form[field][index].image}
           variant="outlined"
         />
       );
     }
-    return shinies;
+    return list;
   };
 
   const renderDateField = (field, label) => {
@@ -368,9 +400,17 @@ export default function EventForm(props) {
             onClick={() => incrementArray("features")}
           />
           <Typography align="center" variant="h6">
+            New Pokémon
+          </Typography>
+          {renderNew("newPokemon")}
+          <AddCircleIcon
+            className={classes.plus}
+            onClick={() => incrementArray("newPokemon")}
+          />
+          <Typography align="center" variant="h6">
             New Shinies
           </Typography>
-          {renderNewShinies()}
+          {renderNew("newShinies")}
           <AddCircleIcon
             className={classes.plus}
             onClick={() => incrementArray("newShinies")}
