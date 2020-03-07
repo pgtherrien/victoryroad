@@ -104,11 +104,14 @@ export default function EventForm(props) {
   const classes = useStyles();
 
   const handleSubmit = () => {
-    delete form.id;
+    let submitForm = Object.assign({}, form);
+    delete submitForm.id;
+    submitForm.newPokemon = submitForm.newPokemon.map(pokemon => pokemon.image);
+    submitForm.newShinies = submitForm.newShinies.map(shiny => shiny.image);
     db.collection("events")
-      .doc(form.title)
+      .doc(submitForm.title)
       .set({
-        ...form
+        ...submitForm
       })
       .then(() => {
         handleClose();
@@ -291,7 +294,7 @@ export default function EventForm(props) {
           }}
           key={i}
           label="Image"
-          onChange={event => updateArray(field, index, event.target.value)}
+          onChange={event => updateNew(field, index, event.target.value)}
           value={form[field][index].image}
           variant="outlined"
         />
@@ -353,6 +356,12 @@ export default function EventForm(props) {
   const updateNestedArray = (i, nestedField, parentField, value) => {
     let updatedForm = Object.assign({}, form);
     updatedForm[parentField][i][nestedField] = value;
+    setForm(updatedForm);
+  };
+
+  const updateNew = (field, i, value) => {
+    let updatedForm = Object.assign({}, form);
+    updatedForm[field][i] = { image: value };
     setForm(updatedForm);
   };
 

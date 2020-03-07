@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down("sm")]: {
       width: "90%"
     },
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: "#3b3b3b",
     borderRadius: "15px",
     display: "flex",
     flexDirection: "column",
@@ -89,12 +89,8 @@ export default function EventModal({ event, handleClose }) {
       <List
         component="nav"
         aria-labelledby={`${field}-header`}
-        style={{ marginTop: "20px" }}
-        subheader={
-          <Typography align="center" className={styles.sectionTitle}>
-            {label}
-          </Typography>
-        }
+        style={{ marginTop: "40px" }}
+        subheader={<Typography align="center">{label}</Typography>}
       >
         {event[field].map(item => (
           <ListItem alignItems="center" key={item.text}>
@@ -161,7 +157,12 @@ export default function EventModal({ event, handleClose }) {
           </Typography>
           {event.newPokemon && event.newPokemon.length > 0 && (
             <div className={styles.shinies}>
-              <Typography align="center" className={styles.sectionTitle}>
+              <Typography
+                align="center"
+                gutterBottom
+                style={{ marginBottom: "10px" }}
+                variant="h5"
+              >
                 New Pokémon
               </Typography>
               <GridList
@@ -183,7 +184,12 @@ export default function EventModal({ event, handleClose }) {
           )}
           {event.newShinies && event.newShinies.length > 0 && (
             <div className={styles.shinies}>
-              <Typography align="center" className={styles.sectionTitle}>
+              <Typography
+                align="center"
+                gutterBottom
+                style={{ marginBottom: "10px" }}
+                variant="h5"
+              >
                 New Shinies
               </Typography>
               <GridList
@@ -204,56 +210,70 @@ export default function EventModal({ event, handleClose }) {
             </div>
           )}
           {event.perfectIV && event.perfectIV[0].length > 0 && (
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                marginTop: "15px"
-              }}
-            >
-              <Typography align="center" className={styles.sectionTitle}>
-                Perfect CP's
-              </Typography>
-              <GridList
-                cellHeight={100}
-                cols={2}
-                style={{ margin: "0 auto", marginTop: "10px", width: "300px" }}
-              >
-                <GridListTile
-                  col={1}
-                  style={{
-                    borderRight: "1px solid #C3C3BE",
-                    height: "45px"
-                  }}
-                >
-                  <Typography align="center" variant="h4">
-                    {event.perfectIV[0]}
-                  </Typography>
-                </GridListTile>
-                <GridListTile
-                  col={1}
-                  style={{
-                    borderLeft: "1px solid #C3C3BE",
-                    height: "45px"
-                  }}
-                >
-                  <Typography align="center" variant="h4">
-                    {event.perfectIV[1]}
-                  </Typography>
-                </GridListTile>
-              </GridList>
+            <div style={{ marginTop: "40px" }}>
+              <TableContainer component={Paper}>
+                <Table aria-label="simple table">
+                  <TableHead>
+                    <StyledTableHeader>
+                      <TableCell colSpan={6} style={{ textAlign: "center" }}>
+                        Level 20 Perfect CP
+                      </TableCell>
+                      <TableCell colSpan={6} style={{ textAlign: "center" }}>
+                        Level 25 Perfect CP
+                      </TableCell>
+                    </StyledTableHeader>
+                  </TableHead>
+                  <TableBody>
+                    <StyledTableRow>
+                      <TableCell colSpan={6} style={{ textAlign: "center" }}>
+                        <Typography gutterBottom variant="h6">
+                          {event.perfectIV[0]}
+                        </Typography>
+                      </TableCell>
+                      <TableCell colSpan={6} style={{ textAlign: "center" }}>
+                        <Typography gutterBottom variant="h6">
+                          {event.perfectIV[1]}
+                        </Typography>
+                      </TableCell>
+                    </StyledTableRow>
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </div>
+          )}
+          {event.bonuses && event.bonuses.length > 0 && (
+            <div style={{ marginTop: "40px" }}>
+              <TableContainer component={Paper}>
+                <Table aria-label="simple table">
+                  <TableHead>
+                    <StyledTableHeader>
+                      <TableCell colSpan={12} style={{ textAlign: "center" }}>
+                        Bonuses
+                      </TableCell>
+                    </StyledTableHeader>
+                  </TableHead>
+                  <TableBody>
+                    {event.bonuses.map(bonus => (
+                      <StyledTableRow key={bonus.image}>
+                        <TableCell>
+                          <div className={styles.attackCell}>
+                            <img
+                              alt="bonus"
+                              className={classes.standardImage}
+                              src={bonus.image}
+                            />
+                          </div>
+                        </TableCell>
+                        <TableCell>{bonus.text}</TableCell>
+                      </StyledTableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </TableContainer>
             </div>
           )}
           {event.counters && event.counters.length > 0 && (
-            <div style={{ marginTop: "15px" }}>
-              <Typography
-                align="center"
-                className={styles.sectionTitle}
-                style={{ marginBottom: "10px" }}
-              >
-                Counters
-              </Typography>
+            <div style={{ marginTop: "40px" }}>
               <TableContainer component={Paper}>
                 <Table aria-label="simple table">
                   <TableHead>
@@ -294,40 +314,9 @@ export default function EventModal({ event, handleClose }) {
               </TableContainer>
             </div>
           )}
-          {event.bonuses && event.bonuses.length > 0 && (
-            <div style={{ marginTop: "15px" }}>
-              <TableContainer boxShadow={3} component={Paper}>
-                <Table aria-label="simple table">
-                  <TableHead>
-                    <StyledTableHeader>
-                      <TableCell colSpan={12} style={{ textAlign: "center" }}>
-                        Bonuses
-                      </TableCell>
-                    </StyledTableHeader>
-                  </TableHead>
-                  <TableBody>
-                    {event.bonuses.map(bonus => (
-                      <StyledTableRow key={bonus.image}>
-                        <TableCell>
-                          <div className={styles.attackCell}>
-                            <img
-                              alt="bonus"
-                              className={classes.standardImage}
-                              src={bonus.image}
-                            />
-                          </div>
-                        </TableCell>
-                        <TableCell>{bonus.text}</TableCell>
-                      </StyledTableRow>
-                    ))}
-                  </TableBody>
-                </Table>
-              </TableContainer>
-            </div>
-          )}
           {event.features && event.features.length > 0 && (
-            <div style={{ marginTop: "15px" }}>
-              <TableContainer boxShadow={3} component={Paper}>
+            <div style={{ marginTop: "40px" }}>
+              <TableContainer component={Paper}>
                 <Table aria-label="simple table">
                   <TableHead>
                     <StyledTableHeader>
