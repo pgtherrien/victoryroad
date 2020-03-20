@@ -210,7 +210,15 @@ export default function EventModal({ event, handleClose }) {
             </div>
           )}
           {event.perfectIV && event.perfectIV[0].length > 0 && (
-            <div style={{ marginTop: "40px" }}>
+            <div style={{ marginTop: "20px" }}>
+              <Typography
+                align="center"
+                gutterBottom
+                style={{ marginBottom: "20px" }}
+                variant="h5"
+              >
+                Perfect CP's
+              </Typography>
               <TableContainer component={Paper}>
                 <Table aria-label="simple table">
                   <TableHead>
@@ -273,7 +281,15 @@ export default function EventModal({ event, handleClose }) {
             </div>
           )}
           {event.counters && event.counters.length > 0 && (
-            <div style={{ marginTop: "40px" }}>
+            <div style={{ marginTop: "20px" }}>
+              <Typography
+                align="center"
+                gutterBottom
+                style={{ marginBottom: "20px" }}
+                variant="h5"
+              >
+                Counters
+              </Typography>
               <TableContainer component={Paper}>
                 <Table aria-label="simple table">
                   <TableHead>

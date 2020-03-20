@@ -4,6 +4,18 @@ body,
   width: 100%;
 }
 
-body::-webkit-scrollbar {
-  display: none;
+::-webkit-scrollbar {
+  background-color: #212121;
+  width: 0.75em !important;
+  z-index: 3;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px #212121 !important;
+  -webkit-box-shadow: inset 0 0 6px #212121 !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #333333 !important;
+  outline: 1px solid #333333 !important;
 }

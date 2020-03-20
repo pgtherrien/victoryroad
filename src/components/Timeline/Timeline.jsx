@@ -1,23 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Button, CircularProgress, Grid, Typography } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
 import GitHubIcon from "@material-ui/icons/GitHub";
 
 import { db } from "../../utils/firebase";
 import EventModal from "../EventModal";
 import EventRow from "../EventRow";
 import styles from "./Timeline.module.css";
-
-const useStyles = makeStyles(theme => ({
-  timeline: {
-    [theme.breakpoints.up("md")]: {
-      paddingTop: "90px"
-    },
-    backgroundColor: "#212121",
-    height: "100%",
-    paddingTop: "70px"
-  }
-}));
 
 export default function Timeline(props) {
   const { admins, handleSelectEditEvent, user } = props;
@@ -27,7 +15,6 @@ export default function Timeline(props) {
     upcoming: []
   });
   const [selectedEventID, setSelectedEventID] = useState("");
-  const classes = useStyles();
   let i = 0;
   let renderedEvents = [
     <Typography
@@ -127,7 +114,7 @@ export default function Timeline(props) {
 
   if (events.current.length > 0 || events.upcoming.length > 0) {
     return (
-      <div className={classes.timeline}>
+      <div className={styles.timeline}>
         <Grid className={styles.container} container spacing={3}>
           {renderedEvents}
         </Grid>

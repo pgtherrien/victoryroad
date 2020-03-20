@@ -9,7 +9,7 @@ admin.initializeApp(functions.config().firebase);
 //  response.send("Hello from Firebase!");
 // });
 
-functions.auth.user().onCreate(user => {
+exports.createUserchecklist = functions.auth.user().onCreate(user => {
   checklist = {
     lucky: "[]",
     normal: "[]",
@@ -17,7 +17,7 @@ functions.auth.user().onCreate(user => {
     shiny: "[]",
     shadow: "[]"
   };
-
+  debugger;
   admin
     .firestore()
     .collection("checklists")

@@ -35,14 +35,13 @@ const BorderLinearProgress = withStyles({
 })(LinearProgress);
 
 const DEFAULT_FILTERS = {
+  checked: false,
   gen1: true,
   gen2: true,
   gen3: true,
   gen4: true,
   gen5: true,
   gen7: true,
-  onlyChecked: false,
-  onlyUnchecked: false,
   search: "",
   showEventForms: false,
   type: "normal"
@@ -139,8 +138,11 @@ class ChecklistRaw extends React.PureComponent {
   // filterDex returns the remaining entries after filters are applied
   filterDex = (updatedAvailable, updatedFilters, updatedLists) => {
     const {
-      onlyChecked,
-      onlyUnchecked,
+      baby,
+      checked,
+      legendary,
+      mythical,
+      regional,
       search,
       showEventForms,
       type
@@ -162,10 +164,7 @@ class ChecklistRaw extends React.PureComponent {
           }
       }
 
-      if (add && onlyChecked && !updatedLists[type].includes(number)) {
-        add = false;
-      }
-      if (add && onlyUnchecked && updatedLists[type].includes(number)) {
+      if (add && !checked && updatedLists[type].includes(number)) {
         add = false;
       }
       if (add && !showEventForms && number.length > 6) {
@@ -179,6 +178,26 @@ class ChecklistRaw extends React.PureComponent {
           !pokedex[number].name.toLowerCase().includes(search.toLowerCase()) &&
           !pokedex[number].number.includes(search)
         ) {
+          add = false;
+        }
+      }
+      if (add && baby) {
+        if (!pokedex[number].tags.includes("baby")) {
+          add = false;
+        }
+      }
+      if (add && legendary) {
+        if (!pokedex[number].tags.includes("legendary")) {
+          add = false;
+        }
+      }
+      if (add && mythical) {
+        if (!pokedex[number].tags.includes("mythical")) {
+          add = false;
+        }
+      }
+      if (add && regional) {
+        if (!pokedex[number].tags.includes("regional")) {
           add = false;
         }
       }
@@ -248,6 +267,7 @@ class ChecklistRaw extends React.PureComponent {
   // handleCheck updates the
   handleCheck = number => {
     const { filters, userLists } = this.state;
+    const { user } = this.props;
     let lists = Object.assign({}, userLists);
 
     if (lists[filters.type].includes(number)) {
@@ -256,7 +276,9 @@ class ChecklistRaw extends React.PureComponent {
       lists[filters.type].push(number);
     }
 
-    this.handleSave(lists);
+    if (user.uid && user.uid.length > 0) {
+      this.handleSave(lists);
+    }
     this.setState({ userLists: lists });
   };
 

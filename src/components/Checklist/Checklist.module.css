@@ -36,7 +36,7 @@
 }
 
 .virtualized::-webkit-scrollbar {
-  width: 0.4em !important;
+  width: 0.5em !important;
 }
 
 .virtualized::-webkit-scrollbar-track {

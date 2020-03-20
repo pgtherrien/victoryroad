@@ -1,7 +1,10 @@
 export const DEFAULT_FILTERS = {
+  baby: false,
+  checked: false,
   generations: [],
-  onlyChecked: false,
-  onlyUnchecked: false,
+  legendary: false,
+  mythical: false,
+  regional: false,
   search: "",
   showEventForms: false,
   tags: [],
@@ -22,15 +25,6 @@ export const IGNORE_STRINGS = [
   "STORAGE",
   "NORMAL"
 ];
-
-export const TAG_COLORS = {
-  alolan: "yellow",
-  baby: "teal",
-  legendary: "red",
-  mythical: "purple",
-  regional: "green",
-  starter: "blue"
-};
 
 export const TYPE_COLORS = {
   normal: "#A8A77A",

@@ -4,8 +4,7 @@
     "generation": 1,
     "name": "Bulbasaur",
     "number": "001",
-    "purified": true,
-    "shadow": true,
+
     "tags": ["starter"],
     "templateId": "V0001_POKEMON_BULBASAUR",
     "types": ["poison", "grass"]
@@ -15,8 +14,7 @@
     "generation": 1,
     "name": "Bulbasaur - Halloween Costume",
     "number": "001",
-    "purified": true,
-    "shadow": true,
+
     "tags": ["starter"],
     "templateId": "V0001_POKEMON_BULBASAUR",
     "types": ["poison", "grass"]
@@ -26,8 +24,7 @@
     "generation": 1,
     "name": "Bulbasaur - Party Hat",
     "number": "001",
-    "purified": true,
-    "shadow": true,
+
     "tags": ["starter"],
     "templateId": "V0001_POKEMON_BULBASAUR",
     "types": ["poison", "grass"]
@@ -37,8 +34,7 @@
     "generation": 1,
     "name": "Ivysaur",
     "number": "002",
-    "purified": true,
-    "shadow": true,
+
     "tags": ["starter"],
     "templateId": "V0002_POKEMON_IVYSAUR",
     "types": ["poison", "grass"]
@@ -48,8 +44,7 @@
     "generation": 1,
     "name": "Venusaur",
     "number": "003",
-    "purified": true,
-    "shadow": true,
+
     "tags": ["starter"],
     "templateId": "V0003_POKEMON_VENUSAUR",
     "types": ["poison", "grass"]
@@ -59,8 +54,7 @@
     "generation": 1,
     "name": "Clone Venusaur",
     "number": "003",
-    "purified": true,
-    "shadow": true,
+
     "tags": ["starter"],
     "templateId": "V0003_POKEMON_VENUSAUR",
     "types": ["poison", "grass"]
@@ -70,8 +64,7 @@
     "generation": 1,
     "name": "Charmander",
     "number": "004",
-    "purified": true,
-    "shadow": true,
+
     "tags": ["starter"],
     "templateId": "V0004_POKEMON_CHARMANDER",
     "types": ["fire"]
@@ -81,9 +74,7 @@
     "generation": 1,
     "name": "Charmander - Halloween Costume",
     "number": "004",
-    "purified": true,
 
-    "shadow": true,
     "tags": ["starter"],
     "templateId": "V0004_POKEMON_CHARMANDER",
     "types": ["fire"]
@@ -93,9 +84,7 @@
     "generation": 1,
     "name": "Charmander - Party Hat",
     "number": "004",
-    "purified": true,
 
-    "shadow": true,
     "tags": ["starter"],
     "templateId": "V0004_POKEMON_CHARMANDER",
     "types": ["fire"]
@@ -105,9 +94,7 @@
     "generation": 1,
     "name": "Charmeleon",
     "number": "005",
-    "purified": true,
 
-    "shadow": true,
     "tags": ["starter"],
     "templateId": "V0005_POKEMON_CHARMELEON",
     "types": ["fire"]
@@ -117,9 +104,7 @@
     "generation": 1,
     "name": "Charizard",
     "number": "006",
-    "purified": true,
 
-    "shadow": true,
     "tags": ["starter"],
     "templateId": "V0006_POKEMON_CHARIZARD",
     "types": ["flying", "fire"]
@@ -129,8 +114,7 @@
     "generation": 1,
     "name": "Clone Charizard",
     "number": "006",
-    "purified": true,
-    "shadow": true,
+
     "tags": ["starter"],
     "templateId": "V0006_POKEMON_CHARIZARD",
     "types": ["flying", "fire"]
@@ -140,9 +124,7 @@
     "generation": 1,
     "name": "Squirtle",
     "number": "007",
-    "purified": true,
 
-    "shadow": true,
     "tags": ["starter"],
     "templateId": "V0007_POKEMON_SQUIRTLE",
     "types": ["water"]
@@ -152,9 +134,7 @@
     "generation": 1,
     "name": "Squirtle - Halloween Costume",
     "number": "007",
-    "purified": true,
 
-    "shadow": true,
     "tags": ["starter"],
     "templateId": "V0007_POKEMON_SQUIRTLE",
     "types": ["water"]
@@ -164,9 +144,7 @@
     "generation": 1,
     "name": "Sunglasses Squirtle",
     "number": "007",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["water"]
   },
@@ -175,9 +153,7 @@
     "generation": 1,
     "name": "Squirtle - Party Hat",
     "number": "007",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["water"]
   },
@@ -186,9 +162,7 @@
     "generation": 1,
     "name": "Wartortle",
     "number": "008",
-    "purified": true,
 
-    "shadow": true,
     "tags": ["starter"],
     "templateId": "V0008_POKEMON_WARTORTLE",
     "types": ["water"]
@@ -198,9 +172,7 @@
     "generation": 1,
     "name": "Sunglasses Wartortle",
     "number": "008",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["water"]
   },
@@ -209,9 +181,7 @@
     "generation": 1,
     "name": "Blastoise",
     "number": "009",
-    "purified": true,
 
-    "shadow": true,
     "tags": ["starter"],
     "templateId": "V0009_POKEMON_BLASTOISE",
     "types": ["water"]
@@ -221,9 +191,7 @@
     "generation": 1,
     "name": "Sunglasses Blastoise",
     "number": "009",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["water"]
   },
@@ -232,8 +200,7 @@
     "generation": 1,
     "name": "Clone Blastoise",
     "number": "009",
-    "purified": false,
-    "shadow": false,
+
     "tags": ["starter"],
     "types": ["water"]
   },
@@ -242,9 +209,7 @@
     "generation": 1,
     "name": "Caterpie",
     "number": "010",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["bug"]
   },
@@ -253,9 +218,7 @@
     "generation": 1,
     "name": "Metapod",
     "number": "011",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["bug"]
   },
@@ -264,9 +227,7 @@
     "generation": 1,
     "name": "Butterfree",
     "number": "012",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "bug"]
   },
@@ -275,9 +236,7 @@
     "generation": 1,
     "name": "Weedle",
     "number": "013",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison", "bug"]
   },
@@ -286,9 +245,7 @@
     "generation": 1,
     "name": "Kakuna",
     "number": "014",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison", "bug"]
   },
@@ -297,9 +254,7 @@
     "generation": 1,
     "name": "Beedrill",
     "number": "015",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison", "bug"]
   },
@@ -308,9 +263,7 @@
     "generation": 1,
     "name": "Pidgey",
     "number": "016",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "normal"]
   },
@@ -319,9 +272,7 @@
     "generation": 1,
     "name": "Pidgeotto",
     "number": "017",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "normal"]
   },
@@ -330,9 +281,7 @@
     "generation": 1,
     "name": "Pidgeot",
     "number": "018",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "normal"]
   },
@@ -341,9 +290,7 @@
     "generation": 1,
     "name": "Rattata",
     "number": "019",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0019_POKEMON_RATTATA",
     "types": ["normal"]
@@ -353,9 +300,7 @@
     "generation": 7,
     "name": "Rattata - Alola Form",
     "number": "019",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["alolan"],
     "templateId": "V0019_POKEMON_RATTATA_ALOLA",
     "types": ["dark", "normal"]
@@ -365,9 +310,7 @@
     "generation": 1,
     "name": "Raticate",
     "number": "020",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0020_POKEMON_RATICATE",
     "types": ["normal"]
@@ -377,9 +320,7 @@
     "generation": 1,
     "name": "Raticate - New Years Hat",
     "number": "020",
-    "purified": true,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0020_POKEMON_RATICATE",
     "types": ["normal"]
@@ -389,9 +330,7 @@
     "generation": 7,
     "name": "Raticate - Alola Form",
     "number": "020",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["alolan"],
     "templateId": "V0020_POKEMON_RATICATE_ALOLA",
     "types": ["dark", "normal"]
@@ -401,9 +340,7 @@
     "generation": 1,
     "name": "Spearow",
     "number": "021",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "normal"]
   },
@@ -412,9 +349,7 @@
     "generation": 1,
     "name": "Fearow",
     "number": "022",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "normal"]
   },
@@ -423,9 +358,7 @@
     "generation": 1,
     "name": "Ekans",
     "number": "023",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison"]
   },
@@ -434,9 +367,7 @@
     "generation": 1,
     "name": "Arbok",
     "number": "024",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison"]
   },
@@ -445,9 +376,7 @@
     "generation": 1,
     "name": "Pikachu",
     "number": "025",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -456,9 +385,7 @@
     "generation": 1,
     "name": "Pikachu - Santa Hat",
     "number": "025",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -467,8 +394,7 @@
     "generation": 1,
     "name": "Pikachu - New Years Hat",
     "number": "025",
-    "purified": false,
-    "shadow": false,
+
     "tags": [],
     "types": ["electric"]
   },
@@ -477,9 +403,7 @@
     "generation": 1,
     "name": "Pikachu - Original Cap",
     "number": "025",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -488,9 +412,7 @@
     "generation": 1,
     "name": "Pikachu - Witch Hat",
     "number": "025",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -499,9 +421,7 @@
     "generation": 1,
     "name": "Pikachu - Summer Style",
     "number": "025",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -510,9 +430,7 @@
     "generation": 1,
     "name": "Pikachu - Fragment Cap",
     "number": "025",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -521,9 +439,7 @@
     "generation": 1,
     "name": "Pikachu - Flower Crown",
     "number": "025",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -532,9 +448,7 @@
     "generation": 1,
     "name": "Pikachu - Winter Beanie",
     "number": "025",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -543,9 +457,7 @@
     "generation": 1,
     "name": "Pikachu - Detective",
     "number": "025",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -554,9 +466,7 @@
     "generation": 1,
     "name": "Pikachu - Halloween Costume",
     "number": "025",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -565,9 +475,7 @@
     "generation": 1,
     "name": "Pikachu - Party Hat",
     "number": "025",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -576,9 +484,7 @@
     "generation": 1,
     "name": "Clone Pikachu",
     "number": "025",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -587,9 +493,7 @@
     "generation": 1,
     "name": "Raichu",
     "number": "026",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0026_POKEMON_RAICHU",
     "types": ["electric"]
@@ -599,9 +503,7 @@
     "generation": 1,
     "name": "Raichu - Santa Hat",
     "number": "026",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0026_POKEMON_RAICHU",
     "types": ["electric"]
@@ -611,9 +513,7 @@
     "generation": 1,
     "name": "Raichu - New Years Hat",
     "number": "026",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0026_POKEMON_RAICHU",
     "types": ["electric"]
@@ -623,9 +523,7 @@
     "generation": 1,
     "name": "Raichu - Original Cap",
     "number": "026",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0026_POKEMON_RAICHU",
     "types": ["electric"]
@@ -635,9 +533,7 @@
     "generation": 1,
     "name": "Raichu - Witch Hat",
     "number": "026",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0026_POKEMON_RAICHU",
     "types": ["electric"]
@@ -647,9 +543,7 @@
     "generation": 1,
     "name": "Raichu - Summer Style",
     "number": "026",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0026_POKEMON_RAICHU",
     "types": ["electric"]
@@ -659,9 +553,7 @@
     "generation": 1,
     "name": "Raichu - Fragment Cap",
     "number": "026",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0026_POKEMON_RAICHU",
     "types": ["electric"]
@@ -671,9 +563,7 @@
     "generation": 1,
     "name": "Raichu - Flower Crown",
     "number": "026",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0026_POKEMON_RAICHU",
     "types": ["electric"]
@@ -683,9 +573,7 @@
     "generation": 1,
     "name": "Raichu - Winter Beanie",
     "number": "025",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -694,9 +582,7 @@
     "generation": 1,
     "name": "Raichu - Detective",
     "number": "026",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0026_POKEMON_RAICHU",
     "types": ["electric"]
@@ -706,9 +592,7 @@
     "generation": 7,
     "name": "Raichu - Alola Form",
     "number": "026",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["alolan"],
     "templateId": "V0026_POKEMON_RAICHU_ALOLA",
     "types": ["electric", "psychic"]
@@ -718,9 +602,7 @@
     "generation": 1,
     "name": "Sandshrew",
     "number": "027",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0027_POKEMON_SANDSHREW",
     "types": ["ground"]
@@ -730,9 +612,7 @@
     "generation": 7,
     "name": "Sandshrew - Alola Form",
     "number": "027",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["alolan"],
     "templateId": "V0027_POKEMON_SANDSHREW_ALOLA",
     "types": ["ice", "steel"]
@@ -742,9 +622,7 @@
     "generation": 1,
     "name": "Sandslash",
     "number": "028",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0028_POKEMON_SANDSLASH",
     "types": ["ground"]
@@ -754,9 +632,7 @@
     "generation": 7,
     "name": "Sandslash - Alola Form",
     "number": "028",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["alolan"],
     "templateId": "V0028_POKEMON_SANDSLASH_ALOLA",
     "types": ["ice", "steel"]
@@ -766,9 +642,7 @@
     "generation": 1,
     "name": "Nidoran♀",
     "number": "029",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison"]
   },
@@ -777,9 +651,7 @@
     "generation": 1,
     "name": "Nidorina",
     "number": "030",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison"]
   },
@@ -788,9 +660,7 @@
     "generation": 1,
     "name": "Nidoqueen",
     "number": "031",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison", "ground"]
   },
@@ -799,9 +669,7 @@
     "generation": 1,
     "name": "Nidoran♂",
     "number": "032",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison"]
   },
@@ -810,9 +678,7 @@
     "generation": 1,
     "name": "Nidorino",
     "number": "033",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison"]
   },
@@ -821,9 +687,7 @@
     "generation": 1,
     "name": "Nidorino - Party Hat",
     "number": "033",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison"]
   },
@@ -832,9 +696,7 @@
     "generation": 1,
     "name": "Nidoking",
     "number": "034",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ground", "poison"]
   },
@@ -843,9 +705,7 @@
     "generation": 1,
     "name": "Clefairy",
     "number": "035",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fairy"]
   },
@@ -854,9 +714,7 @@
     "generation": 1,
     "name": "Clefable",
     "number": "036",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fairy"]
   },
@@ -865,9 +723,7 @@
     "generation": 1,
     "name": "Vulpix",
     "number": "037",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0037_POKEMON_VULPIX",
     "types": ["fire"]
@@ -877,9 +733,7 @@
     "generation": 7,
     "name": "Vulpix - Alola Form",
     "number": "037",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["alolan"],
     "templateId": "V0037_POKEMON_VULPIX_ALOLA",
     "types": ["ice"]
@@ -889,9 +743,7 @@
     "generation": 1,
     "name": "Ninetales",
     "number": "038",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0038_POKEMON_NINETALES",
     "types": ["fire"]
@@ -901,9 +753,7 @@
     "generation": 7,
     "name": "Ninetales - Alola Form",
     "number": "038",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["alolan"],
     "templateId": "V0038_POKEMON_NINETALES_ALOLA",
     "types": ["ice", "fairy"]
@@ -913,9 +763,7 @@
     "generation": 1,
     "name": "Jigglypuff",
     "number": "039",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fairy", "normal"]
   },
@@ -924,9 +772,7 @@
     "generation": 1,
     "name": "Wigglytuff",
     "number": "040",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fairy", "normal"]
   },
@@ -935,9 +781,7 @@
     "generation": 1,
     "name": "Zubat",
     "number": "041",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0041_POKEMON_ZUBAT",
     "types": ["flying", "poison"]
@@ -947,9 +791,7 @@
     "generation": 1,
     "name": "Golbat",
     "number": "042",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0042_POKEMON_GOLBAT",
     "types": ["flying", "poison"]
@@ -959,9 +801,7 @@
     "generation": 1,
     "name": "Oddish",
     "number": "043",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0043_POKEMON_ODDISH",
     "types": ["poison", "grass"]
@@ -971,9 +811,7 @@
     "generation": 1,
     "name": "Gloom",
     "number": "044",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0044_POKEMON_GLOOM",
     "types": ["poison", "grass"]
@@ -983,9 +821,7 @@
     "generation": 1,
     "name": "Vileplume",
     "number": "045",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0045_POKEMON_VILEPLUME",
     "types": ["poison", "grass"]
@@ -995,9 +831,7 @@
     "generation": 1,
     "name": "Paras",
     "number": "046",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["grass", "bug"]
   },
@@ -1006,9 +840,7 @@
     "generation": 1,
     "name": "Parasect",
     "number": "047",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["grass", "bug"]
   },
@@ -1017,9 +849,7 @@
     "generation": 1,
     "name": "Venonat",
     "number": "048",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0048_POKEMON_VENONAT",
     "types": ["poison", "bug"]
@@ -1029,9 +859,7 @@
     "generation": 1,
     "name": "Venomoth",
     "number": "049",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0049_POKEMON_VENOMOTH",
     "types": ["poison", "bug"]
@@ -1041,9 +869,7 @@
     "generation": 1,
     "name": "Diglett",
     "number": "050",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0050_POKEMON_DIGLETT",
     "types": ["ground"]
@@ -1053,9 +879,7 @@
     "generation": 7,
     "name": "Diglett - Alola Form",
     "number": "050",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["alolan"],
     "templateId": "V0050_POKEMON_DIGLETT_ALOLA",
     "types": ["ground", "steel"]
@@ -1065,9 +889,7 @@
     "generation": 1,
     "name": "Dugtrio",
     "number": "051",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0051_POKEMON_DUGTRIO",
     "types": ["ground"]
@@ -1077,9 +899,7 @@
     "generation": 7,
     "name": "Dugtrio - Alola Form",
     "number": "051",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["alolan"],
     "templateId": "V0051_POKEMON_DUGTRIO_ALOLA",
     "types": ["ground", "steel"]
@@ -1089,9 +909,7 @@
     "generation": 1,
     "name": "Meowth",
     "number": "052",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0052_POKEMON_MEOWTH",
     "types": ["normal"]
@@ -1101,9 +919,7 @@
     "generation": 7,
     "name": "Meowth - Alola Form",
     "number": "052",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["alolan"],
     "templateId": "V0052_POKEMON_MEOWTH_ALOLA",
     "types": ["dark"]
@@ -1113,9 +929,7 @@
     "generation": 1,
     "name": "Persian",
     "number": "053",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0053_POKEMON_PERSIAN",
     "types": ["normal"]
@@ -1125,9 +939,7 @@
     "generation": 7,
     "name": "Persian - Alola Form",
     "number": "053",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["alolan"],
     "templateId": "V0053_POKEMON_PERSIAN_ALOLA",
     "types": ["dark"]
@@ -1137,9 +949,7 @@
     "generation": 1,
     "name": "Psyduck",
     "number": "054",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0054_POKEMON_PSYDUCK",
     "types": ["water"]
@@ -1149,9 +959,7 @@
     "generation": 1,
     "name": "Golduck",
     "number": "055",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0055_POKEMON_GOLDUCK",
     "types": ["water"]
@@ -1161,9 +969,7 @@
     "generation": 1,
     "name": "Mankey",
     "number": "056",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fighting"]
   },
@@ -1172,9 +978,7 @@
     "generation": 1,
     "name": "Primeape",
     "number": "057",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fighting"]
   },
@@ -1183,9 +987,7 @@
     "generation": 1,
     "name": "Growlithe",
     "number": "058",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0058_POKEMON_GROWLITHE",
     "types": ["fire"]
@@ -1195,9 +997,7 @@
     "generation": 1,
     "name": "Arcanine",
     "number": "059",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0059_POKEMON_ARCANINE",
     "types": ["fire"]
@@ -1207,9 +1007,7 @@
     "generation": 1,
     "name": "Poliwag",
     "number": "060",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0060_POKEMON_POLIWAG",
     "types": ["water"]
@@ -1219,8 +1017,7 @@
     "generation": 1,
     "name": "Poliwhirl",
     "number": "061",
-    "purified": true,
-    "shadow": true,
+
     "tags": [],
     "templateId": "V0061_POKEMON_POLIWHIRL",
     "types": ["water"]
@@ -1230,9 +1027,7 @@
     "generation": 1,
     "name": "Poliwrath",
     "number": "062",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0062_POKEMON_POLIWRATH",
     "types": ["fighting", "water"]
@@ -1242,9 +1037,7 @@
     "generation": 1,
     "name": "Abra",
     "number": "063",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0063_POKEMON_ABRA",
     "types": ["psychic"]
@@ -1254,9 +1047,7 @@
     "generation": 1,
     "name": "Kadabra",
     "number": "064",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0064_POKEMON_KADABRA",
     "types": ["psychic"]
@@ -1266,9 +1057,7 @@
     "generation": 1,
     "name": "Alakazam",
     "number": "065",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0065_POKEMON_ALAKAZAM",
     "types": ["psychic"]
@@ -1278,9 +1067,7 @@
     "generation": 1,
     "name": "Machop",
     "number": "066",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fighting"]
   },
@@ -1289,9 +1076,7 @@
     "generation": 1,
     "name": "Machoke",
     "number": "067",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fighting"]
   },
@@ -1300,9 +1085,7 @@
     "generation": 1,
     "name": "Machamp",
     "number": "068",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fighting"]
   },
@@ -1311,9 +1094,7 @@
     "generation": 1,
     "name": "Bellsprout",
     "number": "069",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison", "grass"]
   },
@@ -1322,9 +1103,7 @@
     "generation": 1,
     "name": "Weepinbell",
     "number": "070",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison", "grass"]
   },
@@ -1333,9 +1112,7 @@
     "generation": 1,
     "name": "Victreebel",
     "number": "071",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison", "grass"]
   },
@@ -1344,9 +1121,7 @@
     "generation": 1,
     "name": "Tentacool",
     "number": "072",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison", "water"]
   },
@@ -1355,9 +1130,7 @@
     "generation": 1,
     "name": "Tentacruel",
     "number": "073",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison", "water"]
   },
@@ -1366,9 +1139,7 @@
     "generation": 1,
     "name": "Geodude",
     "number": "074",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0074_POKEMON_GEODUDE",
     "types": ["ground", "rock"]
@@ -1378,9 +1149,7 @@
     "generation": 7,
     "name": "Geodude - Alola Form",
     "number": "074",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["alolan"],
     "templateId": "V0074_POKEMON_GEODUDE_ALOLA",
     "types": ["rock", "electric"]
@@ -1390,9 +1159,7 @@
     "generation": 1,
     "name": "Graveler",
     "number": "075",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0075_POKEMON_GRAVELER",
     "types": ["ground", "rock"]
@@ -1402,9 +1169,7 @@
     "generation": 7,
     "name": "Graveler - Alola Form",
     "number": "075",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["alolan"],
     "templateId": "V0075_POKEMON_GRAVELER_ALOLA",
     "types": ["rock", "electric"]
@@ -1414,9 +1179,7 @@
     "generation": 1,
     "name": "Golem",
     "number": "076",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0076_POKEMON_GOLEM",
     "types": ["ground", "rock"]
@@ -1426,9 +1189,7 @@
     "generation": 7,
     "name": "Golem - Alola Form",
     "number": "076",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["alolan"],
     "templateId": "V0076_POKEMON_GOLEM_ALOLA",
     "types": ["rock", "electric"]
@@ -1438,9 +1199,7 @@
     "generation": 1,
     "name": "Ponyta",
     "number": "077",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fire"]
   },
@@ -1449,9 +1208,7 @@
     "generation": 1,
     "name": "Rapidash",
     "number": "078",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fire"]
   },
@@ -1460,9 +1217,7 @@
     "generation": 1,
     "name": "Slowpoke",
     "number": "079",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["psychic", "water"]
   },
@@ -1471,9 +1226,7 @@
     "generation": 1,
     "name": "Slowbro",
     "number": "080",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["psychic", "water"]
   },
@@ -1482,9 +1235,7 @@
     "generation": 1,
     "name": "Magnemite",
     "number": "081",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["steel", "electric"]
   },
@@ -1493,9 +1244,7 @@
     "generation": 1,
     "name": "Magneton",
     "number": "082",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["steel", "electric"]
   },
@@ -1504,9 +1253,7 @@
     "generation": 1,
     "name": "Farfetch'd",
     "number": "083",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["regional"],
     "types": ["flying", "normal"]
   },
@@ -1515,9 +1262,7 @@
     "generation": 1,
     "name": "Doduo",
     "number": "084",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "normal"]
   },
@@ -1526,9 +1271,7 @@
     "generation": 1,
     "name": "Dodrio",
     "number": "085",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "normal"]
   },
@@ -1537,9 +1280,7 @@
     "generation": 1,
     "name": "Seel",
     "number": "086",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water"]
   },
@@ -1548,9 +1289,7 @@
     "generation": 1,
     "name": "Dewgong",
     "number": "087",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ice", "water"]
   },
@@ -1559,9 +1298,7 @@
     "generation": 1,
     "name": "Grimer",
     "number": "088",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0088_POKEMON_GRIMER",
     "types": ["poison"]
@@ -1571,9 +1308,7 @@
     "generation": 7,
     "name": "Grimer - Alola Form",
     "number": "088",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["alolan"],
     "templateId": "V0088_POKEMON_GRIMER_ALOLA",
     "types": ["poison", "dark"]
@@ -1583,9 +1318,7 @@
     "generation": 1,
     "name": "Muk",
     "number": "089",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0089_POKEMON_MUK",
     "types": ["poison"]
@@ -1595,9 +1328,7 @@
     "generation": 7,
     "name": "Grimer - Alola Form",
     "number": "089",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["alolan"],
     "templateId": "V0089_POKEMON_MUK_ALOLA",
     "types": ["poison", "dark"]
@@ -1607,9 +1338,7 @@
     "generation": 1,
     "name": "Shellder",
     "number": "090",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water"]
   },
@@ -1618,9 +1347,7 @@
     "generation": 1,
     "name": "Cloyster",
     "number": "091",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ice", "water"]
   },
@@ -1629,9 +1356,7 @@
     "generation": 1,
     "name": "Gastly",
     "number": "092",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison", "ghost"]
   },
@@ -1640,9 +1365,7 @@
     "generation": 1,
     "name": "Haunter",
     "number": "093",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison", "ghost"]
   },
@@ -1651,8 +1374,7 @@
     "generation": 1,
     "name": "Gengar",
     "number": "094",
-    "purified": false,
-    "shadow": false,
+
     "tags": [],
     "types": ["poison", "ghost"]
   },
@@ -1661,8 +1383,7 @@
     "generation": 1,
     "name": "Gengar - Party Hat",
     "number": "094",
-    "purified": false,
-    "shadow": false,
+
     "tags": [],
     "types": ["poison", "ghost"]
   },
@@ -1671,9 +1392,7 @@
     "generation": 1,
     "name": "Onix",
     "number": "095",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ground", "rock"]
   },
@@ -1682,9 +1401,7 @@
     "generation": 1,
     "name": "Drowzee",
     "number": "096",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0096_POKEMON_DROWZEE",
     "types": ["psychic"]
@@ -1694,9 +1411,7 @@
     "generation": 1,
     "name": "Hypno",
     "number": "097",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0097_POKEMON_HYPNO",
     "types": ["psychic"]
@@ -1706,9 +1421,7 @@
     "generation": 1,
     "name": "Krabby",
     "number": "098",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water"]
   },
@@ -1717,9 +1430,7 @@
     "generation": 1,
     "name": "Kingler",
     "number": "099",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water"]
   },
@@ -1728,9 +1439,7 @@
     "generation": 1,
     "name": "Voltorb",
     "number": "100",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -1739,9 +1448,7 @@
     "generation": 1,
     "name": "Electrode",
     "number": "101",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -1750,9 +1457,7 @@
     "generation": 1,
     "name": "Exeggcute",
     "number": "102",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["psychic", "grass"]
   },
@@ -1761,9 +1466,7 @@
     "generation": 1,
     "name": "Exeggutor",
     "number": "103",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0103_POKEMON_EXEGGUTOR",
     "types": ["psychic", "grass"]
@@ -1773,9 +1476,7 @@
     "generation": 7,
     "name": "Exeggutor - Alola Form",
     "number": "103",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["alolan"],
     "templateId": "V0103_POKEMON_EXEGGUTOR_ALOLA",
     "types": ["grass", "dragon"]
@@ -1785,9 +1486,7 @@
     "generation": 1,
     "name": "Cubone",
     "number": "104",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0104_POKEMON_CUBONE",
     "types": ["ground"]
@@ -1797,9 +1496,7 @@
     "generation": 1,
     "name": "Marowak",
     "number": "105",
-    "purified": true,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0105_POKEMON_MAROWAK",
     "types": ["ground"]
@@ -1809,9 +1506,7 @@
     "generation": 7,
     "name": "Marowak - Alola Form",
     "number": "105",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["alolan"],
     "templateId": "V0105_POKEMON_MAROWAK_ALOLA",
     "types": ["fire", "ghost"]
@@ -1821,9 +1516,7 @@
     "generation": 1,
     "name": "Hitmonlee",
     "number": "106",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fighting"]
   },
@@ -1832,9 +1525,7 @@
     "generation": 1,
     "name": "Hitmonchan",
     "number": "107",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0107_POKEMON_HITMONCHAN",
     "types": ["fighting"]
@@ -1844,9 +1535,7 @@
     "generation": 1,
     "name": "Lickitung",
     "number": "108",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -1855,9 +1544,7 @@
     "generation": 1,
     "name": "Koffing",
     "number": "109",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison"]
   },
@@ -1866,9 +1553,7 @@
     "generation": 1,
     "name": "Weezing",
     "number": "110",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison"]
   },
@@ -1877,9 +1562,7 @@
     "generation": 1,
     "name": "Rhyhorn",
     "number": "111",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["rock", "ground"]
   },
@@ -1888,9 +1571,7 @@
     "generation": 1,
     "name": "Rhydon",
     "number": "112",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["rock", "ground"]
   },
@@ -1899,9 +1580,7 @@
     "generation": 1,
     "name": "Chansey",
     "number": "113",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -1910,9 +1589,7 @@
     "generation": 1,
     "name": "Tangela",
     "number": "114",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["grass"]
   },
@@ -1921,9 +1598,7 @@
     "generation": 1,
     "name": "Kangaskhan",
     "number": "115",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["regional"],
     "types": ["normal"]
   },
@@ -1932,9 +1607,7 @@
     "generation": 1,
     "name": "Horsea",
     "number": "116",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water"]
   },
@@ -1943,9 +1616,7 @@
     "generation": 1,
     "name": "Seadra",
     "number": "117",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water"]
   },
@@ -1954,9 +1625,7 @@
     "generation": 1,
     "name": "Goldeen",
     "number": "118",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water"]
   },
@@ -1965,9 +1634,7 @@
     "generation": 1,
     "name": "Seaking",
     "number": "119",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water"]
   },
@@ -1976,9 +1643,7 @@
     "generation": 1,
     "name": "Staryu",
     "number": "120",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water"]
   },
@@ -1987,9 +1652,7 @@
     "generation": 1,
     "name": "Starmie",
     "number": "121",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["psychic", "water"]
   },
@@ -1998,9 +1661,7 @@
     "generation": 1,
     "name": "Mr. Mime",
     "number": "122",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["regional"],
     "types": ["fairy", "psychic"]
   },
@@ -2009,9 +1670,7 @@
     "generation": 1,
     "name": "Scyther",
     "number": "123",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0123_POKEMON_SCYTHER",
     "types": ["flying", "bug"]
@@ -2021,9 +1680,7 @@
     "generation": 1,
     "name": "Jynx",
     "number": "124",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ice", "psychic"]
   },
@@ -2032,9 +1689,7 @@
     "generation": 1,
     "name": "Electabuzz",
     "number": "125",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -2043,9 +1698,7 @@
     "generation": 1,
     "name": "Magmar",
     "number": "126",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fire"]
   },
@@ -2054,9 +1707,7 @@
     "generation": 1,
     "name": "Pinsir",
     "number": "127",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["bug"]
   },
@@ -2065,9 +1716,7 @@
     "generation": 1,
     "name": "Tauros",
     "number": "128",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["regional"],
     "types": ["normal"]
   },
@@ -2076,9 +1725,7 @@
     "generation": 1,
     "name": "Magikarp",
     "number": "129",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0129_POKEMON_MAGIKARP",
     "types": ["water"]
@@ -2088,9 +1735,7 @@
     "generation": 1,
     "name": "Gyarados",
     "number": "130",
-    "purified": true,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0130_POKEMON_GYARADOS",
     "types": ["flying", "water"]
@@ -2100,9 +1745,7 @@
     "generation": 1,
     "name": "Lapras",
     "number": "131",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0131_POKEMON_LAPRAS",
     "types": ["ice", "water"]
@@ -2112,9 +1755,7 @@
     "generation": 1,
     "name": "Ditto",
     "number": "132",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -2123,9 +1764,7 @@
     "generation": 1,
     "name": "Eevee",
     "number": "133",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -2134,9 +1773,7 @@
     "generation": 1,
     "name": "Eevee - Flower Crown",
     "number": "133",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -2145,9 +1782,7 @@
     "generation": 1,
     "name": "Eevee - Party Hat",
     "number": "133",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -2156,9 +1791,7 @@
     "generation": 1,
     "name": "Vaporeon",
     "number": "134",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water"]
   },
@@ -2167,9 +1800,7 @@
     "generation": 1,
     "name": "Vaporeon - Flower Crown",
     "number": "134",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water"]
   },
@@ -2178,9 +1809,7 @@
     "generation": 1,
     "name": "Jolteon",
     "number": "135",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -2189,9 +1818,7 @@
     "generation": 1,
     "name": "Jolteon - Flower Crown",
     "number": "135",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -2200,9 +1827,7 @@
     "generation": 1,
     "name": "Flareon",
     "number": "136",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fire"]
   },
@@ -2211,9 +1836,7 @@
     "generation": 1,
     "name": "Flareon - Flower Crown",
     "number": "136",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fire"]
   },
@@ -2222,9 +1845,7 @@
     "generation": 1,
     "name": "Porygon",
     "number": "137",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -2233,9 +1854,7 @@
     "generation": 1,
     "name": "Omanyte",
     "number": "138",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water", "rock"]
   },
@@ -2244,9 +1863,7 @@
     "generation": 1,
     "name": "Omastar",
     "number": "139",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water", "rock"]
   },
@@ -2255,9 +1872,7 @@
     "generation": 1,
     "name": "Kabuto",
     "number": "140",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water", "rock"]
   },
@@ -2266,9 +1881,7 @@
     "generation": 1,
     "name": "Kabutops",
     "number": "141",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water", "rock"]
   },
@@ -2277,9 +1890,7 @@
     "generation": 1,
     "name": "Aerodactyl",
     "number": "142",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "rock"]
   },
@@ -2288,9 +1899,7 @@
     "generation": 1,
     "name": "Snorlax",
     "number": "143",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0143_POKEMON_SNORLAX",
     "types": ["normal"]
@@ -2300,9 +1909,7 @@
     "generation": 1,
     "name": "Articuno",
     "number": "144",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "types": ["flying", "ice"]
   },
@@ -2311,9 +1918,7 @@
     "generation": 1,
     "name": "Zapdos",
     "number": "145",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "types": ["flying", "electric"]
   },
@@ -2322,9 +1927,7 @@
     "generation": 1,
     "name": "Moltres",
     "number": "146",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "types": ["flying", "fire"]
   },
@@ -2333,9 +1936,7 @@
     "generation": 1,
     "name": "Dratini",
     "number": "147",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0147_POKEMON_DRATINI",
     "types": ["dragon"]
@@ -2345,9 +1946,7 @@
     "generation": 1,
     "name": "Dragonair",
     "number": "148",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0148_POKEMON_DRAGONAIR",
     "types": ["dragon"]
@@ -2357,9 +1956,7 @@
     "generation": 1,
     "name": "Dragonite",
     "number": "149",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0149_POKEMON_DRAGONITE",
     "types": ["flying", "dragon"]
@@ -2369,9 +1966,7 @@
     "generation": 1,
     "name": "Mewtwo",
     "number": "150",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "templateId": "V0150_POKEMON_MEWTWO",
     "types": ["psychic"]
@@ -2381,9 +1976,7 @@
     "generation": 1,
     "name": "Armored Mewtwo",
     "number": "150",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "templateId": "V0150_POKEMON_MEWTWO_A",
     "types": ["psychic"]
@@ -2393,9 +1986,7 @@
     "generation": 1,
     "name": "Mew",
     "number": "151",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["mythical", "not_tradable"],
     "types": ["psychic"]
   },
@@ -2404,9 +1995,7 @@
     "generation": 2,
     "name": "Chikorita",
     "number": "152",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["grass"]
   },
@@ -2415,9 +2004,7 @@
     "generation": 2,
     "name": "Bayleef",
     "number": "153",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["grass"]
   },
@@ -2426,9 +2013,7 @@
     "generation": 2,
     "name": "Meganium",
     "number": "154",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["grass"]
   },
@@ -2437,9 +2022,7 @@
     "generation": 2,
     "name": "Cyndaquil",
     "number": "155",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["fire"]
   },
@@ -2448,9 +2031,7 @@
     "generation": 2,
     "name": "Quilava",
     "number": "156",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["fire"]
   },
@@ -2459,9 +2040,7 @@
     "generation": 2,
     "name": "Typhlosion",
     "number": "157",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["fire"]
   },
@@ -2470,9 +2049,7 @@
     "generation": 2,
     "name": "Totodile",
     "number": "158",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["water"]
   },
@@ -2481,9 +2058,7 @@
     "generation": 2,
     "name": "Croconaw",
     "number": "159",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["water"]
   },
@@ -2492,9 +2067,7 @@
     "generation": 2,
     "name": "Feraligatr",
     "number": "160",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["water"]
   },
@@ -2503,9 +2076,7 @@
     "generation": 2,
     "name": "Sentret",
     "number": "161",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -2514,9 +2085,7 @@
     "generation": 2,
     "name": "Furret",
     "number": "162",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -2525,9 +2094,7 @@
     "generation": 2,
     "name": "Hoothoot",
     "number": "163",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "normal"]
   },
@@ -2536,9 +2103,7 @@
     "generation": 2,
     "name": "Noctowl",
     "number": "164",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "normal"]
   },
@@ -2547,9 +2112,7 @@
     "generation": 2,
     "name": "Ledyba",
     "number": "165",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "bug"]
   },
@@ -2558,9 +2121,7 @@
     "generation": 2,
     "name": "Ledian",
     "number": "166",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "bug"]
   },
@@ -2569,9 +2130,7 @@
     "generation": 2,
     "name": "Spinarak",
     "number": "167",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison", "bug"]
   },
@@ -2580,9 +2139,7 @@
     "generation": 2,
     "name": "Ariados",
     "number": "168",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison", "bug"]
   },
@@ -2591,9 +2148,7 @@
     "generation": 2,
     "name": "Crobat",
     "number": "169",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0169_POKEMON_CROBAT",
     "types": ["flying", "poison"]
@@ -2603,9 +2158,7 @@
     "generation": 2,
     "name": "Chinchou",
     "number": "170",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric", "water"]
   },
@@ -2614,9 +2167,7 @@
     "generation": 2,
     "name": "Lanturn",
     "number": "171",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric", "water"]
   },
@@ -2625,9 +2176,7 @@
     "generation": 2,
     "name": "Pichu",
     "number": "172",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["baby"],
     "types": ["electric"]
   },
@@ -2636,9 +2185,7 @@
     "generation": 2,
     "name": "Pichu - Santa Hat",
     "number": "172",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["baby"],
     "types": ["electric"]
   },
@@ -2647,9 +2194,7 @@
     "generation": 2,
     "name": "Pichu - New Years Hat",
     "number": "172",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["baby"],
     "types": ["electric"]
   },
@@ -2658,9 +2203,7 @@
     "generation": 2,
     "name": "Pichu - Original Style",
     "number": "172",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["baby"],
     "types": ["electric"]
   },
@@ -2669,9 +2212,7 @@
     "generation": 2,
     "name": "Pichu - Witch Hat",
     "number": "172",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["baby"],
     "types": ["electric"]
   },
@@ -2680,9 +2221,7 @@
     "generation": 2,
     "name": "Pichu - Winter Beanie",
     "number": "172",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["baby"],
     "types": ["electric"]
   },
@@ -2691,9 +2230,7 @@
     "generation": 2,
     "name": "Pichu - Summer Style",
     "number": "172",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["baby"],
     "types": ["electric"]
   },
@@ -2702,9 +2239,7 @@
     "generation": 2,
     "name": "Cleffa",
     "number": "173",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["baby"],
     "types": ["fairy"]
   },
@@ -2713,9 +2248,7 @@
     "generation": 2,
     "name": "Igglybuff",
     "number": "174",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["baby"],
     "types": ["fairy", "normal"]
   },
@@ -2724,9 +2257,7 @@
     "generation": 2,
     "name": "Togepi",
     "number": "175",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["baby"],
     "types": ["fairy"]
   },
@@ -2735,9 +2266,7 @@
     "generation": 2,
     "name": "Togetic",
     "number": "176",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "fairy"]
   },
@@ -2746,9 +2275,7 @@
     "generation": 2,
     "name": "Natu",
     "number": "177",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "psychic"]
   },
@@ -2757,9 +2284,7 @@
     "generation": 2,
     "name": "Xatu",
     "number": "178",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "psychic"]
   },
@@ -2768,9 +2293,7 @@
     "generation": 2,
     "name": "Mareep",
     "number": "179",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -2779,9 +2302,7 @@
     "generation": 2,
     "name": "Flaaffy",
     "number": "180",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -2790,9 +2311,7 @@
     "generation": 2,
     "name": "Ampharos",
     "number": "181",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -2801,9 +2320,7 @@
     "generation": 2,
     "name": "Bellossom",
     "number": "182",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0182_POKEMON_BELLOSSOM",
     "types": ["grass"]
@@ -2813,9 +2330,7 @@
     "generation": 2,
     "name": "Marill",
     "number": "183",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fairy", "water"]
   },
@@ -2824,9 +2339,7 @@
     "generation": 2,
     "name": "Azumarill",
     "number": "184",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fairy", "water"]
   },
@@ -2835,9 +2348,7 @@
     "generation": 2,
     "name": "Sudowoodo",
     "number": "185",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["rock"]
   },
@@ -2846,9 +2357,7 @@
     "generation": 2,
     "name": "Politoed",
     "number": "186",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0186_POKEMON_POLITOED",
     "types": ["water"]
@@ -2858,9 +2367,7 @@
     "generation": 2,
     "name": "Hoppip",
     "number": "187",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "grass"]
   },
@@ -2869,9 +2376,7 @@
     "generation": 2,
     "name": "Skiploom",
     "number": "188",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "grass"]
   },
@@ -2880,9 +2385,7 @@
     "generation": 2,
     "name": "Jumpluff",
     "number": "189",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "grass"]
   },
@@ -2891,9 +2394,7 @@
     "generation": 2,
     "name": "Aipom",
     "number": "190",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -2902,9 +2403,7 @@
     "generation": 2,
     "name": "Sunkern",
     "number": "191",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["grass"]
   },
@@ -2913,9 +2412,7 @@
     "generation": 2,
     "name": "Sunflora",
     "number": "192",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["grass"]
   },
@@ -2924,9 +2421,7 @@
     "generation": 2,
     "name": "Yanma",
     "number": "193",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "bug"]
   },
@@ -2935,9 +2430,7 @@
     "generation": 2,
     "name": "Wooper",
     "number": "194",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ground", "water"]
   },
@@ -2946,9 +2439,7 @@
     "generation": 2,
     "name": "Quagsire",
     "number": "195",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ground", "water"]
   },
@@ -2957,9 +2448,7 @@
     "generation": 2,
     "name": "Espeon",
     "number": "196",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["psychic"]
   },
@@ -2968,9 +2457,7 @@
     "generation": 1,
     "name": "Espeon - Flower Crown",
     "number": "196",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["psychic"]
   },
@@ -2979,9 +2466,7 @@
     "generation": 2,
     "name": "Umbreon",
     "number": "197",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dark"]
   },
@@ -2990,9 +2475,7 @@
     "generation": 1,
     "name": "Umbreon - Flower Crown",
     "number": "197",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dark"]
   },
@@ -3001,9 +2484,7 @@
     "generation": 2,
     "name": "Murkrow",
     "number": "198",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "dark"]
   },
@@ -3012,9 +2493,7 @@
     "generation": 2,
     "name": "Slowking",
     "number": "199",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["psychic", "water"]
   },
@@ -3023,20 +2502,259 @@
     "generation": 2,
     "name": "Misdreavus",
     "number": "200",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ghost"]
   },
-  "201_00": {
+  "201_11": {
     "genders": [],
     "generation": 2,
-    "name": "Unown",
+    "name": "Unown A",
     "number": "201",
-    "purified": false,
 
-    "shadow": false,
+    "tags": [],
+    "types": ["psychic"]
+  },
+  "201_12": {
+    "genders": [],
+    "generation": 2,
+    "name": "Unown B",
+    "number": "201",
+
+    "tags": [],
+    "types": ["psychic"]
+  },
+  "201_13": {
+    "genders": [],
+    "generation": 2,
+    "name": "Unown C",
+    "number": "201",
+
+    "tags": [],
+    "types": ["psychic"]
+  },
+  "201_14": {
+    "genders": [],
+    "generation": 2,
+    "name": "Unown D",
+    "number": "201",
+
+    "tags": [],
+    "types": ["psychic"]
+  },
+  "201_15": {
+    "genders": [],
+    "generation": 2,
+    "name": "Unown E",
+    "number": "201",
+
+    "tags": [],
+    "types": ["psychic"]
+  },
+  "201_16": {
+    "genders": [],
+    "generation": 2,
+    "name": "Unown F",
+    "number": "201",
+
+    "tags": [],
+    "types": ["psychic"]
+  },
+  "201_17": {
+    "genders": [],
+    "generation": 2,
+    "name": "Unown G",
+    "number": "201",
+
+    "tags": [],
+    "types": ["psychic"]
+  },
+  "201_18": {
+    "genders": [],
+    "generation": 2,
+    "name": "Unown H",
+    "number": "201",
+
+    "tags": [],
+    "types": ["psychic"]
+  },
+  "201_19": {
+    "genders": [],
+    "generation": 2,
+    "name": "Unown I",
+    "number": "201",
+
+    "tags": [],
+    "types": ["psychic"]
+  },
+  "201_20": {
+    "genders": [],
+    "generation": 2,
+    "name": "Unown J",
+    "number": "201",
+
+    "tags": [],
+    "types": ["psychic"]
+  },
+  "201_21": {
+    "genders": [],
+    "generation": 2,
+    "name": "Unown K",
+    "number": "201",
+
+    "tags": [],
+    "types": ["psychic"]
+  },
+  "201_22": {
+    "genders": [],
+    "generation": 2,
+    "name": "Unown L",
+    "number": "201",
+
+    "tags": [],
+    "types": ["psychic"]
+  },
+  "201_23": {
+    "genders": [],
+    "generation": 2,
+    "name": "Unown M",
+    "number": "201",
+
+    "tags": [],
+    "types": ["psychic"]
+  },
+  "201_24": {
+    "genders": [],
+    "generation": 2,
+    "name": "Unown N",
+    "number": "201",
+
+    "tags": [],
+    "types": ["psychic"]
+  },
+  "201_25": {
+    "genders": [],
+    "generation": 2,
+    "name": "Unown O",
+    "number": "201",
+
+    "tags": [],
+    "types": ["psychic"]
+  },
+  "201_26": {
+    "genders": [],
+    "generation": 2,
+    "name": "Unown P",
+    "number": "201",
+
+    "tags": [],
+    "types": ["psychic"]
+  },
+  "201_27": {
+    "genders": [],
+    "generation": 2,
+    "name": "Unown Q",
+    "number": "201",
+
+    "tags": [],
+    "types": ["psychic"]
+  },
+  "201_28": {
+    "genders": [],
+    "generation": 2,
+    "name": "Unown R",
+    "number": "201",
+
+    "tags": [],
+    "types": ["psychic"]
+  },
+  "201_29": {
+    "genders": [],
+    "generation": 2,
+    "name": "Unown S",
+    "number": "201",
+
+    "tags": [],
+    "types": ["psychic"]
+  },
+  "201_30": {
+    "genders": [],
+    "generation": 2,
+    "name": "Unown T",
+    "number": "201",
+
+    "tags": [],
+    "types": ["psychic"]
+  },
+  "201_31": {
+    "genders": [],
+    "generation": 2,
+    "name": "Unown U",
+    "number": "201",
+
+    "tags": [],
+    "types": ["psychic"]
+  },
+  "201_32": {
+    "genders": [],
+    "generation": 2,
+    "name": "Unown V",
+    "number": "201",
+
+    "tags": [],
+    "types": ["psychic"]
+  },
+  "201_33": {
+    "genders": [],
+    "generation": 2,
+    "name": "Unown W",
+    "number": "201",
+
+    "tags": [],
+    "types": ["psychic"]
+  },
+  "201_34": {
+    "genders": [],
+    "generation": 2,
+    "name": "Unown X",
+    "number": "201",
+
+    "tags": [],
+    "types": ["psychic"]
+  },
+  "201_35": {
+    "genders": [],
+    "generation": 2,
+    "name": "Unown Y",
+    "number": "201",
+
+    "tags": [],
+    "types": ["psychic"]
+  },
+  "201_36": {
+    "genders": [],
+    "generation": 2,
+    "name": "Unown Z",
+    "number": "201",
+
+    "tags": [],
+    "types": ["psychic"]
+  },
+  "201_37": {
+    "genders": [],
+    "generation": 2,
+    "name": "Unown !",
+    "number": "201",
+
+    "tags": [],
+    "types": ["psychic"]
+  },
+  "201_38": {
+    "genders": [],
+    "generation": 2,
+    "name": "Unown ?",
+    "number": "201",
+
     "tags": [],
     "types": ["psychic"]
   },
@@ -3045,9 +2763,7 @@
     "generation": 2,
     "name": "Wobbuffet",
     "number": "202",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["psychic"]
   },
@@ -3056,9 +2772,7 @@
     "generation": 2,
     "name": "Wobbuffet - New Years Hat",
     "number": "202",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["psychic"]
   },
@@ -3067,9 +2781,7 @@
     "generation": 2,
     "name": "Girafarig",
     "number": "203",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["psychic", "normal"]
   },
@@ -3078,9 +2790,7 @@
     "generation": 2,
     "name": "Pineco",
     "number": "204",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["bug"]
   },
@@ -3089,9 +2799,7 @@
     "generation": 2,
     "name": "Forretress",
     "number": "205",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["steel", "bug"]
   },
@@ -3100,9 +2808,7 @@
     "generation": 2,
     "name": "Dunsparce",
     "number": "206",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -3111,9 +2817,7 @@
     "generation": 2,
     "name": "Gligar",
     "number": "207",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "ground"]
   },
@@ -3122,9 +2826,7 @@
     "generation": 2,
     "name": "Steelix",
     "number": "208",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ground", "steel"]
   },
@@ -3133,9 +2835,7 @@
     "generation": 2,
     "name": "Snubbull",
     "number": "209",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fairy"]
   },
@@ -3144,9 +2844,7 @@
     "generation": 2,
     "name": "Granbull",
     "number": "210",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fairy"]
   },
@@ -3155,9 +2853,7 @@
     "generation": 2,
     "name": "Qwilfish",
     "number": "211",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison", "water"]
   },
@@ -3166,9 +2862,7 @@
     "generation": 2,
     "name": "Scizor",
     "number": "212",
-    "purified": true,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0212_POKEMON_SCIZOR",
     "types": ["steel", "bug"]
@@ -3178,9 +2872,7 @@
     "generation": 2,
     "name": "Shuckle",
     "number": "213",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["rock", "bug"]
   },
@@ -3189,9 +2881,7 @@
     "generation": 2,
     "name": "Heracross",
     "number": "214",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["regional"],
     "types": ["fighting", "bug"]
   },
@@ -3200,9 +2890,7 @@
     "generation": 2,
     "name": "Sneasel",
     "number": "215",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ice", "dark"]
   },
@@ -3211,9 +2899,7 @@
     "generation": 2,
     "name": "Teddiursa",
     "number": "216",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -3222,9 +2908,7 @@
     "generation": 2,
     "name": "Ursaring",
     "number": "217",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -3233,9 +2917,7 @@
     "generation": 2,
     "name": "Slugma",
     "number": "218",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fire"]
   },
@@ -3244,9 +2926,7 @@
     "generation": 2,
     "name": "Magcargo",
     "number": "219",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["rock", "fire"]
   },
@@ -3255,9 +2935,7 @@
     "generation": 2,
     "name": "Swinub",
     "number": "220",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ground", "ice"]
   },
@@ -3266,9 +2944,7 @@
     "generation": 2,
     "name": "Piloswine",
     "number": "221",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ground", "ice"]
   },
@@ -3277,9 +2953,7 @@
     "generation": 2,
     "name": "Corsola",
     "number": "222",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["regional"],
     "types": ["rock", "water"]
   },
@@ -3288,9 +2962,7 @@
     "generation": 2,
     "name": "Remoraid",
     "number": "223",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water"]
   },
@@ -3299,9 +2971,7 @@
     "generation": 2,
     "name": "Octillery",
     "number": "224",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water"]
   },
@@ -3310,9 +2980,7 @@
     "generation": 2,
     "name": "Delibird",
     "number": "225",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "ice"]
   },
@@ -3321,9 +2989,7 @@
     "generation": 2,
     "name": "Mantine",
     "number": "226",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "water"]
   },
@@ -3332,9 +2998,7 @@
     "generation": 2,
     "name": "Skarmory",
     "number": "227",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "steel"]
   },
@@ -3343,9 +3007,7 @@
     "generation": 2,
     "name": "Houndour",
     "number": "228",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0228_POKEMON_HOUNDOUR",
     "types": ["fire", "dark"]
@@ -3355,9 +3017,7 @@
     "generation": 2,
     "name": "Houndoom",
     "number": "229",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0229_POKEMON_HOUNDOOM",
     "types": ["fire", "dark"]
@@ -3367,9 +3027,7 @@
     "generation": 2,
     "name": "Kingdra",
     "number": "230",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dragon", "water"]
   },
@@ -3378,9 +3036,7 @@
     "generation": 2,
     "name": "Phanpy",
     "number": "231",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ground"]
   },
@@ -3389,9 +3045,7 @@
     "generation": 2,
     "name": "Donphan",
     "number": "232",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ground"]
   },
@@ -3400,9 +3054,7 @@
     "generation": 2,
     "name": "Porygon2",
     "number": "233",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -3411,9 +3063,7 @@
     "generation": 2,
     "name": "Stantler",
     "number": "234",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -3422,9 +3072,7 @@
     "generation": 2,
     "name": "Stantler - Holidays Form",
     "number": "234",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -3433,9 +3081,7 @@
     "generation": 2,
     "name": "Smeargle",
     "number": "235",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -3444,9 +3090,7 @@
     "generation": 2,
     "name": "Tyrogue",
     "number": "236",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["baby"],
     "types": ["fighting"]
   },
@@ -3455,9 +3099,7 @@
     "generation": 2,
     "name": "Hitmontop",
     "number": "237",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fighting"]
   },
@@ -3466,9 +3108,7 @@
     "generation": 2,
     "name": "Smoochum",
     "number": "238",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["baby"],
     "types": ["psychic", "ice"]
   },
@@ -3477,9 +3117,7 @@
     "generation": 2,
     "name": "Elekid",
     "number": "239",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["baby"],
     "types": ["electric"]
   },
@@ -3488,9 +3126,7 @@
     "generation": 2,
     "name": "Magby",
     "number": "240",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["baby"],
     "types": ["fire"]
   },
@@ -3499,9 +3135,7 @@
     "generation": 2,
     "name": "Miltank",
     "number": "241",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -3510,9 +3144,7 @@
     "generation": 2,
     "name": "Blissey",
     "number": "242",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -3521,9 +3153,7 @@
     "generation": 2,
     "name": "Raikou",
     "number": "243",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "types": ["electric"]
   },
@@ -3532,9 +3162,7 @@
     "generation": 2,
     "name": "Entei",
     "number": "244",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "types": ["fire"]
   },
@@ -3543,9 +3171,7 @@
     "generation": 2,
     "name": "Suicune",
     "number": "245",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "types": ["water"]
   },
@@ -3554,9 +3180,7 @@
     "generation": 2,
     "name": "Larvitar",
     "number": "246",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0246_POKEMON_LARVITAR",
     "types": ["ground", "rock"]
@@ -3566,9 +3190,7 @@
     "generation": 2,
     "name": "Pupitar",
     "number": "247",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0247_POKEMON_PUPITAR",
     "types": ["ground", "rock"]
@@ -3578,9 +3200,7 @@
     "generation": 2,
     "name": "Tyranitar",
     "number": "248",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0248_POKEMON_TYRANITAR",
     "types": ["dark", "rock"]
@@ -3590,9 +3210,7 @@
     "generation": 2,
     "name": "Lugia",
     "number": "249",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "types": ["flying", "psychic"]
   },
@@ -3601,9 +3219,7 @@
     "generation": 2,
     "name": "Ho-Oh",
     "number": "250",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "types": ["flying", "fire"]
   },
@@ -3612,9 +3228,7 @@
     "generation": 2,
     "name": "Celebi",
     "number": "251",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["mythical", "not_tradable"],
     "types": ["grass", "psychic"]
   },
@@ -3623,9 +3237,7 @@
     "generation": 3,
     "name": "Treecko",
     "number": "252",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["grass"]
   },
@@ -3634,9 +3246,7 @@
     "generation": 3,
     "name": "Grovyle",
     "number": "253",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["grass"]
   },
@@ -3645,9 +3255,7 @@
     "generation": 3,
     "name": "Sceptile",
     "number": "254",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["grass"]
   },
@@ -3656,9 +3264,7 @@
     "generation": 3,
     "name": "Torchic",
     "number": "255",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["fire"]
   },
@@ -3667,9 +3273,7 @@
     "generation": 3,
     "name": "Combusken",
     "number": "256",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["fighting", "fire"]
   },
@@ -3678,9 +3282,7 @@
     "generation": 3,
     "name": "Blaziken",
     "number": "257",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["fighting", "fire"]
   },
@@ -3689,9 +3291,7 @@
     "generation": 3,
     "name": "Mudkip",
     "number": "258",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "templateId": "V0258_POKEMON_MUDKIP",
     "types": ["water"]
@@ -3701,9 +3301,7 @@
     "generation": 3,
     "name": "Marshtomp",
     "number": "259",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "templateId": "V0259_POKEMON_MARSHTOMP",
     "types": ["ground", "water"]
@@ -3713,9 +3311,7 @@
     "generation": 3,
     "name": "Swampert",
     "number": "260",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "templateId": "V0260_POKEMON_SWAMPERT",
     "types": ["ground", "water"]
@@ -3725,9 +3321,7 @@
     "generation": 3,
     "name": "Poochyena",
     "number": "261",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dark"]
   },
@@ -3736,9 +3330,7 @@
     "generation": 3,
     "name": "Mightyena",
     "number": "262",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dark"]
   },
@@ -3747,9 +3339,7 @@
     "generation": 3,
     "name": "Zigzagoon",
     "number": "263",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -3758,9 +3348,7 @@
     "generation": 3,
     "name": "Linoone",
     "number": "264",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -3769,9 +3357,7 @@
     "generation": 3,
     "name": "Wurmple",
     "number": "265",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["bug"]
   },
@@ -3780,9 +3366,7 @@
     "generation": 3,
     "name": "Wurmple - New Years Hat",
     "number": "265",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["bug"]
   },
@@ -3791,9 +3375,7 @@
     "generation": 3,
     "name": "Silcoon",
     "number": "266",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["bug"]
   },
@@ -3802,9 +3384,7 @@
     "generation": 3,
     "name": "Beautifly",
     "number": "267",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "bug"]
   },
@@ -3813,9 +3393,7 @@
     "generation": 3,
     "name": "Cascoon",
     "number": "268",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["bug"]
   },
@@ -3824,9 +3402,7 @@
     "generation": 3,
     "name": "Dustox",
     "number": "269",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison", "bug"]
   },
@@ -3835,9 +3411,7 @@
     "generation": 3,
     "name": "Lotad",
     "number": "270",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["grass", "water"]
   },
@@ -3846,9 +3420,7 @@
     "generation": 3,
     "name": "Lombre",
     "number": "271",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["grass", "water"]
   },
@@ -3857,9 +3429,7 @@
     "generation": 3,
     "name": "Ludicolo",
     "number": "272",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["grass", "water"]
   },
@@ -3868,9 +3438,7 @@
     "generation": 3,
     "name": "Seedot",
     "number": "273",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["grass"]
   },
@@ -3879,9 +3447,7 @@
     "generation": 3,
     "name": "Nuzleaf",
     "number": "274",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dark", "grass"]
   },
@@ -3890,9 +3456,7 @@
     "generation": 3,
     "name": "Shiftry",
     "number": "275",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dark", "grass"]
   },
@@ -3901,9 +3465,7 @@
     "generation": 3,
     "name": "Taillow",
     "number": "276",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "normal"]
   },
@@ -3912,9 +3474,7 @@
     "generation": 3,
     "name": "Swellow",
     "number": "277",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "normal"]
   },
@@ -3923,9 +3483,7 @@
     "generation": 3,
     "name": "Wingull",
     "number": "278",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "water"]
   },
@@ -3934,9 +3492,7 @@
     "generation": 3,
     "name": "Pelipper",
     "number": "279",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "water"]
   },
@@ -3945,9 +3501,7 @@
     "generation": 3,
     "name": "Ralts",
     "number": "280",
-    "purified": true,
 
-    "shadow": true,
     "tags": [],
     "templateId": "V0280_POKEMON_RALTS",
     "types": ["fairy", "psychic"]
@@ -3957,9 +3511,7 @@
     "generation": 3,
     "name": "Kirlia",
     "number": "281",
-    "purified": true,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0281_POKEMON_KIRLIA",
     "types": ["fairy", "psychic"]
@@ -3969,9 +3521,7 @@
     "generation": 3,
     "name": "Gardevoir",
     "number": "282",
-    "purified": true,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0282_POKEMON_GARDEVOIR",
     "types": ["fairy", "psychic"]
@@ -3981,9 +3531,7 @@
     "generation": 3,
     "name": "Surskit",
     "number": "283",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water", "bug"]
   },
@@ -3992,9 +3540,7 @@
     "generation": 3,
     "name": "Masquerain",
     "number": "284",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "bug"]
   },
@@ -4003,9 +3549,7 @@
     "generation": 3,
     "name": "Shroomish",
     "number": "285",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["grass"]
   },
@@ -4014,9 +3558,7 @@
     "generation": 3,
     "name": "Breloom",
     "number": "286",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fighting", "grass"]
   },
@@ -4025,9 +3567,7 @@
     "generation": 3,
     "name": "Slakoth",
     "number": "287",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -4036,9 +3576,7 @@
     "generation": 3,
     "name": "Vigoroth",
     "number": "288",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -4047,9 +3585,7 @@
     "generation": 3,
     "name": "Slaking",
     "number": "289",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -4058,9 +3594,7 @@
     "generation": 3,
     "name": "Nincada",
     "number": "290",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ground", "bug"]
   },
@@ -4069,9 +3603,7 @@
     "generation": 3,
     "name": "Ninjask",
     "number": "291",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "bug"]
   },
@@ -4080,9 +3612,7 @@
     "generation": 3,
     "name": "Shedinja",
     "number": "292",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ghost", "bug"]
   },
@@ -4091,9 +3621,7 @@
     "generation": 3,
     "name": "Whismur",
     "number": "293",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -4102,9 +3630,7 @@
     "generation": 3,
     "name": "Loudred",
     "number": "294",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -4113,9 +3639,7 @@
     "generation": 3,
     "name": "Exploud",
     "number": "295",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -4124,9 +3648,7 @@
     "generation": 3,
     "name": "Makuhita",
     "number": "296",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fighting"]
   },
@@ -4135,9 +3657,7 @@
     "generation": 3,
     "name": "Hariyama",
     "number": "297",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fighting"]
   },
@@ -4146,9 +3666,7 @@
     "generation": 3,
     "name": "Azurill",
     "number": "298",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["baby"],
     "types": ["fairy", "normal"]
   },
@@ -4157,9 +3675,7 @@
     "generation": 3,
     "name": "Nosepass",
     "number": "299",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["rock"]
   },
@@ -4168,9 +3684,7 @@
     "generation": 3,
     "name": "Skitty",
     "number": "300",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -4179,9 +3693,7 @@
     "generation": 3,
     "name": "Delcatty",
     "number": "301",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -4190,9 +3702,7 @@
     "generation": 3,
     "name": "Sableye",
     "number": "302",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ghost", "dark"]
   },
@@ -4201,9 +3711,7 @@
     "generation": 3,
     "name": "Mawile",
     "number": "303",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fairy", "steel"]
   },
@@ -4212,9 +3720,7 @@
     "generation": 3,
     "name": "Aron",
     "number": "304",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["rock", "steel"]
   },
@@ -4223,9 +3729,7 @@
     "generation": 3,
     "name": "Lairon",
     "number": "305",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["rock", "steel"]
   },
@@ -4234,9 +3738,7 @@
     "generation": 3,
     "name": "Aggron",
     "number": "306",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["rock", "steel"]
   },
@@ -4245,9 +3747,7 @@
     "generation": 3,
     "name": "Meditite",
     "number": "307",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["psychic", "fighting"]
   },
@@ -4256,9 +3756,7 @@
     "generation": 3,
     "name": "Medicham",
     "number": "308",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["psychic", "fighting"]
   },
@@ -4267,9 +3765,7 @@
     "generation": 3,
     "name": "Electrike",
     "number": "309",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -4278,9 +3774,7 @@
     "generation": 3,
     "name": "Manectric",
     "number": "310",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -4289,9 +3783,7 @@
     "generation": 3,
     "name": "Plusle",
     "number": "311",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -4300,9 +3792,7 @@
     "generation": 3,
     "name": "Minun",
     "number": "312",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -4311,9 +3801,7 @@
     "generation": 3,
     "name": "Volbeat",
     "number": "313",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["regional"],
     "types": ["bug"]
   },
@@ -4322,9 +3810,7 @@
     "generation": 3,
     "name": "Illumise",
     "number": "314",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["regional"],
     "types": ["bug"]
   },
@@ -4333,9 +3819,7 @@
     "generation": 3,
     "name": "Roselia",
     "number": "315",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison", "grass"]
   },
@@ -4344,9 +3828,7 @@
     "generation": 3,
     "name": "Gulpin",
     "number": "316",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison"]
   },
@@ -4355,9 +3837,7 @@
     "generation": 3,
     "name": "Swalot",
     "number": "317",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison"]
   },
@@ -4366,9 +3846,7 @@
     "generation": 3,
     "name": "Carvanha",
     "number": "318",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dark", "water"]
   },
@@ -4377,9 +3855,7 @@
     "generation": 3,
     "name": "Sharpedo",
     "number": "319",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dark", "water"]
   },
@@ -4388,9 +3864,7 @@
     "generation": 3,
     "name": "Wailmer",
     "number": "320",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water"]
   },
@@ -4399,9 +3873,7 @@
     "generation": 3,
     "name": "Wailord",
     "number": "321",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water"]
   },
@@ -4410,9 +3882,7 @@
     "generation": 3,
     "name": "Numel",
     "number": "322",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ground", "fire"]
   },
@@ -4421,9 +3891,7 @@
     "generation": 3,
     "name": "Camerupt",
     "number": "323",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ground", "fire"]
   },
@@ -4432,9 +3900,7 @@
     "generation": 3,
     "name": "Torkoal",
     "number": "324",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["regional"],
     "types": ["fire"]
   },
@@ -4443,9 +3909,7 @@
     "generation": 3,
     "name": "Spoink",
     "number": "325",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["psychic"]
   },
@@ -4454,9 +3918,7 @@
     "generation": 3,
     "name": "Grumpig",
     "number": "326",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["psychic"]
   },
@@ -4465,9 +3927,7 @@
     "generation": 3,
     "name": "Spinda",
     "number": "327",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -4476,9 +3936,7 @@
     "generation": 3,
     "name": "Trapinch",
     "number": "328",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ground"]
   },
@@ -4487,9 +3945,7 @@
     "generation": 3,
     "name": "Vibrava",
     "number": "329",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dragon", "ground"]
   },
@@ -4498,9 +3954,7 @@
     "generation": 3,
     "name": "Flygon",
     "number": "330",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dragon", "ground"]
   },
@@ -4509,9 +3963,7 @@
     "generation": 3,
     "name": "Cacnea",
     "number": "331",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["grass"]
   },
@@ -4520,9 +3972,7 @@
     "generation": 3,
     "name": "Cacturne",
     "number": "332",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dark", "grass"]
   },
@@ -4531,9 +3981,7 @@
     "generation": 3,
     "name": "Swablu",
     "number": "333",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "normal"]
   },
@@ -4542,9 +3990,7 @@
     "generation": 3,
     "name": "Altaria",
     "number": "334",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "dragon"]
   },
@@ -4553,9 +3999,7 @@
     "generation": 3,
     "name": "Zangoose",
     "number": "335",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["regional"],
     "types": ["normal"]
   },
@@ -4564,9 +4008,7 @@
     "generation": 3,
     "name": "Seviper",
     "number": "336",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["regional"],
     "types": ["poison"]
   },
@@ -4575,9 +4017,7 @@
     "generation": 3,
     "name": "Lunatone",
     "number": "337",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["regional"],
     "types": ["psychic", "rock"]
   },
@@ -4586,9 +4026,7 @@
     "generation": 3,
     "name": "Solrock",
     "number": "338",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["regional"],
     "types": ["psychic", "rock"]
   },
@@ -4597,9 +4035,7 @@
     "generation": 3,
     "name": "Barboach",
     "number": "339",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ground", "water"]
   },
@@ -4608,9 +4044,7 @@
     "generation": 3,
     "name": "Whiscash",
     "number": "340",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ground", "water"]
   },
@@ -4619,9 +4053,7 @@
     "generation": 3,
     "name": "Corphish",
     "number": "341",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water"]
   },
@@ -4630,9 +4062,7 @@
     "generation": 3,
     "name": "Crawdaunt",
     "number": "342",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dark", "water"]
   },
@@ -4641,9 +4071,7 @@
     "generation": 3,
     "name": "Baltoy",
     "number": "343",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["psychic", "ground"]
   },
@@ -4652,9 +4080,7 @@
     "generation": 3,
     "name": "Claydol",
     "number": "344",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["psychic", "ground"]
   },
@@ -4663,9 +4089,7 @@
     "generation": 3,
     "name": "Lileep",
     "number": "345",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["grass", "rock"]
   },
@@ -4674,9 +4098,7 @@
     "generation": 3,
     "name": "Cradily",
     "number": "346",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["grass", "rock"]
   },
@@ -4685,9 +4107,7 @@
     "generation": 3,
     "name": "Anorith",
     "number": "347",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["bug", "rock"]
   },
@@ -4696,9 +4116,7 @@
     "generation": 3,
     "name": "Armaldo",
     "number": "348",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["bug", "rock"]
   },
@@ -4707,9 +4125,7 @@
     "generation": 3,
     "name": "Feebas",
     "number": "349",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water"]
   },
@@ -4718,9 +4134,7 @@
     "generation": 3,
     "name": "Milotic",
     "number": "350",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water"]
   },
@@ -4729,9 +4143,7 @@
     "generation": 3,
     "name": "Castform - Normal Form",
     "number": "351",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0351_POKEMON_CASTFORM",
     "types": ["normal"]
@@ -4741,9 +4153,7 @@
     "generation": 3,
     "name": "Castform - Sunny Form",
     "number": "351",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0351_POKEMON_CASTFORM_SUNNY",
     "types": ["fire"]
@@ -4753,9 +4163,7 @@
     "generation": 3,
     "name": "Castform - Rainy Form",
     "number": "351",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0351_POKEMON_CASTFORM_RAINY",
     "types": ["water"]
@@ -4765,9 +4173,7 @@
     "generation": 3,
     "name": "Castform - Snowy Form",
     "number": "351",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0351_POKEMON_CASTFORM_SNOWY",
     "types": ["ice"]
@@ -4777,9 +4183,7 @@
     "generation": 3,
     "name": "Kecleon",
     "number": "352",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -4788,9 +4192,7 @@
     "generation": 3,
     "name": "Shuppet",
     "number": "353",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ghost"]
   },
@@ -4799,9 +4201,7 @@
     "generation": 3,
     "name": "Banette",
     "number": "354",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ghost"]
   },
@@ -4810,9 +4210,7 @@
     "generation": 3,
     "name": "Duskull",
     "number": "355",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ghost"]
   },
@@ -4821,9 +4219,7 @@
     "generation": 3,
     "name": "Dusclops",
     "number": "356",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ghost"]
   },
@@ -4832,9 +4228,7 @@
     "generation": 3,
     "name": "Tropius",
     "number": "357",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["regional"],
     "types": ["flying", "grass"]
   },
@@ -4843,9 +4237,7 @@
     "generation": 3,
     "name": "Chimecho",
     "number": "358",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["psychic"]
   },
@@ -4854,9 +4246,7 @@
     "generation": 3,
     "name": "Absol",
     "number": "359",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dark"]
   },
@@ -4865,9 +4255,7 @@
     "generation": 3,
     "name": "Wynaut",
     "number": "360",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["baby"],
     "types": ["psychic"]
   },
@@ -4876,9 +4264,7 @@
     "generation": 3,
     "name": "Snorunt",
     "number": "361",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ice"]
   },
@@ -4887,9 +4273,7 @@
     "generation": 3,
     "name": "Glalie",
     "number": "362",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ice"]
   },
@@ -4898,9 +4282,7 @@
     "generation": 3,
     "name": "Spheal",
     "number": "363",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water", "ice"]
   },
@@ -4909,9 +4291,7 @@
     "generation": 3,
     "name": "Sealeo",
     "number": "364",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water", "ice"]
   },
@@ -4920,9 +4300,7 @@
     "generation": 3,
     "name": "Walrein",
     "number": "365",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water", "ice"]
   },
@@ -4931,9 +4309,7 @@
     "generation": 3,
     "name": "Clamperl",
     "number": "366",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water"]
   },
@@ -4942,9 +4318,7 @@
     "generation": 3,
     "name": "Huntail",
     "number": "367",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water"]
   },
@@ -4953,9 +4327,7 @@
     "generation": 3,
     "name": "Gorebyss",
     "number": "368",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water"]
   },
@@ -4964,9 +4336,7 @@
     "generation": 3,
     "name": "Relicanth",
     "number": "369",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["regional"],
     "types": ["rock", "water"]
   },
@@ -4975,9 +4345,7 @@
     "generation": 3,
     "name": "Luvdisc",
     "number": "370",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water"]
   },
@@ -4986,9 +4354,7 @@
     "generation": 3,
     "name": "Bagon",
     "number": "371",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dragon"]
   },
@@ -4997,9 +4363,7 @@
     "generation": 3,
     "name": "Shelgon",
     "number": "372",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dragon"]
   },
@@ -5008,9 +4372,7 @@
     "generation": 3,
     "name": "Salamence",
     "number": "373",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "dragon"]
   },
@@ -5019,9 +4381,7 @@
     "generation": 3,
     "name": "Beldum",
     "number": "374",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["psychic", "steel"]
   },
@@ -5030,9 +4390,7 @@
     "generation": 3,
     "name": "Metang",
     "number": "375",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["psychic", "steel"]
   },
@@ -5041,9 +4399,7 @@
     "generation": 3,
     "name": "Metagross",
     "number": "376",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["psychic", "steel"]
   },
@@ -5052,9 +4408,7 @@
     "generation": 3,
     "name": "Regirock",
     "number": "377",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "types": ["rock"]
   },
@@ -5063,9 +4417,7 @@
     "generation": 3,
     "name": "Regice",
     "number": "378",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "types": ["ice"]
   },
@@ -5074,9 +4426,7 @@
     "generation": 3,
     "name": "Registeel",
     "number": "379",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "types": ["steel"]
   },
@@ -5085,9 +4435,7 @@
     "generation": 3,
     "name": "Latias",
     "number": "380",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "types": ["dragon", "psychic"]
   },
@@ -5096,9 +4444,7 @@
     "generation": 3,
     "name": "Latios",
     "number": "381",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "types": ["psychic", "dragon"]
   },
@@ -5107,9 +4453,7 @@
     "generation": 3,
     "name": "Kyogre",
     "number": "382",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "types": ["water"]
   },
@@ -5118,9 +4462,7 @@
     "generation": 3,
     "name": "Groudon",
     "number": "383",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "types": ["ground"]
   },
@@ -5129,9 +4471,7 @@
     "generation": 3,
     "name": "Rayquaza",
     "number": "384",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "types": ["flying", "dragon"]
   },
@@ -5140,9 +4480,7 @@
     "generation": 3,
     "name": "Jirachi",
     "number": "385",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["mythical", "not_tradable"],
     "types": ["psychic", "steel"]
   },
@@ -5151,9 +4489,7 @@
     "generation": 3,
     "name": "Deoxys - Normal Form",
     "number": "386",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["mythical", "not_tradable"],
     "templateId": "V0386_POKEMON_DEOXYS",
     "types": ["psychic"]
@@ -5163,9 +4499,7 @@
     "generation": 3,
     "name": "Deoxys - Attack Form",
     "number": "386",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["mythical", "not_tradable"],
     "templateId": "V0386_POKEMON_DEOXYS_ATTACK",
     "types": ["psychic"]
@@ -5175,9 +4509,7 @@
     "generation": 3,
     "name": "Deoxys - Defense Form",
     "number": "386",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["mythical", "not_tradable"],
     "templateId": "V0386_POKEMON_DEOXYS_DEFENSE",
     "types": ["psychic"]
@@ -5187,9 +4519,7 @@
     "generation": 3,
     "name": "Deoxys - Speed Form",
     "number": "386",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["mythical", "not_tradable"],
     "templateId": "V0386_POKEMON_DEOXYS_SPEED",
     "types": ["psychic"]
@@ -5199,9 +4529,7 @@
     "generation": 4,
     "name": "Turtwig",
     "number": "387",
-    "purified": true,
 
-    "shadow": true,
     "tags": ["starter"],
     "templateId": "V0387_POKEMON_TURTWIG",
     "types": ["grass"]
@@ -5211,9 +4539,7 @@
     "generation": 4,
     "name": "Grotle",
     "number": "388",
-    "purified": true,
 
-    "shadow": true,
     "tags": ["starter"],
     "templateId": "V0388_POKEMON_GROTLE",
     "types": ["grass"]
@@ -5223,9 +4549,7 @@
     "generation": 4,
     "name": "Torterra",
     "number": "389",
-    "purified": true,
 
-    "shadow": true,
     "tags": ["starter"],
     "templateId": "V0389_POKEMON_TORTERRA",
     "types": ["ground", "grass"]
@@ -5235,9 +4559,7 @@
     "generation": 4,
     "name": "Chimchar",
     "number": "390",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["fire"]
   },
@@ -5246,9 +4568,7 @@
     "generation": 4,
     "name": "Monferno",
     "number": "391",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["fighting", "fire"]
   },
@@ -5257,9 +4577,7 @@
     "generation": 4,
     "name": "Infernape",
     "number": "392",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["fighting", "fire"]
   },
@@ -5268,9 +4586,7 @@
     "generation": 4,
     "name": "Piplup",
     "number": "393",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["water"]
   },
@@ -5279,9 +4595,7 @@
     "generation": 4,
     "name": "Prinplup",
     "number": "394",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["water"]
   },
@@ -5290,9 +4604,7 @@
     "generation": 4,
     "name": "Empoleon",
     "number": "395",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["steel", "water"]
   },
@@ -5301,9 +4613,7 @@
     "generation": 4,
     "name": "Starly",
     "number": "396",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "normal"]
   },
@@ -5312,9 +4622,7 @@
     "generation": 4,
     "name": "Staravia",
     "number": "397",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "normal"]
   },
@@ -5323,9 +4631,7 @@
     "generation": 4,
     "name": "Staraptor",
     "number": "398",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "normal"]
   },
@@ -5334,9 +4640,7 @@
     "generation": 4,
     "name": "Bidoof",
     "number": "399",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -5345,9 +4649,7 @@
     "generation": 4,
     "name": "Bibarel",
     "number": "400",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water", "normal"]
   },
@@ -5356,9 +4658,7 @@
     "generation": 4,
     "name": "Kricketot",
     "number": "401",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["bug"]
   },
@@ -5367,9 +4667,7 @@
     "generation": 4,
     "name": "Kricketune",
     "number": "402",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["bug"]
   },
@@ -5378,9 +4676,7 @@
     "generation": 4,
     "name": "Shinx",
     "number": "403",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -5389,9 +4685,7 @@
     "generation": 4,
     "name": "Luxio",
     "number": "404",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -5400,9 +4694,7 @@
     "generation": 4,
     "name": "Luxray",
     "number": "405",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -5411,9 +4703,7 @@
     "generation": 4,
     "name": "Budew",
     "number": "406",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["baby"],
     "types": ["poison", "grass"]
   },
@@ -5422,9 +4712,7 @@
     "generation": 4,
     "name": "Roserade",
     "number": "407",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison", "grass"]
   },
@@ -5433,9 +4721,7 @@
     "generation": 4,
     "name": "Cranidos",
     "number": "408",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["rock"]
   },
@@ -5444,9 +4730,7 @@
     "generation": 4,
     "name": "Rampardos",
     "number": "409",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["rock"]
   },
@@ -5455,9 +4739,7 @@
     "generation": 4,
     "name": "Shieldon",
     "number": "410",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["steel", "rock"]
   },
@@ -5466,9 +4748,7 @@
     "generation": 4,
     "name": "Bastiodon",
     "number": "411",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["steel", "rock"]
   },
@@ -5477,9 +4757,7 @@
     "generation": 4,
     "name": "Burmy - Plant Cloak",
     "number": "412",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0412_POKEMON_BURMY_PLANT",
     "types": ["bug"]
@@ -5489,9 +4767,7 @@
     "generation": 4,
     "name": "Burmy - Sandy Cloak",
     "number": "412",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0412_POKEMON_BURMY_SANDY",
     "types": ["bug"]
@@ -5501,9 +4777,7 @@
     "generation": 4,
     "name": "Burmy - Trash Cloak",
     "number": "412",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0412_POKEMON_BURMY_TRASH",
     "types": ["bug"]
@@ -5513,9 +4787,7 @@
     "generation": 4,
     "name": "Wormadam - Plant Cloak",
     "number": "413",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0413_POKEMON_WORMADAM_PLANT",
     "types": ["bug", "grass"]
@@ -5525,9 +4797,7 @@
     "generation": 4,
     "name": "Wormadam - Sandy Cloak",
     "number": "413",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0413_POKEMON_WORMADAM_SANDY",
     "types": ["bug", "ground"]
@@ -5537,9 +4807,7 @@
     "generation": 4,
     "name": "Wormadam - Trash Cloak",
     "number": "413",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0413_POKEMON_WORMADAM_TRASH",
     "types": ["bug", "steel"]
@@ -5549,9 +4817,7 @@
     "generation": 4,
     "name": "Mothim",
     "number": "414",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "bug"]
   },
@@ -5560,9 +4826,7 @@
     "generation": 4,
     "name": "Combee",
     "number": "415",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "bug"]
   },
@@ -5571,9 +4835,7 @@
     "generation": 4,
     "name": "Vespiquen",
     "number": "416",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["bug", "flying"]
   },
@@ -5582,9 +4844,7 @@
     "generation": 4,
     "name": "Pachirisu",
     "number": "417",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["regional"],
     "types": ["electric"]
   },
@@ -5593,9 +4853,7 @@
     "generation": 4,
     "name": "Buizel",
     "number": "418",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water"]
   },
@@ -5604,9 +4862,7 @@
     "generation": 4,
     "name": "Floatzel",
     "number": "419",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water"]
   },
@@ -5615,9 +4871,7 @@
     "generation": 4,
     "name": "Cherubi",
     "number": "420",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["grass"]
   },
@@ -5626,9 +4880,7 @@
     "generation": 4,
     "name": "Cherrim -Overcast Form",
     "number": "421",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0421_POKEMON_CHERRIM_OVERCAST",
     "types": ["grass"]
@@ -5638,9 +4890,7 @@
     "generation": 4,
     "name": "Cherrim - Sunshine Form",
     "number": "421",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0421_POKEMON_CHERRIM_SUNNY",
     "types": ["grass"]
@@ -5650,9 +4900,7 @@
     "generation": 4,
     "name": "Shellos- West Sea",
     "number": "422",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["regional"],
     "templateId": "V0422_POKEMON_SHELLOS_WEST_SEA",
     "types": ["water"]
@@ -5662,9 +4910,7 @@
     "generation": 4,
     "name": "Shellos - East Sea",
     "number": "422",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["regional"],
     "templateId": "V0422_POKEMON_SHELLOS_EAST_SEA",
     "types": ["water"]
@@ -5674,9 +4920,7 @@
     "generation": 4,
     "name": "Gastrodon - West Sea",
     "number": "423",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["regional"],
     "templateId": "V0423_POKEMON_GASTRODON_WEST_SEA",
     "types": ["water", "ground"]
@@ -5686,9 +4930,7 @@
     "generation": 4,
     "name": "Gastrodon - East Sea",
     "number": "423",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["regional"],
     "templateId": "V0423_POKEMON_GASTRODON_EAST_SEA",
     "types": ["water", "ground"]
@@ -5698,9 +4940,7 @@
     "generation": 4,
     "name": "Ambipom",
     "number": "424",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -5709,9 +4949,7 @@
     "generation": 4,
     "name": "Drifloon",
     "number": "425",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "ghost"]
   },
@@ -5720,9 +4958,7 @@
     "generation": 4,
     "name": "Drifblim",
     "number": "426",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "ghost"]
   },
@@ -5731,9 +4967,7 @@
     "generation": 4,
     "name": "Buneary",
     "number": "427",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -5742,9 +4976,7 @@
     "generation": 4,
     "name": "Lopunny",
     "number": "428",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -5753,9 +4985,7 @@
     "generation": 4,
     "name": "Mismagius",
     "number": "429",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ghost"]
   },
@@ -5764,9 +4994,7 @@
     "generation": 4,
     "name": "Honchkrow",
     "number": "430",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "dark"]
   },
@@ -5775,9 +5003,7 @@
     "generation": 4,
     "name": "Glameow",
     "number": "431",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -5786,9 +5012,7 @@
     "generation": 4,
     "name": "Purugly",
     "number": "432",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -5797,9 +5021,7 @@
     "generation": 4,
     "name": "Chingling",
     "number": "433",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["baby"],
     "types": ["psychic"]
   },
@@ -5808,9 +5030,7 @@
     "generation": 4,
     "name": "Stunky",
     "number": "434",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dark", "poison"]
   },
@@ -5819,9 +5039,7 @@
     "generation": 4,
     "name": "Skuntank",
     "number": "435",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dark", "poison"]
   },
@@ -5830,9 +5048,7 @@
     "generation": 4,
     "name": "Bronzor",
     "number": "436",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["psychic", "steel"]
   },
@@ -5841,9 +5057,7 @@
     "generation": 4,
     "name": "Bronzong",
     "number": "437",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["psychic", "steel"]
   },
@@ -5852,9 +5066,7 @@
     "generation": 4,
     "name": "Bonsly",
     "number": "438",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["baby"],
     "types": ["rock"]
   },
@@ -5863,9 +5075,7 @@
     "generation": 4,
     "name": "Mime Jr.",
     "number": "439",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["baby", "regional"],
     "types": ["fairy", "psychic"]
   },
@@ -5874,9 +5084,7 @@
     "generation": 4,
     "name": "Happiny",
     "number": "440",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["baby"],
     "types": ["normal"]
   },
@@ -5885,9 +5093,7 @@
     "generation": 4,
     "name": "Chatot",
     "number": "441",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["regional"],
     "types": ["flying", "normal"]
   },
@@ -5896,9 +5102,7 @@
     "generation": 4,
     "name": "Spiritomb",
     "number": "442",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dark", "ghost"]
   },
@@ -5907,9 +5111,7 @@
     "generation": 4,
     "name": "Gible",
     "number": "443",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ground", "dragon"]
   },
@@ -5918,9 +5120,7 @@
     "generation": 4,
     "name": "Gabite",
     "number": "444",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ground", "dragon"]
   },
@@ -5929,9 +5129,7 @@
     "generation": 4,
     "name": "Garchomp",
     "number": "445",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ground", "dragon"]
   },
@@ -5940,9 +5138,7 @@
     "generation": 4,
     "name": "Munchlax",
     "number": "446",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["baby"],
     "types": ["normal"]
   },
@@ -5951,9 +5147,7 @@
     "generation": 4,
     "name": "Riolu",
     "number": "447",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fighting"]
   },
@@ -5962,9 +5156,7 @@
     "generation": 4,
     "name": "Lucario",
     "number": "448",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["steel", "fighting"]
   },
@@ -5973,9 +5165,7 @@
     "generation": 4,
     "name": "Hippopotas",
     "number": "449",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ground"]
   },
@@ -5984,9 +5174,7 @@
     "generation": 4,
     "name": "Hippowdon",
     "number": "450",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ground"]
   },
@@ -5995,9 +5183,7 @@
     "generation": 4,
     "name": "Skorupi",
     "number": "451",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["bug", "poison"]
   },
@@ -6006,9 +5192,7 @@
     "generation": 4,
     "name": "Drapion",
     "number": "452",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dark", "poison"]
   },
@@ -6017,9 +5201,7 @@
     "generation": 4,
     "name": "Croagunk",
     "number": "453",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fighting", "poison"]
   },
@@ -6028,9 +5210,7 @@
     "generation": 4,
     "name": "Toxicroak",
     "number": "454",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fighting", "poison"]
   },
@@ -6039,9 +5219,7 @@
     "generation": 4,
     "name": "Carnivine",
     "number": "455",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["regional"],
     "types": ["grass"]
   },
@@ -6050,9 +5228,7 @@
     "generation": 4,
     "name": "Finneon",
     "number": "456",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water"]
   },
@@ -6061,9 +5237,7 @@
     "generation": 4,
     "name": "Lumineon",
     "number": "457",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water"]
   },
@@ -6072,9 +5246,7 @@
     "generation": 4,
     "name": "Mantyke",
     "number": "458",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["baby"],
     "types": ["flying", "water"]
   },
@@ -6083,9 +5255,7 @@
     "generation": 4,
     "name": "Snover",
     "number": "459",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ice", "grass"]
   },
@@ -6094,9 +5264,7 @@
     "generation": 4,
     "name": "Abomasnow",
     "number": "460",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ice", "grass"]
   },
@@ -6105,9 +5273,7 @@
     "generation": 4,
     "name": "Weavile",
     "number": "461",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ice", "dark"]
   },
@@ -6116,9 +5282,7 @@
     "generation": 4,
     "name": "Magnezone",
     "number": "462",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["steel", "electric"]
   },
@@ -6127,9 +5291,7 @@
     "generation": 4,
     "name": "Lickilicky",
     "number": "463",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -6138,9 +5300,7 @@
     "generation": 4,
     "name": "Rhyperior",
     "number": "464",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["rock", "ground"]
   },
@@ -6149,9 +5309,7 @@
     "generation": 4,
     "name": "Tangrowth",
     "number": "465",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["grass"]
   },
@@ -6160,9 +5318,7 @@
     "generation": 4,
     "name": "Electivire",
     "number": "466",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -6171,9 +5327,7 @@
     "generation": 4,
     "name": "Magmortar",
     "number": "467",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fire"]
   },
@@ -6182,9 +5336,7 @@
     "generation": 4,
     "name": "Togekiss",
     "number": "468",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "fairy"]
   },
@@ -6193,9 +5345,7 @@
     "generation": 4,
     "name": "Yanmega",
     "number": "469",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "bug"]
   },
@@ -6204,9 +5354,7 @@
     "generation": 4,
     "name": "Leafeon",
     "number": "470",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["grass"]
   },
@@ -6215,9 +5363,7 @@
     "generation": 1,
     "name": "Leafeon - Flower Crown",
     "number": "470",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["grass"]
   },
@@ -6226,9 +5372,7 @@
     "generation": 4,
     "name": "Glaceon",
     "number": "471",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ice"]
   },
@@ -6237,9 +5381,7 @@
     "generation": 1,
     "name": "Glaceon - Flower Crown",
     "number": "471",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ice"]
   },
@@ -6248,9 +5390,7 @@
     "generation": 4,
     "name": "Gliscor",
     "number": "472",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "ground"]
   },
@@ -6259,9 +5399,7 @@
     "generation": 4,
     "name": "Mamoswine",
     "number": "473",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ground", "ice"]
   },
@@ -6270,9 +5408,7 @@
     "generation": 4,
     "name": "Porygon-Z",
     "number": "474",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -6281,9 +5417,7 @@
     "generation": 4,
     "name": "Gallade",
     "number": "475",
-    "purified": true,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0475_POKEMON_GALLADE",
     "types": ["fighting", "psychic"]
@@ -6293,9 +5427,7 @@
     "generation": 4,
     "name": "Probopass",
     "number": "476",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["steel", "rock"]
   },
@@ -6304,9 +5436,7 @@
     "generation": 4,
     "name": "Dusknoir",
     "number": "477",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ghost"]
   },
@@ -6315,9 +5445,7 @@
     "generation": 4,
     "name": "Froslass",
     "number": "478",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ghost", "ice"]
   },
@@ -6326,9 +5454,7 @@
     "generation": 4,
     "name": "Rotom",
     "number": "479",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0479_POKEMON_ROTOM",
     "types": ["electric", "ghost"]
@@ -6338,9 +5464,7 @@
     "generation": 4,
     "name": "Heat Rotom",
     "number": "479",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0479_POKEMON_ROTOM_HEAT",
     "types": ["electric", "fire"]
@@ -6350,9 +5474,7 @@
     "generation": 4,
     "name": "Wash Rotom",
     "number": "479",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0479_POKEMON_ROTOM_WASH",
     "types": ["electric", "water"]
@@ -6362,9 +5484,7 @@
     "generation": 4,
     "name": "Frost Rotom",
     "number": "479",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0479_POKEMON_ROTOM_FROST",
     "types": ["electric", "ice"]
@@ -6374,9 +5494,7 @@
     "generation": 4,
     "name": "Fan Rotom",
     "number": "479",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0479_POKEMON_ROTOM_FAN",
     "types": ["electric", "flying"]
@@ -6386,9 +5504,7 @@
     "generation": 4,
     "name": "Mow Rotom",
     "number": "479",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "templateId": "V0479_POKEMON_ROTOM_MOW",
     "types": ["electric", "grass"]
@@ -6398,9 +5514,7 @@
     "generation": 4,
     "name": "Uxie",
     "number": "480",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary", "regional"],
     "types": ["psychic"]
   },
@@ -6409,9 +5523,7 @@
     "generation": 4,
     "name": "Mesprit",
     "number": "481",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary", "regional"],
     "types": ["psychic"]
   },
@@ -6420,9 +5532,7 @@
     "generation": 4,
     "name": "Azelf",
     "number": "482",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary", "regional"],
     "types": ["psychic"]
   },
@@ -6431,9 +5541,7 @@
     "generation": 4,
     "name": "Dialga",
     "number": "483",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "types": ["dragon", "steel"]
   },
@@ -6442,9 +5550,7 @@
     "generation": 4,
     "name": "Palkia",
     "number": "484",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "types": ["dragon", "water"]
   },
@@ -6453,9 +5559,7 @@
     "generation": 4,
     "name": "Heatran",
     "number": "485",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "types": ["steel", "fire"]
   },
@@ -6464,9 +5568,7 @@
     "generation": 4,
     "name": "Regigigas",
     "number": "486",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "types": ["normal"]
   },
@@ -6475,9 +5577,7 @@
     "generation": 4,
     "name": "Giratina - Altered Form",
     "number": "487",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "templateId": "V0487_POKEMON_GIRATINA_ALTERED",
     "types": ["ghost", "dragon"]
@@ -6487,9 +5587,7 @@
     "generation": 4,
     "name": "Giratina - Origin Form",
     "number": "487",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "templateId": "V0487_POKEMON_GIRATINA_ORIGIN",
     "types": ["ghost", "dragon"]
@@ -6499,9 +5597,7 @@
     "generation": 4,
     "name": "Cresselia",
     "number": "488",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "types": ["psychic"]
   },
@@ -6510,9 +5606,7 @@
     "generation": 4,
     "name": "Phione",
     "number": "489",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["mythical"],
     "types": ["water"]
   },
@@ -6521,9 +5615,7 @@
     "generation": 4,
     "name": "Manaphy",
     "number": "490",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["mythical"],
     "types": ["water"]
   },
@@ -6532,9 +5624,7 @@
     "generation": 4,
     "name": "Darkrai",
     "number": "491",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["mythical"],
     "types": ["dark"]
   },
@@ -6543,9 +5633,7 @@
     "generation": 4,
     "name": "Shaymin - Land Forme",
     "number": "492",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["mythical"],
     "types": ["grass"]
   },
@@ -6554,9 +5642,7 @@
     "generation": 4,
     "name": "Shaymin - Sky Forme",
     "number": "492",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["mythical"],
     "types": ["flying", "grass"]
   },
@@ -6565,9 +5651,7 @@
     "generation": 4,
     "name": "Arceus",
     "number": "493",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "types": ["normal"]
   },
@@ -6576,9 +5660,7 @@
     "generation": 5,
     "name": "Victini",
     "number": "494",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["mythical"],
     "types": ["fire", "psychic"]
   },
@@ -6587,9 +5669,7 @@
     "generation": 5,
     "name": "Snivy",
     "number": "495",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["grass"]
   },
@@ -6598,9 +5678,7 @@
     "generation": 5,
     "name": "Servine",
     "number": "496",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["grass"]
   },
@@ -6609,9 +5687,7 @@
     "generation": 5,
     "name": "Serperior",
     "number": "497",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["grass"]
   },
@@ -6620,9 +5696,7 @@
     "generation": 5,
     "name": "Tepig",
     "number": "498",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["fire"]
   },
@@ -6631,9 +5705,7 @@
     "generation": 5,
     "name": "Pignite",
     "number": "499",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["fighting", "fire"]
   },
@@ -6642,9 +5714,7 @@
     "generation": 5,
     "name": "Emboar",
     "number": "500",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["fighting", "fire"]
   },
@@ -6653,9 +5723,7 @@
     "generation": 5,
     "name": "Oshawott",
     "number": "501",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["water"]
   },
@@ -6664,9 +5732,7 @@
     "generation": 5,
     "name": "Dewott",
     "number": "502",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["water"]
   },
@@ -6675,9 +5741,7 @@
     "generation": 5,
     "name": "Samurott",
     "number": "503",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["starter"],
     "types": ["water"]
   },
@@ -6686,9 +5750,7 @@
     "generation": 5,
     "name": "Patrat",
     "number": "504",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -6697,9 +5759,7 @@
     "generation": 5,
     "name": "Watchog",
     "number": "505",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -6708,9 +5768,7 @@
     "generation": 5,
     "name": "Lillipup",
     "number": "506",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -6719,9 +5777,7 @@
     "generation": 5,
     "name": "Herdier",
     "number": "507",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -6730,9 +5786,7 @@
     "generation": 5,
     "name": "Stoutland",
     "number": "508",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -6741,9 +5795,7 @@
     "generation": 5,
     "name": "Purrloin",
     "number": "509",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dark"]
   },
@@ -6752,9 +5804,7 @@
     "generation": 5,
     "name": "Liepard",
     "number": "510",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dark"]
   },
@@ -6763,9 +5813,7 @@
     "generation": 5,
     "name": "Pansage",
     "number": "511",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["regional"],
     "types": ["grass"]
   },
@@ -6774,9 +5822,7 @@
     "generation": 5,
     "name": "Simisage",
     "number": "512",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["regional"],
     "types": ["grass"]
   },
@@ -6785,9 +5831,7 @@
     "generation": 5,
     "name": "Pansear",
     "number": "513",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["regional"],
     "types": ["fire"]
   },
@@ -6796,9 +5840,7 @@
     "generation": 5,
     "name": "Simisear",
     "number": "514",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["regional"],
     "types": ["fire"]
   },
@@ -6807,9 +5849,7 @@
     "generation": 5,
     "name": "Panpour",
     "number": "515",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["regional"],
     "types": ["water"]
   },
@@ -6818,9 +5858,7 @@
     "generation": 5,
     "name": "Simipour",
     "number": "516",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["regional"],
     "types": ["water"]
   },
@@ -6829,9 +5867,7 @@
     "generation": 5,
     "name": "Munna",
     "number": "517",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["psychic"]
   },
@@ -6840,9 +5876,7 @@
     "generation": 5,
     "name": "Musharna",
     "number": "518",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["psychic"]
   },
@@ -6851,9 +5885,7 @@
     "generation": 5,
     "name": "Pidove",
     "number": "519",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "normal"]
   },
@@ -6862,9 +5894,7 @@
     "generation": 5,
     "name": "Tranquill",
     "number": "520",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "normal"]
   },
@@ -6873,9 +5903,7 @@
     "generation": 5,
     "name": "Unfezant",
     "number": "521",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "normal"]
   },
@@ -6884,9 +5912,7 @@
     "generation": 5,
     "name": "Blitzle",
     "number": "522",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -6895,9 +5921,7 @@
     "generation": 5,
     "name": "Zebstrika",
     "number": "523",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -6906,9 +5930,7 @@
     "generation": 5,
     "name": "Roggenrola",
     "number": "524",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["rock"]
   },
@@ -6917,9 +5939,7 @@
     "generation": 5,
     "name": "Boldore",
     "number": "525",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["rock"]
   },
@@ -6928,9 +5948,7 @@
     "generation": 5,
     "name": "Gigalith",
     "number": "526",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["rock"]
   },
@@ -6939,9 +5957,7 @@
     "generation": 5,
     "name": "Woobat",
     "number": "527",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "psychic"]
   },
@@ -6950,9 +5966,7 @@
     "generation": 5,
     "name": "Swoobat",
     "number": "528",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "psychic"]
   },
@@ -6961,9 +5975,7 @@
     "generation": 5,
     "name": "Drilbur",
     "number": "529",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ground"]
   },
@@ -6972,9 +5984,7 @@
     "generation": 5,
     "name": "Excadrill",
     "number": "530",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["steel", "ground"]
   },
@@ -6983,9 +5993,7 @@
     "generation": 5,
     "name": "Audino",
     "number": "531",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -6994,9 +6002,7 @@
     "generation": 5,
     "name": "Timburr",
     "number": "532",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fighting"]
   },
@@ -7005,9 +6011,7 @@
     "generation": 5,
     "name": "Gurdurr",
     "number": "533",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fighting"]
   },
@@ -7016,9 +6020,7 @@
     "generation": 5,
     "name": "Conkeldurr",
     "number": "534",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fighting"]
   },
@@ -7027,9 +6029,7 @@
     "generation": 5,
     "name": "Tympole",
     "number": "535",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water"]
   },
@@ -7038,9 +6038,7 @@
     "generation": 5,
     "name": "Palpitoad",
     "number": "536",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ground", "water"]
   },
@@ -7049,9 +6047,7 @@
     "generation": 5,
     "name": "Seismitoad",
     "number": "537",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ground", "water"]
   },
@@ -7060,10 +6056,8 @@
     "generation": 5,
     "name": "Throh",
     "number": "538",
-    "purified": false,
 
-    "shadow": false,
-    "tags": [],
+    "tags": ["regional"],
     "types": ["fighting"]
   },
   "539_00": {
@@ -7071,10 +6065,8 @@
     "generation": 5,
     "name": "Sawk",
     "number": "539",
-    "purified": false,
 
-    "shadow": false,
-    "tags": [],
+    "tags": ["regional"],
     "types": ["fighting"]
   },
   "540_00": {
@@ -7082,9 +6074,7 @@
     "generation": 5,
     "name": "Sewaddle",
     "number": "540",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["grass", "bug"]
   },
@@ -7093,9 +6083,7 @@
     "generation": 5,
     "name": "Swadloon",
     "number": "541",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["grass", "bug"]
   },
@@ -7104,9 +6092,7 @@
     "generation": 5,
     "name": "Leavanny",
     "number": "542",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["grass", "bug"]
   },
@@ -7115,9 +6101,7 @@
     "generation": 5,
     "name": "Venipede",
     "number": "543",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison", "bug"]
   },
@@ -7126,9 +6110,7 @@
     "generation": 5,
     "name": "Whirlipede",
     "number": "544",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison", "bug"]
   },
@@ -7137,9 +6119,7 @@
     "generation": 5,
     "name": "Scolipede",
     "number": "545",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison", "bug"]
   },
@@ -7148,9 +6128,7 @@
     "generation": 5,
     "name": "Cottonee",
     "number": "546",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fairy", "grass"]
   },
@@ -7159,9 +6137,7 @@
     "generation": 5,
     "name": "Whimsicott",
     "number": "547",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fairy", "grass"]
   },
@@ -7170,9 +6146,7 @@
     "generation": 5,
     "name": "Petilil",
     "number": "548",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["grass"]
   },
@@ -7181,9 +6155,7 @@
     "generation": 5,
     "name": "Lilligant",
     "number": "549",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["grass"]
   },
@@ -7192,10 +6164,8 @@
     "generation": 5,
     "name": "Basculin - Red Striped",
     "number": "550",
-    "purified": false,
 
-    "shadow": false,
-    "tags": [],
+    "tags": ["regional"],
     "types": ["water"]
   },
   "550_12": {
@@ -7203,10 +6173,8 @@
     "generation": 5,
     "name": "Basculin - Blue Striped",
     "number": "550",
-    "purified": false,
 
-    "shadow": false,
-    "tags": [],
+    "tags": ["regional"],
     "types": ["water"]
   },
   "551_00": {
@@ -7214,9 +6182,7 @@
     "generation": 5,
     "name": "Sandile",
     "number": "551",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dark", "ground"]
   },
@@ -7225,9 +6191,7 @@
     "generation": 5,
     "name": "Krokorok",
     "number": "552",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dark", "ground"]
   },
@@ -7236,9 +6200,7 @@
     "generation": 5,
     "name": "Krookodile",
     "number": "553",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dark", "ground"]
   },
@@ -7247,9 +6209,7 @@
     "generation": 5,
     "name": "Darumaka",
     "number": "554",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fire"]
   },
@@ -7258,9 +6218,7 @@
     "generation": 5,
     "name": "Darmanitan - Standard Mode",
     "number": "555",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fire"]
   },
@@ -7269,9 +6227,7 @@
     "generation": 5,
     "name": "Darmanitan - Zen Mode",
     "number": "555",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fire"]
   },
@@ -7280,10 +6236,8 @@
     "generation": 5,
     "name": "Maractus",
     "number": "556",
-    "purified": false,
 
-    "shadow": false,
-    "tags": [],
+    "tags": ["regional"],
     "types": ["grass"]
   },
   "557_00": {
@@ -7291,9 +6245,7 @@
     "generation": 5,
     "name": "Dwebble",
     "number": "557",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["rock", "bug"]
   },
@@ -7302,9 +6254,7 @@
     "generation": 5,
     "name": "Crustle",
     "number": "558",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["rock", "bug"]
   },
@@ -7313,9 +6263,7 @@
     "generation": 5,
     "name": "Scraggy",
     "number": "559",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fighting", "dark"]
   },
@@ -7324,9 +6272,7 @@
     "generation": 5,
     "name": "Scrafty",
     "number": "560",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fighting", "dark"]
   },
@@ -7335,10 +6281,8 @@
     "generation": 5,
     "name": "Sigilyph",
     "number": "561",
-    "purified": false,
 
-    "shadow": false,
-    "tags": [],
+    "tags": ["regional"],
     "types": ["flying", "psychic"]
   },
   "562_00": {
@@ -7346,9 +6290,7 @@
     "generation": 5,
     "name": "Yamask",
     "number": "562",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ghost"]
   },
@@ -7357,9 +6299,7 @@
     "generation": 5,
     "name": "Cofagrigus",
     "number": "563",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ghost"]
   },
@@ -7368,9 +6308,7 @@
     "generation": 5,
     "name": "Tirtouga",
     "number": "564",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["rock", "water"]
   },
@@ -7379,9 +6317,7 @@
     "generation": 5,
     "name": "Carracosta",
     "number": "565",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["rock", "water"]
   },
@@ -7390,9 +6326,7 @@
     "generation": 5,
     "name": "Archen",
     "number": "566",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "rock"]
   },
@@ -7401,9 +6335,7 @@
     "generation": 5,
     "name": "Archeops",
     "number": "567",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "rock"]
   },
@@ -7412,9 +6344,7 @@
     "generation": 5,
     "name": "Trubbish",
     "number": "568",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison"]
   },
@@ -7423,9 +6353,7 @@
     "generation": 5,
     "name": "Garbodor",
     "number": "569",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison"]
   },
@@ -7434,9 +6362,7 @@
     "generation": 5,
     "name": "Zorua",
     "number": "570",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dark"]
   },
@@ -7445,9 +6371,7 @@
     "generation": 5,
     "name": "Zoroark",
     "number": "571",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dark"]
   },
@@ -7456,9 +6380,7 @@
     "generation": 5,
     "name": "Minccino",
     "number": "572",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -7467,9 +6389,7 @@
     "generation": 5,
     "name": "Cinccino",
     "number": "573",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -7478,9 +6398,7 @@
     "generation": 5,
     "name": "Gothita",
     "number": "574",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["psychic"]
   },
@@ -7489,9 +6407,7 @@
     "generation": 5,
     "name": "Gothorita",
     "number": "575",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["psychic"]
   },
@@ -7500,9 +6416,7 @@
     "generation": 5,
     "name": "Gothitelle",
     "number": "576",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["psychic"]
   },
@@ -7511,9 +6425,7 @@
     "generation": 5,
     "name": "Solosis",
     "number": "577",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["psychic"]
   },
@@ -7522,9 +6434,7 @@
     "generation": 5,
     "name": "Duosion",
     "number": "578",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["psychic"]
   },
@@ -7533,9 +6443,7 @@
     "generation": 5,
     "name": "Reuniclus",
     "number": "579",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["psychic"]
   },
@@ -7544,9 +6452,7 @@
     "generation": 5,
     "name": "Ducklett",
     "number": "580",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "water"]
   },
@@ -7555,9 +6461,7 @@
     "generation": 5,
     "name": "Swanna",
     "number": "581",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "water"]
   },
@@ -7566,9 +6470,7 @@
     "generation": 5,
     "name": "Vanillite",
     "number": "582",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ice"]
   },
@@ -7577,9 +6479,7 @@
     "generation": 5,
     "name": "Vanillish",
     "number": "583",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ice"]
   },
@@ -7588,9 +6488,7 @@
     "generation": 5,
     "name": "Vanilluxe",
     "number": "584",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ice"]
   },
@@ -7599,9 +6497,7 @@
     "generation": 5,
     "name": "Deerling",
     "number": "585",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["grass", "normal"]
   },
@@ -7610,9 +6506,7 @@
     "generation": 5,
     "name": "Sawsbuck",
     "number": "586",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["grass", "normal"]
   },
@@ -7621,9 +6515,7 @@
     "generation": 5,
     "name": "Emolga",
     "number": "587",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "electric"]
   },
@@ -7632,9 +6524,7 @@
     "generation": 5,
     "name": "Karrablast",
     "number": "588",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["bug"]
   },
@@ -7643,9 +6533,7 @@
     "generation": 5,
     "name": "Escavalier",
     "number": "589",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["steel", "bug"]
   },
@@ -7654,9 +6542,7 @@
     "generation": 5,
     "name": "Foongus",
     "number": "590",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison", "grass"]
   },
@@ -7665,9 +6551,7 @@
     "generation": 5,
     "name": "Amoonguss",
     "number": "591",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["poison", "grass"]
   },
@@ -7676,9 +6560,7 @@
     "generation": 5,
     "name": "Frillish",
     "number": "592",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ghost", "water"]
   },
@@ -7687,9 +6569,7 @@
     "generation": 5,
     "name": "Jellicent",
     "number": "593",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ghost", "water"]
   },
@@ -7698,9 +6578,7 @@
     "generation": 5,
     "name": "Alomomola",
     "number": "594",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["water"]
   },
@@ -7709,9 +6587,7 @@
     "generation": 5,
     "name": "Joltik",
     "number": "595",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric", "bug"]
   },
@@ -7720,9 +6596,7 @@
     "generation": 5,
     "name": "Galvantula",
     "number": "596",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric", "bug"]
   },
@@ -7731,9 +6605,7 @@
     "generation": 5,
     "name": "Ferroseed",
     "number": "597",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["steel", "grass"]
   },
@@ -7742,9 +6614,7 @@
     "generation": 5,
     "name": "Ferrothorn",
     "number": "598",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["steel", "grass"]
   },
@@ -7753,9 +6623,7 @@
     "generation": 5,
     "name": "Klink",
     "number": "599",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["steel"]
   },
@@ -7764,9 +6632,7 @@
     "generation": 5,
     "name": "Klang",
     "number": "600",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["steel"]
   },
@@ -7775,9 +6641,7 @@
     "generation": 5,
     "name": "Klinklang",
     "number": "601",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["steel"]
   },
@@ -7786,9 +6650,7 @@
     "generation": 5,
     "name": "Tynamo",
     "number": "602",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -7797,9 +6659,7 @@
     "generation": 5,
     "name": "Eelektrik",
     "number": "603",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -7808,9 +6668,7 @@
     "generation": 5,
     "name": "Eelektross",
     "number": "604",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric"]
   },
@@ -7819,9 +6677,7 @@
     "generation": 5,
     "name": "Elgyem",
     "number": "605",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["psychic"]
   },
@@ -7830,9 +6686,7 @@
     "generation": 5,
     "name": "Beheeyem",
     "number": "606",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["psychic"]
   },
@@ -7841,9 +6695,7 @@
     "generation": 5,
     "name": "Litwick",
     "number": "607",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fire", "ghost"]
   },
@@ -7852,9 +6704,7 @@
     "generation": 5,
     "name": "Lampent",
     "number": "608",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fire", "ghost"]
   },
@@ -7863,9 +6713,7 @@
     "generation": 5,
     "name": "Chandelure",
     "number": "609",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fire", "ghost"]
   },
@@ -7874,9 +6722,7 @@
     "generation": 5,
     "name": "Axew",
     "number": "610",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dragon"]
   },
@@ -7885,9 +6731,7 @@
     "generation": 5,
     "name": "Fraxure",
     "number": "611",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dragon"]
   },
@@ -7896,9 +6740,7 @@
     "generation": 5,
     "name": "Haxorus",
     "number": "612",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dragon"]
   },
@@ -7907,9 +6749,7 @@
     "generation": 5,
     "name": "Cubchoo",
     "number": "613",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ice"]
   },
@@ -7918,9 +6758,7 @@
     "generation": 5,
     "name": "Beartic",
     "number": "614",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ice"]
   },
@@ -7929,9 +6767,7 @@
     "generation": 5,
     "name": "Cryogonal",
     "number": "615",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ice"]
   },
@@ -7940,9 +6776,7 @@
     "generation": 5,
     "name": "Shelmet",
     "number": "616",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["bug"]
   },
@@ -7951,9 +6785,7 @@
     "generation": 5,
     "name": "Accelgor",
     "number": "617",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["bug"]
   },
@@ -7962,9 +6794,7 @@
     "generation": 5,
     "name": "Stunfisk",
     "number": "618",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["electric", "ground"]
   },
@@ -7973,9 +6803,7 @@
     "generation": 5,
     "name": "Mienfoo",
     "number": "619",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fighting"]
   },
@@ -7984,9 +6812,7 @@
     "generation": 5,
     "name": "Mienshao",
     "number": "620",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fighting"]
   },
@@ -7995,9 +6821,7 @@
     "generation": 5,
     "name": "Druddigon",
     "number": "621",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dragon"]
   },
@@ -8006,9 +6830,7 @@
     "generation": 5,
     "name": "Golett",
     "number": "622",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ghost", "ground"]
   },
@@ -8017,9 +6839,7 @@
     "generation": 5,
     "name": "Golurk",
     "number": "623",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["ghost", "ground"]
   },
@@ -8028,9 +6848,7 @@
     "generation": 5,
     "name": "Pawniard",
     "number": "624",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["steel", "dark"]
   },
@@ -8039,9 +6857,7 @@
     "generation": 5,
     "name": "Bisharp",
     "number": "625",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["steel", "dark"]
   },
@@ -8050,9 +6866,7 @@
     "generation": 5,
     "name": "Bouffalant",
     "number": "626",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["normal"]
   },
@@ -8061,9 +6875,7 @@
     "generation": 5,
     "name": "Rufflet",
     "number": "627",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "normal"]
   },
@@ -8072,9 +6884,7 @@
     "generation": 5,
     "name": "Braviary",
     "number": "628",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "normal"]
   },
@@ -8083,9 +6893,7 @@
     "generation": 5,
     "name": "Vullaby",
     "number": "629",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "dark"]
   },
@@ -8094,9 +6902,7 @@
     "generation": 5,
     "name": "Mandibuzz",
     "number": "630",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["flying", "dark"]
   },
@@ -8105,9 +6911,7 @@
     "generation": 5,
     "name": "Heatmor",
     "number": "631",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["regional"],
     "types": ["fire"]
   },
@@ -8116,9 +6920,7 @@
     "generation": 5,
     "name": "Durant",
     "number": "632",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["regional"],
     "types": ["steel", "bug"]
   },
@@ -8127,9 +6929,7 @@
     "generation": 5,
     "name": "Deino",
     "number": "633",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dragon", "dark"]
   },
@@ -8138,9 +6938,7 @@
     "generation": 5,
     "name": "Zweilous",
     "number": "634",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dragon", "dark"]
   },
@@ -8149,9 +6947,7 @@
     "generation": 5,
     "name": "Hydreigon",
     "number": "635",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["dragon", "dark"]
   },
@@ -8160,9 +6956,7 @@
     "generation": 5,
     "name": "Larvesta",
     "number": "636",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fire", "bug"]
   },
@@ -8171,9 +6965,7 @@
     "generation": 5,
     "name": "Volcarona",
     "number": "637",
-    "purified": false,
 
-    "shadow": false,
     "tags": [],
     "types": ["fire", "bug"]
   },
@@ -8182,9 +6974,7 @@
     "generation": 5,
     "name": "Cobalion",
     "number": "638",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "types": ["fighting", "steel"]
   },
@@ -8193,9 +6983,7 @@
     "generation": 5,
     "name": "Terrakion",
     "number": "639",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "types": ["fighting", "rock"]
   },
@@ -8204,9 +6992,7 @@
     "generation": 5,
     "name": "Virizion",
     "number": "640",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "types": ["fighting", "grass"]
   },
@@ -8215,9 +7001,7 @@
     "generation": 5,
     "name": "Tornadus",
     "number": "641",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "types": ["flying"]
   },
@@ -8226,9 +7010,7 @@
     "generation": 5,
     "name": "Thundurus",
     "number": "642",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "types": ["flying", "electric"]
   },
@@ -8237,9 +7019,7 @@
     "generation": 5,
     "name": "Reshiram",
     "number": "643",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "types": ["fire", "dragon"]
   },
@@ -8248,9 +7028,7 @@
     "generation": 5,
     "name": "Zekrom",
     "number": "644",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "types": ["electric", "dragon"]
   },
@@ -8259,9 +7037,7 @@
     "generation": 5,
     "name": "Landorus",
     "number": "645",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "types": ["flying", "ground"]
   },
@@ -8270,9 +7046,7 @@
     "generation": 5,
     "name": "Kyurem",
     "number": "646",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["legendary"],
     "types": ["ice", "dragon"]
   },
@@ -8281,9 +7055,7 @@
     "generation": 5,
     "name": "Keldeo",
     "number": "647",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["mythical"],
     "types": ["fighting", "water"]
   },
@@ -8292,9 +7064,7 @@
     "generation": 5,
     "name": "Meloetta - Aria Forme",
     "number": "648",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["mythical"],
     "types": ["psychic", "normal"]
   },
@@ -8303,9 +7073,7 @@
     "generation": 5,
     "name": "Meloetta - Pirouette Forme",
     "number": "648",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["mythical"],
     "types": ["psychic", "normal"]
   },
@@ -8314,9 +7082,7 @@
     "generation": 5,
     "name": "Genesect",
     "number": "649",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["mythical"],
     "types": ["steel", "bug"]
   },
@@ -8325,9 +7091,7 @@
     "generation": 7,
     "name": "Meltan",
     "number": "808",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["mythical"],
     "types": ["steel"]
   },
@@ -8336,9 +7100,7 @@
     "generation": 7,
     "name": "Melmetal",
     "number": "809",
-    "purified": false,
 
-    "shadow": false,
     "tags": ["mythical"],
     "types": ["steel"]
   }
