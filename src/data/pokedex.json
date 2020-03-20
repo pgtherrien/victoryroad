@@ -488,6 +488,14 @@
     "tags": [],
     "types": ["electric"]
   },
+  "025_01_16": {
+    "genders": ["female", "male"],
+    "generation": 1,
+    "name": "Pikachu Libre",
+    "number": "025",
+    "tags": [],
+    "types": ["electric"]
+  },
   "026_00": {
     "genders": ["female", "male"],
     "generation": 1,
@@ -2506,6 +2514,14 @@
     "tags": [],
     "types": ["ghost"]
   },
+  "201_00": {
+    "genders": [],
+    "generation": 2,
+    "name": "Unown",
+    "number": "201",
+    "tags": [],
+    "types": ["psychic"]
+  },
   "201_11": {
     "genders": [],
     "generation": 2,
@@ -4141,7 +4157,7 @@
   "351_00": {
     "genders": ["female", "male"],
     "generation": 3,
-    "name": "Castform - Normal Form",
+    "name": "Castform",
     "number": "351",
 
     "tags": [],
