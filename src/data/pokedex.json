@@ -4,7 +4,6 @@
     "generation": 1,
     "name": "Bulbasaur",
     "number": "001",
-
     "tags": ["starter"],
     "templateId": "V0001_POKEMON_BULBASAUR",
     "types": ["poison", "grass"]
@@ -14,7 +13,6 @@
     "generation": 1,
     "name": "Bulbasaur - Halloween Costume",
     "number": "001",
-
     "tags": ["starter"],
     "templateId": "V0001_POKEMON_BULBASAUR",
     "types": ["poison", "grass"]
@@ -24,7 +22,6 @@
     "generation": 1,
     "name": "Bulbasaur - Party Hat",
     "number": "001",
-
     "tags": ["starter"],
     "templateId": "V0001_POKEMON_BULBASAUR",
     "types": ["poison", "grass"]
@@ -34,7 +31,6 @@
     "generation": 1,
     "name": "Ivysaur",
     "number": "002",
-
     "tags": ["starter"],
     "templateId": "V0002_POKEMON_IVYSAUR",
     "types": ["poison", "grass"]
@@ -44,7 +40,6 @@
     "generation": 1,
     "name": "Venusaur",
     "number": "003",
-
     "tags": ["starter"],
     "templateId": "V0003_POKEMON_VENUSAUR",
     "types": ["poison", "grass"]
@@ -54,7 +49,6 @@
     "generation": 1,
     "name": "Clone Venusaur",
     "number": "003",
-
     "tags": ["starter"],
     "templateId": "V0003_POKEMON_VENUSAUR",
     "types": ["poison", "grass"]
@@ -484,7 +478,22 @@
     "generation": 1,
     "name": "Clone Pikachu",
     "number": "025",
-
+    "tags": [],
+    "types": ["electric"]
+  },
+  "025_00_14": {
+    "genders": ["female", "male"],
+    "generation": 1,
+    "name": "Pikachu - Flower Hat",
+    "number": "025",
+    "tags": [],
+    "types": ["electric"]
+  },
+  "025_00_15": {
+    "genders": ["female", "male"],
+    "generation": 1,
+    "name": "Pikachu - Cowboy Hat",
+    "number": "025",
     "tags": [],
     "types": ["electric"]
   },
@@ -2242,6 +2251,15 @@
     "tags": ["baby"],
     "types": ["electric"]
   },
+  "172_00_12": {
+    "genders": ["female", "male"],
+    "generation": 2,
+    "name": "Pichu - Flower Crown",
+    "number": "172",
+
+    "tags": ["baby"],
+    "types": ["electric"]
+  },
   "173_00": {
     "genders": ["female", "male"],
     "generation": 2,
@@ -2264,6 +2282,15 @@
     "genders": ["female", "male"],
     "generation": 2,
     "name": "Togepi",
+    "number": "175",
+
+    "tags": ["baby"],
+    "types": ["fairy"]
+  },
+  "175_00_12": {
+    "genders": ["female", "male"],
+    "generation": 2,
+    "name": "Togepi - Flower Crown",
     "number": "175",
 
     "tags": ["baby"],
@@ -4982,6 +5009,15 @@
     "genders": ["female", "male"],
     "generation": 4,
     "name": "Buneary",
+    "number": "427",
+
+    "tags": [],
+    "types": ["normal"]
+  },
+  "427_00_12": {
+    "genders": ["female", "male"],
+    "generation": 4,
+    "name": "Buneary - Flower Crown",
     "number": "427",
 
     "tags": [],

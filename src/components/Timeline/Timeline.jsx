@@ -1,20 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useContext, useEffect, useState } from "react";
 import { Button, CircularProgress, Grid, Typography } from "@material-ui/core";
 import GitHubIcon from "@material-ui/icons/GitHub";
 
 import { db } from "../../utils/firebase";
+import AuthContext from "../../contexts/AuthContext";
 import EventModal from "../EventModal";
 import EventRow from "../EventRow";
+import Header from "../Header";
 import styles from "./Timeline.module.css";
 
 export default function Timeline(props) {
-  const { admins, handleSelectEditEvent, user } = props;
+  const { handleSelectEditEvent } = props;
   const [events, setEvents] = useState({
     current: [],
     past: [],
-    upcoming: []
+    upcoming: [],
   });
   const [selectedEventID, setSelectedEventID] = useState("");
+  const authContext = useContext(AuthContext);
+  const { admins, user } = authContext;
   let i = 0;
   let renderedEvents = [
     <Typography
@@ -24,7 +28,7 @@ export default function Timeline(props) {
       variant="caption"
     >
       ACTIVE
-    </Typography>
+    </Typography>,
   ];
   let selectedEvent = {};
 
@@ -33,13 +37,13 @@ export default function Timeline(props) {
     let updatedEvents = {
       current: [],
       past: [],
-      upcoming: []
+      upcoming: [],
     };
 
     db.collection("events")
       .get()
-      .then(querySnapshot => {
-        querySnapshot.forEach(doc => {
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
           let event = doc.data();
           event.id = doc.id;
           event.startDate = new Date(event.startDate.toDate());
@@ -65,7 +69,7 @@ export default function Timeline(props) {
       });
   }, []);
 
-  events.current.forEach(function(event) {
+  events.current.forEach(function (event) {
     if (event.id === selectedEventID) {
       selectedEvent = event;
     }
@@ -94,7 +98,7 @@ export default function Timeline(props) {
     </Typography>
   );
 
-  events.upcoming.forEach(function(event) {
+  events.upcoming.forEach(function (event) {
     if (event.id === selectedEventID) {
       selectedEvent = event;
     }
@@ -112,8 +116,9 @@ export default function Timeline(props) {
     i++;
   });
 
+  let contents = <CircularProgress className={styles.loading} />;
   if (events.current.length > 0 || events.upcoming.length > 0) {
-    return (
+    contents = (
       <div className={styles.timeline}>
         <Grid className={styles.container} container spacing={3}>
           {renderedEvents}
@@ -135,7 +140,12 @@ export default function Timeline(props) {
         )}
       </div>
     );
-  } else {
-    return <CircularProgress className={styles.loading} />;
   }
+
+  return (
+    <Fragment>
+      <Header showSearch={false} />
+      {contents}
+    </Fragment>
+  );
 }

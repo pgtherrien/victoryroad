@@ -9,8 +9,8 @@ import App from "./components/App";
 const theme = createMuiTheme({
   palette: {
     secondary: lightBlue,
-    type: "dark"
-  }
+    type: "dark",
+  },
 });
 
 ReactDOM.render(
