@@ -1,3 +1,23 @@
+.adminControls {
+  overflow-y: auto;
+}
+
+.adminControlsTitle {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px !important;
+  text-align: center;
+}
+
+.adminControlsTitle::before,
+.adminControlsTitle::after {
+  content: "";
+  border-top: 1px rgba(255, 255, 255, 0.12) solid;
+  margin: 0 10px 0 10px;
+  flex: 1 0 20px;
+}
+
 .container {
   margin: 0 auto !important;
   width: 100% !important;

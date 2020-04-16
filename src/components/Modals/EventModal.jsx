@@ -1,57 +1,64 @@
 import React, { useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import PropTypes from "prop-types";
 import { Button, Modal, TextField, Typography } from "@material-ui/core";
-import AddCircleIcon from "@material-ui/icons/AddCircle";
+import { makeStyles } from "@material-ui/core/styles";
+import { AddCircle as AddCircleIcon } from "@material-ui/icons";
 
 import { db } from "../../utils/firebase";
 
-const useStyles = makeStyles(theme => ({
-  leftField: {
-    marginRight: "32px",
-    marginTop: "20px",
-    width: "300px"
+const useStyles = makeStyles((theme) => ({
+  content: {
+    height: "95%",
+    overflowY: "auto",
+    padding: "10px",
   },
   form: {
     "& .MuiTextField-root": {
-      marginBottom: "15px"
+      marginBottom: "15px",
     },
     "& .MuiInputBase-root": {
-      marginBottom: "15px"
-    }
+      marginBottom: "15px",
+    },
+  },
+  leftField: {
+    marginTop: "20px",
+    width: "320px",
   },
   modal: {
     backgroundColor: theme.palette.background.paper,
     borderRadius: "15px",
+    boxShadow: theme.shadows[5],
     height: "78%",
     left: "50%",
     outline: 0,
-    overflowY: "auto",
     padding: theme.spacing(4, 4, 3),
     position: "absolute",
     right: "50%",
     top: "50%",
     transform: "translate(-50%, -50%)",
-    width: "750px"
+    width: "750px",
   },
   plus: {
-    cursor: "pointer"
+    cursor: "pointer",
   },
   rightField: {
-    marginLeft: "32px",
+    marginLeft: "16px",
     marginTop: "20px",
-    width: "300px"
+    width: "320px",
   },
   submit: {
-    margin: "0 auto"
+    margin: "0 auto",
   },
   submitWrapper: {
     textAlign: "center",
-    width: "100%"
-  }
+    width: "100%",
+  },
+  title: {
+    paddingBottom: "10px",
+  },
 }));
 
-export default function EventForm(props) {
-  const { event, handleClose } = props;
+const EventModal = ({ event, handleClose }) => {
   const {
     background,
     bonuses,
@@ -66,7 +73,7 @@ export default function EventForm(props) {
     startDate,
     summary,
     title,
-    voteOptions
+    voteOptions,
   } = event;
 
   let defaultForm = {
@@ -79,17 +86,17 @@ export default function EventForm(props) {
     link: link || "",
     newPokemon:
       newPokemon && newPokemon.length > 0
-        ? newPokemon.map(pokemon => {
+        ? newPokemon.map((pokemon) => {
             return {
-              image: pokemon
+              image: pokemon,
             };
           })
         : [],
     newShinies:
       newShinies && newShinies.length > 0
-        ? newShinies.map(pokemon => {
+        ? newShinies.map((pokemon) => {
             return {
-              image: pokemon
+              image: pokemon,
             };
           })
         : [],
@@ -97,7 +104,7 @@ export default function EventForm(props) {
     startDate: startDate || "",
     summary: summary || "",
     title: title || "",
-    voteOptions: voteOptions || []
+    voteOptions: voteOptions || [],
   };
 
   const [form, setForm] = useState(defaultForm);
@@ -106,28 +113,30 @@ export default function EventForm(props) {
   const handleSubmit = () => {
     let submitForm = Object.assign({}, form);
     delete submitForm.id;
-    submitForm.newPokemon = submitForm.newPokemon.map(pokemon => pokemon.image);
-    submitForm.newShinies = submitForm.newShinies.map(shiny => shiny.image);
+    submitForm.newPokemon = submitForm.newPokemon.map(
+      (pokemon) => pokemon.image
+    );
+    submitForm.newShinies = submitForm.newShinies.map((shiny) => shiny.image);
     db.collection("events")
       .doc(submitForm.title)
       .set({
-        ...submitForm
+        ...submitForm,
       })
       .then(() => {
         handleClose();
       })
-      .catch(function(error) {
+      .catch(function (error) {
         console.error("Error writing event: ", error);
       });
   };
 
-  const incrementArray = field => {
+  const incrementArray = (field) => {
     let counter = {
       charged: "",
       chargedImage: "",
       fast: "",
       fastImage: "",
-      name: ""
+      name: "",
     };
     let pokemon = { image: "" };
     let standard = { image: "", text: "" };
@@ -162,35 +171,36 @@ export default function EventForm(props) {
             color="secondary"
             fullWidth
             InputLabelProps={{
-              shrink: true
+              shrink: true,
             }}
             label="Name"
-            onChange={event =>
+            onChange={(event) =>
               updateNestedArray(index, "name", "counters", event.target.value)
             }
             value={form.counters[i].name}
+            variant="filled"
           />
           <TextField
             className={classes.leftField}
             color="secondary"
             InputLabelProps={{
-              shrink: true
+              shrink: true,
             }}
             label="Fast Attack"
-            onChange={event =>
+            onChange={(event) =>
               updateNestedArray(index, "fast", "counters", event.target.value)
             }
             value={form.counters[i].fast}
-            variant="outlined"
+            variant="filled"
           />
           <TextField
             className={classes.rightField}
             color="secondary"
             InputLabelProps={{
-              shrink: true
+              shrink: true,
             }}
             label="Type Image"
-            onChange={event =>
+            onChange={(event) =>
               updateNestedArray(
                 index,
                 "fastImage",
@@ -199,16 +209,16 @@ export default function EventForm(props) {
               )
             }
             value={form.counters[i].fastImage}
-            variant="outlined"
+            variant="filled"
           />
           <TextField
             className={classes.leftField}
             color="secondary"
             InputLabelProps={{
-              shrink: true
+              shrink: true,
             }}
             label="Charged Attack"
-            onChange={event =>
+            onChange={(event) =>
               updateNestedArray(
                 index,
                 "charged",
@@ -217,16 +227,16 @@ export default function EventForm(props) {
               )
             }
             value={form.counters[i].charged}
-            variant="outlined"
+            variant="filled"
           />
           <TextField
             className={classes.rightField}
             color="secondary"
             InputLabelProps={{
-              shrink: true
+              shrink: true,
             }}
             label="Type Image"
-            onChange={event =>
+            onChange={(event) =>
               updateNestedArray(
                 index,
                 "chargedImage",
@@ -235,7 +245,7 @@ export default function EventForm(props) {
               )
             }
             value={form.counters[i].chargedImage}
-            variant="outlined"
+            variant="filled"
           />
         </React.Fragment>
       );
@@ -243,7 +253,7 @@ export default function EventForm(props) {
     return counters;
   };
 
-  const renderPairs = field => {
+  const renderPairs = (field) => {
     let pairs = [];
     for (var i = 0; i < form[field].length; i++) {
       let index = i;
@@ -253,27 +263,27 @@ export default function EventForm(props) {
             className={classes.leftField}
             color="secondary"
             InputLabelProps={{
-              shrink: true
+              shrink: true,
             }}
             label="Image"
-            onChange={event =>
+            onChange={(event) =>
               updateNestedArray(index, "image", field, event.target.value)
             }
             value={form[field][i].image}
-            variant="outlined"
+            variant="filled"
           />
           <TextField
             className={classes.rightField}
             color="secondary"
             InputLabelProps={{
-              shrink: true
+              shrink: true,
             }}
             label="Text"
-            onChange={event =>
+            onChange={(event) =>
               updateNestedArray(index, "text", field, event.target.value)
             }
             value={form[field][i].text}
-            variant="outlined"
+            variant="filled"
           />
         </React.Fragment>
       );
@@ -281,7 +291,7 @@ export default function EventForm(props) {
     return pairs;
   };
 
-  const renderNew = field => {
+  const renderNew = (field) => {
     let list = [];
     for (var i = 0; i < form[field].length; i++) {
       let index = i;
@@ -290,13 +300,13 @@ export default function EventForm(props) {
           color="secondary"
           fullWidth
           InputLabelProps={{
-            shrink: true
+            shrink: true,
           }}
           key={i}
           label="Image"
-          onChange={event => updateNew(field, index, event.target.value)}
+          onChange={(event) => updateNew(field, index, event.target.value)}
           value={form[field][index].image}
-          variant="outlined"
+          variant="filled"
         />
       );
     }
@@ -315,12 +325,13 @@ export default function EventForm(props) {
         color="secondary"
         fullWidth
         InputLabelProps={{
-          shrink: true
+          shrink: true,
         }}
         label={label}
-        onChange={event => updateField(field, new Date(event.target.value))}
+        onChange={(event) => updateField(field, new Date(event.target.value))}
         type="datetime-local"
         value={value}
+        variant="filled"
       />
     );
   };
@@ -331,12 +342,13 @@ export default function EventForm(props) {
         color="secondary"
         fullWidth
         InputLabelProps={{
-          shrink: true
+          shrink: true,
         }}
         label={label}
         multiline={field === "summary"}
-        onChange={event => updateField(field, event.target.value)}
+        onChange={(event) => updateField(field, event.target.value)}
         value={form[field]}
+        variant="filled"
       />
     );
   };
@@ -369,113 +381,126 @@ export default function EventForm(props) {
     <Modal
       aria-labelledby="simple-modal-title"
       aria-describedby="simple-modal-description"
-      open={true}
+      open
       onClose={handleClose}
     >
       <div className={classes.modal}>
-        <Typography align="center" variant="h6">
+        <Typography align="center" className={classes.title} variant="h5">
           Event Form
         </Typography>
-        <form autoComplete="off" className={classes.form} noValidate>
-          {renderTextField("title", "Title")}
-          {renderTextField("summary", "Summary")}
-          {renderTextField("background", "Background")}
-          {renderTextField("icon", "Icon")}
-          {renderTextField("link", "Link")}
-          {renderDateField("startDate", "Start Date")}
-          {renderDateField("endDate", "End Date")}
-          <Typography align="center" variant="h6">
-            Bonuses
-          </Typography>
-          {renderPairs("bonuses")}
-          <AddCircleIcon
-            className={classes.plus}
-            onClick={() => incrementArray("bonuses")}
-          />
-          <Typography align="center" variant="h6">
-            Counters
-          </Typography>
-          {renderCounters()}
-          <AddCircleIcon
-            className={classes.plus}
-            onClick={() => incrementArray("counters")}
-          />
-          <Typography align="center" variant="h6">
-            Features
-          </Typography>
-          {renderPairs("features")}
-          <AddCircleIcon
-            className={classes.plus}
-            onClick={() => incrementArray("features")}
-          />
-          <Typography align="center" variant="h6">
-            New Pokémon
-          </Typography>
-          {renderNew("newPokemon")}
-          <AddCircleIcon
-            className={classes.plus}
-            onClick={() => incrementArray("newPokemon")}
-          />
-          <Typography align="center" variant="h6">
-            New Shinies
-          </Typography>
-          {renderNew("newShinies")}
-          <AddCircleIcon
-            className={classes.plus}
-            onClick={() => incrementArray("newShinies")}
-          />
-          <Typography align="center" variant="h6">
-            Perfect IV's
-          </Typography>
-          <TextField
-            className={classes.leftField}
-            color="secondary"
-            InputLabelProps={{
-              shrink: true
-            }}
-            label="Level 20"
-            onChange={event => updateArray("perfectIV", 0, event.target.value)}
-            value={form.perfectIV[0]}
-            variant="outlined"
-          />
-          <TextField
-            className={classes.rightField}
-            color="secondary"
-            InputLabelProps={{
-              shrink: true
-            }}
-            label="Level 25"
-            onChange={event => updateArray("perfectIV", 1, event.target.value)}
-            value={form.perfectIV[1]}
-            variant="outlined"
-          />
-          <Typography align="center" variant="h6">
-            Vote Options
-          </Typography>
-          {renderPairs("voteOptions")}
-          <AddCircleIcon
-            className={classes.plus}
-            onClick={() => incrementArray("voteOptions")}
-          />
-          <div className={classes.submitWrapper}>
-            <Button
-              onClick={handleClose}
-              style={{ marginRight: "15px" }}
-              variant="contained"
-            >
-              Cancel
-            </Button>
-            <Button
-              className={classes.submit}
+        <div className={classes.content}>
+          <form autoComplete="off" className={classes.form} noValidate>
+            {renderTextField("title", "Title")}
+            {renderTextField("summary", "Summary")}
+            {renderTextField("background", "Background")}
+            {renderTextField("icon", "Icon")}
+            {renderTextField("link", "Link")}
+            {renderDateField("startDate", "Start Date")}
+            {renderDateField("endDate", "End Date")}
+            <Typography align="center" variant="h6">
+              Bonuses
+            </Typography>
+            {renderPairs("bonuses")}
+            <AddCircleIcon
+              className={classes.plus}
+              onClick={() => incrementArray("bonuses")}
+            />
+            <Typography align="center" variant="h6">
+              Counters
+            </Typography>
+            {renderCounters()}
+            <AddCircleIcon
+              className={classes.plus}
+              onClick={() => incrementArray("counters")}
+            />
+            <Typography align="center" variant="h6">
+              Features
+            </Typography>
+            {renderPairs("features")}
+            <AddCircleIcon
+              className={classes.plus}
+              onClick={() => incrementArray("features")}
+            />
+            <Typography align="center" variant="h6">
+              New Pokémon
+            </Typography>
+            {renderNew("newPokemon")}
+            <AddCircleIcon
+              className={classes.plus}
+              onClick={() => incrementArray("newPokemon")}
+            />
+            <Typography align="center" variant="h6">
+              New Shinies
+            </Typography>
+            {renderNew("newShinies")}
+            <AddCircleIcon
+              className={classes.plus}
+              onClick={() => incrementArray("newShinies")}
+            />
+            <Typography align="center" variant="h6">
+              Perfect IV's
+            </Typography>
+            <TextField
+              className={classes.leftField}
               color="secondary"
-              onClick={handleSubmit}
-              variant="contained"
-            >
-              Submit
-            </Button>
-          </div>
-        </form>
+              InputLabelProps={{
+                shrink: true,
+              }}
+              label="Level 20"
+              onChange={(event) =>
+                updateArray("perfectIV", 0, event.target.value)
+              }
+              value={form.perfectIV[0]}
+              variant="filled"
+            />
+            <TextField
+              className={classes.rightField}
+              color="secondary"
+              InputLabelProps={{
+                shrink: true,
+              }}
+              label="Level 25"
+              onChange={(event) =>
+                updateArray("perfectIV", 1, event.target.value)
+              }
+              value={form.perfectIV[1]}
+              variant="filled"
+            />
+            <Typography align="center" variant="h6">
+              Vote Options
+            </Typography>
+            {renderPairs("voteOptions")}
+            <AddCircleIcon
+              className={classes.plus}
+              onClick={() => incrementArray("voteOptions")}
+            />
+            <div className={classes.submitWrapper}>
+              <Button
+                onClick={handleClose}
+                style={{ marginRight: "15px" }}
+                variant="contained"
+              >
+                Cancel
+              </Button>
+              <Button
+                className={classes.submit}
+                color="secondary"
+                onClick={handleSubmit}
+                variant="contained"
+              >
+                Submit
+              </Button>
+            </div>
+          </form>
+        </div>
       </div>
     </Modal>
   );
-}
+};
+
+EventModal.propTypes = {
+  event: PropTypes.object.isRequired,
+  handleClose: PropTypes.func.isRequired,
+};
+
+export default EventModal;

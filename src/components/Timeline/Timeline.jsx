@@ -3,19 +3,22 @@ import { Button, CircularProgress, Grid, Typography } from "@material-ui/core";
 import GitHubIcon from "@material-ui/icons/GitHub";
 
 import { db } from "../../utils/firebase";
+import AdminControls from "./AdminControls";
 import AuthContext from "../../contexts/AuthContext";
-import EventModal from "../EventModal";
+import Event from "../Event";
+import { EventModal } from "../Modals";
 import EventRow from "../EventRow";
 import Header from "../Header";
 import styles from "./Timeline.module.css";
 
-export default function Timeline(props) {
-  const { handleSelectEditEvent } = props;
+const Timeline = () => {
+  const [editEvent, setEditEvent] = useState({});
   const [events, setEvents] = useState({
     current: [],
     past: [],
     upcoming: [],
   });
+  const [isEventModalOpen, setIsEventModalOpen] = useState(false);
   const [selectedEventID, setSelectedEventID] = useState("");
   const authContext = useContext(AuthContext);
   const { admins, user } = authContext;
@@ -77,7 +80,10 @@ export default function Timeline(props) {
     renderedEvents.push(
       <EventRow
         event={event}
-        handleSelectEditEvent={handleSelectEditEvent}
+        handleSelectEditEvent={(e) => {
+          setEditEvent(e);
+          setIsEventModalOpen(true);
+        }}
         handleSelectEvent={setSelectedEventID}
         isAdmin={admins.includes(user.uid)}
         key={i}
@@ -106,7 +112,10 @@ export default function Timeline(props) {
     renderedEvents.push(
       <EventRow
         event={event}
-        handleSelectEditEvent={handleSelectEditEvent}
+        handleSelectEditEvent={(e) => {
+          setEditEvent(e);
+          setIsEventModalOpen(true);
+        }}
         handleSelectEvent={setSelectedEventID}
         isAdmin={admins.includes(user.uid)}
         key={i}
@@ -133,7 +142,7 @@ export default function Timeline(props) {
           </Button>
         </div>
         {selectedEventID !== "" && (
-          <EventModal
+          <Event
             event={selectedEvent}
             handleClose={() => setSelectedEventID("")}
           />
@@ -144,8 +153,24 @@ export default function Timeline(props) {
 
   return (
     <Fragment>
-      <Header showSearch={false} />
+      <Header
+        showSearch={false}
+        sidebarChildren={
+          <AdminControls handleOpenAdd={() => setIsEventModalOpen(true)} />
+        }
+      />
       {contents}
+      {isEventModalOpen && (
+        <EventModal
+          event={editEvent}
+          handleClose={() => {
+            setEditEvent({});
+            setIsEventModalOpen(false);
+          }}
+        />
+      )}
     </Fragment>
   );
-}
+};
+
+export default Timeline;

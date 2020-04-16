@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
-
 import {
-  Divider,
   FormControlLabel,
   List,
   ListItem,
+  ListItemIcon,
   ListItemText,
   ListSubheader,
   Switch,
   Typography,
 } from "@material-ui/core";
+import { Clear as ClearIcon, Edit as EditIcon } from "@material-ui/icons";
+
+import AuthContext from "../../contexts/AuthContext";
 import styles from "./Filters.module.css";
 
 const SwitchFilter = ({ checked, field, label, onChange }) => (
@@ -24,7 +26,12 @@ const SwitchFilter = ({ checked, field, label, onChange }) => (
   </ListItem>
 );
 
-const Filters = ({ filters, handleUpdateFilter, resetFilters }) => {
+const Filters = ({
+  filters,
+  handleUpdateFilter,
+  openAvailableModal,
+  resetFilters,
+}) => {
   const {
     baby,
     checked,
@@ -39,6 +46,8 @@ const Filters = ({ filters, handleUpdateFilter, resetFilters }) => {
     regional,
     showEventForms,
   } = filters;
+  const authContext = useContext(AuthContext);
+  const { admins, user } = authContext;
 
   return (
     <div className={styles.filters}>
@@ -129,12 +138,32 @@ const Filters = ({ filters, handleUpdateFilter, resetFilters }) => {
           label="Mythical"
           onChange={handleUpdateFilter}
         />
-        <Divider />
-        <ListItem button onClick={resetFilters} className={styles.filtersReset}>
+        <ListItem button onClick={resetFilters}>
+          <ListItemIcon>
+            <ClearIcon />
+          </ListItemIcon>
           <ListItemText primary="Reset Filters" />
         </ListItem>
-        <Divider />
       </List>
+      {admins.includes(user.uid) && (
+        <React.Fragment>
+          <Typography
+            className={styles.filtersTitle}
+            color="textSecondary"
+            variant="body1"
+          >
+            Admin Controls
+          </Typography>
+          <List>
+            <ListItem button onClick={openAvailableModal}>
+              <ListItemIcon>
+                <EditIcon />
+              </ListItemIcon>
+              <ListItemText primary="Update Available" />
+            </ListItem>
+          </List>
+        </React.Fragment>
+      )}
     </div>
   );
 };
@@ -142,6 +171,7 @@ const Filters = ({ filters, handleUpdateFilter, resetFilters }) => {
 Filters.propTypes = {
   filters: PropTypes.object.isRequired,
   handleUpdateFilter: PropTypes.func.isRequired,
+  openAvailableModal: PropTypes.func.isRequired,
   resetFilters: PropTypes.func.isRequired,
 };
 

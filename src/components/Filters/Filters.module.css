@@ -2,8 +2,8 @@
   overflow-y: auto;
 }
 
-.filtersReset {
-  text-align: center !important;
+.filters::-webkit-scrollbar {
+  display: none;
 }
 
 .filtersSubheader {

@@ -3,19 +3,19 @@ import PropTypes from "prop-types";
 
 import styles from "./Sprite.module.css";
 
-export default class Sprite extends React.PureComponent {
+class Sprite extends React.PureComponent {
   constructor(props) {
     super(props);
 
     this.state = {
-      src: props.src
+      src: props.src,
     };
   }
 
-  componentDidUpdate = prevProps => {
+  componentDidUpdate = (prevProps) => {
     if (prevProps.src !== this.props.src) {
       this.setState({
-        src: this.props.src
+        src: this.props.src,
       });
     }
   };
@@ -54,5 +54,7 @@ export default class Sprite extends React.PureComponent {
 
 Sprite.propTypes = {
   showShiny: PropTypes.bool,
-  src: PropTypes.string.isRequired
+  src: PropTypes.string.isRequired,
 };
+
+export default Sprite;

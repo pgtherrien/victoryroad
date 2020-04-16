@@ -1,0 +1,15 @@
+.availableButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.availableButtons button {
+  margin: 20px 20px 5px;
+}
+
+.availableField {
+  height: 500px;
+  margin: 20px 10px !important;
+  width: 30%;
+}

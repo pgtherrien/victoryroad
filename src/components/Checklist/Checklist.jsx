@@ -12,6 +12,7 @@ import { List } from "react-virtualized";
 import { withStyles, withTheme } from "@material-ui/core/styles";
 import MuiAlert from "@material-ui/lab/Alert";
 
+import { AvailableModal } from "../Modals";
 import { db } from "../../utils/firebase";
 import { DEFAULT_FILTERS } from "../../data/constants";
 import AuthContext from "../../contexts/AuthContext";
@@ -22,12 +23,12 @@ import Pokemon from "../Pokemon";
 import styles from "./Checklist.module.css";
 
 const BorderLinearProgress = withStyles({
+  bar: {
+    backgroundColor: lightBlue[400],
+  },
   root: {
     height: 15,
     backgroundColor: "#333333",
-  },
-  bar: {
-    backgroundColor: lightBlue[400],
   },
 })(LinearProgress);
 
@@ -54,9 +55,16 @@ class RawChecklist extends React.PureComponent {
         normal: [],
         shiny: [],
       },
+      availableID: "",
+      editedAvailable: {
+        lucky: "",
+        normal: "",
+        shiny: "",
+      },
       filters:
         JSON.parse(localStorage.getItem("victoryFilters")) ||
         Object.assign({}, DEFAULT_FILTERS),
+      isAvailableOpen: false,
       rowCount: 0,
       rowData: [],
       userLists: {
@@ -85,6 +93,12 @@ class RawChecklist extends React.PureComponent {
           this.getUserChecklists(available, filters);
           this.setState({
             available: available,
+            availableID: doc.id,
+            editedAvailable: {
+              lucky: data.lucky,
+              normal: data.normal,
+              shiny: data.shiny,
+            },
           });
         });
       });
@@ -267,6 +281,28 @@ class RawChecklist extends React.PureComponent {
     });
   };
 
+  // handleAvailableChange updates the state with the new edited available lists
+  handleAvailableChange = (key, value) => {
+    let available = Object.assign({}, this.state.editedAvailable);
+    available[key] = value;
+    this.setState({
+      editedAvailable: available,
+    });
+  };
+
+  // handleAvailableSave submits the available edits to the db
+  handleAvailableSave = () => {
+    const { availableID, editedAvailable } = this.state;
+    db.collection("available")
+      .doc(availableID)
+      .set({
+        lucky: editedAvailable.lucky,
+        normal: editedAvailable.normal,
+        shiny: editedAvailable.shiny,
+      })
+      .then(() => this.setState({ isAvailableOpen: false }));
+  };
+
   // handleCheck updates the checklist state and saves if a user is logged in
   handleCheck = (number) => {
     const { filters, userLists } = this.state;
@@ -371,7 +407,15 @@ class RawChecklist extends React.PureComponent {
   };
 
   render() {
-    const { alert, available, filters, rowCount, userLists } = this.state;
+    const {
+      alert,
+      available,
+      editedAvailable,
+      filters,
+      isAvailableOpen,
+      rowCount,
+      userLists,
+    } = this.state;
     const { selectedList } = filters;
     const { theme } = this.props;
     let progress =
@@ -388,6 +432,9 @@ class RawChecklist extends React.PureComponent {
             <Filters
               filters={filters}
               handleUpdateFilter={this.handleUpdateFilter}
+              openAvailableModal={() =>
+                this.setState({ isAvailableOpen: true })
+              }
               resetFilters={() => this.setState({ filters: DEFAULT_FILTERS })}
             />
           }
@@ -444,13 +491,18 @@ class RawChecklist extends React.PureComponent {
             </Alert>
           </Snackbar>
         </div>
+        <AvailableModal
+          available={editedAvailable}
+          handleChange={this.handleAvailableChange}
+          handleClose={() => this.setState({ isAvailableOpen: false })}
+          handleSave={this.handleAvailableSave}
+          isOpen={isAvailableOpen}
+        />
       </div>
     );
   }
 }
 
 const Checklist = withTheme(RawChecklist);
-
-Checklist.propTypes = {};
 
 export default Checklist;
