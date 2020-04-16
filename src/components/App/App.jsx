@@ -3,12 +3,11 @@ import { BrowserRouter, Route } from "react-router-dom";
 import firebase from "firebase";
 
 import { auth, db } from "../../utils/firebase";
-import AppBar from "./AppBar";
+import { AuthProvider } from "../../contexts/AuthContext";
 import Checklist from "../Checklist";
-import EventForm from "../EventForm";
 import Timeline from "../Timeline";
 
-const gapi = window.gapi;
+const googleAPI = window.gapi;
 
 export default class App extends React.PureComponent {
   constructor(props) {
@@ -16,17 +15,13 @@ export default class App extends React.PureComponent {
 
     this.state = {
       admins: [],
-      editEvent: {},
-      isEventFormOpen: false,
-      user: JSON.parse(localStorage.getItem("user")) || {}
+      user: JSON.parse(localStorage.getItem("user")) || {},
     };
   }
 
   componentWillMount() {
-    let updatedAdmins = [];
-
-    // Capture the user from the localStorage / set the user in localStorage
-    auth.onAuthStateChanged(function(updatedUser) {
+    // On an authentication change, update the localStorage
+    auth.onAuthStateChanged(function (updatedUser) {
       updatedUser
         ? localStorage.setItem("user", JSON.stringify(updatedUser))
         : localStorage.removeItem("user");
@@ -37,44 +32,43 @@ export default class App extends React.PureComponent {
     // Get the admins from the database and set them into the state
     db.collection("admins")
       .get()
-      .then(querySnapshot => {
-        querySnapshot.forEach(doc => {
-          updatedAdmins.push(doc.id);
+      .then((querySnapshot) => {
+        this.setState({
+          admins: querySnapshot.docs.map((doc) => doc.id),
         });
-        this.setState({ admins: updatedAdmins });
       });
   }
 
-  // Initialize the GAPI client
+  // Initialize the Google API client
   initClient = () => {
-    if (gapi) {
-      gapi.load("client:auth2", () => {
-        gapi.client.init({
+    if (googleAPI) {
+      googleAPI.load("client:auth2", () => {
+        googleAPI.client.init({
           apiKey: process.env.REACT_APP_API_KEY,
           clientId: process.env.REACT_APP_OATH_CLIENT_ID,
           discoveryDocs: [
-            "https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"
+            "https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest",
           ],
-          scope: "https://www.googleapis.com/auth/calendar"
+          scope: "https://www.googleapis.com/auth/calendar",
         });
 
-        gapi.client.load("calendar", "v3", () => {
+        googleAPI.client.load("calendar", "v3", () => {
           if (process.env.NODE_ENV !== "production") {
             console.log("Loaded GAPI Calendar Client");
           }
         });
 
-        const auth2 = gapi.auth2.getAuthInstance();
+        const auth2 = googleAPI.auth2.getAuthInstance();
         auth2.isSignedIn.listen(this.handleIsSignedIn);
         this.handleIsSignedIn(auth2.isSignedIn.get());
       });
     }
   };
 
-  // Check if the user is signed into the GAPI client and Firebase
-  handleIsSignedIn = isSignedIn => {
+  // Check if the user is signed into the Google API client
+  handleIsSignedIn = (isSignedIn) => {
     if (isSignedIn) {
-      const auth2 = gapi.auth2.getAuthInstance();
+      const auth2 = googleAPI.auth2.getAuthInstance();
       const currentUser = auth2.currentUser.get();
       const authResponse = currentUser.getAuthResponse(true);
       const credential = firebase.auth.GoogleAuthProvider.credential(
@@ -88,53 +82,27 @@ export default class App extends React.PureComponent {
       });
     } else {
       if (process.env.NODE_ENV !== "production") {
-        console.log("GAPI: User is not signed in");
+        console.log("Google API: User is not signed in");
       }
     }
   };
 
-  handleSelectEditEvent = event => {
-    this.setState({
-      editEvent: event,
-      isEventFormOpen: true
-    });
-  };
-
   render() {
-    const { admins, editEvent, isEventFormOpen, user } = this.state;
+    const { admins, user } = this.state;
+
     return (
-      <BrowserRouter>
-        <AppBar
-          admins={admins}
-          setIsEventFormOpen={isOpen =>
-            this.setState({ isEventFormOpen: isOpen })
-          }
-          setUser={user => this.setState({ user: user })}
-          user={user}
-        />
-        {isEventFormOpen && (
-          <EventForm
-            event={editEvent}
-            handleClose={() => this.setState({ isEventFormOpen: false })}
-          />
-        )}
-        <Route
-          exact
-          path="/"
-          render={() => (
-            <Timeline
-              admins={admins}
-              handleSelectEditEvent={this.handleSelectEditEvent}
-              user={user || {}}
-            />
-          )}
-        />
-        <Route
-          exact
-          path="/checklist"
-          render={() => <Checklist user={user || {}} />}
-        />
-      </BrowserRouter>
+      <AuthProvider
+        value={{
+          admins: admins,
+          setUser: (user) => this.setState({ user: user }),
+          user: user,
+        }}
+      >
+        <BrowserRouter>
+          <Route exact path="/" render={() => <Timeline />} />
+          <Route exact path="/checklist" render={() => <Checklist />} />
+        </BrowserRouter>
+      </AuthProvider>
     );
   }
 }

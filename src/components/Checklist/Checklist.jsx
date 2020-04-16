@@ -1,97 +1,105 @@
 import React from "react";
+import { lightBlue } from "@material-ui/core/colors";
 import {
   Grid,
   LinearProgress,
   Paper,
   Tab,
   Tabs,
-  Snackbar
+  Snackbar,
 } from "@material-ui/core";
-import { lightBlue } from "@material-ui/core/colors";
-import { withStyles, withTheme } from "@material-ui/core/styles";
-
-import MuiAlert from "@material-ui/lab/Alert";
 import { List } from "react-virtualized";
+import { withStyles, withTheme } from "@material-ui/core/styles";
+import MuiAlert from "@material-ui/lab/Alert";
 
+import { AvailableModal } from "../Modals";
 import { db } from "../../utils/firebase";
-import Actions from "./Actions";
-import Filters from "./Filters";
+import { DEFAULT_FILTERS } from "../../data/constants";
+import AuthContext from "../../contexts/AuthContext";
+import Filters from "../Filters";
+import Header from "../Header";
 import pokedex from "../../data/pokedex";
 import Pokemon from "../Pokemon";
 import styles from "./Checklist.module.css";
+
+const BorderLinearProgress = withStyles({
+  bar: {
+    backgroundColor: lightBlue[400],
+  },
+  root: {
+    height: 15,
+    backgroundColor: "#333333",
+  },
+})(LinearProgress);
 
 function Alert(props) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
 
-const BorderLinearProgress = withStyles({
-  root: {
-    height: 15,
-    backgroundColor: "#333333"
-  },
-  bar: {
-    backgroundColor: lightBlue[400]
-  }
-})(LinearProgress);
+class RawChecklist extends React.PureComponent {
+  static contextType = AuthContext;
 
-const DEFAULT_FILTERS = {
-  checked: false,
-  gen1: true,
-  gen2: true,
-  gen3: true,
-  gen4: true,
-  gen5: true,
-  gen7: true,
-  search: "",
-  showEventForms: false,
-  type: "normal"
-};
-
-class ChecklistRaw extends React.PureComponent {
   constructor(props) {
     super(props);
 
+    this.list = null;
     this.SMALL = window.innerWidth < props.theme.breakpoints.values.md;
     this.LARGE = window.innerWidth > props.theme.breakpoints.values.lg;
     this.ENTRIES_PER_ROW = this.SMALL ? 3 : 12;
     this.ROW_HEIGHT = this.SMALL ? 170 : this.LARGE ? 250 : 170;
 
-    this.list = null;
     this.state = {
       alert: { type: "", value: "" },
       available: {
         lucky: [],
         normal: [],
-        shiny: []
+        shiny: [],
+      },
+      availableID: "",
+      editedAvailable: {
+        lucky: "",
+        normal: "",
+        shiny: "",
       },
       filters:
-        JSON.parse(localStorage.getItem("vrFilters")) ||
+        JSON.parse(localStorage.getItem("victoryFilters")) ||
         Object.assign({}, DEFAULT_FILTERS),
+      isAvailableOpen: false,
       rowCount: 0,
       rowData: [],
-      showFilters: false,
       userLists: {
         lucky: [],
         normal: [],
-        shiny: []
-      }
+        shiny: [],
+      },
     };
   }
 
+  // Get the available lists and set them into the state
   componentWillMount() {
     const { filters } = this.state;
+
     db.collection("available")
       .get()
-      .then(querySnapshot => {
-        querySnapshot.forEach(doc => {
+      .then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
           let data = doc.data();
           let available = {
             lucky: JSON.parse(data.lucky),
             normal: JSON.parse(data.normal),
-            shiny: JSON.parse(data.shiny)
+            shiny: JSON.parse(data.shiny),
           };
+
           this.getUserChecklists(available, filters);
-          this.setState({ available: available });
+          this.setState({
+            available: available,
+            availableID: doc.id,
+            editedAvailable: {
+              lucky: data.lucky,
+              normal: data.normal,
+              shiny: data.shiny,
+            },
+          });
         });
       });
   }
@@ -101,7 +109,7 @@ class ChecklistRaw extends React.PureComponent {
     let row = {};
 
     if (Object.keys(dex).length <= this.ENTRIES_PER_ROW) {
-      Object.keys(dex).forEach(function(number) {
+      Object.keys(dex).forEach((number) => {
         row[number] = dex[number];
       });
     } else {
@@ -114,10 +122,10 @@ class ChecklistRaw extends React.PureComponent {
       }
     }
 
-    return { row: row, index: i };
+    return { index: i, row: row };
   };
 
-  // buildRowData aggregates the data into rows
+  // buildRowData divides the data into rows
   buildRowData = (count, dex) => {
     let i = 0;
     let rowIndex = 0;
@@ -132,11 +140,12 @@ class ChecklistRaw extends React.PureComponent {
         rowIndex++;
       }
     }
+
     return rows;
   };
 
   // filterDex returns the remaining entries after filters are applied
-  filterDex = (updatedAvailable, updatedFilters, updatedLists) => {
+  filterDex = (available, filters, lists) => {
     const {
       baby,
       checked,
@@ -144,35 +153,39 @@ class ChecklistRaw extends React.PureComponent {
       mythical,
       regional,
       search,
+      selectedList,
       showEventForms,
-      type
-    } = updatedFilters;
-    let entries = {};
+    } = filters;
     let add;
-    let gen;
+    let currentGen;
+    let entries = {};
 
-    Object.keys(pokedex).forEach(number => {
+    Object.keys(pokedex).forEach((number) => {
       add = true;
-      gen = "gen" + pokedex[number].generation.toString();
-      switch (type) {
+      currentGen = `gen${pokedex[number].generation.toString()}`;
+
+      switch (selectedList) {
         case "lucky":
         case "normal":
         case "shiny":
         default:
-          if (!updatedAvailable[type].includes(number)) {
+          if (!available[selectedList].includes(number)) {
             add = false;
           }
       }
 
-      if (add && !checked && updatedLists[type].includes(number)) {
+      if (add && !checked && lists[selectedList].includes(number)) {
         add = false;
       }
+
       if (add && !showEventForms && number.length > 6) {
         add = false;
       }
-      if (add && updatedFilters[gen] === false) {
+
+      if (add && !filters[currentGen]) {
         add = false;
       }
+
       if (add && search.length > 0) {
         if (
           !pokedex[number].name.toLowerCase().includes(search.toLowerCase()) &&
@@ -181,26 +194,31 @@ class ChecklistRaw extends React.PureComponent {
           add = false;
         }
       }
+
       if (add && baby) {
         if (!pokedex[number].tags.includes("baby")) {
           add = false;
         }
       }
+
       if (add && legendary) {
         if (!pokedex[number].tags.includes("legendary")) {
           add = false;
         }
       }
+
       if (add && mythical) {
         if (!pokedex[number].tags.includes("mythical")) {
           add = false;
         }
       }
+
       if (add && regional) {
         if (!pokedex[number].tags.includes("regional")) {
           add = false;
         }
       }
+
       if (add) {
         entries[number] = pokedex[number];
       }
@@ -209,45 +227,44 @@ class ChecklistRaw extends React.PureComponent {
     return entries;
   };
 
-  // getUserChecklists attempts to pull the active user's checklists from the db
-  getUserChecklists = (available, updatedFilters) => {
-    const { user } = this.props;
+  // getUserChecklists attempts to pull the active user's checklists and update the state
+  getUserChecklists = (available, filters) => {
+    const { user } = this.context;
     const { userLists } = this.state;
     let dex, count;
 
     if (user.uid) {
-      var docRef = db.collection("checklists").doc(user.uid);
-      docRef.get().then(doc => {
-        if (doc.exists) {
-          let data = doc.data();
-          let lists = {
-            lucky: JSON.parse(data.lucky),
-            normal: JSON.parse(data.normal),
-            shiny: JSON.parse(data.shiny)
-          };
-          dex = this.filterDex(available, updatedFilters, lists);
-          count = Math.ceil(Object.keys(dex).length / this.ENTRIES_PER_ROW);
+      let docRef = db.collection("checklists").doc(user.uid);
+      docRef.get().then((doc) => {
+        let data = doc.data();
+        let lists = {
+          lucky: JSON.parse(data.lucky),
+          normal: JSON.parse(data.normal),
+          shiny: JSON.parse(data.shiny),
+        };
+        dex = this.filterDex(available, filters, lists);
+        count = Math.ceil(Object.keys(dex).length / this.ENTRIES_PER_ROW);
 
-          this.setState({
-            rowCount: count,
-            rowData: this.buildRowData(count, dex),
-            userLists: lists
-          });
-          return;
-        }
+        this.setState({
+          rowCount: count,
+          rowData: this.buildRowData(count, dex),
+          userLists: lists,
+        });
+
+        return;
       });
     }
 
-    dex = this.filterDex(available, updatedFilters, userLists);
+    dex = this.filterDex(available, filters, userLists);
     count = Math.ceil(Object.keys(dex).length / this.ENTRIES_PER_ROW);
     this.setState({
       rowCount: count,
-      rowData: this.buildRowData(count, dex)
+      rowData: this.buildRowData(count, dex),
     });
   };
 
-  // handleApplyFilters applies the filter changes to the data and updates the state
-  handleApplyFilters = updatedFilters => {
+  // handleApplyFilters updates the state with filtered data
+  handleApplyFilters = (updatedFilters) => {
     const { available, userLists } = this.state;
     let dex = this.filterDex(available, updatedFilters, userLists);
     let count = Math.ceil(Object.keys(dex).length / this.ENTRIES_PER_ROW);
@@ -256,24 +273,47 @@ class ChecklistRaw extends React.PureComponent {
       this.list.forceUpdateGrid();
     }
 
-    localStorage.setItem("vrFilters", JSON.stringify(updatedFilters));
+    localStorage.setItem("victoryFilters", JSON.stringify(updatedFilters));
     this.setState({
       filters: updatedFilters,
       rowCount: count,
-      rowData: this.buildRowData(count, dex)
+      rowData: this.buildRowData(count, dex),
     });
   };
 
-  // handleCheck updates the
-  handleCheck = number => {
+  // handleAvailableChange updates the state with the new edited available lists
+  handleAvailableChange = (key, value) => {
+    let available = Object.assign({}, this.state.editedAvailable);
+    available[key] = value;
+    this.setState({
+      editedAvailable: available,
+    });
+  };
+
+  // handleAvailableSave submits the available edits to the db
+  handleAvailableSave = () => {
+    const { availableID, editedAvailable } = this.state;
+    db.collection("available")
+      .doc(availableID)
+      .set({
+        lucky: editedAvailable.lucky,
+        normal: editedAvailable.normal,
+        shiny: editedAvailable.shiny,
+      })
+      .then(() => this.setState({ isAvailableOpen: false }));
+  };
+
+  // handleCheck updates the checklist state and saves if a user is logged in
+  handleCheck = (number) => {
     const { filters, userLists } = this.state;
-    const { user } = this.props;
+    const { selectedList } = filters;
+    const { user } = this.context;
     let lists = Object.assign({}, userLists);
 
-    if (lists[filters.type].includes(number)) {
-      lists[filters.type].splice(lists[filters.type].indexOf(number), 1);
+    if (lists[selectedList].includes(number)) {
+      lists[selectedList].splice(lists[selectedList].indexOf(number), 1);
     } else {
-      lists[filters.type].push(number);
+      lists[selectedList].push(number);
     }
 
     if (user.uid && user.uid.length > 0) {
@@ -282,73 +322,68 @@ class ChecklistRaw extends React.PureComponent {
     this.setState({ userLists: lists });
   };
 
-  // handleSave updates the user checklists in the database
-  handleSave = userLists => {
-    const { user } = this.props;
+  // handleSave saves the checklist changes to the db
+  handleSave = (userLists) => {
+    const { user } = this.context;
 
     db.collection("checklists")
       .doc(user.uid)
       .set({
         lucky: JSON.stringify(userLists.lucky),
         normal: JSON.stringify(userLists.normal),
-        shiny: JSON.stringify(userLists.shiny)
+        shiny: JSON.stringify(userLists.shiny),
       })
       .then(() => {
         this.setState({
           alert: {
             type: "success",
-            value: "Saved the checklist!"
-          }
+            value: "Saved the checklist!",
+          },
         });
       })
-      .catch(function(error) {
+      .catch(function (error) {
         console.error("Error updating the checklists: ", error);
         this.setState({
           alert: {
             type: "error",
-            value: "Failed to save the checklist"
-          }
+            value: "Failed to save the checklist",
+          },
         });
       });
   };
 
-  // handleUpdateFilter updates and applies new filters
+  // handleUpdateFilter updates the state and applies a filter change
   handleUpdateFilter = (field, value) => {
-    const { filters } = this.state;
-    let updatedFilters = Object.assign({}, filters);
-
+    let updatedFilters = Object.assign({}, this.state.filters);
     updatedFilters[field] = value;
     this.handleApplyFilters(updatedFilters);
   };
 
-  // handleUpdateType applies the type change to the filters
-  handleUpdateType = (e, type) => {
-    const { filters } = this.state;
-    let updatedFilters = Object.assign({}, filters);
-
-    updatedFilters.type = type;
+  // handleUpdateSelectedList updates the state and applies a selected list change
+  handleUpdateSelectedList = (e, selectedList) => {
+    let updatedFilters = Object.assign({}, this.state.filters);
+    updatedFilters.selectedList = selectedList;
     this.handleApplyFilters(updatedFilters);
   };
 
-  // renderRow renders a single row
   renderRow = ({ key, index, isScrolling, isVisible, style }) => {
     const { filters, rowData, userLists } = this.state;
     let entries = [];
     let i = 0;
 
     if (rowData[index]) {
-      Object.keys(rowData[index]).forEach(number => {
+      Object.keys(rowData[index]).forEach((number) => {
         entries.push(
           <Pokemon
             checked={
-              userLists[filters.type] &&
-              userLists[filters.type].includes(number)
+              userLists[filters.selectedList] &&
+              userLists[filters.selectedList].includes(number)
             }
             entriesPerRow={this.ENTRIES_PER_ROW}
             entry={pokedex[number]}
             handleCheck={() => this.handleCheck(number)}
             key={i}
-            listType={filters.type}
+            listType={filters.selectedList}
             number={number}
             rowHeight={this.ROW_HEIGHT}
           />
@@ -375,88 +410,99 @@ class ChecklistRaw extends React.PureComponent {
     const {
       alert,
       available,
+      editedAvailable,
       filters,
+      isAvailableOpen,
       rowCount,
-      showFilters,
-      userLists
+      userLists,
     } = this.state;
+    const { selectedList } = filters;
     const { theme } = this.props;
     let progress =
-      userLists[filters.type].length / available[filters.type].length;
+      userLists[selectedList].length / available[selectedList].length;
 
     return (
-      <div className={styles.list}>
-        <BorderLinearProgress
-          className={styles.progress}
-          variant="determinate"
-          value={progress * 100}
-        />
-        <Paper
-          className={
-            window.innerWidth < theme.breakpoints.values.sm
-              ? styles.tabsMobile
-              : styles.tabs
+      <div>
+        <Header
+          searchOnChange={(e) =>
+            this.handleUpdateFilter("search", e.target.value)
           }
-          square
-        >
-          <Tabs
-            indicatorColor="secondary"
-            onChange={this.handleUpdateType}
-            textColor="secondary"
-            value={filters.type}
-          >
-            <Tab label="Lucky" value="lucky" />
-            <Tab label="Normal" value="normal" />
-            <Tab label="Shiny" value="shiny" />
-          </Tabs>
-        </Paper>
-        <List
-          className={styles.virtualized}
-          height={window.innerHeight - 148}
-          overscanRowCount={2}
-          ref={c => (this.list = c)}
-          rowCount={rowCount}
-          rowHeight={this.ROW_HEIGHT}
-          rowRenderer={this.renderRow}
-          style={{
-            margin: "0 auto",
-            outline: "none"
-          }}
-          width={window.innerWidth * 0.9}
+          showSearch={true}
+          sidebarChildren={
+            <Filters
+              filters={filters}
+              handleUpdateFilter={this.handleUpdateFilter}
+              openAvailableModal={() =>
+                this.setState({ isAvailableOpen: true })
+              }
+              resetFilters={() => this.setState({ filters: DEFAULT_FILTERS })}
+            />
+          }
         />
-        <Snackbar
-          open={alert.value.length > 0}
-          autoHideDuration={6000}
-          onClose={() => this.setState({ alert: { type: "", value: "" } })}
-        >
-          <Alert
+        <div className={styles.list}>
+          <BorderLinearProgress
+            className={styles.progress}
+            value={progress * 100}
+            variant="determinate"
+          />
+          <Paper
+            className={
+              window.innerWidth < theme.breakpoints.values.sm
+                ? styles.tabsMobile
+                : styles.tabs
+            }
+            square
+          >
+            <Tabs
+              indicatorColor="secondary"
+              onChange={this.handleUpdateSelectedList}
+              textColor="secondary"
+              value={selectedList}
+            >
+              <Tab label="Lucky" value="lucky" />
+              <Tab label="Normal" value="normal" />
+              <Tab label="Shiny" value="shiny" />
+            </Tabs>
+          </Paper>
+          <List
+            className={styles.virtualized}
+            height={window.innerHeight - 148}
+            overscanRowCount={2}
+            ref={(c) => (this.list = c)}
+            rowCount={rowCount}
+            rowHeight={this.ROW_HEIGHT}
+            rowRenderer={this.renderRow}
+            style={{
+              margin: "0 auto",
+              outline: "none",
+            }}
+            width={window.innerWidth * 0.9}
+          />
+          <Snackbar
+            open={alert.value.length > 0}
+            autoHideDuration={6000}
             onClose={() => this.setState({ alert: { type: "", value: "" } })}
-            severity={alert.type}
           >
-            {alert.value}
-          </Alert>
-        </Snackbar>
-        <Actions
-          handleShowFilters={() => this.setState({ showFilters: true })}
-        />
-        <Filters
-          resetFilters={() =>
-            this.handleApplyFilters(Object.assign({}, DEFAULT_FILTERS))
-          }
-          filters={filters}
-          handleUpdateFilter={this.handleUpdateFilter}
-          onClose={() => {
-            this.setState({
-              showFilters: false
-            });
-          }}
-          open={showFilters}
+            <Alert
+              onClose={() => this.setState({ alert: { type: "", value: "" } })}
+              severity={alert.type}
+            >
+              {alert.value}
+            </Alert>
+          </Snackbar>
+        </div>
+        <AvailableModal
+          available={editedAvailable}
+          handleChange={this.handleAvailableChange}
+          handleClose={() => this.setState({ isAvailableOpen: false })}
+          handleSave={this.handleAvailableSave}
+          isOpen={isAvailableOpen}
         />
       </div>
     );
   }
 }
 
-const Checklist = withTheme(ChecklistRaw);
+const Checklist = withTheme(RawChecklist);
 
 export default Checklist;

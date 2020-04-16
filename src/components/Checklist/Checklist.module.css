@@ -11,16 +11,6 @@
   width: 80%;
 }
 
-.speeddial {
-  bottom: 20px;
-  right: 10px;
-  position: absolute;
-}
-
-.speeddial > button {
-  background-color: #29b6f6;
-}
-
 .tabs {
   background-color: #212121 !important;
   box-shadow: none;

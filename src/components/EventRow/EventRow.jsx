@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import {
   Button,
   Card,
@@ -6,12 +7,12 @@ import {
   CardMedia,
   Grid,
   Snackbar,
-  Typography
+  Typography,
 } from "@material-ui/core";
 import {
   Event as EventIcon,
   Link as LinkIcon,
-  Settings as SettingsIcon
+  Settings as SettingsIcon,
 } from "@material-ui/icons";
 import MuiAlert from "@material-ui/lab/Alert";
 import { makeStyles } from "@material-ui/core/styles";
@@ -23,28 +24,32 @@ function Alert(props) {
   return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   background: {
     minHeight: "300px",
-    opacity: "0.2"
+    opacity: "0.2",
+  },
+  button: {
+    height: "60px",
+    marginRight: "15px",
   },
   card: {
     backgroundColor: "#333333",
     margin: "1% 2%",
-    minHeight: "300px"
+    minHeight: "300px",
   },
   cardContent: {
     [theme.breakpoints.up("md")]: {
-      display: "flex"
+      display: "flex",
     },
     display: "block",
-    padding: "20px 25px"
+    padding: "20px 25px",
   },
   countdown: {
     [theme.breakpoints.up("md")]: {
       display: "flex",
       fontSize: "xx-large",
-      width: "15%"
+      width: "15%",
     },
     alignItems: "center",
     display: "none",
@@ -54,7 +59,7 @@ const useStyles = makeStyles(theme => ({
     position: "absolute",
     right: 0,
     top: 0,
-    width: "40%"
+    width: "40%",
   },
   icon: {
     [theme.breakpoints.down("sm")]: {
@@ -63,50 +68,51 @@ const useStyles = makeStyles(theme => ({
       right: "50%",
       top: "50%",
       transform: "translate(-50%, -50%)",
-      width: "200px"
+      width: "200px",
     },
     height: "250px",
     left: "5%",
     position: "absolute",
     top: "25px",
-    width: "250px"
+    width: "250px",
   },
   icons: {
     [theme.breakpoints.up("md")]: {
       justifyContent: "flex-end",
       paddingTop: "0px",
-      width: "50%"
+      width: "50%",
     },
+    alignItems: "center",
     display: "flex",
     justifyContent: "center",
     paddingTop: "20px",
-    width: "100%"
+    width: "100%",
   },
   title: {
     [theme.breakpoints.down("sm")]: {
       textAlign: "center",
-      width: "100%"
+      width: "100%",
     },
     textAlign: "left",
-    width: "75%"
-  }
+    width: "75%",
+  },
 }));
 
-export default function EventRow({
+const EventRow = ({
   event,
   handleSelectEditEvent,
   handleSelectEvent,
   isAdmin,
-  user
-}) {
+  user,
+}) => {
   const [alert, setAlert] = useState("");
   const classes = useStyles();
 
   // Adds the event to the user's Google Calendar
-  const addToCalendar = e => {
+  const addToCalendar = (e) => {
     e.stopPropagation();
     const { endDate, startDate, summary, title } = event;
-    insertEvent(title, summary, startDate, endDate).then(response => {
+    insertEvent(title, summary, startDate, endDate).then((response) => {
       if (response.status === 200) {
         setAlert("Added Event to Google Calendar!");
       }
@@ -180,33 +186,33 @@ export default function EventRow({
           <div className={classes.icons}>
             {user.uid && (
               <Button
+                className={classes.button}
                 onClick={addToCalendar}
                 startIcon={<EventIcon />}
-                style={{ marginRight: "15px", padding: "6px 25px" }}
                 title="Add Event to Google Calendar"
               >
                 Track Event
               </Button>
             )}
             <Button
-              onClick={e => {
+              className={classes.button}
+              onClick={(e) => {
                 e.stopPropagation();
                 window.open(event.link, "_blank");
               }}
               startIcon={<LinkIcon />}
-              style={{ marginRight: "15px", padding: "6px 25px" }}
               title="Visit Pokémon GO Live Post"
             >
               Source
             </Button>
             {isAdmin && (
               <Button
-                onClick={e => {
+                className={classes.button}
+                onClick={(e) => {
                   e.stopPropagation();
                   handleSelectEditEvent(event);
                 }}
                 startIcon={<SettingsIcon />}
-                style={{ padding: "6px 25px" }}
                 title="Edit Event"
               >
                 Edit
@@ -226,4 +232,14 @@ export default function EventRow({
       </Snackbar>
     </Grid>
   );
-}
+};
+
+EventRow.propTypes = {
+  event: PropTypes.object.isRequired,
+  handleSelectEditEvent: PropTypes.func.isRequired,
+  handleSelectEvent: PropTypes.func.isRequired,
+  isAdmin: PropTypes.bool.isRequired,
+  user: PropTypes.object.isRequired,
+};
+
+export default EventRow;
