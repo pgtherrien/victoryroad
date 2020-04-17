@@ -32,6 +32,9 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       width: "90%",
     },
+    [theme.breakpoints.down("md")]: {
+      width: "75%",
+    },
     backgroundColor: "#3b3b3b",
     borderRadius: "15px",
     display: "flex",
@@ -43,17 +46,11 @@ const useStyles = makeStyles((theme) => ({
     right: "50%",
     top: "50%",
     transform: "translate(-50%, -50%)",
-    width: "75%",
+    width: "60%",
   },
   content: {
-    maxHeight: "443px",
+    maxHeight: "75%",
     overflowY: "auto",
-  },
-  contentWrapper: {
-    [theme.breakpoints.down("sm")]: {
-      padding: theme.spacing(3, 1, 1, 1),
-    },
-    maxHeight: "450px",
     padding: theme.spacing(3, 3, 1, 3),
   },
   standardImage: {
@@ -154,227 +151,225 @@ const Event = ({ event, handleClose }) => {
             {renderRange(event.startDate, event.endDate)}
           </Typography>
         </div>
-        <div className={classes.contentWrapper}>
-          <div className={classes.content}>
-            <Typography align="center" variant="body2">
-              {event.summary}
-            </Typography>
-            {event.newPokemon && event.newPokemon.length > 0 && (
-              <div className={styles.shinies}>
-                <Typography
-                  align="center"
-                  gutterBottom
-                  style={{ marginBottom: "10px" }}
-                  variant="h5"
-                >
-                  New Pokémon
-                </Typography>
-                <GridList
-                  cellHeight={250}
-                  cols={shinyCols}
-                  style={{ justifyContent: "center" }}
-                >
-                  {event.newPokemon.map((pokemon) => (
-                    <GridListTile
-                      cols={1}
-                      key={pokemon}
-                      style={{ display: "flex", justifyContent: "center" }}
-                    >
-                      <Sprite showShiny={false} src={pokemon} />
-                    </GridListTile>
-                  ))}
-                </GridList>
-              </div>
-            )}
-            {event.newShinies && event.newShinies.length > 0 && (
-              <div className={styles.shinies}>
-                <Typography
-                  align="center"
-                  gutterBottom
-                  style={{ marginBottom: "10px" }}
-                  variant="h5"
-                >
-                  New Shinies
-                </Typography>
-                <GridList
-                  cellHeight={250}
-                  cols={shinyCols}
-                  style={{ justifyContent: "center" }}
-                >
-                  {event.newShinies.map((shiny) => (
-                    <GridListTile
-                      cols={1}
-                      key={shiny}
-                      style={{ display: "flex", justifyContent: "center" }}
-                    >
-                      <Sprite showShiny={true} src={shiny} />
-                    </GridListTile>
-                  ))}
-                </GridList>
-              </div>
-            )}
-            {event.perfectIV && event.perfectIV[0].length > 0 && (
-              <div style={{ marginTop: "20px" }}>
-                <Typography
-                  align="center"
-                  gutterBottom
-                  style={{ marginBottom: "20px" }}
-                  variant="h5"
-                >
-                  Perfect CP's
-                </Typography>
-                <TableContainer component={Paper}>
-                  <Table aria-label="simple table">
-                    <TableHead>
-                      <StyledTableHeader>
-                        <TableCell colSpan={6} style={{ textAlign: "center" }}>
-                          Level 20 Perfect CP
+        <div className={classes.content}>
+          <Typography align="center" variant="body2">
+            {event.summary}
+          </Typography>
+          {event.newPokemon && event.newPokemon.length > 0 && (
+            <div className={styles.shinies}>
+              <Typography
+                align="center"
+                gutterBottom
+                style={{ marginBottom: "10px" }}
+                variant="h5"
+              >
+                New Pokémon
+              </Typography>
+              <GridList
+                cellHeight={250}
+                cols={shinyCols}
+                style={{ justifyContent: "center" }}
+              >
+                {event.newPokemon.map((pokemon) => (
+                  <GridListTile
+                    cols={1}
+                    key={pokemon}
+                    style={{ display: "flex", justifyContent: "center" }}
+                  >
+                    <Sprite showShiny={false} src={pokemon} />
+                  </GridListTile>
+                ))}
+              </GridList>
+            </div>
+          )}
+          {event.newShinies && event.newShinies.length > 0 && (
+            <div className={styles.shinies}>
+              <Typography
+                align="center"
+                gutterBottom
+                style={{ marginBottom: "10px" }}
+                variant="h5"
+              >
+                New Shinies
+              </Typography>
+              <GridList
+                cellHeight={250}
+                cols={shinyCols}
+                style={{ justifyContent: "center" }}
+              >
+                {event.newShinies.map((shiny) => (
+                  <GridListTile
+                    cols={1}
+                    key={shiny}
+                    style={{ display: "flex", justifyContent: "center" }}
+                  >
+                    <Sprite showShiny={true} src={shiny} />
+                  </GridListTile>
+                ))}
+              </GridList>
+            </div>
+          )}
+          {event.perfectIV && event.perfectIV[0].length > 0 && (
+            <div style={{ marginTop: "20px" }}>
+              <Typography
+                align="center"
+                gutterBottom
+                style={{ marginBottom: "20px" }}
+                variant="h5"
+              >
+                Perfect CP's
+              </Typography>
+              <TableContainer component={Paper}>
+                <Table aria-label="simple table">
+                  <TableHead>
+                    <StyledTableHeader>
+                      <TableCell colSpan={6} style={{ textAlign: "center" }}>
+                        Level 20 Perfect CP
+                      </TableCell>
+                      <TableCell colSpan={6} style={{ textAlign: "center" }}>
+                        Level 25 Perfect CP
+                      </TableCell>
+                    </StyledTableHeader>
+                  </TableHead>
+                  <TableBody>
+                    <StyledTableRow>
+                      <TableCell colSpan={6} style={{ textAlign: "center" }}>
+                        <Typography gutterBottom variant="h6">
+                          {event.perfectIV[0]}
+                        </Typography>
+                      </TableCell>
+                      <TableCell colSpan={6} style={{ textAlign: "center" }}>
+                        <Typography gutterBottom variant="h6">
+                          {event.perfectIV[1]}
+                        </Typography>
+                      </TableCell>
+                    </StyledTableRow>
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </div>
+          )}
+          {event.bonuses && event.bonuses.length > 0 && (
+            <div style={{ marginTop: "40px" }}>
+              <TableContainer component={Paper}>
+                <Table aria-label="simple table">
+                  <TableHead>
+                    <StyledTableHeader>
+                      <TableCell colSpan={12} style={{ textAlign: "center" }}>
+                        Bonuses
+                      </TableCell>
+                    </StyledTableHeader>
+                  </TableHead>
+                  <TableBody>
+                    {event.bonuses.map((bonus) => (
+                      <StyledTableRow key={bonus.image}>
+                        <TableCell>
+                          <div className={styles.attackCell}>
+                            <img
+                              alt="bonus"
+                              className={classes.standardImage}
+                              src={bonus.image}
+                            />
+                          </div>
                         </TableCell>
-                        <TableCell colSpan={6} style={{ textAlign: "center" }}>
-                          Level 25 Perfect CP
+                        <TableCell>{bonus.text}</TableCell>
+                      </StyledTableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </div>
+          )}
+          {event.counters && event.counters.length > 0 && (
+            <div style={{ marginTop: "20px" }}>
+              <Typography
+                align="center"
+                gutterBottom
+                style={{ marginBottom: "20px" }}
+                variant="h5"
+              >
+                Counters
+              </Typography>
+              <TableContainer component={Paper}>
+                <Table aria-label="simple table">
+                  <TableHead>
+                    <StyledTableHeader>
+                      <TableCell>Pokémon</TableCell>
+                      <TableCell>Fast Attack</TableCell>
+                      <TableCell>Charged Attack</TableCell>
+                    </StyledTableHeader>
+                  </TableHead>
+                  <TableBody>
+                    {event.counters.map((counter) => (
+                      <StyledTableRow key={counter.name}>
+                        <TableCell>{counter.name}</TableCell>
+                        <TableCell>
+                          <div className={styles.attackCell}>
+                            <img
+                              alt="fast type"
+                              className={classes.typeImage}
+                              src={counter.fastImage}
+                            />
+                            {counter.fast}
+                          </div>
                         </TableCell>
-                      </StyledTableHeader>
-                    </TableHead>
-                    <TableBody>
-                      <StyledTableRow>
-                        <TableCell colSpan={6} style={{ textAlign: "center" }}>
-                          <Typography gutterBottom variant="h6">
-                            {event.perfectIV[0]}
-                          </Typography>
-                        </TableCell>
-                        <TableCell colSpan={6} style={{ textAlign: "center" }}>
-                          <Typography gutterBottom variant="h6">
-                            {event.perfectIV[1]}
-                          </Typography>
+                        <TableCell>
+                          <div className={styles.attackCell}>
+                            <img
+                              alt="charged type"
+                              className={classes.typeImage}
+                              src={counter.chargedImage}
+                            />
+                            {counter.charged}
+                          </div>
                         </TableCell>
                       </StyledTableRow>
-                    </TableBody>
-                  </Table>
-                </TableContainer>
-              </div>
-            )}
-            {event.bonuses && event.bonuses.length > 0 && (
-              <div style={{ marginTop: "40px" }}>
-                <TableContainer component={Paper}>
-                  <Table aria-label="simple table">
-                    <TableHead>
-                      <StyledTableHeader>
-                        <TableCell colSpan={12} style={{ textAlign: "center" }}>
-                          Bonuses
-                        </TableCell>
-                      </StyledTableHeader>
-                    </TableHead>
-                    <TableBody>
-                      {event.bonuses.map((bonus) => (
-                        <StyledTableRow key={bonus.image}>
-                          <TableCell>
-                            <div className={styles.attackCell}>
-                              <img
-                                alt="bonus"
-                                className={classes.standardImage}
-                                src={bonus.image}
-                              />
-                            </div>
-                          </TableCell>
-                          <TableCell>{bonus.text}</TableCell>
-                        </StyledTableRow>
-                      ))}
-                    </TableBody>
-                  </Table>
-                </TableContainer>
-              </div>
-            )}
-            {event.counters && event.counters.length > 0 && (
-              <div style={{ marginTop: "20px" }}>
-                <Typography
-                  align="center"
-                  gutterBottom
-                  style={{ marginBottom: "20px" }}
-                  variant="h5"
-                >
-                  Counters
-                </Typography>
-                <TableContainer component={Paper}>
-                  <Table aria-label="simple table">
-                    <TableHead>
-                      <StyledTableHeader>
-                        <TableCell>Pokémon</TableCell>
-                        <TableCell>Fast Attack</TableCell>
-                        <TableCell>Charged Attack</TableCell>
-                      </StyledTableHeader>
-                    </TableHead>
-                    <TableBody>
-                      {event.counters.map((counter) => (
-                        <StyledTableRow key={counter.name}>
-                          <TableCell>{counter.name}</TableCell>
-                          <TableCell>
-                            <div className={styles.attackCell}>
-                              <img
-                                alt="fast type"
-                                className={classes.typeImage}
-                                src={counter.fastImage}
-                              />
-                              {counter.fast}
-                            </div>
-                          </TableCell>
-                          <TableCell>
-                            <div className={styles.attackCell}>
-                              <img
-                                alt="charged type"
-                                className={classes.typeImage}
-                                src={counter.chargedImage}
-                              />
-                              {counter.charged}
-                            </div>
-                          </TableCell>
-                        </StyledTableRow>
-                      ))}
-                    </TableBody>
-                  </Table>
-                </TableContainer>
-              </div>
-            )}
-            {event.features && event.features.length > 0 && (
-              <div style={{ marginTop: "40px" }}>
-                <TableContainer component={Paper}>
-                  <Table aria-label="simple table">
-                    <TableHead>
-                      <StyledTableHeader>
-                        <TableCell colSpan={12} style={{ textAlign: "center" }}>
-                          Features
-                        </TableCell>
-                      </StyledTableHeader>
-                    </TableHead>
-                    <TableBody>
-                      {event.features.map((feature) => (
-                        <StyledTableRow key={feature.image}>
-                          <TableCell>
-                            <div className={styles.attackCell}>
-                              <img
-                                alt="feature"
-                                className={classes.standardImage}
-                                src={feature.image}
-                              />
-                            </div>
-                          </TableCell>
-                          <TableCell>{feature.text}</TableCell>
-                        </StyledTableRow>
-                      ))}
-                    </TableBody>
-                  </Table>
-                </TableContainer>
-              </div>
-            )}
-            {renderList("voteOptions", "Vote Options")}
-            <div className={styles.close}>
-              <Button
-                color="secondary"
-                onClick={handleClose}
-                style={{ textDecoration: "underline" }}
-              >
-                Close
-              </Button>
+                    ))}
+                  </TableBody>
+                </Table>
+              </TableContainer>
             </div>
+          )}
+          {event.features && event.features.length > 0 && (
+            <div style={{ marginTop: "40px" }}>
+              <TableContainer component={Paper}>
+                <Table aria-label="simple table">
+                  <TableHead>
+                    <StyledTableHeader>
+                      <TableCell colSpan={12} style={{ textAlign: "center" }}>
+                        Features
+                      </TableCell>
+                    </StyledTableHeader>
+                  </TableHead>
+                  <TableBody>
+                    {event.features.map((feature) => (
+                      <StyledTableRow key={feature.image}>
+                        <TableCell>
+                          <div className={styles.attackCell}>
+                            <img
+                              alt="feature"
+                              className={classes.standardImage}
+                              src={feature.image}
+                            />
+                          </div>
+                        </TableCell>
+                        <TableCell>{feature.text}</TableCell>
+                      </StyledTableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </div>
+          )}
+          {renderList("voteOptions", "Vote Options")}
+          <div className={styles.close}>
+            <Button
+              color="secondary"
+              onClick={handleClose}
+              style={{ textDecoration: "underline" }}
+            >
+              Close
+            </Button>
           </div>
         </div>
       </Card>

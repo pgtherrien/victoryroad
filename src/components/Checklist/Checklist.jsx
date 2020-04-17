@@ -43,10 +43,22 @@ class RawChecklist extends React.PureComponent {
     super(props);
 
     this.list = null;
-    this.SMALL = window.innerWidth < props.theme.breakpoints.values.md;
-    this.LARGE = window.innerWidth > props.theme.breakpoints.values.lg;
-    this.ENTRIES_PER_ROW = this.SMALL ? 3 : 12;
-    this.ROW_HEIGHT = this.SMALL ? 170 : this.LARGE ? 250 : 170;
+
+    let entriesPerRow = 3;
+    let rowHeight = 190;
+    if (window.innerWidth > 2000) {
+      entriesPerRow = 12;
+      rowHeight = 250;
+    } else if (window.innerWidth > 1800) {
+      entriesPerRow = 12;
+      rowHeight = 210;
+    } else if (window.innerWidth > 1200) {
+      entriesPerRow = 12;
+      rowHeight = 180;
+    } else if (window.innerWidth < 1200 && window.innerWidth > 800) {
+      entriesPerRow = 6;
+      rowHeight = 200;
+    }
 
     this.state = {
       alert: { type: "", value: "" },
@@ -61,12 +73,14 @@ class RawChecklist extends React.PureComponent {
         normal: "",
         shiny: "",
       },
+      entriesPerRow: entriesPerRow,
       filters:
         JSON.parse(localStorage.getItem("victoryFilters")) ||
         Object.assign({}, DEFAULT_FILTERS),
       isAvailableOpen: false,
       rowCount: 0,
       rowData: [],
+      rowHeight: rowHeight,
       userLists: {
         lucky: [],
         normal: [],
@@ -106,16 +120,17 @@ class RawChecklist extends React.PureComponent {
 
   // buildRow builds a single row of data
   buildRow = (i, dex) => {
+    const { entriesPerRow } = this.state;
     let row = {};
 
-    if (Object.keys(dex).length <= this.ENTRIES_PER_ROW) {
+    if (Object.keys(dex).length <= entriesPerRow) {
       Object.keys(dex).forEach((number) => {
         row[number] = dex[number];
       });
     } else {
       while (
         dex[Object.keys(dex)[i]] &&
-        Object.keys(row).length < this.ENTRIES_PER_ROW
+        Object.keys(row).length < entriesPerRow
       ) {
         row[Object.keys(dex)[i]] = dex[Object.keys(dex)[i]];
         i++;
@@ -230,7 +245,7 @@ class RawChecklist extends React.PureComponent {
   // getUserChecklists attempts to pull the active user's checklists and update the state
   getUserChecklists = (available, filters) => {
     const { user } = this.context;
-    const { userLists } = this.state;
+    const { entriesPerRow, userLists } = this.state;
     let dex, count;
 
     if (user.uid) {
@@ -243,7 +258,7 @@ class RawChecklist extends React.PureComponent {
           shiny: JSON.parse(data.shiny),
         };
         dex = this.filterDex(available, filters, lists);
-        count = Math.ceil(Object.keys(dex).length / this.ENTRIES_PER_ROW);
+        count = Math.ceil(Object.keys(dex).length / entriesPerRow);
 
         this.setState({
           rowCount: count,
@@ -256,7 +271,7 @@ class RawChecklist extends React.PureComponent {
     }
 
     dex = this.filterDex(available, filters, userLists);
-    count = Math.ceil(Object.keys(dex).length / this.ENTRIES_PER_ROW);
+    count = Math.ceil(Object.keys(dex).length / entriesPerRow);
     this.setState({
       rowCount: count,
       rowData: this.buildRowData(count, dex),
@@ -265,9 +280,9 @@ class RawChecklist extends React.PureComponent {
 
   // handleApplyFilters updates the state with filtered data
   handleApplyFilters = (updatedFilters) => {
-    const { available, userLists } = this.state;
+    const { available, entriesPerRow, userLists } = this.state;
     let dex = this.filterDex(available, updatedFilters, userLists);
-    let count = Math.ceil(Object.keys(dex).length / this.ENTRIES_PER_ROW);
+    let count = Math.ceil(Object.keys(dex).length / entriesPerRow);
 
     if (this.list) {
       this.list.forceUpdateGrid();
@@ -367,7 +382,13 @@ class RawChecklist extends React.PureComponent {
   };
 
   renderRow = ({ key, index, isScrolling, isVisible, style }) => {
-    const { filters, rowData, userLists } = this.state;
+    const {
+      entriesPerRow,
+      filters,
+      rowData,
+      rowHeight,
+      userLists,
+    } = this.state;
     let entries = [];
     let i = 0;
 
@@ -379,13 +400,13 @@ class RawChecklist extends React.PureComponent {
               userLists[filters.selectedList] &&
               userLists[filters.selectedList].includes(number)
             }
-            entriesPerRow={this.ENTRIES_PER_ROW}
+            entriesPerRow={entriesPerRow}
             entry={pokedex[number]}
             handleCheck={() => this.handleCheck(number)}
             key={i}
             listType={filters.selectedList}
             number={number}
-            rowHeight={this.ROW_HEIGHT}
+            rowHeight={rowHeight}
           />
         );
         i++;
@@ -395,7 +416,7 @@ class RawChecklist extends React.PureComponent {
         <div key={key} style={style}>
           <Grid
             container
-            style={{ height: `${this.ROW_HEIGHT}px`, justifyContent: "center" }}
+            style={{ height: `${rowHeight}px`, justifyContent: "center" }}
           >
             {entries}
           </Grid>
@@ -414,6 +435,7 @@ class RawChecklist extends React.PureComponent {
       filters,
       isAvailableOpen,
       rowCount,
+      rowHeight,
       userLists,
     } = this.state;
     const { selectedList } = filters;
@@ -470,7 +492,7 @@ class RawChecklist extends React.PureComponent {
             overscanRowCount={2}
             ref={(c) => (this.list = c)}
             rowCount={rowCount}
-            rowHeight={this.ROW_HEIGHT}
+            rowHeight={rowHeight}
             rowRenderer={this.renderRow}
             style={{
               margin: "0 auto",

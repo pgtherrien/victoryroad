@@ -292,7 +292,7 @@
   "019_61": {
     "genders": ["female", "male"],
     "generation": 7,
-    "name": "Rattata - Alola Form",
+    "name": "Alolan Rattata",
     "number": "019",
 
     "tags": ["alolan"],
@@ -322,7 +322,7 @@
   "020_61": {
     "genders": ["female", "male"],
     "generation": 7,
-    "name": "Raticate - Alola Form",
+    "name": "Alolan Raticate",
     "number": "020",
 
     "tags": ["alolan"],
@@ -607,7 +607,7 @@
   "026_61": {
     "genders": ["female", "male"],
     "generation": 7,
-    "name": "Raichu - Alola Form",
+    "name": "Alolan Raichu",
     "number": "026",
 
     "tags": ["alolan"],
@@ -627,7 +627,7 @@
   "027_61": {
     "genders": ["female", "male"],
     "generation": 7,
-    "name": "Sandshrew - Alola Form",
+    "name": "Alolan Sandshrew",
     "number": "027",
 
     "tags": ["alolan"],
@@ -647,7 +647,7 @@
   "028_61": {
     "genders": ["female", "male"],
     "generation": 7,
-    "name": "Sandslash - Alola Form",
+    "name": "Alolan Sandslash",
     "number": "028",
 
     "tags": ["alolan"],
@@ -748,7 +748,7 @@
   "037_61": {
     "genders": ["female", "male"],
     "generation": 7,
-    "name": "Vulpix - Alola Form",
+    "name": "Alolan Vulpix",
     "number": "037",
 
     "tags": ["alolan"],
@@ -768,7 +768,7 @@
   "038_61": {
     "genders": ["female", "male"],
     "generation": 7,
-    "name": "Ninetales - Alola Form",
+    "name": "Alolan Ninetales",
     "number": "038",
 
     "tags": ["alolan"],
@@ -894,7 +894,7 @@
   "050_61": {
     "genders": ["female", "male"],
     "generation": 7,
-    "name": "Diglett - Alola Form",
+    "name": "Alolan Diglett",
     "number": "050",
 
     "tags": ["alolan"],
@@ -914,7 +914,7 @@
   "051_61": {
     "genders": ["female", "male"],
     "generation": 7,
-    "name": "Dugtrio - Alola Form",
+    "name": "Alolan Dugtrio",
     "number": "051",
 
     "tags": ["alolan"],
@@ -934,7 +934,7 @@
   "052_61": {
     "genders": ["female", "male"],
     "generation": 7,
-    "name": "Meowth - Alola Form",
+    "name": "Alolan Meowth",
     "number": "052",
 
     "tags": ["alolan"],
@@ -954,7 +954,7 @@
   "053_61": {
     "genders": ["female", "male"],
     "generation": 7,
-    "name": "Persian - Alola Form",
+    "name": "Alolan Persian",
     "number": "053",
 
     "tags": ["alolan"],
@@ -1164,7 +1164,7 @@
   "074_61": {
     "genders": ["female", "male"],
     "generation": 7,
-    "name": "Geodude - Alola Form",
+    "name": "Alolan Geodude",
     "number": "074",
 
     "tags": ["alolan"],
@@ -1184,7 +1184,7 @@
   "075_61": {
     "genders": ["female", "male"],
     "generation": 7,
-    "name": "Graveler - Alola Form",
+    "name": "Alolan Graveler",
     "number": "075",
 
     "tags": ["alolan"],
@@ -1204,7 +1204,7 @@
   "076_61": {
     "genders": ["female", "male"],
     "generation": 7,
-    "name": "Golem - Alola Form",
+    "name": "Alolan Golem",
     "number": "076",
 
     "tags": ["alolan"],
@@ -1323,7 +1323,7 @@
   "088_61": {
     "genders": ["female", "male"],
     "generation": 7,
-    "name": "Grimer - Alola Form",
+    "name": "Alolan Grimer",
     "number": "088",
 
     "tags": ["alolan"],
@@ -1343,7 +1343,7 @@
   "089_61": {
     "genders": ["female", "male"],
     "generation": 7,
-    "name": "Grimer - Alola Form",
+    "name": "Alolan Grimer",
     "number": "089",
 
     "tags": ["alolan"],
@@ -1491,7 +1491,7 @@
   "103_61": {
     "genders": ["female", "male"],
     "generation": 7,
-    "name": "Exeggutor - Alola Form",
+    "name": "Alolan Exeggutor",
     "number": "103",
 
     "tags": ["alolan"],
@@ -1521,7 +1521,7 @@
   "105_61": {
     "genders": ["female", "male"],
     "generation": 7,
-    "name": "Marowak - Alola Form",
+    "name": "Alolan Marowak",
     "number": "105",
 
     "tags": ["alolan"],

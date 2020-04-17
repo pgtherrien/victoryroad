@@ -13,8 +13,8 @@
 
 .tabs {
   background-color: #212121 !important;
-  box-shadow: none;
-  margin: 0 auto;
+  box-shadow: none !important;
+  margin: 0 auto 10px;
   width: 500px;
 }
 

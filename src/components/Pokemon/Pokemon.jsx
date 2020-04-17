@@ -60,7 +60,7 @@ const Pokemon = ({
   };
 
   const classes = useStyles();
-  let xs = entriesPerRow === 12 ? 1 : 4;
+  let xs = entriesPerRow === 12 ? 1 : entriesPerRow === 6 ? 2 : 4;
 
   return (
     <Grid className={classes.wrapper} item xs={xs}>
