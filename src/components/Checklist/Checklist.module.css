@@ -25,6 +25,10 @@
   width: 228px;
 }
 
+.virtualized {
+  padding: 0 10px 20px;
+}
+
 .virtualized::-webkit-scrollbar {
   width: 0.5em !important;
 }

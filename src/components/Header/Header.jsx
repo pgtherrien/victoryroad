@@ -11,7 +11,6 @@ import {
 } from "@material-ui/core";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import {
-  AccountCircle as AccountIcon,
   ExitToApp as ExitIcon,
   Menu as MenuIcon,
   Search as SearchIcon,
@@ -77,7 +76,8 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: fade(theme.palette.common.white, 0.25),
     },
     marginLeft: 0,
-    width: window.innerWidth < 950 ? "40%" : "100%",
+    marginRight: window.innerWidth < 950 ? "0px" : "30px",
+    width: window.innerWidth < 950 ? "35%" : "100%",
     [theme.breakpoints.up("sm")]: {
       marginLeft: theme.spacing(1),
       width: "auto",
@@ -91,6 +91,11 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+  },
+  userPhoto: {
+    borderRadius: "20px",
+    cursor: "pointer",
+    height: "40px",
   },
 }));
 
@@ -154,23 +159,18 @@ const Header = ({ searchOnChange, showSearch, sidebarChildren }) => {
               />
             </div>
           )}
-          <div className={classes.account}>
-            {user && user.uid ? (
-              <IconButton
-                aria-haspopup="true"
-                aria-label="account of current user"
-                color="inherit"
-                edge="end"
-                onClick={handleMenuOpen}
-              >
-                <AccountIcon />
-              </IconButton>
-            ) : (
-              <Button color="inherit" onClick={authSignIn}>
-                Login
-              </Button>
-            )}
-          </div>
+          {user && user.uid ? (
+            <img
+              alt="Account Icon"
+              className={classes.userPhoto}
+              onClick={handleMenuOpen}
+              src={user.photoURL}
+            />
+          ) : (
+            <Button color="inherit" onClick={authSignIn}>
+              Login
+            </Button>
+          )}
         </Toolbar>
       </AppBar>
       {isSidebarOpen && (

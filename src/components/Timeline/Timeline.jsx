@@ -1,6 +1,6 @@
 import React, { Fragment, useContext, useEffect, useState } from "react";
-import { Button, CircularProgress, Grid, Typography } from "@material-ui/core";
-import GitHubIcon from "@material-ui/icons/GitHub";
+import clsx from "clsx";
+import { CircularProgress, Grid, Typography } from "@material-ui/core";
 
 import { db } from "../../utils/firebase";
 import AdminControls from "./AdminControls";
@@ -25,7 +25,7 @@ const Timeline = () => {
   let i = 0;
   let renderedEvents = [
     <Typography
-      className={styles.dividerText}
+      className={clsx(styles.dividerText, styles.dividerTextFirst)}
       color="textSecondary"
       key="dividerActive"
       variant="caption"
@@ -85,7 +85,7 @@ const Timeline = () => {
           setIsEventModalOpen(true);
         }}
         handleSelectEvent={setSelectedEventID}
-        isAdmin={admins.includes(user.uid)}
+        isAdmin={user ? admins.includes(user.uid) : false}
         key={i}
         user={user}
       />
@@ -117,7 +117,7 @@ const Timeline = () => {
           setIsEventModalOpen(true);
         }}
         handleSelectEvent={setSelectedEventID}
-        isAdmin={admins.includes(user.uid)}
+        isAdmin={user ? admins.includes(user.uid) : false}
         key={i}
         user={user}
       />
@@ -132,15 +132,6 @@ const Timeline = () => {
         <Grid className={styles.container} container spacing={3}>
           {renderedEvents}
         </Grid>
-        <div className={styles.footer}>
-          <Button
-            href="https://github.com/pgtherrien/victoryroad"
-            startIcon={<GitHubIcon />}
-            style={{ height: "50%" }}
-          >
-            GitHub
-          </Button>
-        </div>
         {selectedEventID !== "" && (
           <Event
             event={selectedEvent}
@@ -156,7 +147,10 @@ const Timeline = () => {
       <Header
         showSearch={false}
         sidebarChildren={
-          <AdminControls handleOpenAdd={() => setIsEventModalOpen(true)} />
+          user &&
+          admins.includes(user.uid) && (
+            <AdminControls handleOpenAdd={() => setIsEventModalOpen(true)} />
+          )
         }
       />
       {contents}

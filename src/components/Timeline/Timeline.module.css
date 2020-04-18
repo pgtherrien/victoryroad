@@ -19,26 +19,22 @@
 }
 
 .container {
+  height: 100%;
   margin: 0 auto !important;
+  overflow-y: auto;
   width: 100% !important;
 }
 
 .dividerText {
+  align-items: center;
+  display: flex;
   font-size: 1.5em !important;
+  height: 75px;
   margin: 0 auto !important;
-  margin-bottom: 20px !important;
-  margin-top: 40px !important;
 }
 
-.footer {
-  align-items: center;
-  background-color: #333333;
-  display: flex;
-  height: 50px;
-  justify-content: center;
-  margin-top: 20px;
-  vertical-align: middle;
-  width: 100%;
+.dividerTextFirst {
+  margin-top: 20px !important;
 }
 
 .loading {
