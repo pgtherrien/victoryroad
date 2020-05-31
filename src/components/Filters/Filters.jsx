@@ -41,6 +41,7 @@ const Filters = ({
     gen4,
     gen5,
     gen7,
+    gen8,
     legendary,
     mythical,
     regional,
@@ -111,6 +112,12 @@ const Filters = ({
           checked={gen7}
           field="gen7"
           label="Alola"
+          onChange={handleUpdateFilter}
+        />
+        <SwitchFilter
+          checked={gen8}
+          field="gen8"
+          label="Galaria"
           onChange={handleUpdateFilter}
         />
         <ListSubheader className={styles.filtersSubheader}>Tags</ListSubheader>

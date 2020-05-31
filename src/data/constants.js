@@ -6,6 +6,7 @@ export const DEFAULT_FILTERS = {
   gen4: true,
   gen5: true,
   gen7: true,
+  gen8: true,
   search: "",
   selectedList: "normal",
   showEventForms: false,
